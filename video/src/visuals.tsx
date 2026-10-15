@@ -31,7 +31,7 @@ function TextField({ text, cursor, typo, fixed, fix, wrongAt }: { text: string; 
           borderBottom: inTypo && fixed <= 0.5 ? `3px dotted ${C.warn}` : "none", borderRadius: 4 }}>
           {i === ci && <Caret wrong={wrongAt === i} />}{ch}</span>;
       })}
-      {ci >= chars.length && <Caret />}
+      {ci >= chars.length && <span style={{ position: "relative" }}><Caret />&nbsp;</span>}
     </div>
   );
 }
