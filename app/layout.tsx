@@ -17,7 +17,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
   return (
     <html lang="en"><body>
       <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(org) }} />
-      <header className="site"><Link href="/" className="logo">TechTip<b>ADay</b></Link><nav><Link href="/about">About</Link></nav></header>
+      <header className="site"><Link href="/" className="logo" aria-label="TechTipADay home"><img src="/logo-lockup-dark.svg" alt="TechTipADay" height={36} style={{ display: "block", height: 36, width: "auto" }} /></Link><nav><Link href="/about">About</Link></nav></header>
       {children}
       <footer className="site"><span>© {new Date().getFullYear()} TechTipADay</span><span><a href="/llms.txt">llms.txt</a> · <a href="/sitemap.xml">sitemap</a></span></footer>
     </body></html>
