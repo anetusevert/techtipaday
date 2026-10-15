@@ -1,0 +1,17 @@
+{
+  "name": "techtipaday-video",
+  "private": true,
+  "type": "module",
+  "scripts": {
+    
+    "render": "node render.mjs"
+  },
+  "dependencies": {
+    "@remotion/cli": "4.0.535",
+    "@remotion/google-fonts": "4.0.535",
+    "gray-matter": "^4.0.3",
+    "react": "19.3.0",
+    "react-dom": "19.3.0",
+    "remotion": "4.0.535"
+  }
+}

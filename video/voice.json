@@ -1,0 +1,8 @@
+{
+  "provider": "ElevenLabs",
+  "voice_id": "y0s2ExEMuum3muUnA6Zd",
+  "voice_name": "Marcus - Bright, Upbeat and Clear",
+  "model_id": "eleven_v4",
+  "generations_count": 1,
+  "note": "The one brand voice for every daily short. Do not change per agent."
+}
