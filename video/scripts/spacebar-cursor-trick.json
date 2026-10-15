@@ -1,8 +1,55 @@
-{ "n": 1, "title": "Hold the spacebar to move your cursor precisely", "category": "Phone tip",
+{
+  "n": 1,
+  "title": "Hold the spacebar to move your cursor precisely",
+  "category": "Phone tip",
   "segments": [
-    { "kind": "hook", "text": "Still tapping on typos and missing every single time?" },
-    { "kind": "step", "text": "Press and hold the spacebar." },
-    { "kind": "step", "text": "Your whole keyboard turns into a trackpad." },
-    { "kind": "step", "text": "Slide your finger to drop the cursor exactly where you want it." },
-    { "kind": "step", "text": "On Android, just swipe left or right along the spacebar." },
-    { "kind": "cta", "text": "One tech tip a day." } ] }
+    {
+      "kind": "hook",
+      "text": "Still tapping on typos and missing every single time?",
+      "visual": {
+        "type": "phone-keyboard",
+        "action": "miss-taps"
+      }
+    },
+    {
+      "kind": "step",
+      "text": "Press and hold the spacebar.",
+      "visual": {
+        "type": "phone-keyboard",
+        "action": "hold-space"
+      }
+    },
+    {
+      "kind": "step",
+      "text": "Your whole keyboard turns into a trackpad.",
+      "visual": {
+        "type": "phone-keyboard",
+        "action": "trackpad"
+      }
+    },
+    {
+      "kind": "step",
+      "text": "Slide your finger to drop the cursor exactly where you want it.",
+      "visual": {
+        "type": "phone-keyboard",
+        "action": "glide-fix"
+      }
+    },
+    {
+      "kind": "step",
+      "text": "On Android, just swipe left or right along the spacebar.",
+      "visual": {
+        "type": "phone-keyboard",
+        "action": "swipe-space",
+        "platform": "android"
+      }
+    },
+    {
+      "kind": "cta",
+      "text": "One tech tip a day.",
+      "visual": {
+        "type": "brand"
+      }
+    }
+  ]
+}
