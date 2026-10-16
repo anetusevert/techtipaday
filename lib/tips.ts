@@ -118,9 +118,69 @@ export const tips: Tip[] = [
   },
 ];
 
-export const isLive = (t: Tip) => t.date <= new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Berlin" });
-export const byNewest = () => tips.filter(isLive).sort((a, b) => b.n - a.n);
-export const getTip = (slug: string) => tips.find((t) => t.slug === slug);
 export const SITE_URL = (process.env.NEXT_PUBLIC_SITE_URL || "https://techtipaday.com").replace(/\/$/, "");
 export const SITE_NAME = "TechTipADay";
 export const SITE_DESC = "One useful phone, AI-tool or everyday tech tip a day. Short, tested, no fluff.";
+
+/** Calendar date in Europe/Berlin, `YYYY-MM-DD`. Tips go live on this date and not before. */
+export const todayISO = () => new Date().toLocaleDateString("sv-SE", { timeZone: "Europe/Berlin" });
+
+export const isLive = (t: Tip) => t.date <= todayISO();
+export const byNewest = () => tips.filter(isLive).sort((a, b) => b.n - a.n);
+export const getTip = (slug: string) => tips.find((t) => t.slug === slug);
+export const getLiveTip = (slug: string) => {
+  const t = getTip(slug);
+  return t && isLive(t) ? t : undefined;
+};
+
+export const CATEGORIES = ["Phone", "AI tools", "Everyday tech"] as const;
+export function isCategory(v: string | undefined): v is Tip["category"] {
+  return !!v && (CATEGORIES as readonly string[]).includes(v);
+}
+
+export function formatDate(iso: string, opts: Intl.DateTimeFormatOptions = {}) {
+  const [y, m, d] = iso.split("-").map(Number);
+  return new Intl.DateTimeFormat("en-US", {
+    month: "short",
+    day: "numeric",
+    timeZone: "UTC",
+    ...opts,
+  }).format(new Date(Date.UTC(y, m - 1, d)));
+}
+
+export function tipUrl(slug: string) {
+  return `${SITE_URL}/tips/${slug}`;
+}
+
+function prevISO(iso: string) {
+  const [y, m, d] = iso.split("-").map(Number);
+  const dt = new Date(Date.UTC(y, m - 1, d));
+  dt.setUTCDate(dt.getUTCDate() - 1);
+  return dt.toISOString().slice(0, 10);
+}
+
+/** Consecutive published days, counting backward from the newest live tip. */
+export function streakOf(list: Tip[]) {
+  if (!list.length) return 0;
+  const days = new Set(list.map((t) => t.date));
+  let iso = list[0].date;
+  let n = 0;
+  while (days.has(iso)) {
+    n += 1;
+    iso = prevISO(iso);
+  }
+  return n;
+}
+
+export type ShareTip = {
+  n: number;
+  title: string;
+  summary: string;
+  steps: string[];
+  body: string[];
+  url: string;
+};
+
+export function shareTip(t: Tip): ShareTip {
+  return { n: t.n, title: t.title, summary: t.summary, steps: t.steps, body: t.body, url: tipUrl(t.slug) };
+}

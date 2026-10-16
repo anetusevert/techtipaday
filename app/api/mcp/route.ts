@@ -1,4 +1,4 @@
-import { tips, byNewest, getTip, SITE_URL } from "@/lib/tips";
+import { tips, byNewest, getTip, isLive, SITE_URL } from "@/lib/tips";
 const tools = [
   { name: "get_latest_tip", description: "Get today's TechTipADay tip.", inputSchema: { type: "object", properties: {} } },
   { name: "list_tips", description: "List all tips (title, slug, category, url).", inputSchema: { type: "object", properties: {} } },
@@ -16,9 +16,9 @@ export async function POST(req: Request) {
     case "tools/list": return ok({ tools });
     case "tools/call": {
       const n = m.params?.name; let data: unknown;
-      if (n === "get_latest_tip") data = full(byNewest()[0]);
+      if (n === "get_latest_tip") { const t = byNewest()[0]; data = t ? full(t) : { error: "no tip published yet" }; }
       else if (n === "list_tips") data = byNewest().map((t) => ({ title: t.title, slug: t.slug, category: t.category, url: `${SITE_URL}/tips/${t.slug}` }));
-      else if (n === "get_tip") { const t = getTip(m.params?.arguments?.slug); data = t ? full(t) : { error: "not found" }; }
+      else if (n === "get_tip") { const t = getTip(m.params?.arguments?.slug); data = t && isLive(t) ? full(t) : { error: "not found" }; }
       else return Response.json({ jsonrpc: "2.0", id: m.id, error: { code: -32602, message: "Unknown tool" } });
       return ok({ content: [{ type: "text", text: JSON.stringify(data, null, 2) }] });
     }
