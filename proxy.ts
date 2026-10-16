@@ -1,10 +1,11 @@
 import { NextResponse, type NextRequest } from "next/server";
 
-// 301 the bare domain to the canonical www host.
-// TODO: once www.techtipaday.com resolves with a valid cert, also add the
-// railway.app host (web-production-136d2d.up.railway.app) to REDIRECT_HOSTS.
+// 301 non-canonical hosts to www.
 const CANONICAL = "www.techtipaday.com";
-const REDIRECT_HOSTS = new Set(["techtipaday.com"]);
+const REDIRECT_HOSTS = new Set([
+  "techtipaday.com",
+  "web-production-136d2d.up.railway.app",
+]);
 
 export function proxy(req: NextRequest) {
   const host = (req.headers.get("x-forwarded-host") || req.headers.get("host") || "").split(":")[0].toLowerCase();
