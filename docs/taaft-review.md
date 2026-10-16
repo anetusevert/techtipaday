@@ -33,6 +33,6 @@ Reviewed October 16, 2026, against [theresanaiforthat.com](https://theresanaifor
   - topic: `/categories/[topic]`
 - Each landing has its own title, H1, and intro, lists only live matching tips, and links to related landings, the cheat sheet, and the tips.
 - Tip pages link out to the device, the task, the app, related tips, and the previous and next day.
-- Newsletter capture is prominent and pitched as "Get tomorrow's tip a day early." There is no `/api/subscribe` and no Railway volume in this app, so the form does not collect addresses. It says so.
+- Newsletter capture is prominent and pitched as "Get tomorrow's tip a day early." Beehiiv's free plan has no API, so the email field is a GET form that opens `https://techtipaday.beehiiv.com/subscribe?email=` in a new tab, and the page also embeds Beehiiv form `504a21de-5a19-45e8-97d0-c8daf5455d5a`.
 - One printable HTML cheat sheet per category, at `/sheets/[category]`, linked from the hub.
 - Title pattern: the job first, brand in the template (`How to use Back Tap on iPhone | TechTipADay`).

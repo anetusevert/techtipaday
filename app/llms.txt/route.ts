@@ -1,4 +1,5 @@
 import { appBySlug } from "@/lib/landings";
+import { BEEHIIV_FORM_ID, BEEHIIV_PUBLICATION, BEEHIIV_SUBSCRIBE, beehiivSubscribeUrl } from "@/lib/newsletter";
 import { categoryName } from "@/lib/taxonomy";
 import { byNewest, liveAppPages, liveFixPages, SITE_DESC, SITE_NAME, SITE_URL, tipUrl } from "@/lib/tips";
 
@@ -24,6 +25,7 @@ export function GET() {
     `- Cheat sheets: ${SITE_URL}/sheets`,
     `- Timeline: ${SITE_URL}/timeline`,
     `- Subscribe: ${SITE_URL}/subscribe`,
+    `- Daily email: ${BEEHIIV_SUBSCRIBE}`,
     `- About: ${SITE_URL}/about`,
     `- iPhone: ${SITE_URL}/iphone`,
     `- Android: ${SITE_URL}/android`,
@@ -36,6 +38,15 @@ export function GET() {
     `- Sitemap: ${SITE_URL}/sitemap.xml`,
     "",
     "MCP tools: get_latest_tip, list_tips, get_tip (argument: slug). get_tip returns not found for unknown or future slugs.",
+    "",
+    "## Newsletter",
+    "",
+    `The free daily email is a beehiiv publication at ${BEEHIIV_PUBLICATION}. The free plan has no API, and server-side POSTs are blocked. Every visible email signup embeds beehiiv form ${BEEHIIV_FORM_ID} or opens the subscribe page in a new tab with the address in the email query parameter. JavaScript is not required for that handoff.`,
+    "",
+    `- ${BEEHIIV_SUBSCRIBE}`,
+    `- With an address: ${beehiivSubscribeUrl("you@example.com")}`,
+    `- Publication: ${BEEHIIV_PUBLICATION}`,
+    `- On this site: ${SITE_URL}/subscribe`,
     "",
     "## Live task pages",
     "",

@@ -1,12 +1,14 @@
 import type { Metadata, Viewport } from "next";
 import { Newsreader, Source_Sans_3 } from "next/font/google";
 import Link from "next/link";
+import Script from "next/script";
 import "./globals.css";
 import { JsonLd } from "@/components/JsonLd";
 import { PwaRegister } from "@/components/PwaRegister";
 import { SiteHeader } from "@/components/SiteHeader";
 import { pageAlternates } from "@/lib/seo";
 import { CATEGORIES } from "@/lib/taxonomy";
+import { BEEHIIV_ATTRIBUTION, BEEHIIV_SUBSCRIBE } from "@/lib/newsletter";
 import { SITE_DESC, SITE_NAME, SITE_URL } from "@/lib/tips";
 
 const serif = Newsreader({
@@ -107,6 +109,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
                 ))}
                 <Link href="/about">About</Link>
                 <Link href="/subscribe">Subscribe</Link>
+                <a href={BEEHIIV_SUBSCRIBE}>Daily email</a>
               </div>
             </div>
             <div className="footer-base">
@@ -121,6 +124,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
           </footer>
         </div>
         <PwaRegister />
+        <Script src={BEEHIIV_ATTRIBUTION} strategy="lazyOnload" />
       </body>
     </html>
   );

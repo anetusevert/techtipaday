@@ -7,5 +7,5 @@ One phone, AI-tool or everyday tech tip a day. Next.js on Railway.
 - Printable cheat sheets: `/sheets/[category]`.
 - SEO: per-tip metadata, HowTo/Article/Breadcrumb JSON-LD, CollectionPage on hubs, sitemap, robots, `/llms.txt`.
 - `/api/mcp`: read-only MCP server.
-- The newsletter form is intentionally not collecting addresses. There is no subscribe API.
+- Newsletter: Beehiiv free plan (`https://techtipaday.beehiiv.com`). The form is the embed plus a GET to `/subscribe?email=`, opened in a new tab. There is no subscribe API.
 - Video template: `video/` (Remotion, 9:16). Leave it alone when changing the site.

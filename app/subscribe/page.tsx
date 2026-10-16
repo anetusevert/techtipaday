@@ -4,7 +4,7 @@ import { SITE_DESC } from "@/lib/tips";
 
 export const metadata = {
   title: "Get tomorrow's tip a day early",
-  description: `The TechTipADay newsletter. ${SITE_DESC} The list is not open yet.`,
+  description: `Get tomorrow's TechTipADay tip the evening before it goes on the site. ${SITE_DESC}`,
   alternates: pageAlternates("/subscribe"),
 };
 
