@@ -1,6 +1,6 @@
 import { jsonFeed } from "@/lib/feed";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export function GET() {
   return Response.json(jsonFeed(), {

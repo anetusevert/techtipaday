@@ -5,7 +5,17 @@ export function xmlEscape(s: string) {
 }
 
 export function tipText(t: Tip) {
-  return [t.summary, "", "How to do it:", ...t.steps.map((s, i) => `${i + 1}. ${s}`), "", ...t.body].join("\n");
+  return [
+    t.summary,
+    "",
+    `Why it matters: ${t.why}`,
+    `Difficulty: ${t.difficulty}. About ${t.minutes} min.`,
+    "",
+    "How to do it:",
+    ...t.steps.map((s, i) => `${i + 1}. ${s}`),
+    "",
+    ...t.body,
+  ].join("\n");
 }
 
 function rfc822(iso: string) {
@@ -55,7 +65,7 @@ export function jsonFeed() {
       summary: t.summary,
       content_text: tipText(t),
       date_published: `${t.date}T00:00:00Z`,
-      tags: [t.category, ...t.devices],
+      tags: [t.category, t.difficulty, ...t.platforms, ...t.devices, t.task.slug],
       authors: [{ name: SITE_NAME }],
     })),
   };

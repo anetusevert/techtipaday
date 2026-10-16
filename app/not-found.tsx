@@ -3,11 +3,11 @@ import Link from "next/link";
 export default function NotFound() {
   return (
     <main className="article">
-      <p className="eyebrow">404</p>
+      <p className="kicker">404</p>
       <h1>That page isn&apos;t here</h1>
-      <p>Tips only go live on their date, so a future tip stays hidden until then. If the address is wrong, it was never a tip.</p>
+      <p>Tips and the pages that list them go live on their date. A future tip stays hidden until then. If the address is wrong, it was never a page.</p>
       <p>
-        <Link className="btn primary" href="/" transitionTypes={["nav-back"]}>
+        <Link className="btn btn-primary" href="/">
           Back to today
         </Link>
       </p>

@@ -1,20 +1,17 @@
 import { Newsletter } from "@/components/Newsletter";
-import { Rise } from "@/components/Reveal";
 import { pageAlternates } from "@/lib/seo";
 import { SITE_DESC } from "@/lib/tips";
 
 export const metadata = {
-  title: "Subscribe",
-  description: `Get each TechTipADay tip by email. ${SITE_DESC}`,
+  title: "Get tomorrow's tip a day early",
+  description: `The TechTipADay newsletter. ${SITE_DESC} The list is not open yet.`,
   alternates: pageAlternates("/subscribe"),
 };
 
 export default function SubscribePage() {
   return (
     <main className="article">
-      <Rise>
-        <Newsletter level={1} />
-      </Rise>
+      <Newsletter level={1} />
     </main>
   );
 }

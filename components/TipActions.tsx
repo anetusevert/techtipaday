@@ -3,17 +3,15 @@
 import { useEffect, useId, useRef, useState } from "react";
 import { createPortal } from "react-dom";
 import Link from "next/link";
-import { AnimatePresence, m } from "framer-motion";
 import type { ShareTip } from "@/lib/tips";
-
-const ease = [0.22, 1, 0.36, 1] as const;
 
 function plain(t: ShareTip) {
   return [
-    `TechTipADay · Tip #${t.n}`,
-    t.title,
+    `TechTipADay · ${t.title}`,
     "",
     t.summary,
+    "",
+    `Why it matters: ${t.why}`,
     "",
     "How to do it:",
     ...t.steps.map((s, i) => `${i + 1}. ${s}`),
@@ -120,74 +118,48 @@ export function TipActions({ tip, readHref }: { tip: ShareTip; readHref?: string
     <div className="action-block">
       <div className="actions">
         {readHref ? (
-          <Link className="btn primary" href={readHref} transitionTypes={["nav-forward"]}>
-            Read<span className="sr"> the full tip</span>
+          <Link className="btn btn-primary" href={readHref}>
+            Read the tip
           </Link>
         ) : null}
-        <m.button type="button" className="btn ghost" whileTap={{ scale: 0.97 }} onClick={() => copy(plain(tip), "Copied the tip")}>
-          Copy<span className="sr"> the full tip</span>
-        </m.button>
-        <m.button
+        <button type="button" className="btn btn-ghost" onClick={() => copy(plain(tip), "Copied the tip")}>
+          Copy
+        </button>
+        <button
           ref={triggerRef}
           type="button"
-          className="btn ghost"
-          whileTap={{ scale: 0.97 }}
+          className="btn btn-ghost"
           aria-expanded={sheet}
           aria-haspopup={canShare ? undefined : "dialog"}
           onClick={share}
         >
-          Share<span className="sr"> this tip</span>
-        </m.button>
+          Share
+        </button>
       </div>
       <p className="action-status" role="status">
         {status}
       </p>
-      {mounted
+      {mounted && sheet
         ? createPortal(
-            <AnimatePresence>
-              {sheet ? (
-                <div className="sheet-root">
-                  <m.button
-                    type="button"
-                    className="sheet-backdrop"
-                    aria-label="Close share sheet"
-                    tabIndex={-1}
-                    onClick={() => setSheet(false)}
-                    initial={{ opacity: 0.45 }}
-                    animate={{ opacity: 1 }}
-                    exit={{ opacity: 0.45 }}
-                  />
-                  <m.div
-                    ref={sheetRef}
-                    className="sheet"
-                    role="dialog"
-                    aria-modal="true"
-                    aria-labelledby={titleId}
-                    tabIndex={-1}
-                    initial={{ y: 28 }}
-                    animate={{ y: 0 }}
-                    exit={{ y: 20 }}
-                    transition={{ duration: 0.28, ease }}
-                  >
-                    <div className="sheet-handle" aria-hidden="true" />
-                    <h2 id={titleId}>Share this tip</h2>
-                    <p className="sheet-title">{tip.title}</p>
-                    <p className="share-url">{tip.url}</p>
-                    <div className="stack">
-                      <button type="button" className="btn primary" onClick={() => copy(plain(tip), "Copied the tip")}>
-                        Copy tip text
-                      </button>
-                      <button type="button" className="btn ghost" onClick={() => copy(tip.url, "Copied the link")}>
-                        Copy link
-                      </button>
-                      <button type="button" className="btn ghost" onClick={() => setSheet(false)}>
-                        Close
-                      </button>
-                    </div>
-                  </m.div>
+            <div className="sheet-root">
+              <button type="button" className="sheet-backdrop" aria-label="Close share sheet" tabIndex={-1} onClick={() => setSheet(false)} />
+              <div ref={sheetRef} className="share-sheet" role="dialog" aria-modal="true" aria-labelledby={titleId} tabIndex={-1}>
+                <h2 id={titleId}>Share this tip</h2>
+                <p className="share-title">{tip.title}</p>
+                <p className="share-url">{tip.url}</p>
+                <div className="stack">
+                  <button type="button" className="btn btn-primary" onClick={() => copy(plain(tip), "Copied the tip")}>
+                    Copy tip text
+                  </button>
+                  <button type="button" className="btn btn-ghost" onClick={() => copy(tip.url, "Copied the link")}>
+                    Copy link
+                  </button>
+                  <button type="button" className="btn btn-ghost" onClick={() => setSheet(false)}>
+                    Close
+                  </button>
                 </div>
-              ) : null}
-            </AnimatePresence>,
+              </div>
+            </div>,
             document.body,
           )
         : null}

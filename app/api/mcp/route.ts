@@ -1,10 +1,16 @@
-import { tips, byNewest, getTip, isLive, SITE_URL } from "@/lib/tips";
+import { tips, byNewest, getTip, isLive, SITE_URL, categoryName } from "@/lib/tips";
 const tools = [
   { name: "get_latest_tip", description: "Get today's TechTipADay tip.", inputSchema: { type: "object", properties: {} } },
-  { name: "list_tips", description: "List all tips (title, slug, category, url).", inputSchema: { type: "object", properties: {} } },
-  { name: "get_tip", description: "Get one tip with steps by slug.", inputSchema: { type: "object", properties: { slug: { type: "string" } }, required: ["slug"] } },
+  { name: "list_tips", description: "List all live tips (title, slug, category, date, url).", inputSchema: { type: "object", properties: {} } },
+  { name: "get_tip", description: "Get one live tip with steps by slug. Future-dated tips return not found.", inputSchema: { type: "object", properties: { slug: { type: "string" } }, required: ["slug"] } },
 ];
-const full = (t: (typeof tips)[number]) => ({ ...t, url: `${SITE_URL}/tips/${t.slug}`, video: undefined });
+const full = (t: (typeof tips)[number]) => ({
+  ...t,
+  category: categoryName(t.category),
+  categorySlug: t.category,
+  url: `${SITE_URL}/tips/${t.slug}`,
+  video: undefined,
+});
 export async function POST(req: Request) {
   const m = await req.json().catch(() => null);
   if (!m) return Response.json({ jsonrpc: "2.0", id: null, error: { code: -32700, message: "Parse error" } }, { status: 400 });
@@ -17,7 +23,7 @@ export async function POST(req: Request) {
     case "tools/call": {
       const n = m.params?.name; let data: unknown;
       if (n === "get_latest_tip") { const t = byNewest()[0]; data = t ? full(t) : { error: "no tip published yet" }; }
-      else if (n === "list_tips") data = byNewest().map((t) => ({ title: t.title, slug: t.slug, category: t.category, url: `${SITE_URL}/tips/${t.slug}` }));
+      else if (n === "list_tips") data = byNewest().map((t) => ({ title: t.title, slug: t.slug, category: categoryName(t.category), date: t.date, difficulty: t.difficulty, url: `${SITE_URL}/tips/${t.slug}` }));
       else if (n === "get_tip") { const t = getTip(m.params?.arguments?.slug); data = t && isLive(t) ? full(t) : { error: "not found" }; }
       else return Response.json({ jsonrpc: "2.0", id: m.id, error: { code: -32602, message: "Unknown tool" } });
       return ok({ content: [{ type: "text", text: JSON.stringify(data, null, 2) }] });

@@ -1,6 +1,6 @@
 import { rssXml } from "@/lib/feed";
 
-export const revalidate = 3600;
+export const dynamic = "force-dynamic";
 
 export function GET() {
   return new Response(rssXml(), {
