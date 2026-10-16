@@ -24,10 +24,11 @@ export default function TimelinePage() {
       </p>
       <h1>Timeline</h1>
       <p className="lede">One square lights up each day a tip ships. Upcoming tips stay blank until their date.</p>
-      <Reveal>
-        <Calendar tips={list} />
-      </Reveal>
-      <section className="block">
+      <div className="timeline-layout">
+        <Reveal>
+          <Calendar tips={list} />
+        </Reveal>
+        <section className="block">
         <h2>Published</h2>
         {chronological.length ? (
           <ol className="time-list">
@@ -54,7 +55,8 @@ export default function TimelinePage() {
         ) : (
           <p className="empty">Nothing published yet.</p>
         )}
-      </section>
+        </section>
+      </div>
     </main>
   );
 }

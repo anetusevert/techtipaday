@@ -5,6 +5,7 @@ import { ViewTransition } from "react";
 import { Calendar } from "@/components/Calendar";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
+import { PhoneMock } from "@/components/PhoneMock";
 import { Reveal, Rise } from "@/components/Reveal";
 import { TipActions } from "@/components/TipActions";
 import { TipCard } from "@/components/TipCard";
@@ -56,8 +57,9 @@ export default function Home() {
             <span>day streak</span>
           </p>
         </div>
+        <PhoneMock title={today?.title ?? "A tip unlocks today"} />
         {today ? (
-          <Rise>
+          <Rise className="hero-card">
             <article className="today-card">
               <p className="eyebrow">
                 <i className="caret-inline" aria-hidden="true" /> Tip #{today.n} · {today.category} ·{" "}
@@ -76,7 +78,7 @@ export default function Home() {
               <h3 className="how">How to do it</h3>
               <p className="swipe-hint">Swipe sideways. Each step is on its own card.</p>
               <div className="deck-fade">
-                <ol className="step-deck" tabIndex={0} aria-label="How to do it. Swipe sideways through the steps.">
+                <ol className="step-deck" tabIndex={0} aria-label="Steps">
                   {today.steps.map((step, index) => (
                     <li key={step}>
                       <span className="step-n" aria-hidden="true">
@@ -93,7 +95,7 @@ export default function Home() {
             </article>
           </Rise>
         ) : (
-          <article className="today-card">
+          <article className="today-card hero-card">
             <h2>The first tip lands soon</h2>
             <p>A new phone, AI, or everyday-tech tip unlocks each day. Nothing is listed before its date.</p>
           </article>
@@ -120,21 +122,22 @@ export default function Home() {
         </section>
       ) : null}
 
-      <Reveal>
-        <section className="block">
-          <div className="block-head">
-            <h2>Timeline</h2>
-            <Link href="/timeline" transitionTypes={["nav-tab"]}>
-              Full calendar
-            </Link>
-          </div>
-          <Calendar tips={list} />
-        </section>
-      </Reveal>
-
-      <Reveal>
-        <Newsletter />
-      </Reveal>
+      <div className="home-split">
+        <Reveal>
+          <section className="block">
+            <div className="block-head">
+              <h2>Timeline</h2>
+              <Link href="/timeline" transitionTypes={["nav-tab"]}>
+                Full calendar
+              </Link>
+            </div>
+            <Calendar tips={list} />
+          </section>
+        </Reveal>
+        <Reveal>
+          <Newsletter />
+        </Reveal>
+      </div>
     </main>
   );
 }

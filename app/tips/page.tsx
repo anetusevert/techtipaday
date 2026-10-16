@@ -34,7 +34,7 @@ export default async function TipsPage({ searchParams }: { searchParams: Promise
         <i className="caret-inline" aria-hidden="true" /> Archive
       </p>
       <h1>{active ? `${active} tips` : "All tips"}</h1>
-      <p className="lede">Swipe the cards. Every tip here is already live. Future days stay off the list.</p>
+      <p className="lede">Every tip here is already live. Future days stay off the list.</p>
       <ul className="filters">
         <li>
           <Link href="/tips" aria-current={active ? undefined : "page"} transitionTypes={["nav-tab"]}>
