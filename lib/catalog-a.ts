@@ -2,8 +2,8 @@ import type { TipDraft } from "./taxonomy";
 
 export const catalogA: TipDraft[] = [
   {
-    slug: "iphone-text-replacement",
-    title: "Save a text shortcut for the words you type every day",
+    slug: "how-to-set-up-text-replacement-on-iphone",
+    title: "How to set up text replacement on iPhone",
     summary: "Type a short code and the phone expands it. Email addresses are the usual win.",
     category: "productivity",
     platforms: ["iphone"],
@@ -11,14 +11,18 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "A long address or a paragraph you retype stops being a typing job.",
-    task: {
-      slug: "text-replacement-iphone",
-      title: "How to set up text replacement on iPhone",
-      h1: "How to set up text replacement on iPhone",
-      intro:
-        "Text replacement expands a short phrase into a longer one as you type. It is in the iPhone keyboard settings on iOS 18 and iOS 26, and it syncs to a Mac signed into the same Apple Account.",
+    intents: ["keyboard"],
+    redirectFrom: ["/tips/iphone-text-replacement", "/fix/text-replacement-iphone"],
+    seo: {
+      searchPhrase: "how to set up text replacement on iphone",
+      searchAlternates: ["iphone shortcut to type email address", "text expansion iphone", "iphone keyboard text shortcuts"],
+      answer: "Open Settings > General > Keyboard > Text Replacement and tap +. Put the full text in Phrase and a short code like @@ in Shortcut. Type the code and a space, and the phone expands it.",
+      faq: [
+        { q: "Does text replacement sync to my Mac?", a: "Yes, if both use the same Apple Account with iCloud. The list shows up under System Settings > Keyboard > Text Replacements." },
+        { q: "What makes a good shortcut?", a: "Something you'd never type by accident, like @@ or a doubled letter. A real word will fire in the middle of a sentence." },
+        { q: "Why isn't my shortcut expanding?", a: "It only expands after a space or punctuation. If it still doesn't work, delete the entry and add it again. The sync sometimes gets stuck." },
+      ],
     },
-    tasks: ["keyboard"],
     steps: [
       "Open Settings > General > Keyboard > Text Replacement.",
       "Tap the + button.",
@@ -32,8 +36,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "mac-text-replacement",
-    title: "Use the same text shortcuts on a Mac",
+    slug: "how-to-set-up-text-replacement-on-a-mac",
+    title: "How to set up text replacement on a Mac",
     summary: "The Mac has the same expansion list as the iPhone. You can edit it in System Settings.",
     category: "productivity",
     platforms: ["mac"],
@@ -41,14 +45,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "Addresses and stock replies are slower on a keyboard than people admit.",
-    task: {
-      slug: "text-replacement-mac",
-      title: "How to set up text replacement on a Mac",
-      h1: "How to set up text replacement on a Mac",
-      intro:
-        "macOS expands a shortcut into a phrase while you type. The list lives in Keyboard settings and can be the same list as your iPhone if both are on one Apple Account.",
+    intents: ["keyboard"],
+    redirectFrom: ["/tips/mac-text-replacement", "/fix/text-replacement-mac"],
+    seo: {
+      searchPhrase: "how to set up text replacement on a mac",
+      searchAlternates: ["mac text expansion", "macos text replacements", "type a shortcut that expands on mac"],
+      answer: "Open System Settings > Keyboard, click Text Replacements, then click +. Type the short code and the full phrase, click Add, and the Mac expands the code whenever you type it followed by a space.",
+      faq: [
+        { q: "Can I use the same list as my iPhone?", a: "Yes. If the Mac and the iPhone share an Apple Account with iCloud, the list syncs. Give it a minute after you add something." },
+        { q: "Which apps support text replacement?", a: "Most apps that use the standard Mac text fields, such as Mail, Notes, Messages and Safari. Some apps with their own editors ignore it." },
+      ],
     },
-    tasks: ["keyboard"],
     steps: [
       "Open System Settings > Keyboard.",
       "Click Text Replacements.",
@@ -60,8 +67,8 @@ export const catalogA: TipDraft[] = [
     ],
   },
   {
-    slug: "mac-spotlight",
-    title: "Open any app with Command + Space",
+    slug: "how-to-open-an-app-on-a-mac-with-the-keyboard",
+    title: "How to open an app on a Mac with the keyboard",
     summary: "Spotlight launches apps and finds files without the Dock.",
     category: "productivity",
     platforms: ["mac"],
@@ -69,14 +76,18 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You stop scanning the Dock and the Launchpad for a name you already know.",
-    task: {
-      slug: "spotlight-open-app",
-      title: "How to open an app with Spotlight on a Mac",
-      h1: "How to open an app with Spotlight on a Mac",
-      intro:
-        "Spotlight is the Mac search field. Command + Space opens it from any app. Typing an app name and pressing Return launches it.",
-    },
     apps: ["finder"],
+    intents: ["mac-keyboard-shortcuts"],
+    redirectFrom: ["/tips/mac-spotlight", "/fix/spotlight-open-app"],
+    seo: {
+      searchPhrase: "how to open an app on a mac with the keyboard",
+      searchAlternates: ["command space spotlight", "spotlight search on mac", "open apps without the dock"],
+      answer: "Press Command + Space to open Spotlight, type the first few letters of the app, and press Return.",
+      faq: [
+        { q: "What if Command + Space doesn't open Spotlight?", a: "Another app has probably taken the shortcut. Check System Settings > Keyboard > Keyboard Shortcuts > Spotlight." },
+        { q: "Can Spotlight do maths?", a: "Yes. Type something like 18*1.2 and the answer is the top row. It converts units and currencies too." },
+      ],
+    },
     steps: [
       "Press Command + Space.",
       "Type the first few letters of the app or file.",
@@ -89,8 +100,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "windows-clipboard-history",
-    title: "Press Windows + V to paste something you copied earlier",
+    slug: "how-to-turn-on-clipboard-history-in-windows-11",
+    title: "How to turn on clipboard history in Windows 11",
     summary: "Windows 11 keeps a list of recent copies. It is off until you turn it on.",
     category: "productivity",
     platforms: ["windows"],
@@ -98,12 +109,24 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can copy two things and still paste the first one.",
-    task: {
-      slug: "clipboard-history",
-      title: "How to turn on clipboard history in Windows 11",
-      h1: "How to turn on clipboard history in Windows 11",
-      intro:
-        "Clipboard history in Windows 11 stores several recent copies and lets you pick which one to paste. The shortcut is Windows + V. The list stays off until the first time you turn it on.",
+    intents: ["windows-11-keyboard-shortcuts"],
+    redirectFrom: ["/tips/windows-clipboard-history", "/fix/clipboard-history"],
+    seo: {
+      searchPhrase: "how to turn on clipboard history in windows 11",
+      searchAlternates: ["windows v clipboard", "paste something i copied earlier on windows", "windows clipboard manager"],
+      answer: "Press Windows + V. If it says clipboard history is off, turn it on. From then on, Windows + V shows your recent copies and you click one to paste it.",
+      faq: [
+        { q: "Does clipboard history survive a restart?", a: "Only pinned items do. Pin anything you want to keep. The rest is cleared when the PC restarts." },
+        { q: "Is it safe to copy passwords?", a: "Not on a shared PC, because anyone at the keyboard can press Windows + V. Use Clear all in the same panel if something sensitive got in." },
+        { q: "Can it sync between PCs?", a: "Yes, there's a sync option under Settings > System > Clipboard when you're signed in with a Microsoft account. Leave it off if you don't need it." },
+      ],
+      useWhen: "Use it when you copied something ten minutes ago and have since copied three other things.",
+      notFor: "It only keeps the last 25 items, and everything unpinned is gone after a restart.",
+      alternatives: [
+        { name: "Ditto", kind: "tool", pickIt: "You copy and paste all day and want a searchable history that survives restarts.", pickThis: "You only need the last few copies back and don't want another app running." },
+        { name: "Paste into Notepad as you go", kind: "manual", pickIt: "You are collecting bits for one document and want to see them all at once.", pickThis: "You don't want to stop and switch windows every time you copy." },
+      ],
+      compareWith: ["ditto-vs-windows-clipboard-history"],
     },
     steps: [
       "Press the Windows key + V.",
@@ -118,8 +141,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "windows-emoji",
-    title: "Open the emoji panel with Windows + period",
+    slug: "how-to-open-the-emoji-panel-in-windows-11",
+    title: "How to open the emoji panel in Windows 11",
     summary: "The same panel has symbols and special characters, not just faces.",
     category: "productivity",
     platforms: ["windows"],
@@ -127,12 +150,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can insert a character that is not on the keyboard without hunting through Character Map.",
-    task: {
-      slug: "windows-emoji-panel",
-      title: "How to open emoji and symbols in Windows 11",
-      h1: "How to open emoji and symbols in Windows 11",
-      intro:
-        "Windows 11 puts emoji, kaomoji, and symbols in one panel. Windows + period opens it in any text field.",
+    intents: ["windows-11-keyboard-shortcuts"],
+    redirectFrom: ["/tips/windows-emoji", "/fix/windows-emoji-panel"],
+    seo: {
+      searchPhrase: "how to open the emoji panel in windows 11",
+      searchAlternates: ["windows period shortcut", "type symbols in windows 11", "how to type an em dash on windows"],
+      answer: "Click in a text field and press Windows + period (.). The panel has emoji, plus a symbols tab for arrows, currency and punctuation like the em dash.",
+      faq: [
+        { q: "Is there another shortcut for the emoji panel?", a: "Windows + semicolon (;) opens the same panel." },
+        { q: "Where are characters like é or ©?", a: "In the symbols tab of the same panel. It's quicker than copying them from a website." },
+      ],
     },
     steps: [
       "Click in a text field.",
@@ -143,8 +170,8 @@ export const catalogA: TipDraft[] = [
     body: ["The symbol tab is the useful one. It is faster than searching the web for how to type an em dash."],
   },
   {
-    slug: "windows-snap",
-    title: "Snap a window to half the screen",
+    slug: "how-to-snap-windows-side-by-side-in-windows-11",
+    title: "How to snap windows side by side in Windows 11",
     summary: "Hover the maximize button, or press Windows + Z, and pick a layout.",
     category: "productivity",
     platforms: ["windows"],
@@ -152,14 +179,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Two documents side by side is a drag-and-hope job until you use the layout picker.",
-    task: {
-      slug: "snap-windows",
-      title: "How to snap windows in Windows 11",
-      h1: "How to snap windows in Windows 11",
-      intro:
-        "Windows 11 snap layouts put a window in a half, a third, or a quarter of the screen. You can open the picker from the maximize button or with Windows + Z.",
+    intents: ["split-screen", "windows-11-keyboard-shortcuts"],
+    redirectFrom: ["/tips/windows-snap", "/fix/snap-windows"],
+    seo: {
+      searchPhrase: "how to snap windows side by side in windows 11",
+      searchAlternates: ["windows z snap layouts", "split screen windows 11", "windows arrow key snap"],
+      answer: "Hover the maximize button and click a zone in the layout grid, or press Windows + Z. For a quick half, press Windows + Left or Right arrow.",
+      faq: [
+        { q: "Why don't snap layouts appear?", a: "Snap may be off. Turn on Snap windows in Settings > System > Multitasking." },
+        { q: "Can I snap more than two windows?", a: "Yes. The grid has three- and four-zone layouts on most screens, and Windows offers your other open windows for the empty zones." },
+      ],
     },
-    tasks: ["split-screen"],
     steps: [
       "Hover the maximize button on a window until the layout grid appears.",
       "Click the zone you want. Or press Windows + Z and then the number of that zone.",
@@ -170,8 +200,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "mac-window-tiling",
-    title: "Tile a Mac window by dragging it to the edge",
+    slug: "how-to-tile-windows-side-by-side-on-a-mac",
+    title: "How to tile windows side by side on a Mac",
     summary: "Drag to the left or right edge, or hover the green button and pick a layout.",
     category: "productivity",
     platforms: ["mac"],
@@ -179,14 +209,23 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You get the Windows snap behavior without a third-party window manager.",
-    task: {
-      slug: "tile-mac-windows",
-      title: "How to tile windows on a Mac",
-      h1: "How to tile windows on a Mac",
-      intro:
-        "Current macOS, including Tahoe, can tile a window when you drag it to a screen edge or use the green button. The Window menu has the same layouts if you would rather not drag.",
+    intents: ["split-screen"],
+    redirectFrom: ["/tips/mac-window-tiling", "/fix/tile-mac-windows"],
+    seo: {
+      searchPhrase: "how to tile windows side by side on a mac",
+      searchAlternates: ["mac split screen", "macos sequoia window tiling", "snap windows on mac"],
+      answer: "On macOS Sequoia or later, drag a window to the left or right edge of the screen and let go, or hover over the green button and pick a half or a quarter.",
+      faq: [
+        { q: "Do I still need an app like Rectangle?", a: "Not for halves and quarters. Rectangle still helps if you want more layouts and your own shortcuts, or if the Mac is on a macOS older than Sequoia." },
+        { q: "How do I stop windows tiling by accident?", a: "Go to System Settings > Desktop & Dock > Windows and turn off dragging windows to the screen edge." },
+      ],
+      notFor: "It needs macOS Sequoia or later, and it has no thirds or custom sizes.",
+      alternatives: [
+        { name: "Rectangle", kind: "tool", pickIt: "You want thirds, a wide-monitor layout, or a shortcut for every position. It's free.", pickThis: "Halves and quarters are all you need." },
+        { name: "Split View", kind: "built-in", pickIt: "You want two apps full screen with nothing else showing. Hover over the green button and pick a full-screen tile.", pickThis: "You want to keep the menu bar, the Dock and other windows around." },
+      ],
+      compareWith: ["mac-window-tiling-vs-rectangle"],
     },
-    tasks: ["split-screen"],
     steps: [
       "Drag a window to the left or right edge until a highlighted area appears, then release.",
       "Or hover the green button at the top left of the window and choose a half or a quarter.",
@@ -196,8 +235,8 @@ export const catalogA: TipDraft[] = [
     body: ["Hold the Option key while dragging if you want the tile to happen without waiting for the highlight. That option is also in the same Windows section of Desktop & Dock."],
   },
   {
-    slug: "windows-virtual-desktops",
-    title: "Put a meeting on its own desktop",
+    slug: "how-to-use-virtual-desktops-in-windows-11",
+    title: "How to use virtual desktops in Windows 11",
     summary: "Windows + Ctrl + D makes a new desktop. Windows + Ctrl + arrows moves between them.",
     category: "productivity",
     platforms: ["windows"],
@@ -205,12 +244,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "The chat and the document stop covering each other.",
-    task: {
-      slug: "virtual-desktops",
-      title: "How to use virtual desktops in Windows 11",
-      h1: "How to use virtual desktops in Windows 11",
-      intro:
-        "Windows 11 virtual desktops are extra screens you switch with the keyboard. A call can stay on one desktop while the work stays on another.",
+    intents: ["windows-11-keyboard-shortcuts"],
+    redirectFrom: ["/tips/windows-virtual-desktops", "/fix/virtual-desktops"],
+    seo: {
+      searchPhrase: "how to use virtual desktops in windows 11",
+      searchAlternates: ["windows ctrl d", "switch desktops in windows 11", "multiple desktops windows"],
+      answer: "Press Windows + Ctrl + D to make a new desktop, and Windows + Ctrl + Left or Right arrow to switch between them.",
+      faq: [
+        { q: "How do I move a window to another desktop?", a: "Press Windows + Tab, then drag the window onto the desktop you want at the bottom of the screen." },
+        { q: "How do I close a desktop?", a: "Press Windows + Ctrl + F4. The windows on it move to the next desktop. They don't close." },
+      ],
     },
     steps: [
       "Press Windows + Ctrl + D to create a desktop.",
@@ -221,8 +264,8 @@ export const catalogA: TipDraft[] = [
     body: ["Desktops are cleared when you restart. They are a layout for the day, not a saved project."],
   },
   {
-    slug: "mac-finder-path-bar",
-    title: "Show the path at the bottom of every Finder window",
+    slug: "how-to-show-the-file-path-in-finder-on-a-mac",
+    title: "How to show the file path in Finder on a Mac",
     summary: "View > Show Path Bar. Double-click a folder in that bar to open it.",
     category: "mac",
     platforms: ["mac"],
@@ -230,14 +273,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can see which Downloads folder you are actually in, and jump up a level without the sidebar.",
-    task: {
-      slug: "finder-path-bar",
-      title: "How to show the Finder path bar",
-      h1: "How to show the Finder path bar",
-      intro:
-        "Finder can show the full path of the open folder along the bottom of the window. It is off by default. The switch is in the View menu.",
-    },
     apps: ["finder"],
+    redirectFrom: ["/tips/mac-finder-path-bar", "/fix/finder-path-bar"],
+    seo: {
+      searchPhrase: "how to show the file path in finder on a mac",
+      searchAlternates: ["finder path bar", "see folder path on mac", "where is this file on my mac"],
+      answer: "In Finder, choose View > Show Path Bar. The folder path appears at the bottom of every window, and you can double-click any folder in it to open it.",
+      faq: [
+        { q: "How do I copy a file's path?", a: "Right-click the file, hold Option, and choose Copy as Pathname." },
+        { q: "What's the status bar?", a: "A separate switch, View > Show Status Bar. It shows how many items are selected and how much space is left." },
+      ],
+    },
     steps: [
       "Click a Finder window so Finder is the front app.",
       "Choose View > Show Path Bar.",
@@ -246,8 +292,8 @@ export const catalogA: TipDraft[] = [
     body: ["View > Show Status Bar is the separate switch that shows how many files are selected. Turn that on too if you drag files around a lot."],
   },
   {
-    slug: "mac-force-quit",
-    title: "Force quit a frozen Mac app",
+    slug: "how-to-force-quit-a-frozen-app-on-a-mac",
+    title: "How to force quit a frozen app on a Mac",
     summary: "Command + Option + Escape. Unsaved work in that app is gone.",
     category: "mac",
     platforms: ["mac"],
@@ -255,12 +301,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You do not have to restart the Mac because one app stopped drawing.",
-    task: {
-      slug: "force-quit-mac",
-      title: "How to force quit an app on a Mac",
-      h1: "How to force quit an app on a Mac",
-      intro:
-        "Force Quit closes an app that is not responding. The shortcut is Command + Option + Escape. Anything you had not saved in that app is lost.",
+    intents: ["frozen-app", "mac-keyboard-shortcuts"],
+    redirectFrom: ["/tips/mac-force-quit", "/fix/force-quit-mac"],
+    seo: {
+      searchPhrase: "how to force quit a frozen app on a mac",
+      searchAlternates: ["command option escape", "mac app not responding", "spinning beach ball won't go away"],
+      answer: "Press Command + Option + Escape, select the stuck app and click Force Quit. Anything unsaved in that app is lost.",
+      faq: [
+        { q: "What if the whole Mac is frozen?", a: "Hold the power button for about ten seconds until it turns off, then turn it back on. Only do this when the pointer won't move at all." },
+        { q: "Should I force quit an app that's just slow?", a: "Not first. Try Command + Q, which quits normally and asks you to save. Force quit is for an app that won't respond." },
+      ],
     },
     steps: [
       "Press Command + Option + Escape.",
@@ -270,8 +320,8 @@ export const catalogA: TipDraft[] = [
     body: ["Use it when the beachball will not go away. For an app that is merely slow, Command + Q is the normal quit and it still asks you to save."],
   },
   {
-    slug: "windows-explorer-tabs",
-    title: "Open a second folder in a File Explorer tab",
+    slug: "how-to-use-tabs-in-file-explorer-on-windows-11",
+    title: "How to use tabs in File Explorer on Windows 11",
     summary: "Ctrl + T in File Explorer. Drag a file onto the other tab to move it.",
     category: "windows",
     platforms: ["windows"],
@@ -279,12 +329,15 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Moving files between two folders stops meaning two windows and a careful drag across the screen.",
-    task: {
-      slug: "file-explorer-tabs",
-      title: "How to use tabs in File Explorer",
-      h1: "How to use tabs in File Explorer",
-      intro:
-        "Windows 11 File Explorer has tabs. Ctrl + T opens one. You can drag a file onto a tab to drop it into that folder.",
+    redirectFrom: ["/tips/windows-explorer-tabs", "/fix/file-explorer-tabs"],
+    seo: {
+      searchPhrase: "how to use tabs in file explorer on windows 11",
+      searchAlternates: ["file explorer ctrl t", "file explorer tabs", "move files between explorer tabs"],
+      answer: "In File Explorer, press Ctrl + T for a new tab, Ctrl + Tab to switch, and Ctrl + W to close one. Drag a file onto another tab to move it there.",
+      faq: [
+        { q: "Does Windows 10 have File Explorer tabs?", a: "No. Tabs are a Windows 11 feature." },
+        { q: "Can I open a folder straight into a new tab?", a: "Yes. Right-click the folder and choose Open in new tab, or middle-click it." },
+      ],
     },
     steps: [
       "Open File Explorer.",
@@ -295,8 +348,8 @@ export const catalogA: TipDraft[] = [
     body: ["This is Windows 11. Windows 10 File Explorer does not have these tabs."],
   },
   {
-    slug: "windows-voice-typing",
-    title: "Dictate into any text field with Windows + H",
+    slug: "how-to-use-voice-typing-in-windows-11",
+    title: "How to use voice typing in Windows 11",
     summary: "Put the cursor where the words should go, then press Windows + H and talk.",
     category: "windows",
     platforms: ["windows"],
@@ -304,12 +357,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A rough first draft is faster spoken than typed, and you can fix it after.",
-    task: {
-      slug: "windows-voice-typing",
-      title: "How to use voice typing in Windows 11",
-      h1: "How to use voice typing in Windows 11",
-      intro:
-        "Windows 11 voice typing turns speech into text in the field where the cursor is. The shortcut is Windows + H. It needs a network connection.",
+    intents: ["windows-11-keyboard-shortcuts"],
+    redirectFrom: ["/tips/windows-voice-typing", "/fix/windows-voice-typing"],
+    seo: {
+      searchPhrase: "how to use voice typing in windows 11",
+      searchAlternates: ["windows h dictation", "speech to text windows 11", "dictate instead of typing on windows"],
+      answer: "Click where you want the words to go, press Windows + H and start talking. Press Windows + H again to stop.",
+      faq: [
+        { q: "How do I add punctuation?", a: "Say it: comma, period, question mark, new line. You can also turn on automatic punctuation from the settings gear in the voice typing bar." },
+        { q: "Why does nothing happen when I press Windows + H?", a: "Check the microphone isn't muted, then look at Settings > Time & language > Speech." },
+      ],
     },
     steps: [
       "Click in the text field you want to write in.",
@@ -320,8 +377,8 @@ export const catalogA: TipDraft[] = [
     body: ["If nothing happens, check Settings > Time & language > Speech and confirm online speech recognition is available. A muted microphone is the other common cause."],
   },
   {
-    slug: "mac-dictation",
-    title: "Turn on dictation and use the shortcut your Mac shows",
+    slug: "how-to-turn-on-dictation-on-a-mac",
+    title: "How to turn on dictation on a Mac",
     summary: "The on switch is in Keyboard settings. The shortcut is printed next to it.",
     category: "mac",
     platforms: ["mac"],
@@ -329,12 +386,15 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "You do not have to remember whether your Mac wants the microphone key or a double-tap of Fn.",
-    task: {
-      slug: "mac-dictation",
-      title: "How to turn on dictation on a Mac",
-      h1: "How to turn on dictation on a Mac",
-      intro:
-        "macOS dictation is in Keyboard settings. The keystroke is shown next to the switch because it has changed between keyboard models. Read the one on your Mac.",
+    redirectFrom: ["/tips/mac-dictation", "/fix/mac-dictation"],
+    seo: {
+      searchPhrase: "how to turn on dictation on a mac",
+      searchAlternates: ["mac speech to text", "dictation shortcut mac", "voice typing on mac"],
+      answer: "Open System Settings > Keyboard and turn Dictation on. The shortcut is printed next to the switch. Press it in any text field and talk.",
+      faq: [
+        { q: "What's the dictation shortcut on a Mac?", a: "Usually the Microphone key, or pressing Control twice on Macs without that key. The one your Mac uses is shown next to the Dictation switch." },
+        { q: "Is Dictation the same as Voice Control?", a: "No. Dictation types what you say. Voice Control, under Accessibility, runs the whole Mac by voice." },
+      ],
     },
     steps: [
       "Open System Settings > Keyboard.",
@@ -345,8 +405,8 @@ export const catalogA: TipDraft[] = [
     body: ["Press the shortcut again to stop. Dictation is not the same as Voice Control, which is the full hands-free mode under Accessibility."],
   },
   {
-    slug: "chrome-tab-search",
-    title: "Search your open Chrome tabs instead of reading the tab strip",
+    slug: "how-to-search-open-tabs-in-chrome",
+    title: "How to search open tabs in Chrome",
     summary: "Ctrl + Shift + A on Windows. Command + Shift + A on a Mac.",
     category: "browser",
     platforms: ["chrome"],
@@ -354,14 +414,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Twenty tabs stop being a visual scan.",
-    task: {
-      slug: "search-open-tabs",
-      title: "How to search open tabs in Chrome",
-      h1: "How to search open tabs in Chrome",
-      intro:
-        "Chrome can filter every open tab by title or address. The shortcut is Ctrl + Shift + A on Windows and Linux, and Command + Shift + A on a Mac.",
+    intents: ["tabs"],
+    redirectFrom: ["/tips/chrome-tab-search", "/fix/search-open-tabs"],
+    seo: {
+      searchPhrase: "how to search open tabs in chrome",
+      searchAlternates: ["chrome tab search shortcut", "ctrl shift a chrome", "find a tab in chrome"],
+      answer: "Press Ctrl + Shift + A in Chrome (Command + Shift + A on a Mac), type part of the page title or address, and press Enter to jump to that tab.",
+      faq: [
+        { q: "Is there a button for tab search?", a: "Yes. It's the small downward arrow at the corner of the tab strip." },
+        { q: "Can I search tabs from the address bar?", a: "Type @tabs, press Tab, then type what you're looking for." },
+      ],
     },
-    tasks: ["tabs"],
     steps: [
       "In Chrome, press Ctrl + Shift + A. On a Mac, press Command + Shift + A.",
       "Type any part of the page title or the address.",
@@ -374,8 +437,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "claude-projects",
-    title: "Put one piece of work in a Claude project",
+    slug: "how-to-use-project-instructions-in-claude",
+    title: "How to use project instructions in Claude",
     summary: "Project instructions stay in that project. They do not leak into every chat.",
     category: "ai",
     platforms: [],
@@ -383,15 +446,19 @@ export const catalogA: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 3,
     why: "Standing rules for one client or one repo stop showing up when you ask an unrelated question.",
-    task: {
-      slug: "claude-project-instructions",
-      title: "How to use Claude project instructions",
-      h1: "How to use Claude project instructions",
-      intro:
-        "A Claude project is a separate workspace with its own chats. Instructions on the project apply only there. Free accounts can create a few projects. The instructions field is not offered on every plan.",
-    },
-    tasks: ["ai-prompts"],
     apps: ["claude"],
+    intents: ["ai-prompts"],
+    redirectFrom: ["/tips/claude-projects", "/fix/claude-project-instructions"],
+    seo: {
+      searchPhrase: "how to use project instructions in claude",
+      searchAlternates: ["claude projects", "claude project custom instructions", "claude instructions for one task"],
+      answer: "Create a project from the Claude sidebar, write the rules for that work in its instructions field, and start chats from inside the project so the rules apply.",
+      faq: [
+        { q: "What's the difference between project instructions and Instructions for Claude?", a: "Project instructions only apply inside that project. Instructions for Claude, in Settings, shape every chat." },
+        { q: "Why don't I see an instructions field?", a: "Your plan may not include it. Paste the same rules at the top of the chat instead." },
+      ],
+      compareWith: ["chatgpt-vs-claude-vs-gemini"],
+    },
     steps: [
       "In Claude, open Projects from the sidebar and create one.",
       "If you see a project instructions field, write the rules for that work only.",
@@ -403,8 +470,8 @@ export const catalogA: TipDraft[] = [
     ],
   },
   {
-    slug: "chrome-task-manager",
-    title: "See which Chrome tab is using the memory",
+    slug: "how-to-see-which-chrome-tab-is-using-the-most-memory",
+    title: "How to see which Chrome tab is using the most memory",
     summary: "Shift + Esc opens Chrome's own task manager. End the process that is the problem.",
     category: "browser",
     platforms: ["chrome"],
@@ -412,14 +479,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can close the runaway tab or extension instead of quitting the whole browser.",
-    task: {
-      slug: "chrome-task-manager",
-      title: "How to open Chrome's task manager",
-      h1: "How to open Chrome's task manager",
-      intro:
-        "Chrome has a task manager separate from the operating system. Shift + Esc opens it. You can sort by memory and end one tab or one extension.",
+    intents: ["tabs", "speed-up-slow-windows-laptop", "frozen-app"],
+    redirectFrom: ["/tips/chrome-task-manager", "/fix/chrome-task-manager"],
+    seo: {
+      searchPhrase: "how to see which chrome tab is using the most memory",
+      searchAlternates: ["chrome task manager shift esc", "chrome using too much memory", "end process chrome tab"],
+      answer: "Press Shift + Esc while Chrome is in front to open its task manager, click the Memory column to sort, and end the tab or extension that's hogging it.",
+      faq: [
+        { q: "What happens when I end a tab's process?", a: "The tab closes or shows a crash page you can reload. Save anything you typed first." },
+        { q: "Is there a menu path?", a: "Chrome menu > More tools > Task manager. Use that on a Mac if Shift + Esc doesn't work." },
+      ],
     },
-    tasks: ["tabs"],
     steps: [
       "Click Chrome so it is the focused app.",
       "Press Shift + Esc.",
@@ -429,8 +499,8 @@ export const catalogA: TipDraft[] = [
     body: ["On a Mac the same shortcut works while Chrome is focused. If it does not, use the Chrome menu > More tools > Task manager."],
   },
   {
-    slug: "chrome-memory-saver",
-    title: "Let Chrome sleep the tabs you are not looking at",
+    slug: "how-to-stop-chrome-using-so-much-memory",
+    title: "How to stop Chrome using so much memory",
     summary: "Settings > Performance > Memory Saver. Inactive tabs reload when you return.",
     category: "browser",
     platforms: ["chrome"],
@@ -438,12 +508,21 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "A laptop with a lot of tabs stays usable, at the cost of a reload when you go back.",
-    task: {
-      slug: "chrome-memory-saver",
-      title: "How to turn on Chrome Memory Saver",
-      h1: "How to turn on Chrome Memory Saver",
-      intro:
-        "Chrome Memory Saver discards inactive tabs and reloads them when you click back. The switch is in Settings > Performance. You can exempt sites that should stay awake, such as mail or music.",
+    intents: ["speed-up-slow-windows-laptop"],
+    redirectFrom: ["/tips/chrome-memory-saver", "/fix/chrome-memory-saver"],
+    seo: {
+      searchPhrase: "how to stop chrome using so much memory",
+      searchAlternates: ["chrome memory saver", "chrome performance settings", "chrome slowing down my laptop"],
+      answer: "Turn on Memory Saver in Chrome Settings > Performance. Tabs you aren't using go to sleep and reload when you click them.",
+      faq: [
+        { q: "Do sleeping tabs lose my place?", a: "No. The tab and its address stay. Unsaved text in a form can be lost if the site didn't save it." },
+        { q: "How do I keep one site always awake?", a: "Add it under Always keep these sites active on the same Performance page. Mail and music sites are the usual ones." },
+      ],
+      notFor: "Sleeping tabs don't free memory used by extensions. Check those in Chrome's task manager.",
+      alternatives: [
+        { name: "Close tabs you won't read", kind: "manual", pickIt: "You have forty tabs open 'for later'. A bookmark folder is honest about that.", pickThis: "You really do come back to those tabs every day." },
+        { name: "Chrome task manager", kind: "built-in", pickIt: "One tab or extension is the problem and you want to end just that one.", pickThis: "You want Chrome to manage memory without you." },
+      ],
     },
     steps: [
       "In Chrome, open Settings > Performance. The address chrome://settings/performance opens the same page.",
@@ -454,8 +533,8 @@ export const catalogA: TipDraft[] = [
     body: ["A sleeping tab is still open. It is not closed, and you do not lose the address. You do lose unsaved text in that tab if the site did not save it."],
   },
   {
-    slug: "chrome-qr-code",
-    title: "Make a QR code for the page you are on",
+    slug: "how-to-make-a-qr-code-for-a-website-in-chrome",
+    title: "How to make a QR code for a website in Chrome",
     summary: "Chrome menu > Cast, save, and share > Create QR code. The other person scans it.",
     category: "browser",
     platforms: ["chrome"],
@@ -463,12 +542,15 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Handing a URL to a phone stops being a matter of reading it aloud.",
-    task: {
-      slug: "chrome-page-qr-code",
-      title: "How to make a QR code for a Chrome page",
-      h1: "How to make a QR code for a Chrome page",
-      intro:
-        "Desktop Chrome can build a QR code for the current page. The control is in the Chrome menu under Cast, save, and share. The other person scans it with their camera.",
+    redirectFrom: ["/tips/chrome-qr-code", "/fix/chrome-page-qr-code"],
+    seo: {
+      searchPhrase: "how to make a qr code for a website in chrome",
+      searchAlternates: ["chrome create qr code", "share a web page with a qr code", "qr code for a url"],
+      answer: "Open the page, click the three-dot Chrome menu, then Cast, save, and share > Create QR code. The other person scans it, or you download the image.",
+      faq: [
+        { q: "Is the Chrome QR code free?", a: "Yes. Chrome makes it on your computer, with no account and no tracking link in between." },
+        { q: "Does the code include the whole address?", a: "Yes, including everything after the ? in the URL. Check for private tokens before you share it." },
+      ],
     },
     steps: [
       "Open the page you want to share.",
@@ -479,8 +561,8 @@ export const catalogA: TipDraft[] = [
     body: ["The code points at the address in the bar, including a long query string. Check the address before you share a page that has a private token in the URL."],
   },
   {
-    slug: "chrome-translate-page",
-    title: "Translate a page from the address bar or the right-click menu",
+    slug: "how-to-translate-a-web-page-in-chrome",
+    title: "How to translate a web page in Chrome",
     summary: "Use the translate icon, or right-click the page and choose Translate.",
     category: "browser",
     platforms: ["chrome"],
@@ -488,12 +570,15 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can read the page without pasting it into another site.",
-    task: {
-      slug: "translate-chrome-page",
-      title: "How to translate a page in Chrome",
-      h1: "How to translate a page in Chrome",
-      intro:
-        "Chrome translates a page in place. The offer usually appears as an icon in the address bar. If it does not, the right-click menu still has the command.",
+    redirectFrom: ["/tips/chrome-translate-page", "/fix/translate-chrome-page"],
+    seo: {
+      searchPhrase: "how to translate a web page in chrome",
+      searchAlternates: ["chrome translate", "translate website to english", "chrome translate not showing"],
+      answer: "Click the translate icon in Chrome's address bar and pick your language. If there's no icon, right-click an empty part of the page and choose Translate to English.",
+      faq: [
+        { q: "Why isn't Chrome offering to translate?", a: "You may have told it never to translate that language. Check Settings > Languages." },
+        { q: "Is the translation accurate?", a: "Good enough for a menu, a review or a settings page. Don't rely on it for anything legal or medical." },
+      ],
     },
     steps: [
       "Open the page.",
@@ -504,8 +589,8 @@ export const catalogA: TipDraft[] = [
     body: ["Translation is approximate. Do not use it for a legal or medical decision. It is fine for a menu, a review, or a settings page."],
   },
   {
-    slug: "chrome-notification-sites",
-    title: "Stop websites from asking to send notifications",
+    slug: "how-to-stop-website-notifications-in-chrome",
+    title: "How to stop website notifications in Chrome",
     summary: "Set the Chrome default to Don't allow, then revoke the sites you already accepted.",
     category: "privacy",
     platforms: ["chrome"],
@@ -513,14 +598,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "The prompt is how random sites get a permanent channel onto your desktop.",
-    task: {
-      slug: "block-site-notifications",
-      title: "How to block website notifications in Chrome",
-      h1: "How to block website notifications in Chrome",
-      intro:
-        "Chrome lets you refuse notification prompts by default and remove the sites you already allowed. The page is Settings > Privacy and security > Site settings > Notifications.",
+    intents: ["privacy-checkup", "notifications"],
+    redirectFrom: ["/tips/chrome-notification-sites", "/fix/block-site-notifications"],
+    seo: {
+      searchPhrase: "how to stop website notifications in chrome",
+      searchAlternates: ["chrome block notifications", "stop sites asking to show notifications", "notification spam in chrome"],
+      answer: "In Chrome Settings > Privacy and security > Site settings > Notifications, choose Don't allow sites to send notifications. Then block any site in the Allowed list that you don't want.",
+      faq: [
+        { q: "I get pop-up ads in the corner of my screen. Is this the cause?", a: "Often, yes. Spammy sites ask for notification permission and then send ads. Find the site in the Allowed list and block it." },
+        { q: "Will this block Gmail or Calendar notifications?", a: "Only if you block them. Leave the sites you rely on in the Allowed list." },
+      ],
     },
-    tasks: ["privacy-checkup", "notifications"],
     steps: [
       "Open Chrome Settings > Privacy and security > Site settings > Notifications.",
       "Set the default to Don't allow sites to send notifications.",
@@ -529,8 +617,8 @@ export const catalogA: TipDraft[] = [
     body: ["Mail and calendar sites are the ones you might want to leave allowed. Everything else in that list is worth a look."],
   },
   {
-    slug: "chrome-password-checkup",
-    title: "Run Chrome's password checkup",
+    slug: "how-to-check-if-your-saved-passwords-were-leaked-in-chrome",
+    title: "How to check if your saved passwords were leaked in Chrome",
     summary: "Google Password Manager has a Checkup page for breached, reused, and weak passwords.",
     category: "privacy",
     platforms: ["chrome"],
@@ -538,14 +626,24 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 3,
     why: "You find out which saved password is already in a known breach, and you can change that one.",
-    task: {
-      slug: "chrome-password-checkup",
-      title: "How to check saved passwords in Chrome",
-      h1: "How to check saved passwords in Chrome",
-      intro:
-        "Chrome's password checkup compares the passwords saved in the browser with known breaches, and it flags reused and weak ones. It only knows about passwords Chrome has saved.",
+    intents: ["privacy-checkup"],
+    redirectFrom: ["/tips/chrome-password-checkup", "/fix/chrome-password-checkup"],
+    seo: {
+      searchPhrase: "how to check if your saved passwords were leaked in chrome",
+      searchAlternates: ["chrome password checkup", "google password manager compromised passwords", "check saved passwords in chrome"],
+      answer: "Open Chrome Settings > Autofill and passwords > Google Password Manager and run Checkup. It lists compromised, reused and weak passwords. Change those on each website.",
+      faq: [
+        { q: "Does Checkup see passwords saved in other apps?", a: "No. It only checks what Google Password Manager holds." },
+        { q: "Which passwords should I change first?", a: "The compromised ones, then any you reused on several sites, since one leak exposes the rest." },
+        { q: "Is Chrome's password manager good enough?", a: "For a lot of people, yes. A separate manager makes more sense if you use several browsers or share passwords with family." },
+      ],
+      notFor: "It only checks passwords saved in Google Password Manager.",
+      alternatives: [
+        { name: "Have I Been Pwned", kind: "tool", pickIt: "You want to know which breaches your email address showed up in, whatever password manager you use.", pickThis: "Your passwords already live in Chrome and you want the list of what to change." },
+        { name: "Bitwarden or 1Password reports", kind: "tool", pickIt: "Your passwords live in one of those managers rather than Chrome.", pickThis: "You use Chrome and Android only." },
+      ],
+      compareWith: ["1password-vs-bitwarden-vs-google-password-manager"],
     },
-    tasks: ["privacy-checkup"],
     steps: [
       "Open Chrome Settings > Autofill and passwords > Google Password Manager.",
       "Open Checkup. On some versions the button says Check passwords.",
@@ -556,8 +654,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "iphone-back-tap",
-    title: "Double-tap the back of your iPhone to run a shortcut",
+    slug: "how-to-use-back-tap-on-iphone",
+    title: "How to use Back Tap on iPhone",
     summary: "The back of the phone is a button. It does nothing until you assign it.",
     category: "iphone",
     platforms: ["iphone"],
@@ -565,12 +663,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Flashlight, camera, or a shortcut opens without finding the icon.",
-    task: {
-      slug: "back-tap",
-      title: "How to use Back Tap on iPhone",
-      h1: "How to use Back Tap on iPhone",
-      intro:
-        "Back Tap runs an action when you tap the back of an iPhone twice or three times. It is under Accessibility > Touch on iOS 18 and iOS 26, and it works through most cases.",
+    redirectFrom: ["/tips/iphone-back-tap", "/fix/back-tap"],
+    seo: {
+      searchPhrase: "how to use back tap on iphone",
+      searchAlternates: ["double tap back of iphone", "iphone back tap screenshot", "back tap not working"],
+      answer: "Go to Settings > Accessibility > Touch > Back Tap, pick Double Tap or Triple Tap, and choose an action like Flashlight or Screenshot. Then tap the back of the phone firmly.",
+      faq: [
+        { q: "Which iPhones have Back Tap?", a: "iPhone 8 and later, on iOS 14 or newer." },
+        { q: "Why doesn't Back Tap work with my case?", a: "Thick cases soften the tap. Tap harder near the camera before you give up on it." },
+        { q: "Can Back Tap run a shortcut?", a: "Yes. Shortcuts from the Shortcuts app show up in the action list." },
+      ],
     },
     steps: [
       "Open Settings > Accessibility > Touch > Back Tap.",
@@ -584,8 +686,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "iphone-one-handed-keyboard",
-    title: "Shrink the iPhone keyboard to one side",
+    slug: "how-to-turn-on-the-one-handed-keyboard-on-iphone",
+    title: "How to turn on the one-handed keyboard on iPhone",
     summary: "Settings > General > Keyboard > One-Handed Keyboard. Or long-press the globe key.",
     category: "iphone",
     platforms: ["iphone"],
@@ -593,14 +695,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A large phone becomes typeable with the thumb you are actually holding it with.",
-    task: {
-      slug: "iphone-one-handed-keyboard",
-      title: "How to turn on the one-handed iPhone keyboard",
-      h1: "How to turn on the one-handed iPhone keyboard",
-      intro:
-        "iOS can tuck the keyboard to the left or the right. The setting is under General > Keyboard, and there is a faster toggle on the globe key.",
+    intents: ["keyboard", "use-phone-with-one-hand"],
+    redirectFrom: ["/tips/iphone-one-handed-keyboard", "/fix/iphone-one-handed-keyboard"],
+    seo: {
+      searchPhrase: "how to turn on the one-handed keyboard on iphone",
+      searchAlternates: ["make iphone keyboard smaller", "move iphone keyboard to one side", "one handed typing iphone"],
+      answer: "Touch and hold the globe or emoji key and pick the left or right keyboard icon. The same option is in Settings > General > Keyboard > One-Handed Keyboard.",
+      faq: [
+        { q: "How do I get the full keyboard back?", a: "Tap the arrow on the empty side of the keyboard." },
+        { q: "Does it stay on?", a: "Yes, until you switch it back. Turn it off when the phone is on a table and you're typing with two thumbs." },
+      ],
     },
-    tasks: ["keyboard"],
     steps: [
       "Open Settings > General > Keyboard > One-Handed Keyboard and pick Left or Right.",
       "Or, while the keyboard is open, touch and hold the globe or emoji key and choose the left or right keyboard icon.",
@@ -609,8 +714,8 @@ export const catalogA: TipDraft[] = [
     body: ["The smaller keyboard is easier to reach and worse for two-thumb typing. Turn it off when the phone is on a table."],
   },
   {
-    slug: "iphone-reachability",
-    title: "Pull the top of the iPhone screen down",
+    slug: "how-to-reach-the-top-of-the-iphone-screen-with-one-hand",
+    title: "How to reach the top of the iPhone screen with one hand",
     summary: "Reachability drops the whole screen halfway so a thumb can hit the top row.",
     category: "iphone",
     platforms: ["iphone"],
@@ -618,12 +723,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "The status icons and the back button stop being a two-hand stretch.",
-    task: {
-      slug: "iphone-reachability",
-      title: "How to turn on Reachability on iPhone",
-      h1: "How to turn on Reachability on iPhone",
-      intro:
-        "Reachability slides the iPhone interface down so the top of the screen is in thumb range. On Face ID phones you swipe down on the bottom edge. The feature is often off.",
+    intents: ["use-phone-with-one-hand"],
+    redirectFrom: ["/tips/iphone-reachability", "/fix/iphone-reachability"],
+    seo: {
+      searchPhrase: "how to reach the top of the iphone screen with one hand",
+      searchAlternates: ["iphone reachability", "pull down iphone screen", "reachability not working"],
+      answer: "Turn on Reachability in Settings > Accessibility > Touch. Then swipe down on the bar at the bottom of the screen, and the top half drops within reach of your thumb.",
+      faq: [
+        { q: "How does Reachability work on an iPhone with a Home button?", a: "Lightly double-tap the Home button. A double press opens the app switcher instead." },
+        { q: "How do I put the screen back?", a: "Tap the empty area at the top, or just wait a few seconds." },
+      ],
     },
     steps: [
       "Open Settings > Accessibility > Touch.",
@@ -634,8 +743,8 @@ export const catalogA: TipDraft[] = [
     body: ["On an iPhone with a Home button, the gesture is a double-tap on that button, lightly, not a double-press that opens the app switcher."],
   },
   {
-    slug: "iphone-camera-level",
-    title: "Turn on the camera level so horizons stay straight",
+    slug: "how-to-turn-on-the-camera-level-on-iphone",
+    title: "How to turn on the camera level on iPhone",
     summary: "Settings > Camera > Composition > Level. A line appears, then turns yellow when you are level.",
     category: "iphone",
     platforms: ["iphone"],
@@ -643,12 +752,15 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You stop cropping a tilted photo later to hide the crooked horizon.",
-    task: {
-      slug: "iphone-camera-level",
-      title: "How to turn on the iPhone camera level",
-      h1: "How to turn on the iPhone camera level",
-      intro:
-        "The iPhone camera can show a level while you shoot. The switch is Settings > Camera, under Composition, on iOS 18 and iOS 26. Grid is the switch next to it.",
+    redirectFrom: ["/tips/iphone-camera-level", "/fix/iphone-camera-level"],
+    seo: {
+      searchPhrase: "how to turn on the camera level on iphone",
+      searchAlternates: ["iphone camera grid", "keep horizons straight in iphone photos", "iphone level not showing"],
+      answer: "Go to Settings > Camera and turn on Level under Composition. In the Camera app, a line in the middle turns solid yellow when the phone is level.",
+      faq: [
+        { q: "Why don't I see the level?", a: "It only shows in photo modes, and it fades once you're already level. Tilt the phone a little and it comes back." },
+        { q: "Should I turn on the grid too?", a: "If you like the rule-of-thirds lines, yes. It's the switch next to Level." },
+      ],
     },
     steps: [
       "Open Settings > Camera.",
@@ -658,8 +770,8 @@ export const catalogA: TipDraft[] = [
     body: ["The level shows for photo, not for every video mode. If you never see it, you are probably in a mode that hides it, or the phone is already level and the line has faded."],
   },
   {
-    slug: "iphone-battery-percentage",
-    title: "Show the battery percentage in the status bar",
+    slug: "how-to-show-battery-percentage-on-iphone",
+    title: "How to show battery percentage on iPhone",
     summary: "Settings > Battery > Battery Percentage. The number replaces the guesswork.",
     category: "iphone",
     platforms: ["iphone"],
@@ -667,14 +779,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A icon that looks half full is not a number you can plan an afternoon around.",
-    task: {
-      slug: "iphone-battery-percentage",
-      title: "How to show battery percentage on iPhone",
-      h1: "How to show battery percentage on iPhone",
-      intro:
-        "iOS can print the battery percentage next to the battery icon. The switch is Settings > Battery > Battery Percentage on iOS 18 and iOS 26.",
+    intents: ["save-battery"],
+    redirectFrom: ["/tips/iphone-battery-percentage", "/fix/iphone-battery-percentage"],
+    seo: {
+      searchPhrase: "how to show battery percentage on iphone",
+      searchAlternates: ["iphone battery percent in status bar", "battery number iphone", "iphone battery percentage missing"],
+      answer: "Go to Settings > Battery and turn on Battery Percentage. The number appears inside the battery icon at the top of the screen.",
+      faq: [
+        { q: "Can I see the percentage without turning this on?", a: "Yes. Swipe down from the top-right corner to open Control Center. The percentage shows there." },
+        { q: "Does the number show while charging?", a: "Yes. It's still the charge level, not the time left." },
+      ],
     },
-    tasks: ["save-battery"],
     steps: [
       "Open Settings > Battery.",
       "Turn Battery Percentage on.",
@@ -683,8 +798,8 @@ export const catalogA: TipDraft[] = [
     body: ["While the phone is charging, the number is still the charge level, not an estimate of time remaining. Low Power Mode is the other switch on this same screen."],
   },
   {
-    slug: "iphone-low-power-mode",
-    title: "Turn on Low Power Mode before the phone dies",
+    slug: "how-to-turn-on-low-power-mode-on-iphone",
+    title: "How to turn on Low Power Mode on iPhone",
     summary: "Settings > Battery > Low Power Mode, or ask Siri. The icon turns yellow.",
     category: "iphone",
     platforms: ["iphone"],
@@ -692,14 +807,18 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You get more time when you are away from a charger, by slowing the things you will not notice for an hour.",
-    task: {
-      slug: "iphone-low-power-mode",
-      title: "How to turn on Low Power Mode on iPhone",
-      h1: "How to turn on Low Power Mode on iPhone",
-      intro:
-        "Low Power Mode reduces background activity on an iPhone. Turn it on from Settings > Battery, from Control Center, or by asking Siri. The battery icon turns yellow.",
+    intents: ["save-battery"],
+    redirectFrom: ["/tips/iphone-low-power-mode", "/fix/iphone-low-power-mode"],
+    seo: {
+      searchPhrase: "how to turn on low power mode on iphone",
+      searchAlternates: ["iphone battery saver", "low power mode automatically", "make iphone battery last longer today"],
+      answer: "Go to Settings > Battery and turn on Low Power Mode, or tap the battery control in Control Center. The battery icon turns yellow while it's on.",
+      faq: [
+        { q: "What does Low Power Mode turn off?", a: "It slows mail fetch, background app refresh and some visual effects. Calls, texts and maps still work." },
+        { q: "Can it turn on by itself?", a: "The iPhone offers it at 20%. For a fully automatic switch, make a Shortcuts automation that runs when the battery drops below a level you pick." },
+        { q: "Is it bad to leave it on all the time?", a: "It doesn't hurt the battery. You just get slower background updates." },
+      ],
     },
-    tasks: ["save-battery"],
     steps: [
       "Open Settings > Battery and turn Low Power Mode on.",
       "Or open Control Center and tap the battery icon, if you have added that control.",
@@ -711,8 +830,8 @@ export const catalogA: TipDraft[] = [
     ],
   },
   {
-    slug: "iphone-night-shift",
-    title: "Schedule Night Shift so the screen warms up at sunset",
+    slug: "how-to-schedule-night-shift-on-iphone",
+    title: "How to schedule Night Shift on iPhone",
     summary: "Settings > Display & Brightness > Night Shift. Set it to sunset to sunrise.",
     category: "iphone",
     platforms: ["iphone"],
@@ -720,12 +839,15 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A cooler screen at midnight is harsher than it needs to be, and you will not remember to toggle it.",
-    task: {
-      slug: "iphone-night-shift",
-      title: "How to schedule Night Shift on iPhone",
-      h1: "How to schedule Night Shift on iPhone",
-      intro:
-        "Night Shift shifts the iPhone display toward amber on a schedule. The setting is Display & Brightness > Night Shift. Sunset to sunrise follows the clock and the location.",
+    redirectFrom: ["/tips/iphone-night-shift", "/fix/iphone-night-shift"],
+    seo: {
+      searchPhrase: "how to schedule night shift on iphone",
+      searchAlternates: ["warmer iphone screen at night", "night shift sunset to sunrise", "iphone blue light filter"],
+      answer: "Go to Settings > Display & Brightness > Night Shift, turn on Scheduled and pick Sunset to Sunrise or your own hours. Drag the slider to make it warmer.",
+      faq: [
+        { q: "Does Night Shift help me sleep?", a: "It makes the screen warmer. Whether that helps sleep is still argued about. Putting the phone down helps more." },
+        { q: "Is Night Shift the same as True Tone?", a: "No. True Tone adjusts to the room's light all day. You can use both." },
+      ],
     },
     steps: [
       "Open Settings > Display & Brightness > Night Shift.",
@@ -735,8 +857,8 @@ export const catalogA: TipDraft[] = [
     body: ["Night Shift is not a sleep treatment. It only changes the screen. True Tone, on the Display screen above it, is a different feature and can stay on at the same time."],
   },
   {
-    slug: "iphone-auto-lock",
-    title: "Shorten Auto-Lock so the screen does not stay on",
+    slug: "how-to-change-the-auto-lock-time-on-iphone",
+    title: "How to change the Auto-Lock time on iPhone",
     summary: "Settings > Display & Brightness > Auto-Lock. Thirty seconds is the impatient setting.",
     category: "privacy",
     platforms: ["iphone"],
@@ -744,14 +866,18 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A phone left face-up on a table stops showing whatever was open.",
-    task: {
-      slug: "iphone-auto-lock",
-      title: "How to change Auto-Lock on iPhone",
-      h1: "How to change Auto-Lock on iPhone",
-      intro:
-        "Auto-Lock is how long the iPhone waits before the screen sleeps. It is under Display & Brightness. A shorter time locks the phone sooner if you also require a passcode immediately.",
+    intents: ["privacy-checkup", "save-battery", "iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-auto-lock", "/fix/iphone-auto-lock"],
+    seo: {
+      searchPhrase: "how to change the auto-lock time on iphone",
+      searchAlternates: ["iphone screen timeout", "iphone screen turns off too fast", "iphone auto-lock greyed out"],
+      answer: "Go to Settings > Display & Brightness > Auto-Lock and pick a time. 30 seconds saves the most battery. Pick longer if you read on the phone.",
+      faq: [
+        { q: "Why is Auto-Lock greyed out?", a: "Low Power Mode fixes it at 30 seconds. Turn Low Power Mode off and you can change it." },
+        { q: "Does a shorter Auto-Lock save battery?", a: "Yes, a bit. The screen is one of the biggest power users, so less time on means more battery left." },
+        { q: "Why does my screen stay on during navigation?", a: "Some map and video apps keep it on on purpose. That's the app, not a broken setting." },
+      ],
     },
-    tasks: ["privacy-checkup"],
     steps: [
       "Open Settings > Display & Brightness > Auto-Lock.",
       "Pick 30 seconds if you want the screen to sleep quickly. Pick a longer time if you read on the phone.",
@@ -760,8 +886,8 @@ export const catalogA: TipDraft[] = [
     body: ["Auto-Lock never fires while you are looking at some navigation and video screens. If the phone stays on during a map, that is the app, not a broken timer."],
   },
   {
-    slug: "iphone-scan-documents",
-    title: "Scan a paper into Notes instead of photographing it crooked",
+    slug: "how-to-scan-a-document-with-your-iphone",
+    title: "How to scan a document with your iPhone",
     summary: "In a note, use the camera or attachment button and choose Scan Documents.",
     category: "productivity",
     platforms: ["iphone"],
@@ -769,14 +895,22 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "The scan straightens the page and saves a PDF-like image, which a casual photo does not.",
-    task: {
-      slug: "scan-documents-notes",
-      title: "How to scan a document in Apple Notes",
-      h1: "How to scan a document in Apple Notes",
-      intro:
-        "Apple Notes includes a document scanner. You start a note, then use the camera control or the attachment menu and choose Scan Documents. The control has moved between those two spots across iOS versions, so both are listed.",
-    },
     apps: ["notes"],
+    redirectFrom: ["/tips/iphone-scan-documents", "/fix/scan-documents-notes"],
+    seo: {
+      searchPhrase: "how to scan a document with your iphone",
+      searchAlternates: ["scan documents in notes", "iphone scanner without an app", "scan to pdf on iphone"],
+      answer: "Open Notes, start a note, tap the camera or paperclip button and choose Scan Documents. Hold the phone over the page and it captures it, cropped and straightened.",
+      faq: [
+        { q: "Do I need a scanner app?", a: "Not for everyday paperwork. Notes crops and straightens the page, and you can share the scan as a PDF." },
+        { q: "Can I scan several pages into one file?", a: "Yes. Keep scanning before you tap Save and they stay together." },
+        { q: "Can the Files app scan too?", a: "Yes. In Files, tap the three dots and choose Scan Documents to save straight to a folder." },
+      ],
+      alternatives: [
+        { name: "Files app scanner", kind: "built-in", pickIt: "You want the PDF saved straight into a folder or iCloud Drive.", pickThis: "You want the scan inside a note with your own text around it." },
+        { name: "Adobe Scan", kind: "tool", pickIt: "You need text recognition on the PDF and to fill in forms.", pickThis: "A clean picture of the page is enough." },
+      ],
+    },
     steps: [
       "Open Notes and start a new note.",
       "Tap the camera icon if you see one. If you do not, tap the attachment button (the paperclip) and find Scan Documents.",
@@ -786,8 +920,8 @@ export const catalogA: TipDraft[] = [
     body: ["You can scan several pages before you save. Keep them. A single photo of a contract is harder to read and harder to forward."],
   },
   {
-    slug: "iphone-type-to-siri",
-    title: "Type to Siri instead of saying the command out loud",
+    slug: "how-to-type-to-siri-on-iphone",
+    title: "How to type to Siri on iPhone",
     summary: "Turn on Type to Siri. The side button then gives you a text field.",
     category: "iphone",
     platforms: ["iphone"],
@@ -795,12 +929,15 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can set a timer or start a shortcut in a quiet room without talking to the phone.",
-    task: {
-      slug: "type-to-siri",
-      title: "How to type to Siri on iPhone",
-      h1: "How to type to Siri on iPhone",
-      intro:
-        "Type to Siri lets you enter a command on the keyboard. On iOS 18 and iOS 26 the switch is in Settings > Siri. Some phones label that row Apple Intelligence & Siri. It is the same screen.",
+    redirectFrom: ["/tips/iphone-type-to-siri", "/fix/type-to-siri"],
+    seo: {
+      searchPhrase: "how to type to siri on iphone",
+      searchAlternates: ["type to siri", "use siri without talking", "text siri instead of speaking"],
+      answer: "Turn on Type to Siri in Settings > Siri (search Settings for it if you can't find it). Pressing the side button then opens a text field instead of listening.",
+      faq: [
+        { q: "Is there another way to open it?", a: "On iPhones with Apple Intelligence, double-tap the bar at the bottom of the screen." },
+        { q: "Why does Siri still listen instead?", a: "The switch may not have stuck. Open the setting again and check it's on." },
+      ],
     },
     steps: [
       "Open Settings and tap Siri. If you do not see Siri, search Settings for Type to Siri.",
@@ -811,8 +948,8 @@ export const catalogA: TipDraft[] = [
     body: ["Typing is better for names and addresses, which speech recognition still mangles. Speaking is still better when your hands are full."],
   },
   {
-    slug: "iphone-unknown-callers",
-    title: "Send unknown callers straight to voicemail",
+    slug: "how-to-silence-unknown-callers-on-iphone",
+    title: "How to silence unknown callers on iPhone",
     summary: "Settings > Apps > Phone > Unknown Callers. Saved contacts still ring.",
     category: "iphone",
     platforms: ["iphone"],
@@ -820,12 +957,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Sales calls stop ringing. So do the doctor and the delivery driver, until you save their numbers.",
-    task: {
-      slug: "silence-unknown-callers",
-      title: "How to silence unknown callers on iPhone",
-      h1: "How to silence unknown callers on iPhone",
-      intro:
-        "iOS can send numbers that are not in your contacts straight to voicemail. On iOS 26 the switch is Settings > Apps > Phone > Unknown Callers. On iOS 18 the same switch is usually labeled Silence Unknown Callers.",
+    intents: ["iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-unknown-callers", "/fix/silence-unknown-callers"],
+    seo: {
+      searchPhrase: "how to silence unknown callers on iphone",
+      searchAlternates: ["stop spam calls on iphone", "send unknown numbers to voicemail", "silence unknown callers"],
+      answer: "Go to Settings > Apps > Phone and turn on Silence Unknown Callers. Numbers that aren't in your contacts go straight to voicemail. Contacts still ring.",
+      faq: [
+        { q: "Will I miss calls from a doctor or a delivery driver?", a: "They go to voicemail unless they're in your contacts or you called them recently. Turn it off on days you expect a call from a new number." },
+        { q: "Do silenced calls show up anywhere?", a: "Yes, in Recents, along with any voicemail they leave." },
+      ],
     },
     steps: [
       "Open Settings > Apps > Phone.",
@@ -838,8 +979,8 @@ export const catalogA: TipDraft[] = [
     ],
   },
   {
-    slug: "android-one-handed",
-    title: "Turn on one-handed mode on a Pixel",
+    slug: "how-to-turn-on-one-handed-mode-on-android",
+    title: "How to turn on one-handed mode on Android",
     summary: "Settings > System > Gestures > One-handed mode. Swipe down at the bottom to use it.",
     category: "android",
     platforms: ["android"],
@@ -847,12 +988,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "The top of a tall phone moves into reach for a moment, then goes back.",
-    task: {
-      slug: "android-one-handed-mode",
-      title: "How to turn on Android one-handed mode",
-      h1: "How to turn on Android one-handed mode",
-      intro:
-        "Pixel phones on Android 15 and 16 hide one-handed mode under System > Gestures. A swipe down near the bottom of the screen pulls the page lower. Samsung keeps a similar switch under Advanced features.",
+    intents: ["use-phone-with-one-hand"],
+    redirectFrom: ["/tips/android-one-handed", "/fix/android-one-handed-mode"],
+    seo: {
+      searchPhrase: "how to turn on one-handed mode on android",
+      searchAlternates: ["pixel one handed mode", "samsung one handed mode", "pull android screen down"],
+      answer: "On a Pixel, go to Settings > System > Gestures > One-handed mode and turn it on. Then swipe down near the bottom edge, and the screen drops within reach.",
+      faq: [
+        { q: "Where is one-handed mode on Samsung?", a: "Settings > Advanced features > One-handed mode." },
+        { q: "Does it shrink the keyboard?", a: "No. Gboard has its own one-handed layout in its settings." },
+      ],
     },
     steps: [
       "On a Pixel, open Settings > System > Gestures > One-handed mode and turn it on.",
@@ -863,8 +1008,8 @@ export const catalogA: TipDraft[] = [
     body: ["This moves the screen. It does not shrink the keyboard. Gboard has its own one-handed layout inside the keyboard settings if that is what you wanted."],
   },
   {
-    slug: "android-notification-history",
-    title: "Turn on notification history before you need it",
+    slug: "how-to-see-old-notifications-on-android",
+    title: "How to see old notifications on Android",
     summary: "Settings > Notifications > Notification history. It only stores alerts from the moment you enable it.",
     category: "android",
     platforms: ["android"],
@@ -872,14 +1017,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can read a notification you swiped away by reflex.",
-    task: {
-      slug: "android-notification-history",
-      title: "How to see dismissed notifications on Android",
-      h1: "How to see dismissed notifications on Android",
-      intro:
-        "Android notification history keeps alerts you have dismissed. On Pixel phones it is Settings > Notifications > Notification history. It starts empty and only records what arrives after you turn it on.",
+    intents: ["notifications"],
+    redirectFrom: ["/tips/android-notification-history", "/fix/android-notification-history"],
+    seo: {
+      searchPhrase: "how to see old notifications on android",
+      searchAlternates: ["android notification history", "recover a dismissed notification", "see deleted notifications android"],
+      answer: "Go to Settings > Notifications > Notification history and turn it on. After that, notifications you dismissed in the last 24 hours are listed there.",
+      faq: [
+        { q: "Can I see notifications from before I turned it on?", a: "No. It only starts recording when you switch it on, which is why it's worth doing now." },
+        { q: "How long are notifications kept?", a: "About 24 hours." },
+      ],
     },
-    tasks: ["notifications"],
     steps: [
       "Open Settings > Notifications.",
       "Turn Notification history on.",
@@ -888,8 +1036,8 @@ export const catalogA: TipDraft[] = [
     body: ["Turn it on now, while nothing is wrong. The alert you wanted was the one you dismissed before the feature was enabled, and that one is gone."],
   },
   {
-    slug: "android-do-not-disturb",
-    title: "Set Do Not Disturb to turn on by itself at night",
+    slug: "how-to-schedule-do-not-disturb-on-android",
+    title: "How to schedule Do Not Disturb on Android",
     summary: "The tile is in quick settings. The schedule is under Settings > Notifications.",
     category: "android",
     platforms: ["android"],
@@ -897,14 +1045,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "A night of sleep stops depending on you remembering to flip a tile.",
-    task: {
-      slug: "android-do-not-disturb",
-      title: "How to schedule Do Not Disturb on Android",
-      h1: "How to schedule Do Not Disturb on Android",
-      intro:
-        "Pixel phones put Do Not Disturb in quick settings for a one-off, and under Settings > Notifications for a schedule. You can still allow calls from contacts.",
+    intents: ["notifications", "focus"],
+    redirectFrom: ["/tips/android-do-not-disturb", "/fix/android-do-not-disturb"],
+    seo: {
+      searchPhrase: "how to schedule do not disturb on android",
+      searchAlternates: ["android quiet hours", "pixel do not disturb schedule", "do not disturb but allow calls"],
+      answer: "Go to Settings > Notifications > Do Not Disturb, add a schedule for the hours you sleep, and allow calls from contacts or favourites so family can still get through.",
+      faq: [
+        { q: "Do alarms still go off?", a: "Yes. Alarms ring during Do Not Disturb unless you change that." },
+        { q: "Why has a chat app gone silent?", a: "Do Not Disturb blocks app notifications unless you add that app as an exception." },
+      ],
     },
-    tasks: ["notifications", "focus"],
     steps: [
       "Swipe down twice from the top of the screen and tap the Do Not Disturb tile if you want it on right now.",
       "For a schedule, open Settings > Notifications > Do Not Disturb.",
@@ -914,8 +1065,8 @@ export const catalogA: TipDraft[] = [
     body: ["Alarms still sound. App notifications do not, unless you added that app to the exceptions. Check the exceptions list if a chat app goes silent and you did not want it to."],
   },
   {
-    slug: "android-app-timer",
-    title: "Put a daily timer on one app",
+    slug: "how-to-set-a-time-limit-on-an-app-on-android",
+    title: "How to set a time limit on an app on Android",
     summary: "Digital Wellbeing > Dashboard, open the app, and set a timer. The icon grays out when time is up.",
     category: "android",
     platforms: ["android"],
@@ -923,12 +1074,16 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "The limit is attached to the one app, not to a vague resolution.",
-    task: {
-      slug: "android-app-timer",
-      title: "How to set an app timer on Android",
-      h1: "How to set an app timer on Android",
-      intro:
-        "Digital Wellbeing on a Pixel can close an app after a daily limit. The dashboard is in Settings. When the timer ends, the app pauses and the icon looks gray. You can dismiss the pause.",
+    intents: ["focus"],
+    redirectFrom: ["/tips/android-app-timer", "/fix/android-app-timer"],
+    seo: {
+      searchPhrase: "how to set a time limit on an app on android",
+      searchAlternates: ["android app timer", "digital wellbeing app limit", "limit screen time on android"],
+      answer: "Go to Settings > Digital Wellbeing and parental controls > Dashboard, pick the app and tap the hourglass to set a daily limit. When time is up, the app is paused until midnight.",
+      faq: [
+        { q: "Can I get around the timer?", a: "Yes, unless parental controls lock it. It's a speed bump, and that's often enough." },
+        { q: "Does the timer reset every day?", a: "Yes, at midnight." },
+      ],
     },
     steps: [
       "Open Settings > Digital Wellbeing and parental controls.",
@@ -939,8 +1094,8 @@ export const catalogA: TipDraft[] = [
     body: ["Without a parental-control PIN, you can override the timer. It is a speed bump, not a lock. That is still enough for a lunch-break app."],
   },
   {
-    slug: "android-circle-to-search",
-    title: "Circle something on the screen to search it",
+    slug: "how-to-use-circle-to-search-on-android",
+    title: "How to use Circle to Search on Android",
     summary: "On a Pixel, hold the bar at the bottom, then circle the thing. No screenshot required.",
     category: "android",
     platforms: ["android"],
@@ -948,12 +1103,17 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can identify a product, a place, or a line of text without leaving the app you are in.",
-    task: {
-      slug: "circle-to-search",
-      title: "How to use Circle to Search on Android",
-      h1: "How to use Circle to Search on Android",
-      intro:
-        "Circle to Search looks up whatever is on the Android screen. On a Pixel you touch and hold the gesture bar. On a Samsung phone that has the feature, you touch and hold the home button.",
+    intents: ["copy-text"],
+    redirectFrom: ["/tips/android-circle-to-search", "/fix/circle-to-search"],
+    seo: {
+      searchPhrase: "how to use circle to search on android",
+      searchAlternates: ["circle to search pixel", "circle to search samsung", "search anything on my screen android"],
+      answer: "On a Pixel, touch and hold the bar at the bottom of the screen, then circle or tap what you want to search. On Samsung, touch and hold the home button.",
+      faq: [
+        { q: "Which phones have Circle to Search?", a: "Recent Pixel and Samsung Galaxy phones and some others. If holding the bar does nothing, the phone doesn't have it." },
+        { q: "Can I copy text with Circle to Search?", a: "Yes. Highlight text in the overlay and you get a Copy option." },
+        { q: "Is it private?", a: "The part you select goes to Google search. Don't use it on a screen showing passwords or someone else's messages." },
+      ],
     },
     steps: [
       "On a Pixel, touch and hold the horizontal bar at the bottom of the screen until the search overlay appears.",
@@ -965,8 +1125,8 @@ export const catalogA: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "gboard-clipboard",
-    title: "Use the clipboard that is built into Gboard",
+    slug: "how-to-use-the-gboard-clipboard-on-android",
+    title: "How to use the Gboard clipboard on Android",
     summary: "Tap the clipboard icon on the keyboard. Unpinned clips disappear after an hour.",
     category: "android",
     platforms: ["android"],
@@ -974,14 +1134,18 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You can copy a code, switch apps, and still have the code without copying it again.",
-    task: {
-      slug: "gboard-clipboard",
-      title: "How to open the Gboard clipboard",
-      h1: "How to open the Gboard clipboard",
-      intro:
-        "Gboard keeps a small clipboard inside the keyboard. The icon is on the toolbar. Clips that you do not pin are deleted after about an hour.",
-    },
     apps: ["gboard"],
+    intents: ["keyboard"],
+    redirectFrom: ["/tips/gboard-clipboard", "/fix/gboard-clipboard"],
+    seo: {
+      searchPhrase: "how to use the gboard clipboard on android",
+      searchAlternates: ["where is the clipboard on android", "android clipboard history", "gboard clipboard not showing"],
+      answer: "Open the keyboard and tap the clipboard icon in Gboard's toolbar. Your recent copies are listed there. Unpinned ones disappear after an hour.",
+      faq: [
+        { q: "Where is the clipboard on Android?", a: "There's no separate clipboard app on most phones. It lives in the keyboard, so in Gboard tap the clipboard icon." },
+        { q: "How do I keep a clip for later?", a: "Touch and hold it and tap Pin." },
+      ],
+    },
     steps: [
       "Open the keyboard in any text field.",
       "Tap the clipboard icon. If you do not see it, tap the four-square toolbar menu and add Clipboard.",

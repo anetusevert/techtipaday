@@ -102,17 +102,17 @@ export default function Home() {
 
       <section className="block">
         <div className="block-head">
-          <h2>Browse by job</h2>
-          <Link href="/fix">All fixes</Link>
+          <h2>Find one by task</h2>
+          <Link href="/how-to">All tasks</Link>
         </div>
         <ul className="hub-grid">
           {hubs.map(({ hub, count }) => (
             <li key={hub.slug}>
-              <Link href={`/fix/${hub.slug}`}>
+              <Link href={`/how-to/${hub.slug}`}>
                 <small>
                   {count} {count === 1 ? "tip" : "tips"}
                 </small>
-                <strong>{hub.h1}</strong>
+                <strong>{hub.title}</strong>
               </Link>
             </li>
           ))}

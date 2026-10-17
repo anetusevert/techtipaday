@@ -503,3 +503,77 @@ a.cal-day.live { background: var(--ink); color: var(--paper); font-weight: 700; 
   main { width: auto; }
   a { text-decoration: none; }
 }
+
+/* SEO baseline: answer-first tips, guides, comparisons */
+.answer {
+  font-size: 19px;
+  line-height: 1.5;
+  max-width: 62ch;
+  margin: 0 0 16px;
+  padding: 14px 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-left: 4px solid var(--green);
+  border-radius: 14px;
+}
+.faq details {
+  border-top: 1px solid var(--line);
+  padding: 12px 0;
+}
+.faq details:last-of-type { border-bottom: 1px solid var(--line); }
+.faq summary { cursor: pointer; list-style: none; }
+.faq summary::-webkit-details-marker { display: none; }
+.faq summary h3 { display: inline; margin: 0; font-size: 18px; line-height: 1.35; }
+.faq details p { margin: 8px 0 0; max-width: 62ch; }
+.guide-list { list-style: none; margin: 18px 0 0; padding: 0; display: grid; gap: 12px; }
+.guide-list > li {
+  display: grid;
+  grid-template-columns: 40px 1fr;
+  gap: 12px;
+  padding: 16px;
+  background: var(--card);
+  border: 1px solid var(--line);
+  border-radius: 18px;
+}
+.guide-no {
+  display: grid;
+  place-items: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 12px;
+  background: var(--green);
+  font-family: var(--serif);
+  font-weight: 600;
+  font-size: 18px;
+}
+.guide-list h2 { margin: 0 0 6px; font-size: 21px; line-height: 1.25; }
+.guide-list h2 a { text-decoration: none; }
+.guide-list h2 a:hover { text-decoration: underline; }
+.guide-list p { margin: 0 0 6px; }
+.guide-meta { color: var(--muted); font-size: 14px; font-weight: 600; }
+.table-wrap { overflow-x: auto; margin: 8px 0 20px; border: 1px solid var(--line); border-radius: 16px; background: var(--card); -webkit-overflow-scrolling: touch; }
+.compare-table { border-collapse: collapse; width: 100%; min-width: 520px; font-size: 15px; }
+.compare-table th, .compare-table td { padding: 10px 12px; text-align: left; vertical-align: top; border-bottom: 1px solid var(--line); }
+.compare-table tbody tr:last-child th, .compare-table tbody tr:last-child td { border-bottom: 0; }
+.compare-table thead th { font-family: var(--serif); font-size: 17px; background: var(--paper); }
+.compare-table tbody th { font-weight: 700; width: 26%; }
+.verdict { padding-left: 18px; display: grid; gap: 8px; }
+.option-grid { display: grid; gap: 12px; }
+.option-card { padding: 16px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+.option-card h3 { margin: 0; font-size: 22px; }
+.option-price { margin: 2px 0 10px; color: var(--muted); font-weight: 700; font-size: 14px; }
+.pros-cons { display: grid; gap: 4px 16px; margin-bottom: 12px; }
+.pros-cons ul { margin: 0 0 8px; padding-left: 18px; }
+.pros-cons .kicker { margin: 4px 0; }
+@media (min-width: 720px) {
+  .option-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+  .pros-cons { grid-template-columns: 1fr 1fr; }
+}
+.use-when .kicker { margin-top: 4px; }
+.use-when p:not(.kicker) { margin: 0 0 10px; }
+.alt-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 10px; }
+.alt-list li { padding: 14px 16px; background: var(--card); border: 1px solid var(--line); border-radius: 18px; }
+.alt-list h3 { margin: 0 0 6px; font-size: 19px; }
+.alt-list h3 small { margin-left: 6px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
+.alt-list p { margin: 0 0 4px; }
+.guide-note { color: var(--muted); font-size: 15px; }

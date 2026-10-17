@@ -17,19 +17,50 @@ export type PlatformId = (typeof PLATFORM_IDS)[number];
 
 export type Difficulty = "Easy" | "Moderate";
 
-export type TaskRef = {
-  slug: string;
-  title: string;
-  h1: string;
-  intro: string;
+export type FaqItem = { q: string; a: string };
+
+export type TipAlternative = {
+  /** A named app, the built-in setting on another device, or the manual way. */
+  name: string;
+  kind: "tool" | "built-in" | "manual";
+  /** When the alternative is the better pick. Be fair. */
+  pickIt: string;
+  /** When this tip is the better pick. */
+  pickThis: string;
+};
+
+/**
+ * Search fields for one tip. The daily routine fills these in for every new tip.
+ * Missing optional fields fall back to generated text (seoOf in lib/tips.ts). See docs/SEO.md.
+ */
+export type TipSeo = {
+  /** The exact phrase a person would type, lowercase. `slug` is slugify(searchPhrase) and `title` reads as the same words. */
+  searchPhrase: string;
+  /** 2-3 other ways people search for the same job. Used in llms.txt, search and JSON-LD, never stuffed into copy. */
+  searchAlternates: string[];
+  /** One to three sentences that answer the phrase outright. Shown first and used in the meta description. */
+  answer: string;
+  /** Two or three real follow-up questions. Rendered on the page and as FAQPage JSON-LD. */
+  faq?: FaqItem[];
+  /** The moment this tip helps. Fallback: `why`. */
+  useWhen?: string;
+  /** A real limit. Fallback: a line naming the devices it was written for. */
+  notFor?: string;
+  /** Other ways to get the same job done. Shown on the tip page and in llms-full.txt. */
+  alternatives?: TipAlternative[];
+  /** Slugs of /compare or /alternatives pages (lib/compare.ts). Unknown slugs fail the build. */
+  compareWith?: string[];
 };
 
 export type Tip = {
   n: number;
+  /** URL slug: slugify(seo.searchPhrase). Never change it without adding the old path to redirectFrom. */
   slug: string;
   /** Publication day, YYYY-MM-DD, Europe/Berlin. This is the tip's publishedAt. */
   date: string;
+  /** Title tag and H1. Same words as seo.searchPhrase, with normal capitalisation. */
   title: string;
+  /** One-line hook for cards and feeds. */
   summary: string;
   category: CategoryId;
   /** Extra topic hubs this tip also lists on. Device hubs use `platforms`. */
@@ -39,10 +70,12 @@ export type Tip = {
   difficulty: Difficulty;
   minutes: number;
   why: string;
-  task: TaskRef;
-  /** Group hubs under /fix/, in addition to task.slug. */
-  tasks?: string[];
+  /** Intent hub ids from lib/landings.ts (HUBS), 1-3. Unknown ids fail the build. A hub goes live once it has MIN_HUB_TIPS live tips. */
+  intents?: string[];
   apps?: string[];
+  /** Old paths that 301 to this tip. */
+  redirectFrom?: string[];
+  seo: TipSeo;
   steps: string[];
   body: string[];
   /** Editor's shortlist. Not a view count. */

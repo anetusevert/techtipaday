@@ -2,8 +2,8 @@ import type { TipDraft } from "./taxonomy";
 
 export const catalogB: TipDraft[] = [
   {
-    slug: "android-screenshot-crop",
-    title: "Crop an Android screenshot before you save it",
+    slug: "how-to-crop-a-screenshot-on-android",
+    title: "How to crop a screenshot on Android",
     summary: "Take the shot, tap the preview in the corner, then tap Crop.",
     category: "android",
     platforms: ["android"],
@@ -11,14 +11,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You share the relevant rectangle instead of your whole home screen.",
-    task: {
-      slug: "crop-android-screenshot",
-      title: "How to crop a screenshot on Android",
-      h1: "How to crop a screenshot on Android",
-      intro:
-        "On a Pixel, a screenshot preview sits in the corner for a few seconds. Open it and use Crop before it disappears. If you miss it, the same crop is in Photos.",
+    intents: ["screenshots"],
+    redirectFrom: ["/tips/android-screenshot-crop", "/fix/crop-android-screenshot"],
+    seo: {
+      searchPhrase: "how to crop a screenshot on android",
+      searchAlternates: ["pixel screenshot crop", "screenshot part of the screen android", "edit a screenshot android"],
+      answer: "Press Power and Volume down, tap the preview in the corner straight away, and choose Crop. If you miss it, open the screenshot in Google Photos and tap Edit > Crop.",
+      faq: [
+        { q: "Can I take a scrolling screenshot?", a: "On many phones, yes. Tap Capture more on the preview." },
+        { q: "Where do Android screenshots go?", a: "Into a Screenshots folder, which you'll find in Google Photos under Library." },
+      ],
     },
-    tasks: ["screenshots"],
     steps: [
       "Press Power and Volume down together.",
       "Tap the preview thumbnail before it slides away.",
@@ -28,8 +31,8 @@ export const catalogB: TipDraft[] = [
     body: ["The preview is easy to miss. Take the screenshot and tap immediately. You can still crop later, but the corner shortcut is the fast path."],
   },
   {
-    slug: "android-quick-share",
-    title: "Decide who is allowed to Quick Share files to you",
+    slug: "how-to-stop-strangers-sending-you-files-with-quick-share",
+    title: "How to stop strangers sending you files with Quick Share",
     summary: "Everyone means strangers nearby can offer you a file. Nearby, or contacts, is the calmer setting.",
     category: "android",
     platforms: ["android"],
@@ -37,12 +40,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "You can still send a photo across the table without leaving the phone open to the room.",
-    task: {
-      slug: "quick-share-visibility",
-      title: "How to change Quick Share visibility on Android",
-      h1: "How to change Quick Share visibility on Android",
-      intro:
-        "Quick Share is the Android file transfer that used to be called Nearby Share. On a Pixel the visibility setting is under Connected devices. Everyone is how a stranger in the same room can try to send you something.",
+    intents: ["android-privacy-settings"],
+    redirectFrom: ["/tips/android-quick-share", "/fix/quick-share-visibility"],
+    seo: {
+      searchPhrase: "how to stop strangers sending you files with quick share",
+      searchAlternates: ["quick share visibility", "nearby share settings", "android airdrop settings"],
+      answer: "Go to Settings > Connected devices > Connection preferences > Quick Share and set who can share with you to Contacts or Your devices. Switch to Everyone only while you're receiving a file.",
+      faq: [
+        { q: "Do I have to accept incoming files?", a: "Yes, from anyone who isn't one of your own devices. The visibility setting decides who is allowed to ask." },
+        { q: "Is Quick Share the same as Nearby Share?", a: "Yes. Google renamed Nearby Share to Quick Share." },
+      ],
     },
     steps: [
       "Open Settings > Connected devices > Connection preferences > Quick Share.",
@@ -52,8 +59,8 @@ export const catalogB: TipDraft[] = [
     body: ["You still have to accept an incoming file. The visibility setting decides who is allowed to ask."],
   },
   {
-    slug: "iphone-forget-wifi",
-    title: "Forget a Wi-Fi network that keeps failing to connect",
+    slug: "how-to-forget-a-wifi-network-on-iphone",
+    title: "How to forget a Wi-Fi network on iPhone",
     summary: "Settings > Wi-Fi, tap the i, then Forget This Network. Join it again and retype the password.",
     category: "wifi",
     platforms: ["iphone"],
@@ -61,14 +68,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "A half-saved configuration is a common reason a network you used to join now spins forever.",
-    task: {
-      slug: "forget-wifi-iphone",
-      title: "How to forget a Wi-Fi network on iPhone",
-      h1: "How to forget a Wi-Fi network on iPhone",
-      intro:
-        "Forgetting a Wi-Fi network on iPhone deletes the saved password and settings for that name. You then join it as if it were new. The control is the info button next to the network in Settings > Wi-Fi.",
+    intents: ["wifi", "wifi-slow"],
+    redirectFrom: ["/tips/iphone-forget-wifi", "/fix/forget-wifi-iphone"],
+    seo: {
+      searchPhrase: "how to forget a wifi network on iphone",
+      searchAlternates: ["iphone wifi won't connect", "remove saved wifi on iphone", "forget this network"],
+      answer: "Go to Settings > Wi-Fi, tap the (i) next to the network, then Forget This Network. Join it again and type the password fresh.",
+      faq: [
+        { q: "Does forgetting a network change the router password?", a: "No. It only removes the network from this iPhone." },
+        { q: "What if it still won't connect?", a: "If other devices connect fine, double-check the password. If nothing connects, restart the router." },
+      ],
     },
-    tasks: ["wifi", "wifi-slow"],
     steps: [
       "Open Settings > Wi-Fi.",
       "Tap the i next to the network that is misbehaving.",
@@ -78,8 +88,8 @@ export const catalogB: TipDraft[] = [
     body: ["This does not change the password on the router. If other devices still connect, the password you type should be the one they are using. If nothing connects, the router is the problem, not the phone."],
   },
   {
-    slug: "android-forget-wifi",
-    title: "Forget a saved Wi-Fi network on Android",
+    slug: "how-to-forget-a-wifi-network-on-android",
+    title: "How to forget a Wi-Fi network on Android",
     summary: "Open the network in Internet settings and tap Forget. Samsung hides it behind the gear icon.",
     category: "wifi",
     platforms: ["android"],
@@ -87,14 +97,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "The phone stops preferring a dead saved network over one that works.",
-    task: {
-      slug: "forget-wifi-android",
-      title: "How to forget a Wi-Fi network on Android",
-      h1: "How to forget a Wi-Fi network on Android",
-      intro:
-        "Forgetting a network on Android removes the saved login. On a Pixel the path is Settings > Network & internet > Internet. On a Samsung phone it is Settings > Connections > Wi-Fi.",
+    intents: ["wifi", "wifi-slow"],
+    redirectFrom: ["/tips/android-forget-wifi", "/fix/forget-wifi-android"],
+    seo: {
+      searchPhrase: "how to forget a wifi network on android",
+      searchAlternates: ["android wifi won't connect", "remove saved wifi network android", "samsung forget wifi"],
+      answer: "On a Pixel, go to Settings > Network & internet > Internet, tap the network and tap Forget. On Samsung, open Settings > Connections > Wi-Fi, tap the gear next to the network, then Forget.",
+      faq: [
+        { q: "The network isn't in my list. Now what?", a: "The phone has already forgotten it. The problem is the signal or the password, not a stale saved network." },
+        { q: "Will I need the password again?", a: "Yes. Have it ready before you tap Forget." },
+      ],
     },
-    tasks: ["wifi", "wifi-slow"],
     steps: [
       "On a Pixel, open Settings > Network & internet > Internet.",
       "Tap the saved network, then Forget.",
@@ -104,8 +117,8 @@ export const catalogB: TipDraft[] = [
     body: ["If the network is not in the list, the phone has already forgotten it. The spinning connection is then a signal or a password problem, not a stale profile."],
   },
   {
-    slug: "iphone-wifi-assist",
-    title: "Stop a weak Wi-Fi network from switching you to cellular",
+    slug: "how-to-turn-off-wifi-assist-on-iphone",
+    title: "How to turn off Wi-Fi Assist on iPhone",
     summary: "Wi-Fi Assist is under Cellular, or Mobile Service. Turn it off when a bad network keeps spending your data.",
     category: "wifi",
     platforms: ["iphone"],
@@ -113,14 +126,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You stay on the Wi-Fi you chose, instead of quietly using mobile data because the router is slow.",
-    task: {
-      slug: "turn-off-wifi-assist",
-      title: "How to turn off Wi-Fi Assist on iPhone",
-      h1: "How to turn off Wi-Fi Assist on iPhone",
-      intro:
-        "Wi-Fi Assist moves an iPhone onto cellular data when the Wi-Fi network is poor. That is helpful on a dead cafe network and expensive on a metered plan. The switch is under Cellular, labeled Mobile Service on some phones.",
+    intents: ["wifi", "wifi-slow"],
+    redirectFrom: ["/tips/iphone-wifi-assist", "/fix/turn-off-wifi-assist"],
+    seo: {
+      searchPhrase: "how to turn off wifi assist on iphone",
+      searchAlternates: ["iphone using cellular data on wifi", "wifi assist data usage", "iphone switching to mobile data"],
+      answer: "Go to Settings > Cellular (or Mobile Service), scroll to the bottom and turn off Wi-Fi Assist. The phone stops jumping to cellular when the Wi-Fi is weak.",
+      faq: [
+        { q: "How much data has Wi-Fi Assist used?", a: "The number is shown right under the Wi-Fi Assist switch." },
+        { q: "Should I keep it off?", a: "Keep it off if your data plan is small. Leave it on if you'd rather pages load when the Wi-Fi is bad." },
+      ],
     },
-    tasks: ["wifi", "wifi-slow"],
     steps: [
       "Open Settings > Cellular. If your phone says Mobile Service or Mobile Data, open that instead.",
       "Scroll to the bottom and turn Wi-Fi Assist off.",
@@ -130,8 +146,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "iphone-hotspot-compatibility",
-    title: "Make an iPhone hotspot visible to an older laptop",
+    slug: "how-to-make-an-iphone-hotspot-show-up-on-a-laptop",
+    title: "How to make an iPhone hotspot show up on a laptop",
     summary: "Turn on Maximize Compatibility under Personal Hotspot. It uses 2.4 GHz, which older devices can see.",
     category: "wifi",
     platforms: ["iphone"],
@@ -139,14 +155,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A laptop that cannot see the hotspot usually cannot see the 5 GHz name, not the password.",
-    task: {
-      slug: "iphone-hotspot-compatibility",
-      title: "How to make an iPhone hotspot easier to find",
-      h1: "How to make an iPhone hotspot easier to find",
-      intro:
-        "Maximize Compatibility on an iPhone hotspot switches it to 2.4 GHz so older laptops and gadgets can see the network. The switch is in Settings > Personal Hotspot. Turn it off again if you want the faster band back.",
+    intents: ["wifi"],
+    redirectFrom: ["/tips/iphone-hotspot-compatibility", "/fix/iphone-hotspot-compatibility"],
+    seo: {
+      searchPhrase: "how to make an iphone hotspot show up on a laptop",
+      searchAlternates: ["iphone hotspot not showing up", "maximize compatibility hotspot", "laptop can't find iphone hotspot"],
+      answer: "Go to Settings > Personal Hotspot and turn on Maximize Compatibility. The hotspot switches to 2.4 GHz, which older laptops can see.",
+      faq: [
+        { q: "Why can't my laptop see my iPhone hotspot?", a: "Many older laptops can't see the 5 GHz band. Maximize Compatibility fixes that. It also helps to keep the Personal Hotspot screen open while the laptop searches." },
+        { q: "Is Maximize Compatibility slower?", a: "Yes. 2.4 GHz is slower and more crowded, so turn it off when you don't need it." },
+      ],
     },
-    tasks: ["wifi"],
     steps: [
       "Open Settings > Personal Hotspot.",
       "Turn Allow Others to Join on, if it is off.",
@@ -156,8 +175,8 @@ export const catalogB: TipDraft[] = [
     body: ["The other person still needs the Wi-Fi password. It is on the Personal Hotspot screen. Family Sharing can join without it when that option is on."],
   },
   {
-    slug: "android-private-dns",
-    title: "Set a Private DNS hostname, and know how to undo it",
+    slug: "how-to-set-private-dns-on-android",
+    title: "How to set Private DNS on Android",
     summary: "Settings > Network & internet > Private DNS. A typo here takes the internet away until you switch back to Automatic.",
     category: "wifi",
     platforms: ["android"],
@@ -165,14 +184,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 2,
     why: "DNS queries leave the phone encrypted, which matters on a network you do not trust. A wrong hostname looks like the internet is down.",
-    task: {
-      slug: "android-private-dns",
-      title: "How to set Private DNS on Android",
-      h1: "How to set Private DNS on Android",
-      intro:
-        "Android Private DNS sends lookups to a hostname you choose, over TLS. On a Pixel it is Settings > Network & internet > Private DNS. If sites stop loading, set it back to Automatic.",
+    intents: ["wifi", "wifi-slow", "android-privacy-settings"],
+    redirectFrom: ["/tips/android-private-dns", "/fix/android-private-dns"],
+    seo: {
+      searchPhrase: "how to set private dns on android",
+      searchAlternates: ["android private dns hostname", "dns.google android", "private dns not working"],
+      answer: "Go to Settings > Network & internet > Private DNS, choose Private DNS provider hostname and enter dns.google. If pages stop loading, switch back to Automatic.",
+      faq: [
+        { q: "Does Private DNS block ads?", a: "Not with dns.google. Some DNS providers filter ads, but this one only looks up addresses." },
+        { q: "Does it hide my browsing?", a: "It hides your DNS lookups from the network you're on. The DNS provider you picked still sees which sites you look up." },
+      ],
     },
-    tasks: ["wifi", "wifi-slow"],
     steps: [
       "Open Settings > Network & internet > Private DNS. On a Samsung phone: Settings > Connections > More connection settings > Private DNS.",
       "Choose Private DNS provider hostname.",
@@ -182,8 +204,8 @@ export const catalogB: TipDraft[] = [
     body: ["dns.google is Google's public resolver. It is a real hostname. It does not block ads by itself, and it does not hide which sites you visit from the resolver you just chose."],
   },
   {
-    slug: "iphone-airdrop-contacts",
-    title: "Set AirDrop to Contacts Only",
+    slug: "how-to-set-airdrop-to-contacts-only",
+    title: "How to set AirDrop to Contacts Only",
     summary: "Settings > General > AirDrop. Everyone for 10 Minutes is the setting for a one-off transfer.",
     category: "privacy",
     platforms: ["iphone"],
@@ -191,12 +213,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Strangers nearby stop being able to offer you AirDrop files.",
-    task: {
-      slug: "airdrop-contacts-only",
-      title: "How to limit AirDrop to contacts",
-      h1: "How to limit AirDrop to contacts",
-      intro:
-        "AirDrop's receiving mode is in Settings > General > AirDrop on iOS 18 and iOS 26. Contacts Only is the everyday setting. Everyone for 10 Minutes covers the moment you need to receive from someone who is not a contact.",
+    intents: ["iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-airdrop-contacts", "/fix/airdrop-contacts-only"],
+    seo: {
+      searchPhrase: "how to set airdrop to contacts only",
+      searchAlternates: ["airdrop settings iphone", "stop strangers airdropping me", "airdrop everyone for 10 minutes"],
+      answer: "Go to Settings > General > AirDrop and choose Contacts Only. When you need a file from someone else, pick Everyone for 10 Minutes. It switches back by itself.",
+      faq: [
+        { q: "Why is there no plain Everyone option?", a: "Apple replaced it with Everyone for 10 Minutes, so it can't be left open by accident." },
+        { q: "What does Receiving Off do?", a: "Nobody can send you anything. You can still send." },
+      ],
     },
     steps: [
       "Open Settings > General > AirDrop.",
@@ -206,8 +232,8 @@ export const catalogB: TipDraft[] = [
     body: ["Receiving Off is the stricter choice. You can still send. You will not see incoming requests."],
   },
   {
-    slug: "iphone-hide-my-email",
-    title: "Make a throwaway address that forwards to you",
+    slug: "how-to-use-hide-my-email-on-iphone",
+    title: "How to use Hide My Email on iPhone",
     summary: "Hide My Email is under your name, then iCloud. You can delete the address later.",
     category: "privacy",
     platforms: ["iphone"],
@@ -215,26 +241,29 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "A shop gets an address that works, and you can shut that address off without changing your real one.",
-    task: {
-      slug: "hide-my-email",
-      title: "How to use Hide My Email on iPhone",
-      h1: "How to use Hide My Email on iPhone",
-      intro:
-        "Hide My Email creates a unique address that forwards to your real inbox. On iOS 18 and iOS 26 it is under your Apple Account, then iCloud. Deleting the address later stops the forwarding.",
+    intents: ["privacy-checkup", "iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-hide-my-email", "/fix/hide-my-email"],
+    seo: {
+      searchPhrase: "how to use hide my email on iphone",
+      searchAlternates: ["hide my email icloud", "throwaway email address iphone", "make a fake email that forwards to me"],
+      answer: "Go to Settings, tap your name, then iCloud > Hide My Email, and create an address. Mail sent to it forwards to your real inbox, and you can turn it off later.",
+      faq: [
+        { q: "Is Hide My Email free?", a: "Making addresses in Settings needs iCloud+, which comes with any paid iCloud storage plan. When an app offers Sign in with Apple, you can hide your email there without paying." },
+        { q: "Can I reply from a Hide My Email address?", a: "Yes. When you reply in Mail to a message sent to that address, the reply goes out from the hidden address." },
+      ],
     },
-    tasks: ["privacy-checkup"],
     steps: [
       "Open Settings and tap your name at the top. The row may be labeled Apple Account.",
       "Tap iCloud > Hide My Email.",
       "Create a new address and use it on the site that asked. Mail forwards to your inbox.",
       "To stop a site later, come back to the same list and deactivate or delete that address.",
     ],
-    body: ["You need iCloud. The feature is included with a normal Apple Account. It is not a separate subscription. The forwarding address is your real one, so do not use this for anything you would not want in that inbox."],
+    body: ["Making addresses here needs iCloud+, which comes with any paid iCloud storage plan. Sign in with Apple can hide your email for free when an app offers it. Mail still lands in your real inbox, so do not use this for anything you would not want there."],
     pick: true,
   },
   {
-    slug: "iphone-precise-location",
-    title: "Turn off Precise Location for apps that do not need your doorstep",
+    slug: "how-to-turn-off-precise-location-on-iphone",
+    title: "How to turn off Precise Location on iPhone",
     summary: "Settings > Privacy & Security > Location Services, then the app. Precise Location is its own switch.",
     category: "privacy",
     platforms: ["iphone"],
@@ -242,14 +271,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "A weather app or a shop app can work with a neighborhood instead of the building you are standing in.",
-    task: {
-      slug: "precise-location",
-      title: "How to turn off Precise Location for one app",
-      h1: "How to turn off Precise Location for one app",
-      intro:
-        "Precise Location is a per-app switch on iPhone. With it off, the app still gets an approximate area if you allowed location at all. Maps and navigation are the apps that usually need the precise switch left on.",
+    intents: ["privacy-checkup", "iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-precise-location", "/fix/precise-location"],
+    seo: {
+      searchPhrase: "how to turn off precise location on iphone",
+      searchAlternates: ["iphone precise location", "stop apps knowing my exact location", "approximate location iphone"],
+      answer: "Go to Settings > Privacy & Security > Location Services, tap the app and turn off Precise Location. The app then only gets your rough area.",
+      faq: [
+        { q: "Which apps actually need precise location?", a: "Maps while you navigate, ride apps and food delivery. Shopping and social apps rarely do." },
+        { q: "Does this change every app at once?", a: "No. It's set per app." },
+      ],
     },
-    tasks: ["privacy-checkup"],
     steps: [
       "Open Settings > Privacy & Security > Location Services.",
       "Tap the app.",
@@ -260,8 +292,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "iphone-tracking-prompts",
-    title: "Stop apps from asking to track you",
+    slug: "how-to-stop-apps-asking-to-track-you-on-iphone",
+    title: "How to stop apps asking to track you on iPhone",
     summary: "Settings > Privacy & Security > Tracking. Turn off Allow Apps to Request to Track.",
     category: "privacy",
     platforms: ["iphone"],
@@ -269,14 +301,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "The prompt goes away, and apps do not get the advertising identifier.",
-    task: {
-      slug: "stop-app-tracking-prompts",
-      title: "How to stop app tracking prompts on iPhone",
-      h1: "How to stop app tracking prompts on iPhone",
-      intro:
-        "The iPhone tracking prompt is the one that asks a new app for permission to track you across other companies' apps. You can refuse them all at once under Privacy & Security > Tracking. This does not stop an app from recognizing you when you are logged in.",
+    intents: ["privacy-checkup", "iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-tracking-prompts", "/fix/stop-app-tracking-prompts"],
+    seo: {
+      searchPhrase: "how to stop apps asking to track you on iphone",
+      searchAlternates: ["allow apps to request to track", "ask app not to track", "iphone tracking settings"],
+      answer: "Go to Settings > Privacy & Security > Tracking and turn off Allow Apps to Request to Track. Every app is then told no without asking you.",
+      faq: [
+        { q: "Does this stop all tracking?", a: "It blocks Apple's tracking request and the advertising ID. An app you're signed into can still link what you do inside it to your account." },
+        { q: "Can I let one app track me and block the rest?", a: "Yes. Leave Allow Apps to Request to Track on and switch each app in the list below it on or off." },
+      ],
     },
-    tasks: ["privacy-checkup"],
     steps: [
       "Open Settings > Privacy & Security > Tracking.",
       "Turn off Allow Apps to Request to Track.",
@@ -285,8 +320,8 @@ export const catalogB: TipDraft[] = [
     body: ["This blocks the Apple tracking request and the advertising ID. An app you are signed into can still tie activity to your account. Logging out, or not making the account, is a different step."],
   },
   {
-    slug: "iphone-app-privacy-report",
-    title: "Turn on the privacy report and read it tomorrow",
+    slug: "how-to-see-which-apps-use-your-camera-and-microphone-on-iphone",
+    title: "How to see which apps use your camera and microphone on iPhone",
     summary: "It records which apps used the camera, microphone, location, and which domains they contacted.",
     category: "privacy",
     platforms: ["iphone"],
@@ -294,14 +329,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You see the behavior of the apps you already installed, instead of guessing from their permission screens.",
-    task: {
-      slug: "app-privacy-report",
-      title: "How to read the iPhone App Privacy Report",
-      h1: "How to read the iPhone App Privacy Report",
-      intro:
-        "App Privacy Report is a log of sensor access and network contacts on iPhone. It is off until you enable it under Privacy & Security. It does not block anything. Check it after it has had a day to record.",
+    intents: ["privacy-checkup", "iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-app-privacy-report", "/fix/app-privacy-report"],
+    seo: {
+      searchPhrase: "how to see which apps use your camera and microphone on iphone",
+      searchAlternates: ["iphone app privacy report", "which apps used my microphone", "iphone app network activity"],
+      answer: "Turn on App Privacy Report in Settings > Privacy & Security. A day later it shows which apps used the camera, microphone and location, and which domains they contacted.",
+      faq: [
+        { q: "Is a long list of domains a bad sign?", a: "Not by itself. A flashlight app talking to lots of ad domains is the kind of thing to look for." },
+        { q: "How can I tell an app is using the mic right now?", a: "An orange dot at the top of the screen means the microphone is on. A green dot means the camera." },
+      ],
     },
-    tasks: ["privacy-checkup"],
     steps: [
       "Open Settings > Privacy & Security > App Privacy Report.",
       "Turn it on.",
@@ -311,8 +349,8 @@ export const catalogB: TipDraft[] = [
     body: ["A long domain list is not automatically a problem. A flashlight app contacting a pile of advertising domains is. Uninstall is the fix the report itself will not do."],
   },
   {
-    slug: "iphone-lock-app",
-    title: "Lock an app behind Face ID, or hide it",
+    slug: "how-to-lock-an-app-with-face-id-on-iphone",
+    title: "How to lock an app with Face ID on iPhone",
     summary: "Touch and hold the icon, tap Require Face ID, then Lock or Hide.",
     category: "privacy",
     platforms: ["iphone"],
@@ -320,12 +358,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Someone who has the unlocked phone still cannot open that app without your face or passcode.",
-    task: {
-      slug: "lock-or-hide-iphone-app",
-      title: "How to lock or hide an iPhone app",
-      h1: "How to lock or hide an iPhone app",
-      intro:
-        "iOS 18 and iOS 26 can lock an app behind Face ID or Touch ID, and can hide it from the Home Screen. You start by touching and holding the icon. Hidden apps live in a Hidden folder in the App Library.",
+    intents: ["iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-lock-app", "/fix/lock-or-hide-iphone-app"],
+    seo: {
+      searchPhrase: "how to lock an app with face id on iphone",
+      searchAlternates: ["hide apps on iphone", "require face id for an app", "iphone hidden apps folder"],
+      answer: "Touch and hold the app icon, tap Require Face ID, then choose Lock. Pick Hide and Require Face ID instead to take it off the Home Screen.",
+      faq: [
+        { q: "Where do hidden apps go?", a: "Into a Hidden folder at the bottom of the App Library. It opens with Face ID." },
+        { q: "Why don't I see Require Face ID?", a: "The iPhone needs iOS 18 or later, and some system apps can't be locked." },
+      ],
     },
     steps: [
       "Touch and hold the app icon until the menu appears.",
@@ -336,8 +378,8 @@ export const catalogB: TipDraft[] = [
     body: ["If Require Face ID is not in the menu, the phone is on an iOS older than 18, or the app does not support the lock. Mail and a few system apps are limited. If you hide an app, remember the App Library is where it went."],
   },
   {
-    slug: "android-lock-screen-notifications",
-    title: "Hide notification text on the Android lock screen",
+    slug: "how-to-hide-notifications-on-the-android-lock-screen",
+    title: "How to hide notifications on the Android lock screen",
     summary: "Choose show sensitive content only when unlocked, or show nothing.",
     category: "privacy",
     platforms: ["android"],
@@ -345,14 +387,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A locked phone on a table stops displaying message previews to the room.",
-    task: {
-      slug: "android-lock-screen-notifications",
-      title: "How to hide Android lock screen notifications",
-      h1: "How to hide Android lock screen notifications",
-      intro:
-        "Android can hide the text of notifications until the phone is unlocked. On a Pixel the path is Settings > Security & privacy > More security settings > Notifications on lock screen. Some phones put the same switch under Settings > Notifications.",
+    intents: ["notifications", "privacy-checkup", "android-privacy-settings"],
+    redirectFrom: ["/tips/android-lock-screen-notifications", "/fix/android-lock-screen-notifications"],
+    seo: {
+      searchPhrase: "how to hide notifications on the android lock screen",
+      searchAlternates: ["android lock screen privacy", "hide message previews android", "sensitive notifications lock screen"],
+      answer: "Go to Settings > Notifications > Notifications on lock screen and choose Don't show notifications, or the option that hides sensitive content until the phone is unlocked.",
+      faq: [
+        { q: "Can I hide just the message text?", a: "Yes. Pick the option that hides sensitive content. You still see which app notified you." },
+        { q: "Does this help if my phone is unlocked?", a: "No. It only protects the lock screen, so lock the phone when you put it down." },
+      ],
     },
-    tasks: ["notifications", "privacy-checkup"],
     steps: [
       "Open Settings > Security & privacy > More security settings > Notifications on lock screen.",
       "If that row is missing, open Settings > Notifications > Notifications on lock screen.",
@@ -361,8 +406,8 @@ export const catalogB: TipDraft[] = [
     body: ["You will still see that an app notified you, depending on the option. You will not see the message text from across the table. Lock the phone. The lock screen only helps if the phone is actually locked."],
   },
   {
-    slug: "android-private-space",
-    title: "Put sensitive apps in a Private space",
+    slug: "how-to-hide-apps-on-android-with-private-space",
+    title: "How to hide apps on Android with Private space",
     summary: "Settings > Security & privacy > Private space. Apps in there stop running while the space is locked.",
     category: "privacy",
     platforms: ["android"],
@@ -370,12 +415,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 5,
     why: "A second set of apps can stay hidden and signed into a different account.",
-    task: {
-      slug: "android-private-space",
-      title: "How to set up Android Private space",
-      h1: "How to set up Android Private space",
-      intro:
-        "Private space on Android 15 and 16 is a separate, lockable area for apps. While it is locked, those apps are stopped, including their notifications. Do not put an app there if you need it to alert you in the background.",
+    intents: ["android-privacy-settings"],
+    redirectFrom: ["/tips/android-private-space", "/fix/android-private-space"],
+    seo: {
+      searchPhrase: "how to hide apps on android with private space",
+      searchAlternates: ["android private space", "hide apps android 15", "secret apps folder android"],
+      answer: "Go to Settings > Security & privacy > Private space, set it up with your screen lock, and install the apps you want inside it. The space opens from the bottom of the app drawer.",
+      faq: [
+        { q: "Do apps in Private space send notifications?", a: "Not while the space is locked. They're paused, so don't put apps there that you need to hear from." },
+        { q: "Which phones have Private space?", a: "Phones on Android 15 and later. Samsung phones have a similar feature called Secure Folder." },
+      ],
     },
     steps: [
       "Open Settings > Security & privacy > Private space.",
@@ -388,8 +437,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "android-theft-detection",
-    title: "Turn on Theft Detection Lock",
+    slug: "how-to-turn-on-theft-detection-lock-on-android",
+    title: "How to turn on Theft Detection Lock on Android",
     summary: "The phone can lock itself if it is snatched and the thief moves off quickly. The switch is grayed out on phones that lack the feature.",
     category: "privacy",
     platforms: ["android"],
@@ -397,12 +446,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 2,
     why: "A stolen phone that locks immediately is harder to rummage through than one that stays open.",
-    task: {
-      slug: "theft-detection-lock",
-      title: "How to turn on Android Theft Detection Lock",
-      h1: "How to turn on Android Theft Detection Lock",
-      intro:
-        "Theft Detection Lock uses motion and nearby signals to lock an Android phone that has been grabbed and carried away. Google's path is Settings > Google > All services > Theft protection. Some phones also list it under Security & privacy > Device unlock.",
+    intents: ["android-privacy-settings"],
+    redirectFrom: ["/tips/android-theft-detection", "/fix/theft-detection-lock"],
+    seo: {
+      searchPhrase: "how to turn on theft detection lock on android",
+      searchAlternates: ["android theft protection", "lock phone if stolen android", "theft detection lock greyed out"],
+      answer: "Go to Settings > Google > All services > Theft protection and turn on Theft Detection Lock. If the switch is greyed out, your phone doesn't support it.",
+      faq: [
+        { q: "How does Theft Detection Lock work?", a: "It uses the phone's sensors to spot a grab-and-run, like a snatch followed by fast movement, and locks the screen." },
+        { q: "Do I still need Find My Device?", a: "Yes. Theft Detection Lock only locks the phone. Find Hub is how you locate or wipe it afterwards." },
+      ],
     },
     steps: [
       "Open Settings > Google > All services.",
@@ -416,8 +469,8 @@ export const catalogB: TipDraft[] = [
     ],
   },
   {
-    slug: "iphone-safety-check",
-    title: "Use Safety Check to review what you are sharing",
+    slug: "how-to-use-safety-check-on-iphone",
+    title: "How to use Safety Check on iPhone",
     summary: "Settings > Privacy & Security > Safety Check. Emergency Reset is the fast path. Manage Sharing is the careful one.",
     category: "privacy",
     platforms: ["iphone"],
@@ -425,12 +478,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 5,
     why: "You can stop sharing your location and review which people and apps have access, from one place.",
-    task: {
-      slug: "iphone-safety-check",
-      title: "How to use Safety Check on iPhone",
-      h1: "How to use Safety Check on iPhone",
-      intro:
-        "Safety Check is an iPhone tool for reviewing sharing and sign-in, built for someone who needs to cut off another person's access. It lives in Settings > Privacy & Security > Safety Check. Emergency Reset changes a lot at once. Manage Sharing walks through it.",
+    intents: ["iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-safety-check", "/fix/iphone-safety-check"],
+    seo: {
+      searchPhrase: "how to use safety check on iphone",
+      searchAlternates: ["stop sharing location with someone iphone", "emergency reset iphone", "manage sharing and access"],
+      answer: "Go to Settings > Privacy & Security > Safety Check. Manage Sharing & Access goes through people, apps and devices one at a time. Emergency Reset stops all sharing at once.",
+      faq: [
+        { q: "Will people know I used Safety Check?", a: "They aren't sent a notice, but they may notice they can't see your location or shared items any more." },
+        { q: "Does it delete messages I've already sent?", a: "No. Other people keep their copies." },
+      ],
     },
     steps: [
       "Open Settings > Privacy & Security > Safety Check.",
@@ -441,8 +498,8 @@ export const catalogB: TipDraft[] = [
     body: ["Use Manage Sharing when you are not in a hurry. Emergency Reset is for a situation where speed matters more than checking each row. Neither one removes another person's copies of messages you already sent."],
   },
   {
-    slug: "iphone-lockdown-mode",
-    title: "Know where Lockdown Mode is, and what it breaks",
+    slug: "what-is-lockdown-mode-on-iphone",
+    title: "What is Lockdown Mode on iPhone",
     summary: "Settings > Privacy & Security > Lockdown Mode. It is for people who believe they may be personally targeted.",
     category: "privacy",
     platforms: ["iphone"],
@@ -450,12 +507,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 3,
     why: "The switch is real, and turning it on without reading the list will surprise you the next time a website or a photo fails.",
-    task: {
-      slug: "iphone-lockdown-mode",
-      title: "How to turn on Lockdown Mode on iPhone",
-      h1: "How to turn on Lockdown Mode on iPhone",
-      intro:
-        "Lockdown Mode is an extreme set of restrictions for an iPhone that may be personally targeted by spyware. It is in Settings > Privacy & Security > Lockdown Mode. Most people do not need it. Turning it on blocks attachments, some web technologies, and incoming calls from unknown numbers, among other things.",
+    intents: ["iphone-privacy-settings"],
+    redirectFrom: ["/tips/iphone-lockdown-mode", "/fix/iphone-lockdown-mode"],
+    seo: {
+      searchPhrase: "what is lockdown mode on iphone",
+      searchAlternates: ["iphone lockdown mode", "should i turn on lockdown mode", "lockdown mode what does it block"],
+      answer: "Lockdown Mode is an extreme setting for people who may be personally targeted by spyware. It's in Settings > Privacy & Security > Lockdown Mode and turns a lot of features off, so most people should leave it off.",
+      faq: [
+        { q: "What stops working in Lockdown Mode?", a: "Most message attachments and link previews, some web features, FaceTime calls from people you haven't called before, and shared albums, among others. The full list is shown before you turn it on." },
+        { q: "Should I turn it on?", a: "Only if you have a real reason to think you're a target, which mostly means journalists, activists and similar. For everyone else, the regular privacy settings are enough." },
+      ],
     },
     steps: [
       "Open Settings > Privacy & Security > Lockdown Mode.",
@@ -466,8 +527,8 @@ export const catalogB: TipDraft[] = [
     body: ["This is not a faster version of the ordinary privacy switches. Those are Precise Location, Tracking, and the passcode. Lockdown Mode is the setting Apple describes for targeted attacks. If you are not in that situation, leave it off."],
   },
   {
-    slug: "iphone-downtime",
-    title: "Set a Downtime schedule in Screen Time",
+    slug: "how-to-set-downtime-in-screen-time-on-iphone",
+    title: "How to set Downtime in Screen Time on iPhone",
     summary: "Only the apps you mark as Allowed stay available. Phone calls still work.",
     category: "productivity",
     platforms: ["iphone"],
@@ -475,14 +536,18 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 3,
     why: "The block is on a clock, so it does not depend on you deciding in the moment.",
-    task: {
-      slug: "screen-time-downtime",
-      title: "How to set Screen Time Downtime on iPhone",
-      h1: "How to set Screen Time Downtime on iPhone",
-      intro:
-        "Downtime in Screen Time blocks everything except the apps you allow, on a schedule you set. Calls still come through. The page is Settings > Screen Time > Downtime.",
+    intents: ["focus"],
+    redirectFrom: ["/tips/iphone-downtime", "/fix/screen-time-downtime"],
+    seo: {
+      searchPhrase: "how to set downtime in screen time on iphone",
+      searchAlternates: ["iphone downtime", "block apps at night iphone", "screen time schedule"],
+      answer: "Go to Settings > Screen Time > Downtime, turn it on and set the hours. Only apps in Always Allowed work during Downtime, and calls still come through.",
+      faq: [
+        { q: "Can I get around Downtime?", a: "Yes, unless there's a Screen Time passcode. Without one you can ignore the limit for a minute or the rest of the day." },
+        { q: "What's the difference between Downtime and a Focus?", a: "Downtime blocks apps. A Focus silences notifications from people and apps. They work fine together." },
+      ],
+      compareWith: ["do-not-disturb-vs-downtime-vs-focus"],
     },
-    tasks: ["focus"],
     steps: [
       "Open Settings > Screen Time. Turn Screen Time on if it is off.",
       "Tap Downtime, turn it on, and set the hours.",
@@ -492,8 +557,8 @@ export const catalogB: TipDraft[] = [
     body: ["A Screen Time passcode stops the easy override. Set one only if you want the friction. If you forget it, changing it is a recovery, not a toggle."],
   },
   {
-    slug: "iphone-focus",
-    title: "Turn on a Focus and allow the people who can still interrupt",
+    slug: "how-to-set-up-a-focus-on-iphone",
+    title: "How to set up a Focus on iPhone",
     summary: "Settings > Focus. A Focus silences notifications except the people and apps you name.",
     category: "productivity",
     platforms: ["iphone"],
@@ -501,14 +566,18 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 3,
     why: "Do Not Disturb is one blunt mode. A Focus lets work calls through and holds the rest.",
-    task: {
-      slug: "iphone-focus-mode",
-      title: "How to set up a Focus on iPhone",
-      h1: "How to set up a Focus on iPhone",
-      intro:
-        "Focus modes on iPhone silence notifications except the people and apps you allow. They are in Settings > Focus. You can turn one on from Control Center, or on a schedule.",
+    intents: ["focus", "notifications"],
+    redirectFrom: ["/tips/iphone-focus", "/fix/iphone-focus-mode"],
+    seo: {
+      searchPhrase: "how to set up a focus on iphone",
+      searchAlternates: ["iphone focus mode", "iphone work focus", "only allow notifications from certain people iphone"],
+      answer: "Go to Settings > Focus, pick Do Not Disturb or Work or make your own, and choose the people and apps allowed to reach you. Turn it on in Control Center or give it a schedule.",
+      faq: [
+        { q: "Why do some notifications still come through?", a: "Time Sensitive notifications can break through a Focus. Turn that off for a noisy app in Settings > Notifications." },
+        { q: "Can a Focus turn on by itself?", a: "Yes. Add a schedule by time or by place on the Focus screen." },
+      ],
+      compareWith: ["do-not-disturb-vs-downtime-vs-focus"],
     },
-    tasks: ["focus", "notifications"],
     steps: [
       "Open Settings > Focus.",
       "Choose Do Not Disturb, Work, or add your own.",
@@ -518,8 +587,8 @@ export const catalogB: TipDraft[] = [
     body: ["Time Sensitive notifications can still break through. That is how reminders and some alarms behave. If too much is getting through, look at that permission on the noisy app, under Settings > Notifications."],
   },
   {
-    slug: "iphone-scheduled-summary",
-    title: "Bundle non-urgent notifications into a summary",
+    slug: "how-to-use-scheduled-summary-on-iphone",
+    title: "How to use Scheduled Summary on iPhone",
     summary: "Settings > Notifications > Scheduled Summary. Pick the times and the apps.",
     category: "productivity",
     platforms: ["iphone"],
@@ -527,14 +596,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "Apps that are not time-sensitive stop tapping you all afternoon and show up together instead.",
-    task: {
-      slug: "scheduled-notification-summary",
-      title: "How to use Scheduled Summary on iPhone",
-      h1: "How to use Scheduled Summary on iPhone",
-      intro:
-        "Scheduled Summary holds ordinary iPhone notifications and delivers them at times you pick. Time Sensitive alerts still arrive immediately. The setting is Settings > Notifications > Scheduled Summary.",
+    intents: ["notifications"],
+    redirectFrom: ["/tips/iphone-scheduled-summary", "/fix/scheduled-notification-summary"],
+    seo: {
+      searchPhrase: "how to use scheduled summary on iphone",
+      searchAlternates: ["bundle notifications iphone", "iphone notification summary", "fewer notifications on iphone"],
+      answer: "Go to Settings > Notifications > Scheduled Summary, turn it on, choose the delivery times and pick which apps go in. Leave messages and anything urgent out.",
+      faq: [
+        { q: "An app went quiet. Is it in the summary?", a: "Probably. Take it out of the summary's app list, or change it in Settings > Notifications for that app." },
+        { q: "Do Time Sensitive alerts wait for the summary?", a: "No, if the app is allowed to send Time Sensitive notifications. Those skip the summary." },
+      ],
     },
-    tasks: ["notifications"],
     steps: [
       "Open Settings > Notifications > Scheduled Summary.",
       "Turn it on and choose the delivery times.",
@@ -545,8 +617,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "mac-hot-corners",
-    title: "Lock the Mac by throwing the pointer into a corner",
+    slug: "how-to-set-up-hot-corners-on-a-mac",
+    title: "How to set up hot corners on a Mac",
     summary: "System Settings > Desktop & Dock > Hot Corners. The bottom-right corner starts as Quick Note.",
     category: "mac",
     platforms: ["mac"],
@@ -554,12 +626,15 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "Locking the screen on the way out of the room becomes a gesture, not a menu.",
-    task: {
-      slug: "mac-hot-corners",
-      title: "How to set hot corners on a Mac",
-      h1: "How to set hot corners on a Mac",
-      intro:
-        "Hot corners run an action when the pointer hits a corner of the screen. On current macOS, including Tahoe, they are in System Settings > Desktop & Dock. The bottom-right corner is Quick Note until you change it.",
+    redirectFrom: ["/tips/mac-hot-corners", "/fix/mac-hot-corners"],
+    seo: {
+      searchPhrase: "how to set up hot corners on a mac",
+      searchAlternates: ["mac hot corners", "lock mac with a corner", "quick note keeps opening mac"],
+      answer: "Open System Settings > Desktop & Dock, scroll down and click Hot Corners. Pick an action for each corner, like Lock Screen.",
+      faq: [
+        { q: "How do I stop triggering hot corners by accident?", a: "Hold Command, Option, Control or Shift while you pick the action. That corner then only works with the key held down." },
+        { q: "Why does a note open in the bottom-right corner?", a: "That corner is set to Quick Note out of the box. Change it in the same Hot Corners menu." },
+      ],
     },
     steps: [
       "Open System Settings > Desktop & Dock.",
@@ -571,8 +646,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "mac-reduce-motion",
-    title: "Turn on Reduce motion if the Mac animations bother you",
+    slug: "how-to-turn-on-reduce-motion-on-a-mac",
+    title: "How to turn on Reduce motion on a Mac",
     summary: "System Settings > Accessibility > Display > Reduce motion.",
     category: "mac",
     platforms: ["mac"],
@@ -580,12 +655,15 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "The large slides and zooms go away. The Mac works the same.",
-    task: {
-      slug: "mac-reduce-motion",
-      title: "How to turn on Reduce motion on a Mac",
-      h1: "How to turn on Reduce motion on a Mac",
-      intro:
-        "Reduce motion on a Mac replaces the larger interface animations with simpler fades. It is in System Settings > Accessibility > Display. It does not change shortcuts or settings.",
+    redirectFrom: ["/tips/mac-reduce-motion", "/fix/mac-reduce-motion"],
+    seo: {
+      searchPhrase: "how to turn on reduce motion on a mac",
+      searchAlternates: ["mac animations make me dizzy", "reduce motion macos", "turn off mac animations"],
+      answer: "Open System Settings > Accessibility > Display and turn on Reduce motion. Animations like switching desktops become a simple fade.",
+      faq: [
+        { q: "Does Reduce motion make the Mac faster?", a: "It can feel quicker because animations are shorter, but it doesn't speed up the computer." },
+        { q: "Is there the same setting on iPhone?", a: "Yes, in Settings > Accessibility > Motion. It's a separate switch." },
+      ],
     },
     steps: [
       "Open System Settings > Accessibility.",
@@ -595,8 +673,8 @@ export const catalogB: TipDraft[] = [
     body: ["There is a matching switch on iPhone under Settings > Accessibility > Motion. They are separate. Turning one on does not turn on the other."],
   },
   {
-    slug: "gemini-instructions",
-    title: "Set standing instructions in Gemini, if your account has them",
+    slug: "how-to-set-instructions-for-gemini",
+    title: "How to set Instructions for Gemini",
     summary: "Look for Instructions for Gemini in Settings. Work and school accounts often do not have it. A Gem ignores it.",
     category: "ai",
     platforms: [],
@@ -604,15 +682,19 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 3,
     why: "You stop repeating how you want the answer shaped, on accounts where the setting exists.",
-    task: {
-      slug: "gemini-instructions",
-      title: "How to set Instructions for Gemini",
-      h1: "How to set Instructions for Gemini",
-      intro:
-        "Gemini can store standing instructions for consumer accounts. On the web they are in Settings, under Personal Intelligence, labeled Instructions for Gemini. Work and school accounts often hide the setting. A Gem uses the Gem's own instructions instead.",
-    },
-    tasks: ["ai-prompts"],
     apps: ["gemini"],
+    intents: ["ai-prompts"],
+    redirectFrom: ["/tips/gemini-instructions", "/fix/gemini-instructions"],
+    seo: {
+      searchPhrase: "how to set instructions for gemini",
+      searchAlternates: ["gemini custom instructions", "gemini saved info", "make gemini remember how i like answers"],
+      answer: "Open Gemini on the web, go to Settings and look for Instructions for Gemini. Write how you want answers. Work and school accounts often don't have the setting.",
+      faq: [
+        { q: "Why don't I see Instructions for Gemini?", a: "Your account type doesn't include it, which is common on work and school accounts. Put the same lines at the top of your chat instead." },
+        { q: "Do Gems use these instructions?", a: "No. A Gem uses its own instructions, so edit the Gem." },
+      ],
+      compareWith: ["chatgpt-vs-claude-vs-gemini"],
+    },
     steps: [
       "Open Gemini on the web and open Settings.",
       "Look for Instructions for Gemini. On the web it is under Personal Intelligence.",
@@ -622,8 +704,8 @@ export const catalogB: TipDraft[] = [
     body: ["Inside a Gem, these global instructions are not applied. Edit the Gem if that is where you do the work."],
   },
   {
-    slug: "mac-screenshot-toolbar",
-    title: "Open the Mac screenshot toolbar with Command + Shift + 5",
+    slug: "how-to-use-the-screenshot-toolbar-on-a-mac",
+    title: "How to use the screenshot toolbar on a Mac",
     summary: "The toolbar can capture a selection, a window, or the whole screen, and it can record.",
     category: "mac",
     platforms: ["mac"],
@@ -631,14 +713,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You get a choice of what to capture, and you can send it to the clipboard instead of the desktop.",
-    task: {
-      slug: "mac-screenshot-toolbar",
-      title: "How to use the Mac screenshot toolbar",
-      h1: "How to use the Mac screenshot toolbar",
-      intro:
-        "Command + Shift + 5 opens the macOS screenshot and recording toolbar. Options on that bar let you save to the clipboard, a timer, or a folder other than the desktop.",
+    intents: ["screenshots", "mac-keyboard-shortcuts"],
+    redirectFrom: ["/tips/mac-screenshot-toolbar", "/fix/mac-screenshot-toolbar"],
+    seo: {
+      searchPhrase: "how to use the screenshot toolbar on a mac",
+      searchAlternates: ["command shift 5", "screen record on mac", "mac screenshot options"],
+      answer: "Press Command + Shift + 5. The toolbar lets you capture a selection, a window or the whole screen, or start a screen recording. Options lets you save to the clipboard instead of the desktop.",
+      faq: [
+        { q: "How do I record my screen on a Mac?", a: "Press Command + Shift + 5, choose one of the recording buttons, then click Record. Stop it from the button in the menu bar." },
+        { q: "How do I change where screenshots are saved?", a: "Click Options in the same toolbar and pick a folder, or Clipboard." },
+      ],
     },
-    tasks: ["screenshots"],
     steps: [
       "Press Command + Shift + 5.",
       "Choose a selection, a window, or the full screen. Or choose a recording button.",
@@ -648,8 +733,8 @@ export const catalogB: TipDraft[] = [
     body: ["Command + Shift + 4 is still the faster selection shortcut, and Command + Shift + 4 then Space captures one window. The toolbar is the one that shows you the choices."],
   },
   {
-    slug: "windows-snipping-text",
-    title: "Copy the text out of a Windows screenshot",
+    slug: "how-to-copy-text-from-a-screenshot-on-windows-11",
+    title: "How to copy text from a screenshot on Windows 11",
     summary: "After Windows + Shift + S, open the snip and use Text actions. The recognition runs on the PC.",
     category: "windows",
     platforms: ["windows"],
@@ -657,15 +742,20 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "An error message or a serial number does not have to be retyped.",
-    task: {
-      slug: "copy-text-from-snip",
-      title: "How to copy text from a Windows screenshot",
-      h1: "How to copy text from a Windows screenshot",
-      intro:
-        "Windows 11 Snipping Tool can copy text out of a capture. Take a region with Windows + Shift + S, open the snip, and use Text actions. Newer builds also put a Text extractor on the capture bar so you can copy text without saving an image.",
-    },
-    tasks: ["screenshots", "copy-text"],
     apps: ["snipping-tool"],
+    intents: ["screenshots", "copy-text"],
+    redirectFrom: ["/tips/windows-snipping-text", "/fix/copy-text-from-snip"],
+    seo: {
+      searchPhrase: "how to copy text from a screenshot on windows 11",
+      searchAlternates: ["snipping tool text actions", "windows 11 ocr", "copy text from image windows"],
+      answer: "Press Windows + Shift + S and drag around the text. Click the preview to open Snipping Tool, then click Text actions and Copy all text.",
+      faq: [
+        { q: "Why don't I see Text actions?", a: "Update Snipping Tool from the Microsoft Store. It's a newer feature." },
+        { q: "Does the text get uploaded anywhere?", a: "No. The text recognition runs on the PC." },
+        { q: "Can I hide email addresses before sharing the screenshot?", a: "Yes. Quick redact, on the same toolbar, blacks out emails and phone numbers." },
+      ],
+      compareWith: ["snipping-tool"],
+    },
     steps: [
       "Press Windows + Shift + S and drag a box around the text.",
       "Click the preview to open Snipping Tool.",
@@ -676,8 +766,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "windows-night-light",
-    title: "Schedule Night light in Windows 11",
+    slug: "how-to-schedule-night-light-in-windows-11",
+    title: "How to schedule Night light in Windows 11",
     summary: "Settings > System > Display > Night light. Set the hours and the strength.",
     category: "windows",
     platforms: ["windows"],
@@ -685,12 +775,15 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "The screen stops being a cold lamp after sunset without you toggling it.",
-    task: {
-      slug: "windows-night-light",
-      title: "How to schedule Night light in Windows 11",
-      h1: "How to schedule Night light in Windows 11",
-      intro:
-        "Night light warms the Windows 11 display on a schedule. It is in Settings > System > Display. Strength is a slider. Sunset to sunrise needs location access if you want those labels rather than clock times.",
+    redirectFrom: ["/tips/windows-night-light", "/fix/windows-night-light"],
+    seo: {
+      searchPhrase: "how to schedule night light in windows 11",
+      searchAlternates: ["windows 11 night light", "warmer screen at night windows", "windows blue light filter"],
+      answer: "Open Settings > System > Display > Night light, turn it on and set a schedule, either fixed hours or sunset to sunrise. The strength slider makes it more or less amber.",
+      faq: [
+        { q: "Why is Night light greyed out?", a: "Usually an old or basic display driver. Update the graphics driver through Windows Update or from the PC maker." },
+        { q: "Can I turn it on quickly?", a: "Yes. There's a Night light tile in quick settings." },
+      ],
     },
     steps: [
       "Open Settings > System > Display.",
@@ -701,8 +794,8 @@ export const catalogB: TipDraft[] = [
     body: ["The quick settings tile toggles it immediately. The schedule is what makes it happen when you forget."],
   },
   {
-    slug: "windows-storage-sense",
-    title: "Let Storage Sense empty the recycle bin on a schedule",
+    slug: "how-to-free-up-disk-space-automatically-in-windows-11",
+    title: "How to free up disk space automatically in Windows 11",
     summary: "Settings > System > Storage > Storage Sense. Uncheck Downloads if you keep installers there.",
     category: "windows",
     platforms: ["windows"],
@@ -710,12 +803,22 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 3,
     why: "Temporary files and a recycle bin full of old deletes stop being a manual chore.",
-    task: {
-      slug: "storage-sense",
-      title: "How to turn on Storage Sense in Windows 11",
-      h1: "How to turn on Storage Sense in Windows 11",
-      intro:
-        "Storage Sense deletes temporary files and can empty the recycle bin on a schedule. It is in Settings > System > Storage. The risky checkbox is the one that cleans your Downloads folder. Turn that off if you keep files there.",
+    intents: ["speed-up-slow-windows-laptop"],
+    redirectFrom: ["/tips/windows-storage-sense", "/fix/storage-sense"],
+    seo: {
+      searchPhrase: "how to free up disk space automatically in windows 11",
+      searchAlternates: ["storage sense windows 11", "windows disk full", "empty recycle bin automatically"],
+      answer: "Turn on Storage Sense in Settings > System > Storage. It deletes temporary files and empties the recycle bin on a schedule. Leave the Downloads cleanup off unless that folder is only junk.",
+      faq: [
+        { q: "Is Storage Sense safe?", a: "Yes for temporary files and the recycle bin. The Downloads option is the one that can delete things you meant to keep." },
+        { q: "Do I need a cleaner app like CCleaner?", a: "Most people don't. Storage Sense and the cleanup recommendations on the same Storage page cover the useful parts." },
+      ],
+      notFor: "It won't find big files you forgot about. Use Cleanup recommendations on the same Storage page for that.",
+      alternatives: [
+        { name: "BleachBit", kind: "tool", pickIt: "You want a deeper one-off clean of app caches, with no ads.", pickThis: "You want it to happen on its own every month." },
+        { name: "Cleanup recommendations", kind: "built-in", pickIt: "You want to see the biggest files and unused apps and decide yourself.", pickThis: "You want something that runs without you." },
+      ],
+      compareWith: ["ccleaner-vs-storage-sense"],
     },
     steps: [
       "Open Settings > System > Storage.",
@@ -726,8 +829,8 @@ export const catalogB: TipDraft[] = [
     body: ["Run it once with the button on that page if you want to see it work today. After that the schedule is the point."],
   },
   {
-    slug: "windows-end-task",
-    title: "End a frozen app from the taskbar",
+    slug: "how-to-force-close-a-frozen-app-in-windows-11",
+    title: "How to force close a frozen app in Windows 11",
     summary: "Turn on End Task under For developers. Then right-click the taskbar icon.",
     category: "windows",
     platforms: ["windows"],
@@ -735,12 +838,16 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "You can kill one stuck app without opening Task Manager and finding it in the list.",
-    task: {
-      slug: "taskbar-end-task",
-      title: "How to end a task from the Windows 11 taskbar",
-      h1: "How to end a task from the Windows 11 taskbar",
-      intro:
-        "Windows 11 can show End task when you right-click an app on the taskbar. The command is hidden until you enable it under Settings > System > For developers. Ending the task closes the app and drops unsaved work.",
+    intents: ["speed-up-slow-windows-laptop", "frozen-app"],
+    redirectFrom: ["/tips/windows-end-task", "/fix/taskbar-end-task"],
+    seo: {
+      searchPhrase: "how to force close a frozen app in windows 11",
+      searchAlternates: ["end task from taskbar", "windows 11 app not responding", "ctrl shift esc"],
+      answer: "Turn on End Task in Settings > System > For developers. Then right-click the frozen app on the taskbar and choose End task.",
+      faq: [
+        { q: "Is there a way without changing settings?", a: "Yes. Press Ctrl + Shift + Esc to open Task Manager, select the app and click End task." },
+        { q: "Will I lose unsaved work?", a: "Yes. End task is a force quit." },
+      ],
     },
     steps: [
       "Open Settings > System > For developers.",
@@ -750,8 +857,8 @@ export const catalogB: TipDraft[] = [
     body: ["This is a force quit. Use it when the app will not close. For a normal exit, use the app's own close button so it can ask you to save."],
   },
   {
-    slug: "windows-do-not-disturb",
-    title: "Turn on Do not disturb from quick settings",
+    slug: "how-to-turn-on-do-not-disturb-in-windows-11",
+    title: "How to turn on Do not disturb in Windows 11",
     summary: "The tile is next to network and volume. The schedule is under Settings > System > Notifications.",
     category: "windows",
     platforms: ["windows"],
@@ -759,14 +866,17 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "Banners stop covering the thing you are trying to read.",
-    task: {
-      slug: "windows-do-not-disturb",
-      title: "How to use Do not disturb in Windows 11",
-      h1: "How to use Do not disturb in Windows 11",
-      intro:
-        "Windows 11 Do not disturb hides notification banners. The quick toggle is in quick settings. A schedule and a priority list live in Settings > System > Notifications.",
+    intents: ["notifications", "focus"],
+    redirectFrom: ["/tips/windows-do-not-disturb", "/fix/windows-do-not-disturb"],
+    seo: {
+      searchPhrase: "how to turn on do not disturb in windows 11",
+      searchAlternates: ["windows 11 focus mode", "stop notifications windows 11", "windows quiet hours"],
+      answer: "Click the network, volume or battery icon to open quick settings, then click Do not disturb. For a schedule, go to Settings > System > Notifications > Do not disturb.",
+      faq: [
+        { q: "Where do my notifications go?", a: "They still collect in Notification Center. They just don't pop up." },
+        { q: "Can some apps still get through?", a: "Yes. Set priority notifications on the same settings page." },
+      ],
     },
-    tasks: ["notifications", "focus"],
     steps: [
       "Click the network, volume, or battery area to open quick settings.",
       "Click Do not disturb. Click it again to turn it off.",
@@ -776,8 +886,8 @@ export const catalogB: TipDraft[] = [
     body: ["Notifications are still collected in Notification Center. You did not delete them. You stopped them from popping over your work."],
   },
   {
-    slug: "ai-name-your-version",
-    title: "Tell the chatbot your exact device and version first",
+    slug: "how-to-get-chatgpt-to-give-the-right-settings-steps-for-your-phone",
+    title: "How to get ChatGPT to give the right settings steps for your phone",
     summary: "One line, like iPhone, iOS 26, or Pixel, Android 16, stops it inventing a menu from a different year.",
     category: "ai",
     platforms: [],
@@ -785,15 +895,18 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Menu names change between versions. A model that does not know yours will guess a plausible path.",
-    task: {
-      slug: "tell-ai-your-os-version",
-      title: "How to stop an AI guessing the wrong settings menu",
-      h1: "How to stop an AI guessing the wrong settings menu",
-      intro:
-        "ChatGPT, Claude, and Gemini answer settings questions with a generic path unless you name the device and the version. Put that in the first line, and tell the model to admit when it does not know.",
-    },
-    tasks: ["ai-prompts"],
     apps: ["chatgpt", "claude", "gemini"],
+    intents: ["ai-prompts"],
+    redirectFrom: ["/tips/ai-name-your-version", "/fix/tell-ai-your-os-version"],
+    seo: {
+      searchPhrase: "how to get chatgpt to give the right settings steps for your phone",
+      searchAlternates: ["chatgpt gives wrong menu names", "ai wrong settings path", "chatgpt outdated instructions"],
+      answer: "Start your question with your exact device and version, like \"Pixel, Android 16\" or \"iPhone, iOS 26\", and ask it to say when it isn't sure a menu still has that name.",
+      faq: [
+        { q: "Where do I find my version?", a: "iPhone: Settings > General > About. Android: Settings > About phone. Windows: Settings > System > About. Mac: Apple menu > About This Mac." },
+        { q: "Why does ChatGPT invent menu names?", a: "Menus change every year and the model mixes versions together. A version line gives it less room to guess." },
+      ],
+    },
     steps: [
       "Find the version. iPhone: Settings > General > About. Android: Settings > About phone. Windows: Settings > System > About. Mac: Apple menu > About This Mac.",
       "Start the request with that fact. Example: Pixel, Android 16.",
@@ -804,8 +917,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "ai-checkable-steps",
-    title: "Ask for steps you can check, and stop when one is missing",
+    slug: "how-to-ask-chatgpt-for-steps-you-can-check",
+    title: "How to ask ChatGPT for steps you can check",
     summary: "Tell it to number the taps and to flag any menu name that might have changed.",
     category: "ai",
     platforms: [],
@@ -813,15 +926,19 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A paragraph you cannot test is how a wrong setting gets recommended with confidence.",
-    task: {
-      slug: "ask-for-checkable-steps",
-      title: "How to ask an AI for steps you can verify",
-      h1: "How to ask an AI for steps you can verify",
-      intro:
-        "A useful settings answer is a list you can match to the screen. Ask ChatGPT, Claude, or Gemini for numbered steps, and stop at the first step that is not there.",
-    },
-    tasks: ["ai-prompts"],
     apps: ["chatgpt", "claude", "gemini"],
+    intents: ["ai-prompts"],
+    redirectFrom: ["/tips/ai-checkable-steps", "/fix/ask-for-checkable-steps"],
+    seo: {
+      searchPhrase: "how to ask chatgpt for steps you can check",
+      searchAlternates: ["chatgpt step by step instructions", "stop ai making up steps", "verify chatgpt instructions"],
+      answer: "After you describe the job, add: \"Give me numbered steps I can check on the screen. If a menu name might have changed, say so.\" Stop as soon as a step doesn't match what you see.",
+      faq: [
+        { q: "What do I do when a step is wrong?", a: "Tell it the labels you actually see and ask it to continue from there." },
+        { q: "Does this work in Claude and Gemini?", a: "Yes. It's just text in the prompt." },
+      ],
+      compareWith: ["chatgpt"],
+    },
     steps: [
       "After you describe the job, add: Give me numbered steps I can check on the screen.",
       "Add: If a menu name might have changed, say so. Do not invent a path.",
@@ -831,8 +948,8 @@ export const catalogB: TipDraft[] = [
     body: ["This is slower than accepting the first answer. It is faster than undoing a setting you did not mean to change."],
   },
   {
-    slug: "chatgpt-custom-instructions",
-    title: "Set ChatGPT custom instructions once",
+    slug: "how-to-set-custom-instructions-in-chatgpt",
+    title: "How to set custom instructions in ChatGPT",
     summary: "Settings > Personalization, or Customize ChatGPT. Keep it short, and leave secrets out.",
     category: "ai",
     platforms: [],
@@ -840,15 +957,20 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 3,
     why: "Every new chat inherits the format you actually want, instead of the default essay.",
-    task: {
-      slug: "chatgpt-custom-instructions",
-      title: "How to set ChatGPT custom instructions",
-      h1: "How to set ChatGPT custom instructions",
-      intro:
-        "ChatGPT custom instructions apply to your chats until you change them. In Settings the page is Personalization on some clients and Customize ChatGPT on others. Turn customization on, then write the instructions. Project chats can override them.",
-    },
-    tasks: ["ai-prompts"],
     apps: ["chatgpt"],
+    intents: ["ai-prompts"],
+    redirectFrom: ["/tips/chatgpt-custom-instructions", "/fix/chatgpt-custom-instructions"],
+    seo: {
+      searchPhrase: "how to set custom instructions in chatgpt",
+      searchAlternates: ["chatgpt personalization", "customize chatgpt", "make chatgpt answers shorter"],
+      answer: "Open ChatGPT Settings > Personalization (or Customize ChatGPT), turn customization on, and write how you want answers. Start a new chat to see the change.",
+      faq: [
+        { q: "Do custom instructions change old chats?", a: "No. They only shape replies from now on." },
+        { q: "What shouldn't I put in custom instructions?", a: "Passwords, your home address or anything confidential from work." },
+        { q: "Do Projects use my custom instructions?", a: "A Project uses its own project instructions instead." },
+      ],
+      compareWith: ["chatgpt-vs-claude-vs-gemini"],
+    },
     steps: [
       "Open ChatGPT Settings.",
       "Open Personalization, or Customize ChatGPT if that is the label.",
@@ -862,8 +984,8 @@ export const catalogB: TipDraft[] = [
     pick: true,
   },
   {
-    slug: "chatgpt-temporary-chat",
-    title: "Use a temporary ChatGPT chat when you do not want it saved",
+    slug: "how-to-use-temporary-chat-in-chatgpt",
+    title: "How to use Temporary chat in ChatGPT",
     summary: "Turn Temporary chat on before you type. It is not added to history and it does not update memory.",
     category: "privacy",
     also: ["ai"],
@@ -872,15 +994,18 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A one-off question stays out of your chat list and does not become a memory the next chat can see.",
-    task: {
-      slug: "chatgpt-temporary-chat",
-      title: "How to start a temporary ChatGPT chat",
-      h1: "How to start a temporary ChatGPT chat",
-      intro:
-        "Temporary chat in ChatGPT is left out of your history and does not create or update memory. Turn it on before you send the first message. OpenAI says a copy can still be kept for up to 30 days for safety review. Saving the chat turns it into a normal one.",
-    },
-    tasks: ["ai-prompts"],
     apps: ["chatgpt"],
+    intents: ["ai-prompts"],
+    redirectFrom: ["/tips/chatgpt-temporary-chat", "/fix/chatgpt-temporary-chat"],
+    seo: {
+      searchPhrase: "how to use temporary chat in chatgpt",
+      searchAlternates: ["chatgpt incognito mode", "chatgpt without saving history", "chatgpt temporary chat"],
+      answer: "Start a new chat and turn on Temporary chat at the top before you type. It isn't saved to your history and doesn't update ChatGPT's memory.",
+      faq: [
+        { q: "Is a temporary chat completely private?", a: "No. OpenAI may keep a copy for up to 30 days for safety checks. Don't paste passwords or ID numbers." },
+        { q: "Does a temporary chat use my custom instructions?", a: "Not unless you turn personalization on for that chat." },
+      ],
+    },
     steps: [
       "Start a new chat.",
       "Turn Temporary chat on before you type. The control is at the top of a new chat. If you do not see it, open the chat options and look for Temporary.",
@@ -890,8 +1015,8 @@ export const catalogB: TipDraft[] = [
     body: ["If you save the conversation, it becomes a regular chat and the point of the mode is gone. For standing rules you do want remembered, use custom instructions instead."],
   },
   {
-    slug: "claude-instructions",
-    title: "Set Instructions for Claude in Settings",
+    slug: "how-to-set-instructions-for-claude",
+    title: "How to set Instructions for Claude",
     summary: "Click your initials at the lower left, then Settings, then Instructions for Claude.",
     category: "ai",
     platforms: [],
@@ -899,15 +1024,19 @@ export const catalogB: TipDraft[] = [
     difficulty: "Easy",
     minutes: 3,
     why: "The rules for how you want to be answered apply to ordinary chats without being pasted every time.",
-    task: {
-      slug: "claude-standing-instructions",
-      title: "How to set Instructions for Claude",
-      h1: "How to set Instructions for Claude",
-      intro:
-        "Instructions for Claude are account-wide. On the web you open them from your initials at the lower left, then Settings. They apply to normal chats. A project can carry a separate set of instructions for one piece of work.",
-    },
-    tasks: ["ai-prompts"],
     apps: ["claude"],
+    intents: ["ai-prompts"],
+    redirectFrom: ["/tips/claude-instructions", "/fix/claude-standing-instructions"],
+    seo: {
+      searchPhrase: "how to set instructions for claude",
+      searchAlternates: ["claude custom instructions", "claude personal preferences", "make claude answers shorter"],
+      answer: "In Claude, click your initials at the lower left, choose Settings, and write how you want answers under Instructions for Claude. It applies to every chat.",
+      faq: [
+        { q: "How is this different from project instructions?", a: "Project instructions only apply inside one project. These apply everywhere." },
+        { q: "Why is Claude ignoring my instructions?", a: "On a Team or Enterprise account, organization instructions win where they conflict with yours." },
+      ],
+      compareWith: ["chatgpt-vs-claude-vs-gemini"],
+    },
     steps: [
       "In Claude, click your initials at the lower left.",
       "Choose Settings.",

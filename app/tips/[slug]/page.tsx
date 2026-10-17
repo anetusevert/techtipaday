@@ -1,24 +1,28 @@
 import type { Metadata } from "next";
 import Link from "next/link";
 import { notFound } from "next/navigation";
+import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
 import { TipActions } from "@/components/TipActions";
-import { breadcrumbLd, pageAlternates } from "@/lib/seo";
+import { breadcrumbLd, faqLd, metaDescription, pageAlternates } from "@/lib/seo";
 import { appBySlug } from "@/lib/landings";
-import { categoryById, categoryName } from "@/lib/taxonomy";
+import { comparePath } from "@/lib/compare";
+import { categoryById, categoryName, platformById } from "@/lib/taxonomy";
 import {
-  fixPage,
+  comparesForTip,
   formatDate,
   formatMinutes,
   getLiveTip,
+  seoOf,
+  hubPath,
+  hubsForTip,
   neighbors,
   relatedTips,
   shareTip,
   SITE_NAME,
   SITE_URL,
   tipUrl,
-  tipsForFix,
 } from "@/lib/tips";
 
 export const dynamic = "force-dynamic";
@@ -26,13 +30,14 @@ export const dynamic = "force-dynamic";
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const tip = getLiveTip((await params).slug);
   if (!tip) return { title: "Not found", robots: { index: false, follow: false } };
+  const description = metaDescription(tip.title, tip.seo.answer);
   return {
     title: tip.title,
-    description: tip.summary,
+    description,
     alternates: pageAlternates(`/tips/${tip.slug}`),
     openGraph: {
       title: tip.title,
-      description: tip.summary,
+      description,
       type: "article",
       url: `/tips/${tip.slug}`,
       publishedTime: tip.date,
@@ -47,11 +52,13 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   const cat = categoryById(tip.category);
   const { newer, older } = neighbors(tip);
   const related = relatedTips(tip);
-  const task = fixPage(tip.task.slug);
-  const taskLive = tipsForFix(tip.task.slug).length > 0;
+  const hubs = hubsForTip(tip);
+  const compares = comparesForTip(tip);
+  const seo = seoOf(tip);
+  const devices = tip.platforms.map((id) => platformById(id)).filter((p) => !!p);
   const crumbs = [
     { name: "Home", href: "/" },
-    { name: cat?.name ?? categoryName(tip.category), href: cat?.path ?? "/tips" },
+    hubs[0] ? { name: hubs[0].title, href: hubPath(hubs[0]) } : { name: cat?.name ?? categoryName(tip.category), href: cat?.path ?? "/tips" },
     { name: tip.title, href: `/tips/${tip.slug}` },
   ];
   const ld = [
@@ -59,22 +66,25 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       "@context": "https://schema.org",
       "@type": "HowTo",
       name: tip.title,
-      description: tip.summary,
+      description: tip.seo.answer,
       url,
       totalTime: `PT${tip.minutes}M`,
       datePublished: tip.date,
       inLanguage: "en",
-      step: tip.steps.map((step, i) => ({ "@type": "HowToStep", position: i + 1, name: `Step ${i + 1}`, text: step })),
+      step: tip.steps.map((step, i) => ({ "@type": "HowToStep", position: i + 1, name: `Step ${i + 1}`, text: step, url: `${url}#step-${i + 1}` })),
     },
+    faqLd(seo.faq),
     {
       "@context": "https://schema.org",
       "@type": "Article",
       headline: tip.title,
-      description: tip.summary,
+      description: tip.seo.answer,
       datePublished: tip.date,
       dateModified: tip.date,
       inLanguage: "en",
       mainEntityOfPage: url,
+      about: seo.searchPhrase,
+      keywords: [seo.searchPhrase, ...seo.searchAlternates].join(", "),
       publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     },
     breadcrumbLd(crumbs.map((crumb) => ({ name: crumb.name, url: crumb.href === "/" ? SITE_URL : `${SITE_URL}${crumb.href}` }))),
@@ -95,7 +105,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
         <time dateTime={tip.date}>{formatDate(tip.date, { month: "long", day: "numeric", year: "numeric" })}</time>
       </p>
       <h1>{tip.title}</h1>
-      <p className="dek">{tip.summary}</p>
+      <p className="answer">{tip.seo.answer}</p>
       <ul className="badges">
         {cat ? (
           <li>
@@ -112,11 +122,6 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
             <span>{device}</span>
           </li>
         ))}
-        {task && taskLive ? (
-          <li>
-            <Link href={task.path}>Fix: {task.h1.replace(/^How to /, "")}</Link>
-          </li>
-        ) : null}
         {(tip.apps ?? []).map((id) => {
           const app = appBySlug(id);
           return app ? (
@@ -131,15 +136,11 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
           </li>
         ) : null}
       </ul>
-      <aside className="why">
-        <p className="kicker">Why it matters</p>
-        <p>{tip.why}</p>
-      </aside>
       <TipActions tip={shareTip(tip)} />
       <h2>How to do it</h2>
       <ol className="steps">
         {tip.steps.map((step, index) => (
-          <li key={step}>
+          <li key={step} id={`step-${index + 1}`}>
             <span className="step-no" aria-hidden="true">
               {String(index + 1).padStart(2, "0")}
             </span>
@@ -147,9 +148,74 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
           </li>
         ))}
       </ol>
+      <aside className="why use-when">
+        <p className="kicker">When it helps</p>
+        <p>{seo.useWhen}</p>
+        <p className="kicker">Where it falls short</p>
+        <p>{seo.notFor}</p>
+      </aside>
       {tip.body.map((paragraph) => (
         <p key={paragraph}>{paragraph}</p>
       ))}
+      {seo.alternatives.length ? (
+        <section className="block">
+          <h2>Other ways to do it</h2>
+          <ul className="alt-list">
+            {seo.alternatives.map((alt) => (
+              <li key={alt.name}>
+                <h3>
+                  {alt.name} <small>{alt.kind === "tool" ? "App" : alt.kind === "manual" ? "By hand" : "Built in"}</small>
+                </h3>
+                <p>
+                  <strong>Pick it if</strong> {alt.pickIt.replace(/^./, (c) => c.toLowerCase())}
+                </p>
+                <p>
+                  <strong>Stick with this tip if</strong> {alt.pickThis.replace(/^./, (c) => c.toLowerCase())}
+                </p>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      <Faq items={seo.faq} />
+      {compares.length ? (
+        <section className="block">
+          <h2>Compare the options</h2>
+          <ul className="link-grid">
+            {compares.map((page) => (
+              <li key={page.slug}>
+                <Link href={comparePath(page)}>
+                  <small>{page.kind === "alternatives" ? "Alternatives" : "Compare"}</small>
+                  {page.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      {hubs.length || devices.length ? (
+        <section className="block">
+          <h2>Find more by task</h2>
+          <ul className="link-grid">
+            {hubs.map((hub) => (
+              <li key={hub.id}>
+                <Link href={hubPath(hub)}>
+                  <small>By task</small>
+                  {hub.title}
+                </Link>
+              </li>
+            ))}
+            {devices.map((device) => (
+              <li key={device.id}>
+                <Link href={device.path}>
+                  <small>Device</small>
+                  {device.h1}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
       {related.length ? (
         <section className="block">
           <h2>Related tips</h2>
