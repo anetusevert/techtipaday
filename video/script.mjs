@@ -30,13 +30,14 @@ export async function buildScript(arg) {
   const result = v.result ?? { say: "Done. That's it.", headline: "Done", before: "before", after: "after" };
   // pieces = timed on-screen units; beats group them for the VO prompt
   const pieces = [
-    { beat: "hook", say: v.hook, text: v.hook, visual: v.hookVisual ?? null },
+    { beat: "hook", say: v.hook, text: v.hook, label: v.hookLabel ?? null, visual: v.hookVisual ?? null },
     { beat: "do", say: `${DO_LEAD} ${doThis}`, text: doThis, visual: v.doVisual ?? steps[0]?.visual ?? null },
     ...steps.map((s, i) => ({ beat: "steps", say: s.say, text: s.say, step: i + 1, visual: s.visual ?? null })),
     { beat: "result", say: result.say, text: result.headline, result },
     { beat: "cta", say: CTA_SAY, text: "One tech tip a day" },
   ];
-  const tags = { hook: "[exasperated]", do: "[confident]", steps: "[friendly]", result: "[delighted]", cta: "[warm]" };
+  const hookTag = { "HIDDEN SETTING": "[intrigued]", "STOP DOING THIS": "[firm]", "YOU'RE DOING IT WRONG": "[playful]" }[v.hookLabel] ?? "[exasperated]";
+  const tags = { hook: hookTag, do: "[confident]", steps: "[friendly]", result: "[delighted]", cta: "[warm]" };
   const beats = [];
   for (const p of pieces) { const b = beats.at(-1); if (b && b.beat === p.beat) b.text += ` ${p.say}`; else beats.push({ beat: p.beat, text: p.say }); }
   const prompt = beats.map((b) => `${tags[b.beat]} ${b.text}`).join("\n\n");
@@ -46,7 +47,7 @@ export async function buildScript(arg) {
   if (words > MAX_WORDS) warn.push(`VO is ${words} words (> ${MAX_WORDS})`);
   if (hookWords < 6 || hookWords > 12) warn.push(`hook is ${hookWords} words (want 6-12)`);
   const hw = result.headline.split(/\s+/).length; if (hw < 2 || hw > 5) warn.push(`result headline is ${hw} words (want 2-5)`);
-  return { key: keyFor(tip), n: tip.n, slug: tip.slug, title: tip.title, category: tip.category, url: `techtipaday.com/${tip.slug}`, pieces, words, warn, elevenlabsPrompt: prompt };
+  return { key: keyFor(tip), n: tip.n, slug: tip.slug, title: tip.title, category: tip.category, url: `https://www.techtipaday.com/tips/${tip.slug}`, pieces, words, warn, elevenlabsPrompt: prompt };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {

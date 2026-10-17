@@ -3,6 +3,7 @@ import { C, clamp } from "./theme";
 import { fontMono, fontSans } from "./fonts";
 import type { Visual } from "./types";
 import { CaretT } from "./CaretT";
+import { Laptop, PhoneSettings } from "./visuals2";
 
 const ease = Easing.inOut(Easing.cubic);
 const DEFAULT_TEXT = "Meet me at the cafe at 7, I'll bring teh charger.";
@@ -11,7 +12,7 @@ const DEFAULT_TEXT = "Meet me at the cafe at 7, I'll bring teh charger.";
 const ROWS = ["qwertyuiop", "asdfghjkl", "zxcvbnm"];
 const PW = 620, PH = 1000, KB_TOP = 560;
 
-function Finger({ x, y, press, show = 1 }: { x: number; y: number; press: number; show?: number }) {
+export function Finger({ x, y, press, show = 1 }: { x: number; y: number; press: number; show?: number }) {
   return <div style={{ position: "absolute", left: x - 42, top: y - 42, width: 84, height: 84, opacity: show, borderRadius: 22,
     transform: `scale(${1 - press * 0.12})`, boxShadow: `0 0 0 ${press * 20}px rgba(62,224,160,${0.35 * press}), 0 10px 30px rgba(0,0,0,.5)` }}>
     <CaretT size={84} /></div>;
@@ -152,5 +153,7 @@ export function VisualView({ v, dur }: { v?: Visual; dur: number }) {
     case "settings-path": return <SettingsPath v={v} />;
     case "icon": return <Icon v={v} />;
     case "brand": return <Brand />;
+    case "phone-settings": return <PhoneSettings v={v} dur={dur} />;
+    case "laptop": return <Laptop v={v} dur={dur} />;
   }
 }

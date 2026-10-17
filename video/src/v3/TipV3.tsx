@@ -96,7 +96,7 @@ function PieceScene({ p, dur, totalSteps, showLabel }: { p: Piece; dur: number; 
   if (p.beat === "cta") return <CtaCard url="" />;
   return <AbsoluteFill style={{ opacity: out, transform: `scale(${sc})` }}>
     <div style={{ position: "absolute", top: 250, left: 80, right: 80 }}>
-      {showLabel && <div style={{ marginBottom: 34 }}><Pill beat={p.beat}>{LABEL[p.beat]}</Pill></div>}
+      {showLabel && <div style={{ marginBottom: 34 }}><Pill beat={p.beat}>{p.label ?? LABEL[p.beat]}</Pill></div>}
       {!showLabel && <div style={{ height: 96 }} />}
       {p.beat === "hook" && <HookText text={p.text} dur={dur} />}
       {p.beat === "do" && <DoText text={p.text} />}

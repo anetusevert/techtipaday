@@ -116,6 +116,21 @@ const originals: Tip[] = [
       "Menu names shift a bit between Android brands. On Samsung it's Settings > Connections > Wi-Fi, gear icon, then the QR code button at the bottom.",
     ],
     pick: true,
+    video: {
+      hook: "Your phone hides every Wi-Fi password you've ever typed.",
+      hookLabel: "HIDDEN SETTING",
+      lines: ["Open Settings, then Wi-Fi.", "Tap the little i next to your network.", "Tap Password. Face ID unlocks it.", "On Android, tap Share for a QR code."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", path: ["Settings", "Wi-Fi"], rows: ["Home-5G", "Cafe Guest", "Office"], tap: "Home-5G" },
+      doThis: "Open Settings, then Wi-Fi.",
+      doVisual: { type: "phone-settings", path: ["Settings"], rows: ["Airplane Mode", "Wi-Fi", "Bluetooth", "Cellular"], tap: "Wi-Fi" },
+      steps: [
+        { say: "Tap the little i next to your network.", visual: { type: "phone-settings", path: ["Settings", "Wi-Fi"], rows: ["Home-5G  (i)", "Cafe Guest", "Office"], tap: "Home-5G  (i)" } },
+        { say: "Tap Password. Face ID unlocks it.", visual: { type: "phone-settings", path: ["Wi-Fi", "Home-5G"], rows: ["Auto-Join", "Password", "Private Address"], tap: "Password", reveal: "sunflower42" } },
+        { say: "On Android, tap Share for a QR code.", visual: { type: "phone-settings", path: ["Internet", "Home-5G"], rows: ["Share  (QR code)", "Forget", "Advanced"], tap: "Share  (QR code)" } },
+      ],
+      result: { say: "No more crawling behind the router.", headline: "Password found", before: "••••••••", after: "sunflower42" },
+    },
   },
   {
     n: 3,

@@ -4,7 +4,9 @@ export type Visual =
   | { type: "shortcut"; keys: string[]; label?: string }
   | { type: "settings-path"; path: string[]; platform?: string }
   | { type: "icon"; icon: string; label?: string }
-  | { type: "brand" };
+  | { type: "brand" }
+  | { type: "phone-settings"; mode?: "settings" | "call"; path: string[]; rows: string[]; tap?: string; toggle?: boolean; reveal?: string; caller?: string; note?: string }
+  | { type: "laptop"; action: "overwrite" | "keys" | "panel" | "paste"; items?: string[] };
 export type Segment = { kind: "hook" | "step" | "cta"; text: string; visual?: Visual; start: number };
 export type TipVideoProps = {
   n: number; title: string; category: string; segments: Segment[];

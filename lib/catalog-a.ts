@@ -139,6 +139,21 @@ export const catalogA: TipDraft[] = [
       "On a shared computer, do not copy passwords into it. Clear all is in the same panel.",
     ],
     pick: true,
+    video: {
+      hook: "You've been copying and pasting wrong your whole life.",
+      hookLabel: "YOU'RE DOING IT WRONG",
+      lines: ["Press Windows plus V.", "Turn on clipboard history.", "Now every copy is saved, not overwritten.", "Click any older copy to paste it."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "overwrite" },
+      doThis: "Press Windows plus V.",
+      doVisual: { type: "laptop", action: "keys" },
+      steps: [
+        { say: "Turn on clipboard history.", visual: { type: "laptop", action: "keys" } },
+        { say: "Now every copy is saved, not overwritten.", visual: { type: "laptop", action: "paste" } },
+        { say: "Click any older copy to paste it.", visual: { type: "laptop", action: "panel" } },
+      ],
+      result: { say: "Copy five things, paste them all.", headline: "Nothing gets lost", before: "Last copy", after: "Every copy" },
+    },
   },
   {
     slug: "how-to-open-the-emoji-panel-in-windows-11",
@@ -977,6 +992,21 @@ export const catalogA: TipDraft[] = [
       "People in your contacts, and numbers you have recently dialed, still ring. A school, a clinic, or a delivery driver will not, unless you add them.",
       "Turn it off on a day you are expecting a call from a number you have not saved. The recent-calls list still shows what you missed.",
     ],
+    video: {
+      hook: "Stop answering spam calls. Make your iPhone ignore them.",
+      hookLabel: "STOP DOING THIS",
+      lines: ["Turn on Silence Unknown Callers.", "Open Settings, then Apps, then Phone.", "Flip on Unknown Callers.", "Contacts still ring. Strangers go to voicemail."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "call", path: [], rows: [] },
+      doThis: "Turn on Silence Unknown Callers.",
+      doVisual: { type: "phone-settings", path: ["Settings", "Apps"], rows: ["Messages", "Phone", "Safari", "Mail"], tap: "Phone" },
+      steps: [
+        { say: "Open Settings, then Apps, then Phone.", visual: { type: "phone-settings", path: ["Apps", "Phone"], rows: ["Call Blocking", "Unknown Callers", "Voicemail"], tap: "Unknown Callers" } },
+        { say: "Flip on Unknown Callers.", visual: { type: "phone-settings", path: ["Phone", "Unknown Callers"], rows: ["Silence Unknown Callers", "Send to Voicemail"], tap: "Silence Unknown Callers", toggle: true } },
+        { say: "Contacts still ring. Strangers go to voicemail.", visual: { type: "phone-settings", mode: "call", path: [], rows: [], caller: "Unknown number", note: "Silenced, sent to voicemail" } },
+      ],
+      result: { say: "Your phone only rings for people you know.", headline: "Spam calls, silenced", before: "Ring ring", after: "Voicemail" },
+    },
   },
   {
     slug: "how-to-turn-on-one-handed-mode-on-android",

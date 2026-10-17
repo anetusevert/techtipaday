@@ -23,6 +23,8 @@ The VO is normalised to -16 LUFS at render; the bed sits around -33 LUFS under t
 ```ts
 video: {
   hook: "6-12 words, relatable pain, ends on ? or a punch",
+  hookLabel: "HIDDEN SETTING",        // optional pill + VO tone by hook style: (default) SOUND FAMILIAR? [exasperated],
+                                      // HIDDEN SETTING [intrigued], STOP DOING THIS [firm], YOU'RE DOING IT WRONG [playful]
   lines: [...],                       // legacy v2; used as steps if `steps` is missing
   cta: "One tech tip a day at techtipaday.com",
   hookVisual: { type: "phone-keyboard", action: "miss-taps" },
@@ -32,13 +34,13 @@ video: {
   result: { say: "spoken payoff", headline: "2-5 words", before: "teh", after: "the" },
 }
 ```
-Visual types are listed in `src/types.ts` and implemented in `src/visuals.tsx` (phone-keyboard, shortcut, settings-path, icon). Add new screen mocks there; each should show the Caret T pointer.
+Visual types are listed in `src/types.ts`: phone-keyboard, phone-settings (settings rows with tap/toggle/reveal, or `mode: "call"` for an incoming call) and laptop (Windows screen: overwrite/keys/panel/paste) are the v3 screen mocks with the Caret T pointer (`src/visuals.tsx`, `src/visuals2.tsx`); shortcut, settings-path and icon are older generic ones. Add new screen mocks there; each should show the Caret T pointer.
 Copy rules: whole VO 70 words max (the script warns), hook 6-12 words, short steps, result headline 2-5 words. Captions sound like a person.
 
 ## Daily commands (from `video/`)
 1. Add the `video` fields to the tip, then `node script.mjs <n|slug>`. This writes `scripts/tip-NN.json` and prints the ElevenLabs prompt (5 emotion-tagged segments: [exasperated] hook, [confident] do, [friendly] steps, [delighted] result, [warm] CTA).
 2. ElevenLabs `creative_generate_speech` with `voice_id`/`model_id` from `voice.json`, `generations_count: 1`, prompt = the printed text exactly. Poll `creative_get_flow_run_status`, then `curl -L -o public/vo/tip-NN.mp3 "<content_url>"`. Never re-call to retry.
-3. `node render.mjs <n|slug> --out=/workspace/techtipaday/tip-NN-v3.mp4`. Timing: the pieces are split into sentences, the boundaries are estimated by text length, then aligned in order to the VO pauses (ffmpeg silencedetect) with a small DP. The CTA sonic logo plays after the voice. Takes about 1.5 min.
+3. `node render.mjs <n|slug> --out=/workspace/techtipaday/tip-NN-v3.mp4` (`--dry` prints timings only). Timing: word timestamps from `align.py` (faster-whisper tiny.en in `/home/box/whisper-venv`; set it up with `python3 -m venv /home/box/whisper-venv && /home/box/whisper-venv/bin/pip install faster-whisper`). Without it, the fallback splits the pieces into sentences and aligns their length-based estimates to the VO pauses (ffmpeg silencedetect) with a DP. The CTA sonic logo plays after the voice. Takes about 1.5 min.
 4. QA: grab 4-5 frames (`ffmpeg -ss <t> -i out.mp4 -frames:v 1 f.png`) for hook, steps, result and CTA, and check loudness (`ffmpeg -i out.mp4 -af ebur128 -f null -`, about -17 LUFS integrated).
 
 Setup: `npm ci` in `video/` (needs ffmpeg; uses google-chrome if present). The v2 composition is still available via `node render-v2.mjs`.

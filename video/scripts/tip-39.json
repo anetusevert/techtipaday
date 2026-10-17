@@ -1,0 +1,112 @@
+{
+  "key": "tip-39",
+  "n": 39,
+  "slug": "how-to-silence-unknown-callers-on-iphone",
+  "title": "How to silence unknown callers on iPhone",
+  "category": "iphone",
+  "url": "techtipaday.com/how-to-silence-unknown-callers-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop answering spam calls. Make your iPhone ignore them.",
+      "text": "Stop answering spam calls. Make your iPhone ignore them.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "call",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Silence Unknown Callers.",
+      "text": "Turn on Silence Unknown Callers.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Apps"
+        ],
+        "rows": [
+          "Messages",
+          "Phone",
+          "Safari",
+          "Mail"
+        ],
+        "tap": "Phone"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Apps, then Phone.",
+      "text": "Open Settings, then Apps, then Phone.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Apps",
+          "Phone"
+        ],
+        "rows": [
+          "Call Blocking",
+          "Unknown Callers",
+          "Voicemail"
+        ],
+        "tap": "Unknown Callers"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Flip on Unknown Callers.",
+      "text": "Flip on Unknown Callers.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Phone",
+          "Unknown Callers"
+        ],
+        "rows": [
+          "Silence Unknown Callers",
+          "Send to Voicemail"
+        ],
+        "tap": "Silence Unknown Callers",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Contacts still ring. Strangers go to voicemail.",
+      "text": "Contacts still ring. Strangers go to voicemail.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "call",
+        "path": [],
+        "rows": [],
+        "caller": "Unknown number",
+        "note": "Silenced, sent to voicemail"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Your phone only rings for people you know.",
+      "text": "Spam calls, silenced",
+      "result": {
+        "say": "Your phone only rings for people you know.",
+        "headline": "Spam calls, silenced",
+        "before": "Ring ring",
+        "after": "Voicemail"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 51,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop answering spam calls. Make your iPhone ignore them.\n\n[confident] Here's the fix. Turn on Silence Unknown Callers.\n\n[friendly] Open Settings, then Apps, then Phone. Flip on Unknown Callers. Contacts still ring. Strangers go to voicemail.\n\n[delighted] Your phone only rings for people you know.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

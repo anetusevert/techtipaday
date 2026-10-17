@@ -1,0 +1,78 @@
+{
+  "key": "tip-11",
+  "n": 11,
+  "slug": "how-to-turn-on-clipboard-history-in-windows-11",
+  "title": "How to turn on clipboard history in Windows 11",
+  "category": "productivity",
+  "url": "techtipaday.com/how-to-turn-on-clipboard-history-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "You've been copying and pasting wrong your whole life.",
+      "text": "You've been copying and pasting wrong your whole life.",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "overwrite"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Press Windows plus V.",
+      "text": "Press Windows plus V.",
+      "visual": {
+        "type": "laptop",
+        "action": "keys"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn on clipboard history.",
+      "text": "Turn on clipboard history.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "keys"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Now every copy is saved, not overwritten.",
+      "text": "Now every copy is saved, not overwritten.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "paste"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click any older copy to paste it.",
+      "text": "Click any older copy to paste it.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "panel"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Copy five things, paste them all.",
+      "text": "Nothing gets lost",
+      "result": {
+        "say": "Copy five things, paste them all.",
+        "headline": "Nothing gets lost",
+        "before": "Last copy",
+        "after": "Every copy"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 49,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] You've been copying and pasting wrong your whole life.\n\n[confident] Here's the fix. Press Windows plus V.\n\n[friendly] Turn on clipboard history. Now every copy is saved, not overwritten. Click any older copy to paste it.\n\n[delighted] Copy five things, paste them all.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

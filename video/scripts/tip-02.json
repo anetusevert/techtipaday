@@ -1,0 +1,124 @@
+{
+  "key": "tip-02",
+  "n": 2,
+  "slug": "how-to-see-a-saved-wifi-password-on-iphone-or-android",
+  "title": "How to see a saved Wi-Fi password on iPhone or Android",
+  "category": "wifi",
+  "url": "techtipaday.com/how-to-see-a-saved-wifi-password-on-iphone-or-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your phone hides every Wi-Fi password you've ever typed.",
+      "text": "Your phone hides every Wi-Fi password you've ever typed.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Wi-Fi"
+        ],
+        "rows": [
+          "Home-5G",
+          "Cafe Guest",
+          "Office"
+        ],
+        "tap": "Home-5G"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Open Settings, then Wi-Fi.",
+      "text": "Open Settings, then Wi-Fi.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Airplane Mode",
+          "Wi-Fi",
+          "Bluetooth",
+          "Cellular"
+        ],
+        "tap": "Wi-Fi"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap the little i next to your network.",
+      "text": "Tap the little i next to your network.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Wi-Fi"
+        ],
+        "rows": [
+          "Home-5G  (i)",
+          "Cafe Guest",
+          "Office"
+        ],
+        "tap": "Home-5G  (i)"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Password. Face ID unlocks it.",
+      "text": "Tap Password. Face ID unlocks it.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Wi-Fi",
+          "Home-5G"
+        ],
+        "rows": [
+          "Auto-Join",
+          "Password",
+          "Private Address"
+        ],
+        "tap": "Password",
+        "reveal": "sunflower42"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On Android, tap Share for a QR code.",
+      "text": "On Android, tap Share for a QR code.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Internet",
+          "Home-5G"
+        ],
+        "rows": [
+          "Share  (QR code)",
+          "Forget",
+          "Advanced"
+        ],
+        "tap": "Share  (QR code)"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "No more crawling behind the router.",
+      "text": "Password found",
+      "result": {
+        "say": "No more crawling behind the router.",
+        "headline": "Password found",
+        "before": "••••••••",
+        "after": "sunflower42"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your phone hides every Wi-Fi password you've ever typed.\n\n[confident] Here's the fix. Open Settings, then Wi-Fi.\n\n[friendly] Tap the little i next to your network. Tap Password. Face ID unlocks it. On Android, tap Share for a QR code.\n\n[delighted] No more crawling behind the router.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

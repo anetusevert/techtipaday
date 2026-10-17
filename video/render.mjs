@@ -27,15 +27,24 @@ const sents = s.pieces.flatMap((p, pi) => (p.say.match(/[^.!?]+[.!?]+|[^.!?]+$/g
 const totLen = sents.reduce((x, y) => x + y.len, 0);
 const est = []; { let a = 0; for (let i = 0; i < sents.length - 1; i++) { a += sents[i].len; est.push((a / totLen) * dur); } }
 const merged = []; for (const p of pauses) { const l = merged.at(-1); if (l && p.s - l.e < 0.3) l.e = p.e; else merged.push({ ...p }); }
-const cand = merged.map((p) => Math.max(p.s + 0.05, p.e - 0.12));
-let bounds = est;
-if (cand.length >= est.length) { // DP: choose est.length ordered pauses minimising total |pause - estimate|
-  const K = est.length, N = cand.length, INF = 1e9; const D = Array.from({ length: K + 1 }, () => Array(N + 1).fill(INF)); const B = Array.from({ length: K + 1 }, () => Array(N + 1).fill(0));
-  for (let j = 0; j <= N; j++) D[0][j] = 0;
-  for (let k = 1; k <= K; k++) for (let j = k; j <= N; j++) { const skip = D[k][j - 1], take = D[k - 1][j - 1] + Math.abs(cand[j - 1] - est[k - 1]); if (take <= skip) { D[k][j] = take; B[k][j] = 1; } else D[k][j] = skip; }
-  bounds = []; for (let k = K, j = N; k > 0; j--) if (B[k][j]) { bounds.unshift(cand[j - 1]); k--; }
-}
-const starts = [0]; for (let i = 1; i < sents.length; i++) if (sents[i].pi !== sents[i - 1].pi) starts.push(bounds[i - 1]);
+const cand = merged.map((p) => Math.max(p.s + 0.05, p.e - 0.12)); const cdur = merged.map((p) => p.e - p.s);
+// DP over ordered (estimate, pause) pairs: match an estimate to a pause, skip a pause (comma breath), or leave an
+// estimate unmatched (the voice ran two sentences together) at a fixed cost.
+const K = est.length, N = cand.length, U = 0.7;
+const cost = (k, j) => Math.abs(cand[j] - est[k]) - 1.2 * Math.min(cdur[j], 0.5);
+const D = Array.from({ length: K + 1 }, () => Array(N + 1).fill(Infinity)); const B = Array.from({ length: K + 1 }, () => Array(N + 1).fill(""));
+D[0][0] = 0;
+for (let k = 0; k <= K; k++) for (let j = 0; j <= N; j++) { const d = D[k][j]; if (!isFinite(d)) continue;
+  if (j < N && d < D[k][j + 1]) { D[k][j + 1] = d; B[k][j + 1] = "skip"; }
+  if (k < K && d + U < D[k + 1][j]) { D[k + 1][j] = d + U; B[k + 1][j] = "est"; }
+  if (k < K && j < N && Math.abs(cand[j] - est[k]) < 2 && d + cost(k, j) < D[k + 1][j + 1]) { D[k + 1][j + 1] = d + cost(k, j); B[k + 1][j + 1] = "match"; } }
+const bounds = Array(K);
+for (let k = K, j = N; k > 0 || j > 0;) { const m = B[k][j]; if (m === "skip") j--; else if (m === "est") { bounds[k - 1] = est[k - 1]; k--; } else { bounds[k - 1] = cand[j - 1]; k--; j--; } }
+let starts = [0]; for (let i = 1; i < sents.length; i++) if (sents[i].pi !== sents[i - 1].pi) starts.push(bounds[i - 1]);
+// Prefer word timestamps (faster-whisper in /home/box/whisper-venv) when available; the pause DP above is the fallback.
+const PY = process.env.WHISPER_PY ?? "/home/box/whisper-venv/bin/python";
+if (hasVo && fs.existsSync(PY)) { const r = spawnSync(PY, [path.join(dir, "align.py"), vo, JSON.stringify(s.pieces.map((p) => p.say))], { encoding: "utf8" });
+  try { const w = JSON.parse(r.stdout.trim().split("\n").at(-1)); if (w.length === s.pieces.length) { starts = w; console.log("Timing: word timestamps"); } } catch { console.warn("⚠ align.py failed, using pause timing", r.stderr?.slice(-300)); } }
 const f = (x) => Math.round(x * FPS);
 const voStart = f(INTRO), voEnd = f(INTRO + dur);
 const pieces = s.pieces.map((p, i) => ({ ...p, start: voStart + f(starts[i]) }));
@@ -43,6 +52,7 @@ const props = { n: s.n, title: s.title, category: s.category, url: s.url, pieces
 fs.mkdirSync(path.join(dir, ".cache"), { recursive: true }); const pp = path.join(dir, ".cache", `${s.key}.props.json`); fs.writeFileSync(pp, JSON.stringify(props, null, 2));
 const out = outArg ? path.resolve(outArg.slice(6)) : path.join(dir, "out", `${s.key}.mp4`); fs.mkdirSync(path.dirname(out), { recursive: true });
 console.log(`VO ${dur.toFixed(2)}s, total ${(props.total / FPS).toFixed(1)}s. Piece starts (s):`, pieces.map((p) => `${p.beat}@${(p.start / FPS).toFixed(2)}`).join(" "));
+if (process.argv.includes("--dry")) process.exit(0);
 const args = ["render", "src/index.ts", "TipV3", out, `--props=${pp}`, "--overwrite", "--concurrency=4"];
 const chrome = ["/usr/bin/google-chrome-stable", "/usr/bin/google-chrome"].find((c) => fs.existsSync(c)); if (chrome) args.push(`--browser-executable=${chrome}`, "--gl=angle");
 const r = spawnSync(path.join(dir, "node_modules", ".bin", "remotion"), args, { cwd: dir, stdio: "inherit" });

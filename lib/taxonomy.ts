@@ -57,6 +57,8 @@ export type TipVideoVisual = { type: string; [key: string]: unknown };
 export type TipVideo = {
   /** 6-12 words, a relatable pain ending on a question or punch. */
   hook: string;
+  /** Hook pill text, by hook style (default SOUND FAMILIAR?), e.g. HIDDEN SETTING, STOP DOING THIS. */
+  hookLabel?: string;
   /** Legacy v2 lines; used as steps when `steps` is missing. */
   lines: string[];
   cta: string;
