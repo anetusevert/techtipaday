@@ -52,6 +52,25 @@ export type TipSeo = {
   compareWith?: string[];
 };
 
+/** Screen-mock action for the video (video/src/types.ts lists the types). */
+export type TipVideoVisual = { type: string; [key: string]: unknown };
+export type TipVideo = {
+  /** 6-12 words, a relatable pain ending on a question or punch. */
+  hook: string;
+  /** Legacy v2 lines; used as steps when `steps` is missing. */
+  lines: string[];
+  cta: string;
+  /** Beat 2, spoken after "Here's the fix." e.g. "Hold the spacebar." */
+  doThis?: string;
+  /** Beat 3: 2-4 short spoken steps, each with an optional screen-mock visual. */
+  steps?: { say: string; visual?: TipVideoVisual }[];
+  /** Beat 4: spoken line, 2-5 word headline, before/after labels. */
+  result?: { say: string; headline: string; before: string; after: string };
+  /** Visual under the hook and the "do this" beat. */
+  hookVisual?: TipVideoVisual;
+  doVisual?: TipVideoVisual;
+};
+
 export type Tip = {
   n: number;
   /** URL slug: slugify(seo.searchPhrase). Never change it without adding the old path to redirectFrom. */
@@ -80,7 +99,8 @@ export type Tip = {
   body: string[];
   /** Editor's shortlist. Not a view count. */
   pick?: boolean;
-  video?: { hook: string; lines: string[]; cta: string };
+  /** Daily short. v3 fields drive video/script.mjs (see video/VIDEO.md). Not rendered on the site. */
+  video?: TipVideo;
 };
 
 export type TipDraft = Omit<Tip, "n" | "date">;

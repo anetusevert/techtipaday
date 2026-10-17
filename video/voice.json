@@ -1,8 +1,10 @@
 {
   "provider": "ElevenLabs",
-  "voice_id": "y0s2ExEMuum3muUnA6Zd",
-  "voice_name": "Marcus - Bright, Upbeat and Clear",
+  "voice_id": "bmAn0TLASQN7ctGBMHgN",
+  "voice_name": "Bennett - Friendly, Smart Narrator",
+  "description": "Warm, approachable American female narrator. Friendly-expert.",
   "model_id": "eleven_v4",
   "generations_count": 1,
-  "note": "The one brand voice for every daily short. Do not change per agent."
+  "chosen": "2026-10-18",
+  "note": "The one TechTipADay voice for every daily short (v3+). Never change it. Distinct from One Agent a Day's Marcus. v2 renders used Marcus; that is retired."
 }

@@ -63,7 +63,7 @@ const originals: Tip[] = [
     ],
     pick: true,
     video: {
-      hook: "Still tapping on typos and missing every time?",
+      hook: "Still tapping on typos and missing every single time?",
       lines: [
         "Hold the spacebar.",
         "Your keyboard turns into a trackpad.",
@@ -71,6 +71,15 @@ const originals: Tip[] = [
         "On Android, just swipe along the spacebar.",
       ],
       cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-keyboard", action: "miss-taps" },
+      doThis: "Hold the spacebar.",
+      doVisual: { type: "phone-keyboard", action: "hold-space" },
+      steps: [
+        { say: "Your keyboard turns into a trackpad.", visual: { type: "phone-keyboard", action: "trackpad" } },
+        { say: "Slide to drop the cursor right on the typo.", visual: { type: "phone-keyboard", action: "glide-fix" } },
+        { say: "On Android, swipe along the spacebar.", visual: { type: "phone-keyboard", action: "swipe-space", platform: "android" } },
+      ],
+      result: { say: "No more stabbing at the screen. Fixed in one slide.", headline: "Fixed in one slide", before: "teh", after: "the" },
     },
   },
   {
