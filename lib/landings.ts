@@ -1,103 +1,198 @@
 /**
  * Landing pages are data, not new routes.
  *
- * Add a long-tail page by giving a tip a `task` (that becomes /fix/[slug])
- * or by adding a hub or app here. The page is published only once a matching
- * tip is live, so the library can grow past 300 pages without empty URLs.
- * Device pages live on PLATFORM paths in taxonomy.ts. Topic pages use CATEGORIES.
+ * Intent hubs live at /how-to/[slug]. Each one is built around a search phrase
+ * (searchPhrase) and collects real tips that list the hub id in `hubs`.
+ * A hub is published only once it has MIN_HUB_TIPS live tips, so there are no
+ * thin pages. Device pages live on PLATFORM paths in taxonomy.ts. Topic pages use CATEGORIES.
+ * Rules: docs/SEO.md.
  */
 
+import type { FaqItem } from "./taxonomy";
+
+/** An intent hub or app page needs at least this many live tips to be published and indexed. Aim for 3+. */
+export const MIN_HUB_TIPS = 2;
+
 export type Hub = {
+  /** Stable id that tips use in `hubs`. Never shown. */
+  id: string;
+  /** URL slug for /how-to/<slug>: slugify(searchPhrase) without a leading "how-to-". */
   slug: string;
+  searchPhrase: string;
+  /** Title tag and H1. Same words as searchPhrase. */
   title: string;
-  h1: string;
   intro: string;
+  searchAlternates?: string[];
+  /** Written FAQ. Fallback: the first FAQ of the newest live tips in the hub. */
+  faq?: FaqItem[];
+  /** Old paths that 301 here. */
+  redirectFrom?: string[];
 };
 
 export const HUBS: Hub[] = [
   {
-    slug: "keyboard",
+    id: "keyboard",
+    slug: "type-faster-on-your-phone-and-computer",
+    searchPhrase: "how to type faster on your phone and computer",
     title: "How to type faster on your phone and computer",
-    h1: "How to type faster on your phone and computer",
     intro:
-      "Typing fixes that are already on the device: text replacement, one-handed keyboards, and the phone trick that turns the spacebar into a trackpad. No new keyboard app required.",
+      "Most of the speed is already on the device. Text replacement turns @@ into your email address, the spacebar moves the cursor, and the keyboard can shrink for one thumb. No new keyboard app needed.",
+    redirectFrom: ["/fix/keyboard"],
   },
   {
-    slug: "split-screen",
+    id: "split-screen",
+    slug: "put-two-windows-side-by-side",
+    searchPhrase: "how to put two windows side by side",
     title: "How to put two windows side by side",
-    h1: "How to put two windows side by side",
     intro:
-      "Snap on Windows 11 and tiling on the Mac. Both are built in. Use them when a form and a document need to be open together, not as a new way to organize your whole desktop.",
+      "Snap on Windows 11 and tiling on the Mac are both built in. Use them when a form and a document need to be open together.",
+    redirectFrom: ["/fix/split-screen"],
   },
   {
-    slug: "tabs",
-    title: "How to find a browser tab",
-    h1: "How to find a browser tab",
+    id: "tabs",
+    slug: "find-and-reopen-browser-tabs-in-chrome",
+    searchPhrase: "how to find and reopen browser tabs in chrome",
+    title: "How to find and reopen browser tabs in Chrome",
     intro:
-      "Search open tabs, bring back one you closed, and see which tab is using the memory. These are Chrome controls, and the reopen shortcut also works in other desktop browsers.",
+      "Bring back a tab you closed by accident, search the forty you have open, and find the one eating memory. These are Chrome controls, and the reopen shortcut works in other browsers too.",
+    redirectFrom: ["/fix/tabs"],
   },
   {
-    slug: "screenshots",
-    title: "How to screenshot part of the screen",
-    h1: "How to screenshot part of the screen",
+    id: "screenshots",
+    slug: "take-a-screenshot-of-part-of-the-screen",
+    searchPhrase: "how to take a screenshot of part of the screen",
+    title: "How to take a screenshot of part of the screen",
     intro:
-      "Capture a region instead of the whole display, on Windows 11, Mac, and Android. A few of these also copy the text out of the picture so you do not retype it.",
+      "Grab just the bit you need instead of the whole display, then crop it or pull the text out. Windows 11, Mac and Android each have a shortcut for it.",
+    redirectFrom: ["/fix/screenshots"],
   },
   {
-    slug: "save-battery",
-    title: "How to make a phone battery last longer",
-    h1: "How to make a phone battery last longer",
+    id: "save-battery",
+    slug: "best-iphone-battery-tips",
+    searchPhrase: "best iphone battery tips",
+    title: "Best iPhone battery tips",
     intro:
-      "Battery tips that trade a little convenience for less wear or a longer afternoon: the charge limit, Low Power Mode, and the percentage so you can see what the phone is actually doing.",
+      "The few settings that actually change how long an iPhone lasts, today and over the years: the charge limit, Low Power Mode, a shorter Auto-Lock, and the percentage so you can see what is going on. No battery-saver apps.",
+    redirectFrom: ["/fix/save-battery"],
   },
   {
-    slug: "wifi",
-    title: "How to fix a Wi-Fi annoyance",
-    h1: "How to fix a Wi-Fi annoyance",
+    id: "wifi",
+    slug: "fix-common-wifi-problems-on-your-phone",
+    searchPhrase: "how to fix common wifi problems on your phone",
+    title: "How to fix common Wi-Fi problems on your phone",
     intro:
-      "Wi-Fi jobs you can finish on the phone: forget a bad network, see why it keeps dropping to cellular, share a hotspot with an older laptop, and read the password the phone already saved.",
+      "Wi-Fi jobs you can finish on the phone: find the saved password, forget a network that keeps failing, stop the phone burning cellular data, and make a hotspot an old laptop can see.",
+    redirectFrom: ["/fix/wifi"],
   },
   {
-    slug: "wifi-slow",
+    id: "wifi-slow",
+    slug: "fix-slow-wifi-on-your-phone",
+    searchPhrase: "how to fix slow wifi on your phone",
     title: "How to fix slow Wi-Fi on your phone",
-    h1: "How to fix slow Wi-Fi on your phone",
     intro:
-      "When the network you are on is the problem. Forget a stale saved network, stop Wi-Fi Assist from bouncing you onto cellular, and check Private DNS if pages fail only on that Android phone.",
+      "When only your phone is slow on a network, the cause is often on the phone: a stale saved network, Wi-Fi Assist bouncing to cellular, or a Private DNS setting. Try these before you restart the router.",
+    redirectFrom: ["/fix/wifi-slow"],
   },
   {
-    slug: "notifications",
-    title: "How to quiet notifications",
-    h1: "How to quiet notifications",
+    id: "notifications",
+    slug: "stop-notifications-from-interrupting-you",
+    searchPhrase: "how to stop notifications from interrupting you",
+    title: "How to stop notifications from interrupting you",
     intro:
-      "Ways to stop a phone or PC from interrupting you, without muting the one call you still need. Scheduled Summary, Do Not Disturb, Focus, and lock-screen previews are the switches that matter.",
+      "Ways to stop a phone or PC from interrupting you without missing the one call you need: Scheduled Summary, Do Not Disturb, Focus, lock-screen previews, and the browser sites that should never have been allowed.",
+    redirectFrom: ["/fix/notifications"],
   },
   {
-    slug: "privacy-checkup",
+    id: "privacy-checkup",
+    slug: "check-what-your-phone-is-sharing",
+    searchPhrase: "how to check what your phone is sharing",
     title: "How to check what your phone is sharing",
-    h1: "How to check what your phone is sharing",
     intro:
-      "A short privacy pass: precise location, tracking prompts, lock-screen content, saved passwords, and the iPhone privacy log. Each tip is one screen. None of them makes a phone anonymous.",
+      "A short privacy pass, one screen at a time: precise location, tracking prompts, lock-screen content, saved passwords and the iPhone privacy report. None of it makes a phone anonymous. It does close the obvious gaps.",
+    redirectFrom: ["/fix/privacy-checkup"],
   },
   {
-    slug: "copy-text",
-    title: "How to copy text from a picture",
-    h1: "How to copy text from a picture",
+    id: "copy-text",
+    slug: "copy-text-from-a-picture-or-screenshot",
+    searchPhrase: "how to copy text from a picture or screenshot",
+    title: "How to copy text from a picture or screenshot",
     intro:
-      "Pull words out of a photo or a screenshot instead of retyping them. iPhone Live Text, Google Photos, and the Windows 11 Snipping Tool all do this on the device.",
+      "Stop retyping serial numbers and Wi-Fi codes. iPhone Live Text, Google Lens, Circle to Search and the Windows 11 Snipping Tool all read text out of an image.",
+    redirectFrom: ["/fix/copy-text"],
   },
   {
-    slug: "ai-prompts",
-    title: "How to get a better answer from an AI chat",
-    h1: "How to get a better answer from an AI chat",
+    id: "ai-prompts",
+    slug: "get-better-answers-from-chatgpt-claude-and-gemini",
+    searchPhrase: "how to get better answers from chatgpt claude and gemini",
+    title: "How to get better answers from ChatGPT, Claude, and Gemini",
     intro:
-      "Prompt habits that work in ChatGPT, Claude, and Gemini, plus the settings where each product stores standing instructions. The goal is an answer you can check, not a longer answer.",
+      "Prompt habits that work in all three, plus where each one keeps standing instructions. The goal is an answer you can check, not a longer one.",
+    redirectFrom: ["/fix/ai-prompts"],
   },
   {
-    slug: "focus",
-    title: "How to block distractions for an hour",
-    h1: "How to block distractions for an hour",
+    id: "focus",
+    slug: "block-distractions-on-your-phone-and-computer",
+    searchPhrase: "how to block distractions on your phone and computer",
+    title: "How to block distractions on your phone and computer",
     intro:
-      "Focus on iPhone, Downtime in Screen Time, and Do Not Disturb on Windows 11. Pick one and leave it on during the hours you already know are noisy.",
+      "Focus and Downtime on iPhone, Do Not Disturb and app timers on Android, and Do not disturb on Windows 11. Pick one and leave it on for the hours you already know are noisy.",
+    redirectFrom: ["/fix/focus"],
+  },
+  {
+    id: "speed-up-slow-windows-laptop",
+    slug: "speed-up-a-slow-windows-laptop",
+    searchPhrase: "how to speed up a slow windows laptop",
+    title: "How to speed up a slow Windows laptop",
+    intro:
+      "Before you buy anything, check the usual suspects. A full disk, one frozen app, or a browser with too many tabs makes a laptop feel old. These are built-in fixes, in roughly the order I would try them.",
+  },
+  {
+    id: "frozen-app",
+    slug: "close-a-frozen-app-on-mac-or-windows",
+    searchPhrase: "how to close a frozen app on mac or windows",
+    title: "How to close a frozen app on Mac or Windows",
+    intro:
+      "When an app stops responding, force quit it and move on. Anything unsaved in that app is lost, so try a normal quit first and wait ten seconds.",
+  },
+  {
+    id: "iphone-privacy-settings",
+    slug: "best-iphone-privacy-settings",
+    searchPhrase: "best iphone privacy settings",
+    title: "Best iPhone privacy settings",
+    intro:
+      "The iPhone privacy switches worth a few minutes, from tracking prompts and precise location to locked apps and AirDrop. Lockdown Mode and Safety Check are here too, with a note on when you actually need them.",
+  },
+  {
+    id: "android-privacy-settings",
+    slug: "best-android-privacy-settings",
+    searchPhrase: "best android privacy settings",
+    title: "Best Android privacy settings",
+    intro:
+      "Android privacy settings that change something real: who can send you files, what the lock screen shows, a hidden space for sensitive apps, and the lock that fires if someone snatches the phone. Paths are for Pixel, with Samsung noted.",
+  },
+  {
+    id: "windows-11-keyboard-shortcuts",
+    slug: "windows-11-keyboard-shortcuts-worth-learning",
+    searchPhrase: "windows 11 keyboard shortcuts worth learning",
+    title: "Windows 11 keyboard shortcuts worth learning",
+    intro:
+      "Not a list of 200 shortcuts. These are the Windows key combinations people keep using after a week: clipboard history, snipping, snapping, voice typing and desktops.",
+  },
+  {
+    id: "mac-keyboard-shortcuts",
+    slug: "mac-keyboard-shortcuts-worth-learning",
+    searchPhrase: "mac keyboard shortcuts worth learning",
+    title: "Mac keyboard shortcuts worth learning",
+    intro:
+      "The Command-key shortcuts that save time every day on a Mac: open any app, take a screenshot, bring back a closed tab and get out of a frozen app.",
+  },
+  {
+    id: "use-phone-with-one-hand",
+    slug: "use-a-big-phone-with-one-hand",
+    searchPhrase: "how to use a big phone with one hand",
+    title: "How to use a big phone with one hand",
+    intro:
+      "Big phones are hard to use on the bus. iPhone and Android both have built-in ways to pull the screen down or shrink the keyboard toward your thumb.",
   },
 ];
 
@@ -176,5 +271,6 @@ export const APPS: AppLanding[] = [
   },
 ];
 
+export const hubById = (id: string) => HUBS.find((h) => h.id === id);
 export const hubBySlug = (slug: string) => HUBS.find((h) => h.slug === slug);
 export const appBySlug = (slug: string) => APPS.find((a) => a.slug === slug);

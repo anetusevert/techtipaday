@@ -4,18 +4,21 @@ import type { Metadata } from "next";
 import { notFound } from "next/navigation";
 import { LandingView } from "@/components/LandingView";
 import { pageAlternates } from "@/lib/seo";
-import { categoryById } from "@/lib/taxonomy";
+import { CATEGORIES } from "@/lib/taxonomy";
+
+/** Topic pages are matched on their path, so /categories/ai-tools finds the "ai" category. */
+const topicBySlug = (slug: string) => CATEGORIES.find((c) => c.path === `/categories/${slug}`);
 import { liveTopicPages, tipsForCategory } from "@/lib/tips";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
-  const category = categoryById((await params).slug);
-  if (!category || category.path !== `/categories/${category.id}`) return { title: "Not found", robots: { index: false, follow: false } };
+  const category = topicBySlug((await params).slug);
+  if (!category) return { title: "Not found", robots: { index: false, follow: false } };
   return { title: `${category.name} tips`, description: category.intro, alternates: pageAlternates(category.path) };
 }
 
 export default async function TopicPage({ params }: { params: Promise<{ slug: string }> }) {
-  const category = categoryById((await params).slug);
-  if (!category || category.path !== `/categories/${category.id}`) notFound();
+  const category = topicBySlug((await params).slug);
+  if (!category) notFound();
   const tips = tipsForCategory(category.id);
   if (!tips.length) notFound();
   const related = liveTopicPages()

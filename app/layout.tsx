@@ -94,7 +94,9 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h2>Browse</h2>
                 <Link href="/tips">All tips</Link>
-                <Link href="/fix">Fixes</Link>
+                <Link href="/how-to">By task</Link>
+                <Link href="/compare">Comparisons</Link>
+                <Link href="/compare#alternatives">Alternatives</Link>
                 <Link href="/apps">Apps</Link>
                 <Link href="/categories">Topics</Link>
                 <Link href="/sheets">Cheat sheets</Link>

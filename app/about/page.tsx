@@ -30,7 +30,10 @@ export default function About() {
           <Link href="/tips">All live tips</Link>, with search and filters
         </li>
         <li>
-          <Link href="/fix">Fixes</Link>, one page per job
+          <Link href="/how-to">Tips by task</Link>, like a slow laptop or a phone battery
+        </li>
+        <li>
+          <Link href="/compare">Comparisons and alternatives</Link>, including when the built-in setting is enough
         </li>
         <li>
           <Link href="/apps">Apps</Link> such as ChatGPT and Gboard

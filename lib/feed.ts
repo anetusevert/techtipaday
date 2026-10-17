@@ -65,7 +65,7 @@ export function jsonFeed() {
       summary: t.summary,
       content_text: tipText(t),
       date_published: `${t.date}T00:00:00Z`,
-      tags: [t.category, t.difficulty, ...t.platforms, ...t.devices, t.task.slug],
+      tags: [t.category, t.difficulty, ...t.platforms, ...t.devices, ...(t.intents ?? [])],
       authors: [{ name: SITE_NAME }],
     })),
   };

@@ -5,13 +5,19 @@ import { notFound } from "next/navigation";
 import { LandingView } from "@/components/LandingView";
 import { appBySlug } from "@/lib/landings";
 import { pageAlternates } from "@/lib/seo";
-import { liveAppPages, tipsForApp } from "@/lib/tips";
+import { isAppIndexable, liveAppPages, tipsForApp } from "@/lib/tips";
 
 export async function generateMetadata({ params }: { params: Promise<{ slug: string }> }): Promise<Metadata> {
   const app = appBySlug((await params).slug);
   const tips = app ? tipsForApp(app.slug) : [];
   if (!app || !tips.length) return { title: "Not found", robots: { index: false, follow: false } };
-  return { title: app.title, description: app.intro, alternates: pageAlternates(`/apps/${app.slug}`) };
+  return {
+    title: app.title,
+    description: app.intro,
+    alternates: pageAlternates(`/apps/${app.slug}`),
+    // Fewer than MIN_HUB_TIPS tips: useful for a visitor, too thin to index.
+    robots: isAppIndexable(app.slug) ? undefined : { index: false, follow: true },
+  };
 }
 
 export default async function AppPage({ params }: { params: Promise<{ slug: string }> }) {

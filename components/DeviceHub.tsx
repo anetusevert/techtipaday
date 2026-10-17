@@ -18,8 +18,8 @@ export function DeviceHub({ id }: { id: PlatformId }) {
     ...hubCards()
       .slice(0, 4)
       .map(({ hub, count }) => ({
-        href: `/fix/${hub.slug}`,
-        title: hub.h1,
+        href: `/how-to/${hub.slug}`,
+        title: hub.title,
         meta: `${count} ${count === 1 ? "tip" : "tips"}`,
       })),
   ];
