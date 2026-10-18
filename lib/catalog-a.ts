@@ -699,6 +699,21 @@ export const catalogA: TipDraft[] = [
       "A light tap is ignored on purpose, so it does not fire in a bag. If a new case seems to break it, tap harder before you turn the feature off.",
     ],
     pick: true,
+    video: {
+      hook: "Your iPhone has a secret button on the back.",
+      hookLabel: "HIDDEN SETTING",
+      lines: ["Turn on Back Tap.", "Settings, Accessibility, Touch, Back Tap.", "Pick Double Tap.", "Choose an action, like Screenshot."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", path: ["Settings", "Accessibility", "Touch"], rows: ["AssistiveTouch", "Haptic Touch", "Back Tap"], tap: "Back Tap" },
+      doThis: "Turn on Back Tap.",
+      doVisual: { type: "phone-settings", path: ["Settings", "Accessibility"], rows: ["VoiceOver", "Zoom", "Touch", "Display & Text Size"], tap: "Touch" },
+      steps: [
+        { say: "Go to Settings, Accessibility, Touch, Back Tap.", visual: { type: "phone-settings", path: ["Accessibility", "Touch"], rows: ["AssistiveTouch", "Haptic Touch", "Back Tap"], tap: "Back Tap" } },
+        { say: "Pick Double Tap.", visual: { type: "phone-settings", path: ["Touch", "Back Tap"], rows: ["Double Tap", "Triple Tap"], tap: "Double Tap" } },
+        { say: "Choose an action, like Screenshot or Flashlight.", visual: { type: "phone-settings", path: ["Back Tap", "Double Tap"], rows: ["None", "Flashlight", "Screenshot", "Camera"], tap: "Screenshot" } },
+      ],
+      result: { say: "Two taps on the back, done.", headline: "Tap tap, done", before: "Dig in menus", after: "Tap tap" },
+    },
   },
   {
     slug: "how-to-turn-on-the-one-handed-keyboard-on-iphone",
@@ -1168,6 +1183,21 @@ export const catalogA: TipDraft[] = [
     ],
     body: ["It sends the selected region to Google search. Do not use it on a screen that shows a password, a code, or someone else's private message."],
     pick: true,
+    video: {
+      hook: "Stop screenshotting things to search for them later.",
+      hookLabel: "STOP DOING THIS",
+      lines: ["Use Circle to Search.", "Hold the bar at the bottom.", "Circle anything on screen.", "Google finds it instantly."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "screenshot", path: [], rows: [] },
+      doThis: "Use Circle to Search.",
+      doVisual: { type: "phone-settings", mode: "circle", path: [], rows: [] },
+      steps: [
+        { say: "Hold the bar at the bottom of the screen.", visual: { type: "phone-settings", mode: "circle", path: [], rows: [] } },
+        { say: "Circle anything you see.", visual: { type: "phone-settings", mode: "circle", path: [], rows: [] } },
+        { say: "On Samsung, hold the home button instead.", visual: { type: "phone-settings", mode: "circle", path: [], rows: [] } },
+      ],
+      result: { say: "Search what you see, right where you are.", headline: "Found it", before: "Screenshot", after: "Circle it" },
+    },
   },
   {
     slug: "how-to-use-the-gboard-clipboard-on-android",

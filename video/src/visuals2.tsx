@@ -4,6 +4,7 @@ import { C, clamp } from "./theme";
 import { fontMono, fontSans } from "./fonts";
 import { Finger } from "./visuals";
 import type { Visual } from "./types";
+import { LaptopSnip, LaptopTabs, PhoneCircle } from "./visuals3";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -24,6 +25,7 @@ function Switch({ on }: { on: number }) {
 export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-settings" }>; dur: number }) {
   const f = useCurrentFrame();
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+  if (v.mode === "circle" || v.mode === "screenshot") return <PhoneCircle dur={dur} mode={v.mode} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>
@@ -59,6 +61,8 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
 const LW = 940, LH = 600;
 export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur: number }) {
   const f = useCurrentFrame();
+  if (v.action === "tabs") return <LaptopTabs v={v} dur={dur} />;
+  if (v.action === "snip") return <LaptopSnip v={v} dur={dur} />;
   if (v.action === "frozen" || v.action === "settings" || v.action === "taskbar") return <LaptopApps v={v} dur={dur} />;
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   const items = v.items ?? ["Meeting moved to 3pm", "https://techtipaday.com", "Flight AB123, seat 14C", "Invoice #4471"];

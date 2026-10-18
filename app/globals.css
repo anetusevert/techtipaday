@@ -577,3 +577,5 @@ a.cal-day.live { background: var(--ink); color: var(--paper); font-weight: 700; 
 .alt-list h3 small { margin-left: 6px; color: var(--muted); font-size: 12px; font-weight: 700; letter-spacing: 0.08em; text-transform: uppercase; }
 .alt-list p { margin: 0 0 4px; }
 .guide-note { color: var(--muted); font-size: 15px; }
+
+.display-name { font-weight: 700; font-size: 1.15rem; color: var(--green-ink); margin: 0.25rem 0 0.1rem; }

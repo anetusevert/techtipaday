@@ -1,0 +1,88 @@
+{
+  "key": "tip-04",
+  "n": 4,
+  "slug": "how-to-reopen-a-closed-tab-in-chrome",
+  "title": "How to reopen a closed tab in Chrome",
+  "category": "browser",
+  "url": "https://www.techtipaday.com/tips/how-to-reopen-a-closed-tab-in-chrome",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Just closed the tab you actually needed? Again?",
+      "text": "Just closed the tab you actually needed? Again?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "tabs",
+        "mode": "close"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Press Control, Shift, T.",
+      "text": "Press Control, Shift, T.",
+      "visual": {
+        "type": "laptop",
+        "action": "tabs",
+        "mode": "reopen"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Your tab comes right back.",
+      "text": "Your tab comes right back.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "tabs",
+        "mode": "reopen"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On a Mac, it's Command, Shift, T.",
+      "text": "On a Mac, it's Command, Shift, T.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "tabs",
+        "mode": "reopen",
+        "keys": [
+          "⌘ Cmd",
+          "Shift",
+          "T"
+        ]
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Keep pressing to bring back more.",
+      "text": "Keep pressing to bring back more.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "tabs",
+        "mode": "multi"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Nothing you close is really gone.",
+      "text": "Tab's back",
+      "result": {
+        "say": "Nothing you close is really gone.",
+        "headline": "Tab's back",
+        "before": "Closed",
+        "after": "Restored"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 48,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Just closed the tab you actually needed? Again?\n\n[confident] Here's the fix. Press Control, Shift, T.\n\n[friendly] Your tab comes right back. On a Mac, it's Command, Shift, T. Keep pressing to bring back more.\n\n[delighted] Nothing you close is really gone.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

@@ -1,0 +1,125 @@
+{
+  "key": "tip-60",
+  "n": 60,
+  "slug": "how-to-hide-apps-on-android-with-private-space",
+  "title": "How to hide apps on Android with Private space",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-hide-apps-on-android-with-private-space",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android can hide apps in a locked secret space.",
+      "text": "Your Android can hide apps in a locked secret space.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Security & privacy"
+        ],
+        "rows": [
+          "Device unlock",
+          "App security",
+          "Private space"
+        ],
+        "tap": "Private space"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Private space.",
+      "text": "Turn on Private space.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Apps",
+          "Notifications",
+          "Security & privacy",
+          "Battery"
+        ],
+        "tap": "Security & privacy"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Security and privacy, Private space.",
+      "text": "Open Settings, Security and privacy, Private space.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Security & privacy"
+        ],
+        "rows": [
+          "Device unlock",
+          "App security",
+          "Private space"
+        ],
+        "tap": "Private space"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Unlock it with your screen lock.",
+      "text": "Unlock it with your screen lock.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Security",
+          "Private space"
+        ],
+        "rows": [
+          "Set up",
+          "Use screen lock",
+          "Lock automatically"
+        ],
+        "tap": "Use screen lock",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Install the apps you want inside it.",
+      "text": "Install the apps you want inside it.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "App drawer",
+          "Private"
+        ],
+        "rows": [
+          "Install apps",
+          "Banking",
+          "Dating",
+          "Lock"
+        ],
+        "tap": "Install apps"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Out of sight, behind your lock.",
+      "text": "Hidden and locked",
+      "result": {
+        "say": "Out of sight, behind your lock.",
+        "headline": "Hidden and locked",
+        "before": "On show",
+        "after": "Private"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android can hide apps in a locked secret space.\n\n[confident] Here's the fix. Turn on Private space.\n\n[friendly] Open Settings, Security and privacy, Private space. Unlock it with your screen lock. Install the apps you want inside it.\n\n[delighted] Out of sight, behind your lock.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

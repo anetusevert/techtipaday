@@ -1,0 +1,125 @@
+{
+  "key": "tip-58",
+  "n": 58,
+  "slug": "how-to-lock-an-app-with-face-id-on-iphone",
+  "title": "How to lock an app with Face ID on iPhone",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-lock-an-app-with-face-id-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop worrying when someone borrows your phone.",
+      "text": "Stop worrying when someone borrows your phone.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Home Screen"
+        ],
+        "rows": [
+          "Photos",
+          "WhatsApp",
+          "Banking",
+          "Notes"
+        ],
+        "tap": "Photos"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Lock any app with Face ID.",
+      "text": "Lock any app with Face ID.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Home Screen",
+          "Photos"
+        ],
+        "rows": [
+          "Share App",
+          "Edit Home Screen",
+          "Require Face ID",
+          "Remove App"
+        ],
+        "tap": "Require Face ID"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press and hold the app icon.",
+      "text": "Press and hold the app icon.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Home Screen",
+          "Photos"
+        ],
+        "rows": [
+          "Share App",
+          "Edit Home Screen",
+          "Require Face ID",
+          "Remove App"
+        ],
+        "tap": "Require Face ID"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Require Face ID.",
+      "text": "Tap Require Face ID.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Photos",
+          "Require Face ID"
+        ],
+        "rows": [
+          "Require Face ID",
+          "Hide and Require Face ID"
+        ],
+        "tap": "Require Face ID",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Or hide it completely.",
+      "text": "Or hide it completely.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Photos",
+          "Require Face ID"
+        ],
+        "rows": [
+          "Require Face ID",
+          "Hide and Require Face ID"
+        ],
+        "tap": "Hide and Require Face ID",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Only your face opens it.",
+      "text": "Locked to your face",
+      "result": {
+        "say": "Only your face opens it.",
+        "headline": "Locked to your face",
+        "before": "Open to all",
+        "after": "Face ID"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 44,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop worrying when someone borrows your phone.\n\n[confident] Here's the fix. Lock any app with Face ID.\n\n[friendly] Press and hold the app icon. Tap Require Face ID. Or hide it completely.\n\n[delighted] Only your face opens it.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

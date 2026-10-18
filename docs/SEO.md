@@ -104,3 +104,8 @@ SITE_URL=http://localhost:3000 npm run verify  # local build
 ```
 
 It fetches every sitemap URL and checks: 200 with no redirect, www canonical, one H1 that matches the slug, no noindex, JSON-LD parses and has the expected types (FAQPage on tips, hubs, comparisons and alternatives). It follows every `/tips/` link on hub, comparison and alternatives pages and fails on anything that isn't a live 200 in the sitemap, which catches future tips leaking. It also checks robots, the llms.txt sections, llms-full.txt coverage, and a sample of 301s, including the apex and Railway hosts.
+
+## Display name (catchy headline)
+Each new tip may set `displayName`: a catchy but clear human headline, e.g. "Closed the wrong tab? One shortcut brings it back".
+It shows above the H1 on the tip page and as the card hook. The `title` (title tag + H1), `seo.searchPhrase` and `slug`
+keep the plain search wording; never put the display name in those.

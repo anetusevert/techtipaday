@@ -17,7 +17,7 @@ export function TipRiver({ tips, labelledBy }: { tips: Tip[]; labelledBy?: strin
                 {categoryName(tip.category)}
               </span>
               <span className="river-title">{tip.title}</span>
-              <span className="river-hook">{tip.summary}</span>
+              <span className="river-hook">{tip.displayName ?? tip.summary}</span>
               <span className="river-meta">
                 {tip.difficulty} · {formatMinutes(tip.minutes)}
               </span>

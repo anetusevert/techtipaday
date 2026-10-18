@@ -1,0 +1,88 @@
+{
+  "key": "tip-44",
+  "n": 44,
+  "slug": "how-to-use-circle-to-search-on-android",
+  "title": "How to use Circle to Search on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-use-circle-to-search-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop screenshotting things to search for them later.",
+      "text": "Stop screenshotting things to search for them later.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "screenshot",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Use Circle to Search.",
+      "text": "Use Circle to Search.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "circle",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Hold the bar at the bottom of the screen.",
+      "text": "Hold the bar at the bottom of the screen.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "circle",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Circle anything you see.",
+      "text": "Circle anything you see.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "circle",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On Samsung, hold the home button instead.",
+      "text": "On Samsung, hold the home button instead.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "circle",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Search what you see, right where you are.",
+      "text": "Found it",
+      "result": {
+        "say": "Search what you see, right where you are.",
+        "headline": "Found it",
+        "before": "Screenshot",
+        "after": "Circle it"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop screenshotting things to search for them later.\n\n[confident] Here's the fix. Use Circle to Search.\n\n[friendly] Hold the bar at the bottom of the screen. Circle anything you see. On Samsung, hold the home button instead.\n\n[delighted] Search what you see, right where you are.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

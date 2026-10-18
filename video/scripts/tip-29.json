@@ -1,0 +1,125 @@
+{
+  "key": "tip-29",
+  "n": 29,
+  "slug": "how-to-use-back-tap-on-iphone",
+  "title": "How to use Back Tap on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-use-back-tap-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone has a secret button on the back.",
+      "text": "Your iPhone has a secret button on the back.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Accessibility",
+          "Touch"
+        ],
+        "rows": [
+          "AssistiveTouch",
+          "Haptic Touch",
+          "Back Tap"
+        ],
+        "tap": "Back Tap"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Back Tap.",
+      "text": "Turn on Back Tap.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Accessibility"
+        ],
+        "rows": [
+          "VoiceOver",
+          "Zoom",
+          "Touch",
+          "Display & Text Size"
+        ],
+        "tap": "Touch"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Go to Settings, Accessibility, Touch, Back Tap.",
+      "text": "Go to Settings, Accessibility, Touch, Back Tap.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Accessibility",
+          "Touch"
+        ],
+        "rows": [
+          "AssistiveTouch",
+          "Haptic Touch",
+          "Back Tap"
+        ],
+        "tap": "Back Tap"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick Double Tap.",
+      "text": "Pick Double Tap.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Touch",
+          "Back Tap"
+        ],
+        "rows": [
+          "Double Tap",
+          "Triple Tap"
+        ],
+        "tap": "Double Tap"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Choose an action, like Screenshot or Flashlight.",
+      "text": "Choose an action, like Screenshot or Flashlight.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Back Tap",
+          "Double Tap"
+        ],
+        "rows": [
+          "None",
+          "Flashlight",
+          "Screenshot",
+          "Camera"
+        ],
+        "tap": "Screenshot"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Two taps on the back, done.",
+      "text": "Tap tap, done",
+      "result": {
+        "say": "Two taps on the back, done.",
+        "headline": "Tap tap, done",
+        "before": "Dig in menus",
+        "after": "Tap tap"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 48,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone has a secret button on the back.\n\n[confident] Here's the fix. Turn on Back Tap.\n\n[friendly] Go to Settings, Accessibility, Touch, Back Tap. Pick Double Tap. Choose an action, like Screenshot or Flashlight.\n\n[delighted] Two taps on the back, done.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

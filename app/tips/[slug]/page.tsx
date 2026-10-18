@@ -104,6 +104,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       <p className="kicker">
         <time dateTime={tip.date}>{formatDate(tip.date, { month: "long", day: "numeric", year: "numeric" })}</time>
       </p>
+      {tip.displayName ? <p className="display-name">{tip.displayName}</p> : null}
       <h1>{tip.title}</h1>
       <p className="answer">{tip.seo.answer}</p>
       <ul className="badges">

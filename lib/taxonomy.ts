@@ -81,6 +81,8 @@ export type Tip = {
   date: string;
   /** Title tag and H1. Same words as seo.searchPhrase, with normal capitalisation. */
   title: string;
+  /** Catchy human headline shown above the H1 and on cards. The H1, title tag and slug keep the plain search wording. */
+  displayName?: string;
   /** One-line hook for cards and feeds. */
   summary: string;
   category: CategoryId;

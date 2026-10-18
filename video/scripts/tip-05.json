@@ -1,0 +1,89 @@
+{
+  "key": "tip-05",
+  "n": 5,
+  "slug": "how-to-screenshot-part-of-the-screen-on-windows-or-mac",
+  "title": "How to screenshot part of the screen on Windows or Mac",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-screenshot-part-of-the-screen-on-windows-or-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "You've been taking screenshots the hard way.",
+      "text": "You've been taking screenshots the hard way.",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "full"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Press Windows, Shift, S.",
+      "text": "Press Windows, Shift, S.",
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "keys"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Drag a box around what you want.",
+      "text": "Drag a box around what you want.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "drag"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "It's already on your clipboard.",
+      "text": "It's already on your clipboard.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "done"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On a Mac, it's Command, Shift, 4.",
+      "text": "On a Mac, it's Command, Shift, 4.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "drag",
+        "keys": [
+          "⌘ Cmd",
+          "Shift",
+          "4"
+        ],
+        "app": "Preview · macOS"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "No full screenshot, no cropping.",
+      "text": "Just the part",
+      "result": {
+        "say": "No full screenshot, no cropping.",
+        "headline": "Just the part",
+        "before": "Crop later",
+        "after": "One drag"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 47,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] You've been taking screenshots the hard way.\n\n[confident] Here's the fix. Press Windows, Shift, S.\n\n[friendly] Drag a box around what you want. It's already on your clipboard. On a Mac, it's Command, Shift, 4.\n\n[delighted] No full screenshot, no cropping.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

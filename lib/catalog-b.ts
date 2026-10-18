@@ -376,6 +376,21 @@ export const catalogB: TipDraft[] = [
       "Open a hidden app from the App Library, in the Hidden folder, at the bottom.",
     ],
     body: ["If Require Face ID is not in the menu, the phone is on an iOS older than 18, or the app does not support the lock. Mail and a few system apps are limited. If you hide an app, remember the App Library is where it went."],
+    video: {
+      hook: "Stop worrying when someone borrows your phone.",
+      hookLabel: "STOP DOING THIS",
+      lines: ["Lock any app with Face ID.", "Press and hold the app icon.", "Tap Require Face ID.", "Or hide it completely."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", path: ["Home Screen"], rows: ["Photos", "WhatsApp", "Banking", "Notes"], tap: "Photos" },
+      doThis: "Lock any app with Face ID.",
+      doVisual: { type: "phone-settings", path: ["Home Screen", "Photos"], rows: ["Share App", "Edit Home Screen", "Require Face ID", "Remove App"], tap: "Require Face ID" },
+      steps: [
+        { say: "Press and hold the app icon.", visual: { type: "phone-settings", path: ["Home Screen", "Photos"], rows: ["Share App", "Edit Home Screen", "Require Face ID", "Remove App"], tap: "Require Face ID" } },
+        { say: "Tap Require Face ID.", visual: { type: "phone-settings", path: ["Photos", "Require Face ID"], rows: ["Require Face ID", "Hide and Require Face ID"], tap: "Require Face ID", toggle: true } },
+        { say: "Or hide it completely.", visual: { type: "phone-settings", path: ["Photos", "Require Face ID"], rows: ["Require Face ID", "Hide and Require Face ID"], tap: "Hide and Require Face ID", toggle: true } },
+      ],
+      result: { say: "Only your face opens it.", headline: "Locked to your face", before: "Open to all", after: "Face ID" },
+    },
   },
   {
     slug: "how-to-hide-notifications-on-the-android-lock-screen",
@@ -435,6 +450,21 @@ export const catalogB: TipDraft[] = [
     ],
     body: ["A medical app, a messaging app you must hear, or anything that should run while the phone is locked does not belong in here. Those apps are paused on purpose."],
     pick: true,
+    video: {
+      hook: "Your Android can hide apps in a locked secret space.",
+      hookLabel: "HIDDEN SETTING",
+      lines: ["Turn on Private space.", "Settings, Security and privacy, Private space.", "Unlock it with your screen lock.", "Install apps inside it."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", path: ["Settings", "Security & privacy"], rows: ["Device unlock", "App security", "Private space"], tap: "Private space" },
+      doThis: "Turn on Private space.",
+      doVisual: { type: "phone-settings", path: ["Settings"], rows: ["Apps", "Notifications", "Security & privacy", "Battery"], tap: "Security & privacy" },
+      steps: [
+        { say: "Open Settings, Security and privacy, Private space.", visual: { type: "phone-settings", path: ["Settings", "Security & privacy"], rows: ["Device unlock", "App security", "Private space"], tap: "Private space" } },
+        { say: "Unlock it with your screen lock.", visual: { type: "phone-settings", path: ["Security", "Private space"], rows: ["Set up", "Use screen lock", "Lock automatically"], tap: "Use screen lock", toggle: true } },
+        { say: "Install the apps you want inside it.", visual: { type: "phone-settings", path: ["App drawer", "Private"], rows: ["Install apps", "Banking", "Dating", "Lock"], tap: "Install apps" } },
+      ],
+      result: { say: "Out of sight, behind your lock.", headline: "Hidden and locked", before: "On show", after: "Private" },
+    },
   },
   {
     slug: "how-to-turn-on-theft-detection-lock-on-android",
