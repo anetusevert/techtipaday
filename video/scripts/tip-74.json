@@ -1,0 +1,112 @@
+{
+  "key": "tip-74",
+  "n": 74,
+  "slug": "how-to-force-close-a-frozen-app-in-windows-11",
+  "title": "How to force close a frozen app in Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-force-close-a-frozen-app-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still mashing Control Alt Delete every time an app freezes?",
+      "text": "Still mashing Control Alt Delete every time an app freezes?",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "frozen",
+        "app": "Excel"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on End Task in Settings.",
+      "text": "Turn on End Task in Settings.",
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "System",
+          "Bluetooth & devices",
+          "Network & internet",
+          "Apps"
+        ],
+        "tap": "System"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open System, then For developers.",
+      "text": "Open System, then For developers.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Settings",
+          "System"
+        ],
+        "rows": [
+          "Display",
+          "Sound",
+          "Notifications",
+          "For developers"
+        ],
+        "tap": "For developers"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Flip on End Task.",
+      "text": "Flip on End Task.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "System",
+          "For developers"
+        ],
+        "rows": [
+          "Developer Mode",
+          "End Task",
+          "File Explorer"
+        ],
+        "tap": "End Task",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Right-click the frozen app, then End task.",
+      "text": "Right-click the frozen app, then End task.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "taskbar",
+        "app": "Excel"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "One right-click, and the frozen app is gone.",
+      "text": "Gone in one click",
+      "result": {
+        "say": "One right-click, and the frozen app is gone.",
+        "headline": "Gone in one click",
+        "before": "Frozen",
+        "after": "Closed"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Still mashing Control Alt Delete every time an app freezes?\n\n[confident] Here's the fix. Turn on End Task in Settings.\n\n[friendly] Open System, then For developers. Flip on End Task. Right-click the frozen app, then End task.\n\n[delighted] One right-click, and the frozen app is gone.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

@@ -187,6 +187,15 @@ export const HUBS: Hub[] = [
       "The Command-key shortcuts that save time every day on a Mac: open any app, take a screenshot, bring back a closed tab and get out of a frozen app.",
   },
   {
+    id: "free-up-storage",
+    slug: "free-up-storage-space-on-your-phone-or-pc",
+    searchPhrase: "how to free up storage space on your phone or pc",
+    title: "How to free up storage space on your phone or PC",
+    intro:
+      "Before you delete photos or pay for more space, let the phone or PC clear out what you don't use. iPhone can offload apps you never open and Windows 11 can empty temp files on a schedule. Both are built in.",
+    searchAlternates: ["phone storage full", "free up space on laptop", "storage full what to delete"],
+  },
+  {
     id: "use-phone-with-one-hand",
     slug: "use-a-big-phone-with-one-hand",
     searchPhrase: "how to use a big phone with one hand",

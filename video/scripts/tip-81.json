@@ -1,0 +1,126 @@
+{
+  "key": "tip-81",
+  "n": 81,
+  "slug": "how-to-free-up-storage-on-iphone",
+  "title": "How to free up storage on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-free-up-storage-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop deleting your photos every time storage is full.",
+      "text": "Stop deleting your photos every time storage is full.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "General",
+          "iPhone Storage"
+        ],
+        "rows": [
+          "Storage Full",
+          "Photos  38.2 GB",
+          "Apps  41.6 GB",
+          "System Data  9.1 GB"
+        ],
+        "tap": "Photos  38.2 GB"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Offload the apps you never open.",
+      "text": "Offload the apps you never open.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "General"
+        ],
+        "rows": [
+          "About",
+          "Software Update",
+          "iPhone Storage",
+          "AirDrop"
+        ],
+        "tap": "iPhone Storage"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, General, iPhone Storage.",
+      "text": "Open Settings, General, iPhone Storage.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "General",
+          "iPhone Storage"
+        ],
+        "rows": [
+          "Offload Unused Apps",
+          "Review Large Attachments",
+          "Photos  38.2 GB",
+          "Apps  41.6 GB"
+        ],
+        "tap": "Offload Unused Apps"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Enable on Offload Unused Apps.",
+      "text": "Tap Enable on Offload Unused Apps.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "iPhone Storage",
+          "Recommendations"
+        ],
+        "rows": [
+          "Offload Unused Apps",
+          "Save up to 7.4 GB"
+        ],
+        "tap": "Offload Unused Apps",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Your photos and app data stay put.",
+      "text": "Your photos and app data stay put.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "General",
+          "iPhone Storage"
+        ],
+        "rows": [
+          "Available  8.9 GB",
+          "Photos  38.2 GB",
+          "Apps  34.2 GB"
+        ],
+        "tap": "Available  8.9 GB"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Gigabytes back, and every photo is still there.",
+      "text": "Space back, photos kept",
+      "result": {
+        "say": "Gigabytes back, and every photo is still there.",
+        "headline": "Space back, photos kept",
+        "before": "Storage Full",
+        "after": "7.4 GB free"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop deleting your photos every time storage is full.\n\n[confident] Here's the fix. Offload the apps you never open.\n\n[friendly] Open Settings, General, iPhone Storage. Tap Enable on Offload Unused Apps. Your photos and app data stay put.\n\n[delighted] Gigabytes back, and every photo is still there.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

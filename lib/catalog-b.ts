@@ -803,7 +803,7 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 3,
     why: "Temporary files and a recycle bin full of old deletes stop being a manual chore.",
-    intents: ["speed-up-slow-windows-laptop"],
+    intents: ["speed-up-slow-windows-laptop", "free-up-storage"],
     redirectFrom: ["/tips/windows-storage-sense", "/fix/storage-sense"],
     seo: {
       searchPhrase: "how to free up disk space automatically in windows 11",
@@ -855,6 +855,21 @@ export const catalogB: TipDraft[] = [
       "Right-click the app's icon on the taskbar and choose End task.",
     ],
     body: ["This is a force quit. Use it when the app will not close. For a normal exit, use the app's own close button so it can ask you to save."],
+    video: {
+      hook: "Still mashing Control Alt Delete every time an app freezes?",
+      hookLabel: "YOU'RE DOING IT WRONG",
+      lines: ["Turn on End Task in Settings.", "Open System, then For developers.", "Flip on End Task.", "Right-click the frozen app, End task."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "frozen", app: "Excel" },
+      doThis: "Turn on End Task in Settings.",
+      doVisual: { type: "laptop", action: "settings", path: ["Settings"], rows: ["System", "Bluetooth & devices", "Network & internet", "Apps"], tap: "System" },
+      steps: [
+        { say: "Open System, then For developers.", visual: { type: "laptop", action: "settings", path: ["Settings", "System"], rows: ["Display", "Sound", "Notifications", "For developers"], tap: "For developers" } },
+        { say: "Flip on End Task.", visual: { type: "laptop", action: "settings", path: ["System", "For developers"], rows: ["Developer Mode", "End Task", "File Explorer"], tap: "End Task", toggle: true } },
+        { say: "Right-click the frozen app, then End task.", visual: { type: "laptop", action: "taskbar", app: "Excel" } },
+      ],
+      result: { say: "One right-click, and the frozen app is gone.", headline: "Gone in one click", before: "Frozen", after: "Closed" },
+    },
   },
   {
     slug: "how-to-turn-on-do-not-disturb-in-windows-11",

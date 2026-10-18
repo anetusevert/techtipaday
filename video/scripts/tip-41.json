@@ -1,0 +1,122 @@
+{
+  "key": "tip-41",
+  "n": 41,
+  "slug": "how-to-see-old-notifications-on-android",
+  "title": "How to see old notifications on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-see-old-notifications-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Swiped away a message? Android can bring it back.",
+      "text": "Swiped away a message? Android can bring it back.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Notifications"
+        ],
+        "rows": [
+          "Mum: call me back",
+          "Parcel arriving today",
+          "Bank: payment received"
+        ],
+        "tap": "Mum: call me back"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on notification history.",
+      "text": "Turn on notification history.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Network & internet",
+          "Connected devices",
+          "Apps",
+          "Notifications"
+        ],
+        "tap": "Notifications"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Notifications.",
+      "text": "Open Settings, then Notifications.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Notifications"
+        ],
+        "rows": [
+          "App notifications",
+          "Notification history",
+          "Conversations",
+          "Bubbles"
+        ],
+        "tap": "Notification history"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Use notification history.",
+      "text": "Switch on Use notification history.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Notifications",
+          "History"
+        ],
+        "rows": [
+          "Use notification history"
+        ],
+        "tap": "Use notification history",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Everything you dismiss waits here for a day.",
+      "text": "Everything you dismiss waits here for a day.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Notifications",
+          "History"
+        ],
+        "rows": [
+          "Recently dismissed",
+          "Mum: call me back",
+          "Parcel arriving today"
+        ],
+        "tap": "Mum: call me back"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "That message you swiped away is still there.",
+      "text": "Notification found",
+      "result": {
+        "say": "That message you swiped away is still there.",
+        "headline": "Notification found",
+        "before": "Swiped away",
+        "after": "Still there"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 50,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Swiped away a message? Android can bring it back.\n\n[confident] Here's the fix. Turn on notification history.\n\n[friendly] Open Settings, then Notifications. Switch on Use notification history. Everything you dismiss waits here for a day.\n\n[delighted] That message you swiped away is still there.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

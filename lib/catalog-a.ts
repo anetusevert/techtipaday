@@ -1064,6 +1064,21 @@ export const catalogA: TipDraft[] = [
       "After you dismiss something, come back to Notification history on that same screen to read it.",
     ],
     body: ["Turn it on now, while nothing is wrong. The alert you wanted was the one you dismissed before the feature was enabled, and that one is gone."],
+    video: {
+      hook: "Swiped away a message? Android can bring it back.",
+      hookLabel: "HIDDEN SETTING",
+      lines: ["Turn on notification history.", "Open Settings, then Notifications.", "Switch on Use notification history.", "Everything you dismiss waits here for a day."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", path: ["Notifications"], rows: ["Mum: call me back", "Parcel arriving today", "Bank: payment received"], tap: "Mum: call me back" },
+      doThis: "Turn on notification history.",
+      doVisual: { type: "phone-settings", path: ["Settings"], rows: ["Network & internet", "Connected devices", "Apps", "Notifications"], tap: "Notifications" },
+      steps: [
+        { say: "Open Settings, then Notifications.", visual: { type: "phone-settings", path: ["Settings", "Notifications"], rows: ["App notifications", "Notification history", "Conversations", "Bubbles"], tap: "Notification history" } },
+        { say: "Switch on Use notification history.", visual: { type: "phone-settings", path: ["Notifications", "History"], rows: ["Use notification history"], tap: "Use notification history", toggle: true } },
+        { say: "Everything you dismiss waits here for a day.", visual: { type: "phone-settings", path: ["Notifications", "History"], rows: ["Recently dismissed", "Mum: call me back", "Parcel arriving today"], tap: "Mum: call me back" } },
+      ],
+      result: { say: "That message you swiped away is still there.", headline: "Notification found", before: "Swiped away", after: "Still there" },
+    },
   },
   {
     slug: "how-to-schedule-do-not-disturb-on-android",
