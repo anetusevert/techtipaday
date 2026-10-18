@@ -12,7 +12,7 @@ if (fileAt >= 0) {
   const fs = await import("node:fs");
   urlList.push(...fs.readFileSync(argv[fileAt + 1], "utf8").split("\n").map((l) => l.trim()).filter(Boolean));
 }
-urlList.push(...argv.filter((a, i) => !a.startsWith("--") && i !== fileAt + 1));
+urlList.push(...argv.filter((a, i) => !a.startsWith("--") && (fileAt < 0 || i !== fileAt + 1)));
 if (!urlList.length) {
   const xml = await (await fetch(site + "/sitemap.xml")).text();
   urlList = [...xml.matchAll(/<loc>(.*?)<\/loc>/g)].map((m) => m[1]);

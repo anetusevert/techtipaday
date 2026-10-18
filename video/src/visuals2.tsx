@@ -161,7 +161,8 @@ function LaptopApps({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur: n
     </>;
   }
   const bar = v.action === "taskbar";
-  return <div style={{ width: LW + 80, display: "flex", flexDirection: "column", alignItems: "center" }}>
+  // 40px lower than the Notepad mock so a four-line hook clears the screen edge
+  return <div style={{ width: LW + 80, display: "flex", flexDirection: "column", alignItems: "center", marginTop: 40 }}>
     <div style={{ position: "relative", width: LW, height: LH, borderRadius: 26, border: "12px solid #2c3658", background: "#0f1730", overflow: "hidden", boxShadow: "0 40px 100px rgba(0,0,0,.55)" }}>
       {screen}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 56, background: "#141c36", display: "flex", justifyContent: "center", alignItems: "center", gap }}>
