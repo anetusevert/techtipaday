@@ -497,6 +497,21 @@ export const catalogB: TipDraft[] = [
       "The phone has to be unlocked for the detection to matter. A phone that is already locked is already locked.",
       "This is not a guarantee. It is one lock that fires in a specific kind of theft. Find Hub, or Find My Device, is still how you locate or wipe a phone later.",
     ],
+    video: {
+      hook: "Your Android can lock itself the second it's snatched.",
+      hookLabel: "HIDDEN SETTING",
+      lines: ["Turn on Theft Detection Lock.", "Open Settings, Google, All services.", "Tap Theft protection.", "Switch on Theft Detection Lock."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "snatch", path: ["Banking · Android"], rows: [] },
+      doThis: "Turn on Theft Detection Lock.",
+      doVisual: { type: "phone-settings", mode: "snatch", path: ["Banking · Android"], rows: [], reveal: "locked" },
+      steps: [
+        { say: "Open Settings, Google, All services.", visual: { type: "phone-settings", path: ["Settings", "Google"], rows: ["Google Account", "All services", "Autofill", "Backup"], tap: "All services" } },
+        { say: "Tap Theft protection.", visual: { type: "phone-settings", path: ["Google", "All services"], rows: ["Find Hub", "Theft protection", "Parental controls", "Ads"], tap: "Theft protection" } },
+        { say: "Switch on Theft Detection Lock.", visual: { type: "phone-settings", path: ["All services", "Theft protection"], rows: ["Theft Detection Lock", "Offline Device Lock", "Remote Lock"], tap: "Theft Detection Lock", toggle: true } },
+      ],
+      result: { say: "Grab it and run, and the screen locks on its own.", headline: "Locked on the spot", before: "Left unlocked", after: "Locks itself" },
+    },
   },
   {
     slug: "how-to-use-safety-check-on-iphone",

@@ -948,6 +948,21 @@ export const catalogA: TipDraft[] = [
       "Drag the corners if the crop is wrong, then tap Save.",
     ],
     body: ["You can scan several pages before you save. Keep them. A single photo of a contract is harder to read and harder to forward."],
+    video: {
+      hook: "Stop paying for scanner apps. Your iPhone already has one.",
+      hookLabel: "STOP DOING THIS",
+      lines: ["Use Scan Documents in Notes.", "In a note, tap the paperclip, then Scan Documents.", "Hold your phone over the page.", "It snaps, crops and straightens it."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", path: ["App Store", "Search: scanner"], rows: ["ScanMate+ · €4.99 a week", "PDF Scan Pro · €29.99/yr", "DocCam · €9.99 a month", "Start free trial"], tap: "Start free trial" },
+      doThis: "Use Scan Documents in Notes.",
+      doVisual: { type: "phone-settings", path: ["Notes"], rows: ["New Note", "Groceries", "Lease notes", "Ideas"], tap: "New Note" },
+      steps: [
+        { say: "In a note, tap the paperclip, then Scan Documents.", visual: { type: "phone-settings", path: ["Notes", "New Note"], rows: ["Choose Photo or Video", "Take Photo or Video", "Scan Documents", "Scan Text"], tap: "Scan Documents" } },
+        { say: "Hold your phone over the page.", visual: { type: "phone-settings", mode: "scan", path: [], rows: [] } },
+        { say: "It snaps, crops and straightens it.", visual: { type: "phone-settings", mode: "scan", path: [], rows: [], reveal: "saved" } },
+      ],
+      result: { say: "A clean PDF, and you didn't pay a cent.", headline: "Free, built-in scanner", before: "€4.99 a week", after: "Free in Notes" },
+    },
   },
   {
     slug: "how-to-type-to-siri-on-iphone",

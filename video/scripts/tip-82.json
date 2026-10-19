@@ -1,0 +1,130 @@
+{
+  "key": "tip-82",
+  "n": 82,
+  "slug": "how-to-stop-apps-from-opening-on-startup-in-windows-11",
+  "title": "How to stop apps from opening on startup in Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-stop-apps-from-opening-on-startup-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Laptop crawls every time you log in? Blame these apps.",
+      "text": "Laptop crawls every time you log in? Blame these apps.",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "boot",
+        "items": [
+          "Teams",
+          "Spotify",
+          "Steam",
+          "OneDrive",
+          "Discord",
+          "Adobe Updater"
+        ]
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn off your startup apps.",
+      "text": "Turn off your startup apps.",
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "System",
+          "Bluetooth & devices",
+          "Network & internet",
+          "Apps"
+        ],
+        "tap": "Apps"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Apps, Startup.",
+      "text": "Open Settings, Apps, Startup.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Settings",
+          "Apps"
+        ],
+        "rows": [
+          "Installed apps",
+          "Default apps",
+          "Startup",
+          "Advanced app settings"
+        ],
+        "tap": "Startup"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Sort by startup impact.",
+      "text": "Sort by startup impact.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Apps",
+          "Startup"
+        ],
+        "rows": [
+          "Sort by: Startup impact",
+          "Spotify · High impact",
+          "Teams · High impact",
+          "Steam · Medium impact"
+        ],
+        "tap": "Sort by: Startup impact"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch off anything you don't need.",
+      "text": "Switch off anything you don't need.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Apps",
+          "Startup"
+        ],
+        "rows": [
+          "Spotify · High impact",
+          "Teams · High impact",
+          "Steam · Medium impact"
+        ],
+        "tap": "Spotify · High impact",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Your desktop's ready the second you log in.",
+      "text": "Ready in seconds",
+      "result": {
+        "say": "Your desktop's ready the second you log in.",
+        "headline": "Ready in seconds",
+        "before": "Slow start",
+        "after": "Ready to go"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 49,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Laptop crawls every time you log in? Blame these apps.\n\n[confident] Here's the fix. Turn off your startup apps.\n\n[friendly] Open Settings, Apps, Startup. Sort by startup impact. Switch off anything you don't need.\n\n[delighted] Your desktop's ready the second you log in.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

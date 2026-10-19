@@ -1,0 +1,117 @@
+{
+  "key": "tip-61",
+  "n": 61,
+  "slug": "how-to-turn-on-theft-detection-lock-on-android",
+  "title": "How to turn on Theft Detection Lock on Android",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-theft-detection-lock-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android can lock itself the second it's snatched.",
+      "text": "Your Android can lock itself the second it's snatched.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "snatch",
+        "path": [
+          "Banking · Android"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Theft Detection Lock.",
+      "text": "Turn on Theft Detection Lock.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "snatch",
+        "path": [
+          "Banking · Android"
+        ],
+        "rows": [],
+        "reveal": "locked"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Google, All services.",
+      "text": "Open Settings, Google, All services.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Google"
+        ],
+        "rows": [
+          "Google Account",
+          "All services",
+          "Autofill",
+          "Backup"
+        ],
+        "tap": "All services"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Theft protection.",
+      "text": "Tap Theft protection.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Google",
+          "All services"
+        ],
+        "rows": [
+          "Find Hub",
+          "Theft protection",
+          "Parental controls",
+          "Ads"
+        ],
+        "tap": "Theft protection"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Theft Detection Lock.",
+      "text": "Switch on Theft Detection Lock.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "All services",
+          "Theft protection"
+        ],
+        "rows": [
+          "Theft Detection Lock",
+          "Offline Device Lock",
+          "Remote Lock"
+        ],
+        "tap": "Theft Detection Lock",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Grab it and run, and the screen locks on its own.",
+      "text": "Locked on the spot",
+      "result": {
+        "say": "Grab it and run, and the screen locks on its own.",
+        "headline": "Locked on the spot",
+        "before": "Left unlocked",
+        "after": "Locks itself"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 50,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android can lock itself the second it's snatched.\n\n[confident] Here's the fix. Turn on Theft Detection Lock.\n\n[friendly] Open Settings, Google, All services. Tap Theft protection. Switch on Theft Detection Lock.\n\n[delighted] Grab it and run, and the screen locks on its own.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

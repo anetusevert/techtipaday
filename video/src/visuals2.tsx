@@ -4,7 +4,7 @@ import { C, clamp } from "./theme";
 import { fontMono, fontSans } from "./fonts";
 import { Finger } from "./visuals";
 import type { Visual } from "./types";
-import { LaptopSnip, LaptopTabs, PhoneCircle } from "./visuals3";
+import { LaptopBoot, LaptopSnip, LaptopTabs, PhoneScan, PhoneCircle, PhoneSnatch } from "./visuals3";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -26,6 +26,8 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   const f = useCurrentFrame();
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   if (v.mode === "circle" || v.mode === "screenshot") return <PhoneCircle dur={dur} mode={v.mode} />;
+  if (v.mode === "scan") return <PhoneScan v={v} dur={dur} />;
+  if (v.mode === "snatch") return <PhoneSnatch v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>
@@ -51,7 +53,7 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
       return <div key={r} style={{ position: "absolute", top: rowY(i), left: 26, right: 26, height: 92, borderRadius: 22, padding: "0 28px", display: "flex", alignItems: "center", justifyContent: "space-between",
         background: hit && done > 0.5 ? "rgba(62,224,160,.16)" : C.panel, border: hit && done > 0.5 ? `3px solid ${C.acc}` : "3px solid transparent", fontFamily: fontSans, fontSize: 36, color: C.fg }}>
         <span>{hit && v.reveal ? (done > 0.5 ? v.reveal : "Password") : r}</span>
-        {hit && v.toggle ? <Switch on={done} /> : hit && v.reveal ? <span style={{ fontFamily: fontMono, color: done > 0.5 ? C.acc : C.mut, fontSize: 34 }}>{done > 0.5 ? "copy" : "••••••••"}</span> : <span style={{ color: C.mut }}>›</span>}
+        {hit && v.toggle ? <Switch on={v.toggleOff ? 1 - done : done} /> : hit && v.reveal ? <span style={{ fontFamily: fontMono, color: done > 0.5 ? C.acc : C.mut, fontSize: 34 }}>{done > 0.5 ? "copy" : "••••••••"}</span> : <span style={{ color: C.mut }}>›</span>}
       </div>; })}
     <Finger x={fx} y={fy} press={press} show={p(0, 6)} />
   </PhoneFrame>;
@@ -63,6 +65,7 @@ export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur
   const f = useCurrentFrame();
   if (v.action === "tabs") return <LaptopTabs v={v} dur={dur} />;
   if (v.action === "snip") return <LaptopSnip v={v} dur={dur} />;
+  if (v.action === "boot") return <LaptopBoot v={v} dur={dur} />;
   if (v.action === "frozen" || v.action === "settings" || v.action === "taskbar") return <LaptopApps v={v} dur={dur} />;
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   const items = v.items ?? ["Meeting moved to 3pm", "https://techtipaday.com", "Flight AB123, seat 14C", "Invoice #4471"];
@@ -142,7 +145,7 @@ function LaptopApps({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur: n
       {rows.map((r, i) => { const hit = i === ti;
         return <div key={r} style={{ position: "absolute", top: rowY(i), left: 26, right: 26, height: 76, borderRadius: 16, padding: "0 26px", display: "flex", alignItems: "center", justifyContent: "space-between",
           background: hit && done > 0.5 ? "rgba(62,224,160,.16)" : C.panel, border: hit && done > 0.5 ? `3px solid ${C.acc}` : "3px solid transparent", fontFamily: fontSans, fontSize: 32, color: C.fg }}>
-          <span>{r}</span>{hit && v.toggle ? <Switch on={done} /> : <span style={{ color: C.mut }}>›</span>}</div>; })}
+          <span>{r}</span>{hit && v.toggle ? <Switch on={v.toggleOff ? 1 - done : done} /> : <span style={{ color: C.mut }}>›</span>}</div>; })}
     </>;
   } else { // taskbar: right-click the app icon, pick End task, the frozen window disappears
     const items = [app, "Pin to taskbar", "Close window", "End task"];

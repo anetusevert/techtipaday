@@ -5,9 +5,9 @@ export type Visual =
   | { type: "settings-path"; path: string[]; platform?: string }
   | { type: "icon"; icon: string; label?: string }
   | { type: "brand" }
-  | { type: "phone-settings"; mode?: "settings" | "call" | "circle" | "screenshot"; path: string[]; rows: string[]; tap?: string; toggle?: boolean; reveal?: string; caller?: string; note?: string }
-  | { type: "laptop"; action: "overwrite" | "keys" | "panel" | "paste" | "frozen" | "settings" | "taskbar" | "tabs" | "snip"; items?: string[]; keys?: string[]; mode?: string;
-      app?: string; path?: string[]; rows?: string[]; tap?: string; toggle?: boolean }; // frozen/taskbar use app; settings uses path/rows/tap/toggle
+  | { type: "phone-settings"; mode?: "settings" | "call" | "circle" | "screenshot" | "scan" | "snatch"; path: string[]; rows: string[]; tap?: string; toggle?: boolean; toggleOff?: boolean; reveal?: string; caller?: string; note?: string }
+  | { type: "laptop"; action: "overwrite" | "keys" | "panel" | "paste" | "frozen" | "settings" | "taskbar" | "tabs" | "snip" | "boot"; items?: string[]; keys?: string[]; mode?: string;
+      app?: string; path?: string[]; rows?: string[]; tap?: string; toggle?: boolean; toggleOff?: boolean }; // frozen/taskbar use app; settings uses path/rows/tap/toggle(/toggleOff); boot uses items
 export type Segment = { kind: "hook" | "step" | "cta"; text: string; visual?: Visual; start: number };
 export type TipVideoProps = {
   n: number; title: string; category: string; segments: Segment[];

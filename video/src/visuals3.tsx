@@ -105,3 +105,78 @@ export function PhoneCircle({ dur, mode }: { dur: number; mode: "circle" | "scre
     </div>}
   </div>;
 }
+
+/** action "boot": signed in, but the desktop is busy opening apps nobody asked for. items = the startup apps. */
+export function LaptopBoot({ v, dur }: { v: LaptopV; dur: number }) {
+  const f = useCurrentFrame();
+  const apps = v.items ?? ["Teams", "Spotify", "Steam", "OneDrive", "Discord", "Adobe Updater"];
+  const k = Math.min(apps.length, Math.floor(interpolate(f, [4, dur * 0.85], [0, apps.length], clamp)));
+  const press = f % 22 < 6 ? 1 : 0; // clicking, nothing happens
+  return <div style={{ width: LW + 80, display: "flex", flexDirection: "column", alignItems: "center", marginTop: 40 }}>
+    <Screen title="Desktop · Windows 11">
+      <div style={{ position: "absolute", top: 120, left: 60, width: 380, textAlign: "center" }}>
+        <div style={{ margin: "0 auto", width: 90, height: 90, borderRadius: 45, border: "10px solid rgba(255,255,255,.18)", borderTopColor: "#4da3ff", transform: `rotate(${f * 14}deg)` }} />
+        <div style={{ marginTop: 30, fontFamily: fontSans, fontWeight: 700, fontSize: 36, color: C.fg }}>Still loading…</div>
+        <div style={{ marginTop: 10, fontFamily: fontMono, fontSize: 24, color: C.mut }}>{`${14 + Math.floor(f / 3)}s since you logged in`}</div>
+      </div>
+      {apps.slice(0, k).map((a, i) => { const at = 4 + (i * (dur * 0.85 - 4)) / apps.length; const s = interpolate(f, [at, at + 6], [0.7, 1], clamp);
+        return <div key={a} style={{ position: "absolute", right: 30, top: 70 + i * 66, width: 400, height: 54, borderRadius: 12, padding: "0 18px", display: "flex", alignItems: "center", gap: 14,
+          background: "#1c2440", border: "2px solid #3a4670", transform: `scale(${s})`, transformOrigin: "100% 50%", fontFamily: fontSans, fontSize: 26, color: C.fg }}>
+          <div style={{ width: 26, height: 26, borderRadius: 6, background: ["#4da3ff", "#21a366", "#8a7cff", "#2f7fe0", "#5865f2", "#ff6b6b"][i % 6] }} />{`${a} is starting`}</div>; })}
+      <div style={{ position: "absolute", bottom: 30, left: 30, padding: "14px 20px", borderRadius: 14, background: "rgba(255,107,107,.18)", border: `2px solid ${C.warn}`, fontFamily: fontSans, fontSize: 26, color: C.fg }}>{`${k} apps opened by themselves`}</div>
+      <div style={{ position: "absolute", left: 0, top: 0, width: LW, height: LH }}><Finger x={250} y={420} press={press} show={1} /></div>
+    </Screen>
+  </div>;
+}
+
+/** Phone document scanner (Notes > Scan Documents): reveal "saved" = shutter fires, the page comes out cropped and straight. */
+export function PhoneScan({ v, dur }: { v: Extract<Visual, { type: "phone-settings" }>; dur: number }) {
+  const f = useCurrentFrame();
+  const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+  const PW = 620, PH = 1000; const saved = v.reveal === "saved";
+  const detect = saved ? 1 : p(dur * 0.2, dur * 0.45); const snap = saved ? p(dur * 0.15, dur * 0.4) : 0;
+  const flash = saved ? interpolate(f, [dur * 0.1, dur * 0.14, dur * 0.24], [0, 0.85, 0], clamp) : 0;
+  const rot = -9 * (1 - snap), sc = 1 + 0.08 * snap;
+  return <div style={{ position: "relative", width: PW, height: PH, borderRadius: 72, background: "#05070d", border: "10px solid #2c3658", boxShadow: "0 40px 100px rgba(0,0,0,.55)", overflow: "hidden" }}>
+    <div style={{ position: "absolute", top: 18, left: PW / 2 - 70, width: 140, height: 34, borderRadius: 20, background: "#000" }} />
+    <div style={{ position: "absolute", top: 70, left: 0, right: 0, textAlign: "center" }}><span style={{ padding: "10px 22px", borderRadius: 14, background: snap > 0.5 ? "rgba(62,224,160,.2)" : "rgba(255,255,255,.12)",
+      fontFamily: fontSans, fontSize: 28, color: snap > 0.5 ? C.acc : C.fg }}>{snap > 0.5 ? "Scan 1 saved" : detect > 0.5 ? "Hold still…" : "Position the document"}</span></div>
+    <div style={{ position: "absolute", top: 160, left: 0, right: 0, height: 640, background: snap > 0.5 ? "#141a2e" : "linear-gradient(180deg,#3a3026,#2a2219)" }} />
+    <div style={{ position: "absolute", top: 200, left: (PW - 380) / 2, width: 380, height: 520, transform: `rotate(${rot}deg) scale(${sc})`, borderRadius: 8, background: "#e9ecf3", padding: "36px 32px", boxShadow: "0 20px 50px rgba(0,0,0,.5)" }}>
+      <div style={{ fontFamily: fontSans, fontWeight: 800, fontSize: 30, color: "#1c2440" }}>Lease agreement</div>
+      {[0, 1, 2, 3, 4, 5, 6, 7].map((i) => <div key={i} style={{ marginTop: 22, width: [300, 260, 290, 220, 300, 240, 280, 160][i], height: 14, borderRadius: 7, background: "#b9c0d2" }} />)}
+      <div style={{ position: "absolute", bottom: 40, left: 32, width: 140, height: 3, background: "#1c2440" }} />
+      {detect > 0 && <div style={{ position: "absolute", inset: -6, borderRadius: 10, border: `5px solid ${C.acc}`, background: `rgba(62,224,160,${0.18 * detect * (1 - snap)})`, opacity: detect * (snap > 0.5 ? 0.6 : 0.7 + 0.3 * Math.sin(f / 3)) }} />}
+    </div>
+    <div style={{ position: "absolute", bottom: 50, left: PW / 2 - 55, width: 110, height: 110, borderRadius: 55, border: "6px solid #fff", padding: 6 }}><div style={{ width: "100%", height: "100%", borderRadius: "50%", background: "#fff" }} /></div>
+    {saved && <div style={{ position: "absolute", bottom: 60, left: 40, width: 70, height: 92, borderRadius: 8, background: "#e9ecf3", border: `3px solid ${C.acc}`, opacity: snap }} />}
+    <div style={{ position: "absolute", inset: 0, background: `rgba(255,255,255,${flash})` }} />
+    <Finger x={PW / 2 + 70} y={PH - 105} press={saved ? interpolate(f, [0, dur * 0.06, dur * 0.12], [0, 1, 0], clamp) : 0} show={p(0, 6)} />
+  </div>;
+}
+
+/** Phone snatched while unlocked. reveal "locked" = Theft Detection Lock kicks in after the grab. */
+export function PhoneSnatch({ v, dur }: { v: Extract<Visual, { type: "phone-settings" }>; dur: number }) {
+  const f = useCurrentFrame();
+  const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+  const PW = 620, PH = 1000; const locks = v.reveal === "locked";
+  const grab = p(dur * 0.25, dur * 0.4); const lock = locks ? p(dur * 0.5, dur * 0.62) : 0;
+  const shake = grab > 0 && grab < 1 ? Math.sin(f * 2.2) * 14 * (1 - lock) : (locks ? 0 : Math.sin(f * 1.7) * 6 * grab);
+  const rows = v.rows.length ? v.rows : ["Balance  €2,418.20", "Send money", "Cards", "Statements"];
+  return <div style={{ transform: `translate(${shake + grab * 36}px, ${grab * 22 * (1 - lock)}px) rotate(${grab * 5 * (1 - lock)}deg)` }}>
+    <div style={{ position: "relative", width: PW, height: PH, borderRadius: 72, background: "#0e1428", border: "10px solid #2c3658", boxShadow: "0 40px 100px rgba(0,0,0,.55)", overflow: "hidden" }}>
+      <div style={{ position: "absolute", top: 18, left: PW / 2 - 70, width: 140, height: 34, borderRadius: 20, background: "#000" }} />
+      <div style={{ position: "absolute", top: 82, left: 34, fontFamily: fontMono, fontSize: 26, color: C.mut }}>{v.path[0] ?? "Banking · Android"}</div>
+      {rows.map((r, i) => <div key={r} style={{ position: "absolute", top: 150 + i * 104, left: 26, right: 26, height: 92, borderRadius: 22, padding: "0 28px", display: "flex", alignItems: "center",
+        background: C.panel, fontFamily: fontSans, fontSize: i === 0 ? 40 : 36, fontWeight: i === 0 ? 700 : 400, color: C.fg }}>{r}</div>)}
+      <div style={{ position: "absolute", bottom: 60, left: 30, right: 30, padding: "18px 22px", borderRadius: 18, background: "rgba(255,107,107,.18)", border: `2px solid ${C.warn}`, fontFamily: fontSans, fontSize: 30, color: C.fg, opacity: grab * (1 - lock) }}>{v.note ?? "Unlocked, and in someone else's hand"}</div>
+      {lock > 0 && <div style={{ position: "absolute", inset: 0, background: `rgba(11,16,32,${0.96 * lock})`, display: "flex", flexDirection: "column", alignItems: "center", justifyContent: "center", opacity: lock }}>
+        <div style={{ width: 120, height: 90, borderRadius: "60px 60px 0 0", border: `16px solid ${C.acc}`, borderBottom: "none", marginBottom: -4 }} />
+        <div style={{ width: 170, height: 130, borderRadius: 24, background: C.acc }} />
+        <div style={{ marginTop: 40, fontFamily: fontSans, fontWeight: 800, fontSize: 52, color: C.acc }}>Locked</div>
+        <div style={{ marginTop: 10, fontFamily: fontMono, fontSize: 26, color: C.mut }}>theft detected</div>
+      </div>}
+      <Finger x={interpolate(p(0, dur * 0.2), [0, 1], [PW * 0.7, PW * 0.45])} y={interpolate(p(0, dur * 0.2), [0, 1], [PH - 160, 150 + 104 + 46])} press={interpolate(f, [dur * 0.18, dur * 0.22, dur * 0.28], [0, 1, 0], clamp)} show={p(0, 6) * (1 - grab)} />
+    </div>
+  </div>;
+}

@@ -1,0 +1,112 @@
+{
+  "key": "tip-37",
+  "n": 37,
+  "slug": "how-to-scan-a-document-with-your-iphone",
+  "title": "How to scan a document with your iPhone",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-scan-a-document-with-your-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop paying for scanner apps. Your iPhone already has one.",
+      "text": "Stop paying for scanner apps. Your iPhone already has one.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "App Store",
+          "Search: scanner"
+        ],
+        "rows": [
+          "ScanMate+ · €4.99 a week",
+          "PDF Scan Pro · €29.99/yr",
+          "DocCam · €9.99 a month",
+          "Start free trial"
+        ],
+        "tap": "Start free trial"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Use Scan Documents in Notes.",
+      "text": "Use Scan Documents in Notes.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Notes"
+        ],
+        "rows": [
+          "New Note",
+          "Groceries",
+          "Lease notes",
+          "Ideas"
+        ],
+        "tap": "New Note"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "In a note, tap the paperclip, then Scan Documents.",
+      "text": "In a note, tap the paperclip, then Scan Documents.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Notes",
+          "New Note"
+        ],
+        "rows": [
+          "Choose Photo or Video",
+          "Take Photo or Video",
+          "Scan Documents",
+          "Scan Text"
+        ],
+        "tap": "Scan Documents"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Hold your phone over the page.",
+      "text": "Hold your phone over the page.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "scan",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "It snaps, crops and straightens it.",
+      "text": "It snaps, crops and straightens it.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "scan",
+        "path": [],
+        "rows": [],
+        "reveal": "saved"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "A clean PDF, and you didn't pay a cent.",
+      "text": "Free, built-in scanner",
+      "result": {
+        "say": "A clean PDF, and you didn't pay a cent.",
+        "headline": "Free, built-in scanner",
+        "before": "€4.99 a week",
+        "after": "Free in Notes"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 57,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop paying for scanner apps. Your iPhone already has one.\n\n[confident] Here's the fix. Use Scan Documents in Notes.\n\n[friendly] In a note, tap the paperclip, then Scan Documents. Hold your phone over the page. It snaps, crops and straightens it.\n\n[delighted] A clean PDF, and you didn't pay a cent.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}
