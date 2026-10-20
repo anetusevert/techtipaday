@@ -1,0 +1,131 @@
+{
+  "key": "tip-73",
+  "n": 73,
+  "slug": "how-to-free-up-disk-space-automatically-in-windows-11",
+  "title": "How to free up disk space automatically in Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-free-up-disk-space-automatically-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Windows can clear out its own junk. It's usually switched off.",
+      "text": "Windows can clear out its own junk. It's usually switched off.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "System",
+          "Storage"
+        ],
+        "rows": [
+          "Local Disk (C:) · 229 of 237 GB used",
+          "Temporary files · 14.2 GB",
+          "Recycle Bin · 6.8 GB",
+          "Storage Sense · Off"
+        ],
+        "tap": "Storage Sense · Off"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Storage Sense.",
+      "text": "Turn on Storage Sense.",
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "System",
+          "Bluetooth & devices",
+          "Network & internet",
+          "Apps"
+        ],
+        "tap": "System"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, System, Storage.",
+      "text": "Open Settings, System, Storage.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Settings",
+          "System"
+        ],
+        "rows": [
+          "Display",
+          "Sound",
+          "Notifications",
+          "Storage"
+        ],
+        "tap": "Storage"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Storage Sense.",
+      "text": "Switch on Storage Sense.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "System",
+          "Storage"
+        ],
+        "rows": [
+          "Temporary files · 14.2 GB",
+          "Cleanup recommendations",
+          "Storage Sense"
+        ],
+        "tap": "Storage Sense",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Leave the Downloads cleanup on Never.",
+      "text": "Leave the Downloads cleanup on Never.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "path": [
+          "Storage",
+          "Storage Sense"
+        ],
+        "rows": [
+          "Run Storage Sense · Every month",
+          "Recycle Bin · after 30 days",
+          "Downloads · Never"
+        ],
+        "tap": "Downloads · Never"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Temp files and old deletes clear out on their own.",
+      "text": "Cleans up by itself",
+      "result": {
+        "say": "Temp files and old deletes clear out on their own.",
+        "headline": "Cleans up by itself",
+        "before": "Disk full",
+        "after": "21 GB freed"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 51,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Windows can clear out its own junk. It's usually switched off.\n\n[confident] Here's the fix. Turn on Storage Sense.\n\n[friendly] Open Settings, System, Storage. Switch on Storage Sense. Leave the Downloads cleanup on Never.\n\n[delighted] Temp files and old deletes clear out on their own.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

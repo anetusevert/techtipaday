@@ -1,0 +1,116 @@
+{
+  "key": "tip-07",
+  "n": 7,
+  "slug": "how-to-set-an-80-percent-charging-limit-on-iphone",
+  "title": "How to set an 80 percent charging limit on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-set-an-80-percent-charging-limit-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone has a hidden 80 percent charging limit.",
+      "text": "Your iPhone has a hidden 80 percent charging limit.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "charge",
+        "path": [
+          "plugged in all night"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Set a charge limit.",
+      "text": "Set a charge limit.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "charge",
+        "path": [
+          "Charge Limit · 80%"
+        ],
+        "rows": [],
+        "reveal": "limit"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On iPhone 15 or newer, open Settings, then Battery.",
+      "text": "On iPhone 15 or newer, open Settings, then Battery.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "General",
+          "Accessibility",
+          "Battery",
+          "Privacy & Security"
+        ],
+        "tap": "Battery"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Charging.",
+      "text": "Tap Charging.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Battery"
+        ],
+        "rows": [
+          "Power Mode",
+          "Charging",
+          "Battery Health"
+        ],
+        "tap": "Charging"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick 80 percent.",
+      "text": "Pick 80 percent.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Battery",
+          "Charging"
+        ],
+        "rows": [
+          "80%",
+          "85%",
+          "90%",
+          "95%",
+          "100%"
+        ],
+        "tap": "80%"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "It stops at 80, so the battery wears out slower.",
+      "text": "Battery ages slower",
+      "result": {
+        "say": "It stops at 80, so the battery wears out slower.",
+        "headline": "Battery ages slower",
+        "before": "100% all night",
+        "after": "Stops at 80%"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 49,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone has a hidden 80 percent charging limit.\n\n[confident] Here's the fix. Set a charge limit.\n\n[friendly] On iPhone 15 or newer, open Settings, then Battery. Tap Charging. Pick 80 percent.\n\n[delighted] It stops at 80, so the battery wears out slower.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

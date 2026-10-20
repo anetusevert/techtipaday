@@ -5,6 +5,7 @@ import { fontMono, fontSans } from "./fonts";
 import { Finger } from "./visuals";
 import type { Visual } from "./types";
 import { LaptopBoot, LaptopSnip, LaptopTabs, PhoneScan, PhoneCircle, PhoneSnatch } from "./visuals3";
+import { PhoneTaps, PhoneScales, PhoneSlowmo, PhoneCharge } from "./visuals4";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -28,6 +29,10 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   if (v.mode === "circle" || v.mode === "screenshot") return <PhoneCircle dur={dur} mode={v.mode} />;
   if (v.mode === "scan") return <PhoneScan v={v} dur={dur} />;
   if (v.mode === "snatch") return <PhoneSnatch v={v} dur={dur} />;
+  if (v.mode === "taps") return <PhoneTaps v={v} dur={dur} />;
+  if (v.mode === "scales") return <PhoneScales v={v} dur={dur} />;
+  if (v.mode === "slowmo") return <PhoneSlowmo v={v} dur={dur} />;
+  if (v.mode === "charge") return <PhoneCharge v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>

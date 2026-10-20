@@ -1,0 +1,112 @@
+{
+  "key": "tip-83",
+  "n": 83,
+  "slug": "how-to-speed-up-animations-on-android",
+  "title": "How to speed up animations on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-speed-up-animations-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "There's a hidden menu that makes your Android feel faster.",
+      "text": "There's a hidden menu that makes your Android feel faster.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "slowmo",
+        "path": [
+          "Home · Android"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Cut the animations in half.",
+      "text": "Cut the animations in half.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "slowmo",
+        "path": [
+          "Home · Android"
+        ],
+        "rows": [],
+        "reveal": "fast"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "In About phone, tap Build number seven times.",
+      "text": "In About phone, tap Build number seven times.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "taps",
+        "path": [
+          "Settings",
+          "About phone"
+        ],
+        "rows": [
+          "Model · Pixel 9",
+          "Android version · 16",
+          "Build number"
+        ],
+        "tap": "Build number"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open System, then Developer options.",
+      "text": "Open System, then Developer options.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "System"
+        ],
+        "rows": [
+          "Languages",
+          "Gestures",
+          "Date & time",
+          "Developer options"
+        ],
+        "tap": "Developer options"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Set all three animation scales to half.",
+      "text": "Set all three animation scales to half.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "scales",
+        "path": [
+          "System",
+          "Developer options"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Same phone, and every swipe feels twice as quick.",
+      "text": "Twice as snappy",
+      "result": {
+        "say": "Same phone, and every swipe feels twice as quick.",
+        "headline": "Twice as snappy",
+        "before": "1x · sluggish",
+        "after": ".5x · snappy"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] There's a hidden menu that makes your Android feel faster.\n\n[confident] Here's the fix. Cut the animations in half.\n\n[friendly] In About phone, tap Build number seven times. Open System, then Developer options. Set all three animation scales to half.\n\n[delighted] Same phone, and every swipe feels twice as quick.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

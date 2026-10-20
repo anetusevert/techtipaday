@@ -872,6 +872,21 @@ export const catalogB: TipDraft[] = [
       "Leave temporary files and the recycle bin on a schedule if you want. Turn off cleanup of the Downloads folder unless you are sure it only holds junk.",
     ],
     body: ["Run it once with the button on that page if you want to see it work today. After that the schedule is the point."],
+    video: {
+      hook: "Windows can clear out its own junk. It's usually switched off.",
+      hookLabel: "HIDDEN SETTING",
+      lines: ["Turn on Storage Sense.", "Open Settings, System, Storage.", "Switch on Storage Sense.", "Leave the Downloads cleanup on Never."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "settings", path: ["System", "Storage"], rows: ["Local Disk (C:) · 229 of 237 GB used", "Temporary files · 14.2 GB", "Recycle Bin · 6.8 GB", "Storage Sense · Off"], tap: "Storage Sense · Off" },
+      doThis: "Turn on Storage Sense.",
+      doVisual: { type: "laptop", action: "settings", path: ["Settings"], rows: ["System", "Bluetooth & devices", "Network & internet", "Apps"], tap: "System" },
+      steps: [
+        { say: "Open Settings, System, Storage.", visual: { type: "laptop", action: "settings", path: ["Settings", "System"], rows: ["Display", "Sound", "Notifications", "Storage"], tap: "Storage" } },
+        { say: "Switch on Storage Sense.", visual: { type: "laptop", action: "settings", path: ["System", "Storage"], rows: ["Temporary files · 14.2 GB", "Cleanup recommendations", "Storage Sense"], tap: "Storage Sense", toggle: true } },
+        { say: "Leave the Downloads cleanup on Never.", visual: { type: "laptop", action: "settings", path: ["Storage", "Storage Sense"], rows: ["Run Storage Sense · Every month", "Recycle Bin · after 30 days", "Downloads · Never"], tap: "Downloads · Never" } },
+      ],
+      result: { say: "Temp files and old deletes clear out on their own.", headline: "Cleans up by itself", before: "Disk full", after: "21 GB freed" },
+    },
   },
   {
     slug: "how-to-force-close-a-frozen-app-in-windows-11",

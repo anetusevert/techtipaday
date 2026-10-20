@@ -203,6 +203,15 @@ export const HUBS: Hub[] = [
     intro:
       "Big phones are hard to use on the bus. iPhone and Android both have built-in ways to pull the screen down or shrink the keyboard toward your thumb.",
   },
+  {
+    id: "speed-up-slow-phone",
+    slug: "speed-up-a-slow-phone",
+    searchPhrase: "how to speed up a slow phone",
+    title: "How to speed up a slow phone",
+    intro:
+      "A phone that feels slow usually isn't broken. Storage that is nearly full drags everything down, and on Android the animations between screens add a wait you can cut in half. Both fixes are built in and take a few minutes.",
+    searchAlternates: ["phone running slow", "make my phone faster", "phone lagging fix"],
+  },
 ];
 
 export type AppLanding = {
