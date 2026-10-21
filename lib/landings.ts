@@ -212,6 +212,15 @@ export const HUBS: Hub[] = [
       "A phone that feels slow usually isn't broken. Storage that is nearly full drags everything down, and on Android the animations between screens add a wait you can cut in half. Both fixes are built in and take a few minutes.",
     searchAlternates: ["phone running slow", "make my phone faster", "phone lagging fix"],
   },
+  {
+    id: "iphone-screen-dimming",
+    slug: "stop-your-iphone-screen-from-dimming",
+    searchPhrase: "how to stop your iphone screen from dimming",
+    title: "How to stop your iPhone screen from dimming",
+    intro:
+      "Two settings cause most of it. Auto-Brightness lowers the screen whenever the room gets darker, and Auto-Lock fades it out before it locks. Both switches are built in, though one of them is buried in Accessibility.",
+    searchAlternates: ["iphone screen keeps dimming", "iphone screen goes dark while reading", "iphone brightness keeps going down"],
+  },
 ];
 
 export type AppLanding = {

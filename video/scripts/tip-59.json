@@ -1,0 +1,115 @@
+{
+  "key": "tip-59",
+  "n": 59,
+  "slug": "how-to-hide-notifications-on-the-android-lock-screen",
+  "title": "How to hide notifications on the Android lock screen",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-hide-notifications-on-the-android-lock-screen",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your texts pop up on the lock screen for anyone to read.",
+      "text": "Your texts pop up on the lock screen for anyone to read.",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "lock",
+        "path": [
+          "Lock screen"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Hide them from the lock screen.",
+      "text": "Hide them from the lock screen.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "lock",
+        "path": [
+          "Lock screen"
+        ],
+        "rows": [],
+        "reveal": "hidden"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Notifications.",
+      "text": "Open Settings, then Notifications.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Network & internet",
+          "Connected devices",
+          "Apps",
+          "Notifications"
+        ],
+        "tap": "Notifications"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Notifications on lock screen.",
+      "text": "Tap Notifications on lock screen.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Notifications"
+        ],
+        "rows": [
+          "App notifications",
+          "Notification history",
+          "On lock screen",
+          "Sensitive notifications"
+        ],
+        "tap": "On lock screen"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick Don't show any notifications.",
+      "text": "Pick Don't show any notifications.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Notifications",
+          "On lock screen"
+        ],
+        "rows": [
+          "Show all",
+          "Hide silent ones",
+          "Don't show any"
+        ],
+        "tap": "Don't show any"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now a locked phone keeps your messages to itself.",
+      "text": "Texts stay private",
+      "result": {
+        "say": "Now a locked phone keeps your messages to itself.",
+        "headline": "Texts stay private",
+        "before": "Texts on show",
+        "after": "Nothing shown"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Your texts pop up on the lock screen for anyone to read.\n\n[confident] Here's the fix. Hide them from the lock screen.\n\n[friendly] Open Settings, then Notifications. Tap Notifications on lock screen. Pick Don't show any notifications.\n\n[delighted] Now a locked phone keeps your messages to itself.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

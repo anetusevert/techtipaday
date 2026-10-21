@@ -419,6 +419,20 @@ export const catalogB: TipDraft[] = [
       "Choose Don't show notifications, or show sensitive content only when unlocked.",
     ],
     body: ["You will still see that an app notified you, depending on the option. You will not see the message text from across the table. Lock the phone. The lock screen only helps if the phone is actually locked."],
+    video: {
+      hook: "Your texts pop up on the lock screen for anyone to read.",
+      lines: ["Hide them from the lock screen.", "Open Settings, then Notifications.", "Tap Notifications on lock screen.", "Pick Don't show any notifications."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "lock", path: ["Lock screen"], rows: [] },
+      doThis: "Hide them from the lock screen.",
+      doVisual: { type: "phone-settings", mode: "lock", path: ["Lock screen"], rows: [], reveal: "hidden" },
+      steps: [
+        { say: "Open Settings, then Notifications.", visual: { type: "phone-settings", path: ["Settings"], rows: ["Network & internet", "Connected devices", "Apps", "Notifications"], tap: "Notifications" } },
+        { say: "Tap Notifications on lock screen.", visual: { type: "phone-settings", path: ["Settings", "Notifications"], rows: ["App notifications", "Notification history", "On lock screen", "Sensitive notifications"], tap: "On lock screen" } },
+        { say: "Pick Don't show any notifications.", visual: { type: "phone-settings", path: ["Notifications", "On lock screen"], rows: ["Show all", "Hide silent ones", "Don't show any"], tap: "Don't show any" } },
+      ],
+      result: { say: "Now a locked phone keeps your messages to itself.", headline: "Texts stay private", before: "Texts on show", after: "Nothing shown" },
+    },
   },
   {
     slug: "how-to-hide-apps-on-android-with-private-space",

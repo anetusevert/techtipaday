@@ -1,0 +1,72 @@
+{
+  "key": "tip-12",
+  "n": 12,
+  "slug": "how-to-open-the-emoji-panel-in-windows-11",
+  "title": "How to open the emoji panel in Windows 11",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-open-the-emoji-panel-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still googling how to type symbols like the em dash?",
+      "text": "Still googling how to type symbols like the em dash?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "emoji",
+        "mode": "hunt"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Press Windows plus period.",
+      "text": "Press Windows plus period.",
+      "visual": {
+        "type": "laptop",
+        "action": "emoji",
+        "mode": "keys"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open the symbols tab.",
+      "text": "Open the symbols tab.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "emoji",
+        "mode": "tab"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click the one you need, and it's typed for you.",
+      "text": "Click the one you need, and it's typed for you.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "emoji",
+        "mode": "pick"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Emoji, accents and symbols, without leaving the keyboard.",
+      "text": "No more googling",
+      "result": {
+        "say": "Emoji, accents and symbols, without leaving the keyboard.",
+        "headline": "No more googling",
+        "before": "Copy from Google",
+        "after": "Win + ."
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 48,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Still googling how to type symbols like the em dash?\n\n[confident] Here's the fix. Press Windows plus period.\n\n[friendly] Open the symbols tab. Click the one you need, and it's typed for you.\n\n[delighted] Emoji, accents and symbols, without leaving the keyboard.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

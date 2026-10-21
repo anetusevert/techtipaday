@@ -183,6 +183,19 @@ export const catalogA: TipDraft[] = [
       "Press Esc to close the panel.",
     ],
     body: ["The symbol tab is the useful one. It is faster than searching the web for how to type an em dash."],
+    video: {
+      hook: "Still googling how to type symbols like the em dash?",
+      lines: ["Press Windows plus period.", "Open the symbols tab.", "Click the one you need."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "emoji", mode: "hunt" },
+      doThis: "Press Windows plus period.",
+      doVisual: { type: "laptop", action: "emoji", mode: "keys" },
+      steps: [
+        { say: "Open the symbols tab.", visual: { type: "laptop", action: "emoji", mode: "tab" } },
+        { say: "Click the one you need, and it's typed for you.", visual: { type: "laptop", action: "emoji", mode: "pick" } },
+      ],
+      result: { say: "Emoji, accents and symbols, without leaving the keyboard.", headline: "No more googling", before: "Copy from Google", after: "Win + ." },
+    },
   },
   {
     slug: "how-to-snap-windows-side-by-side-in-windows-11",
@@ -896,7 +909,7 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A phone left face-up on a table stops showing whatever was open.",
-    intents: ["privacy-checkup", "save-battery", "iphone-privacy-settings"],
+    intents: ["privacy-checkup", "save-battery", "iphone-privacy-settings", "iphone-screen-dimming"],
     redirectFrom: ["/tips/iphone-auto-lock", "/fix/iphone-auto-lock"],
     seo: {
       searchPhrase: "how to change the auto-lock time on iphone",

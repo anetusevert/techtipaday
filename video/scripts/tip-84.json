@@ -1,0 +1,117 @@
+{
+  "key": "tip-84",
+  "n": 84,
+  "slug": "how-to-turn-off-auto-brightness-on-iphone",
+  "title": "How to turn off Auto-Brightness on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-off-auto-brightness-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone keeps dimming the screen. The off switch is hidden.",
+      "text": "Your iPhone keeps dimming the screen. The off switch is hidden.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dim",
+        "path": [
+          "reading in bed"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn off Auto-Brightness.",
+      "text": "Turn off Auto-Brightness.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dim",
+        "path": [
+          "Auto-Brightness · Off"
+        ],
+        "rows": [],
+        "reveal": "steady"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Accessibility.",
+      "text": "Open Settings, then Accessibility.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "General",
+          "Accessibility",
+          "Display & Brightness",
+          "Battery"
+        ],
+        "tap": "Accessibility"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Display and Text Size.",
+      "text": "Tap Display and Text Size.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Accessibility"
+        ],
+        "rows": [
+          "VoiceOver",
+          "Zoom",
+          "Display & Text Size",
+          "Motion"
+        ],
+        "tap": "Display & Text Size"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch off Auto-Brightness at the bottom.",
+      "text": "Switch off Auto-Brightness at the bottom.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Accessibility",
+          "Display & Text Size"
+        ],
+        "rows": [
+          "Reduce Transparency",
+          "Reduce White Point",
+          "Auto-Brightness"
+        ],
+        "tap": "Auto-Brightness",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now it stays exactly where you set it.",
+      "text": "Stays where you set it",
+      "result": {
+        "say": "Now it stays exactly where you set it.",
+        "headline": "Stays where you set it",
+        "before": "Keeps dimming",
+        "after": "Stays put"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 49,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone keeps dimming the screen. The off switch is hidden.\n\n[confident] Here's the fix. Turn off Auto-Brightness.\n\n[friendly] Open Settings, then Accessibility. Tap Display and Text Size. Switch off Auto-Brightness at the bottom.\n\n[delighted] Now it stays exactly where you set it.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}
