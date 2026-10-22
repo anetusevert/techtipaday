@@ -221,6 +221,15 @@ export const HUBS: Hub[] = [
       "Two settings cause most of it. Auto-Brightness lowers the screen whenever the room gets darker, and Auto-Lock fades it out before it locks. Both switches are built in, though one of them is buried in Accessibility.",
     searchAlternates: ["iphone screen keeps dimming", "iphone screen goes dark while reading", "iphone brightness keeps going down"],
   },
+  {
+    id: "stop-spam-calls",
+    slug: "stop-spam-calls",
+    searchPhrase: "how to stop spam calls",
+    title: "How to stop spam calls",
+    intro:
+      "Both iPhone and Android can stop junk calls without an extra app. An iPhone can send every number you haven't saved to voicemail. Android can quietly drop the calls it already flags as spam. Each is one switch in the phone's own settings.",
+    searchAlternates: ["block spam calls", "stop robocalls", "too many spam calls"],
+  },
 ];
 
 export type AppLanding = {

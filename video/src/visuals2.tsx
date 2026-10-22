@@ -7,6 +7,7 @@ import type { Visual } from "./types";
 import { LaptopBoot, LaptopSnip, LaptopTabs, PhoneScan, PhoneCircle, PhoneSnatch } from "./visuals3";
 import { PhoneTaps, PhoneScales, PhoneSlowmo, PhoneCharge } from "./visuals4";
 import { PhoneDim, PhoneLock, LaptopEmoji } from "./visuals5";
+import { PhoneSpam, PhoneData, LaptopPasswords } from "./visuals6";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -36,6 +37,8 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   if (v.mode === "charge") return <PhoneCharge v={v} dur={dur} />;
   if (v.mode === "dim") return <PhoneDim v={v} dur={dur} />;
   if (v.mode === "lock") return <PhoneLock v={v} dur={dur} />;
+  if (v.mode === "spam") return <PhoneSpam v={v} dur={dur} />;
+  if (v.mode === "data") return <PhoneData v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>
@@ -75,6 +78,7 @@ export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur
   if (v.action === "snip") return <LaptopSnip v={v} dur={dur} />;
   if (v.action === "boot") return <LaptopBoot v={v} dur={dur} />;
   if (v.action === "emoji") return <LaptopEmoji v={v} dur={dur} />;
+  if (v.action === "passwords") return <LaptopPasswords v={v} dur={dur} />;
   if (v.action === "frozen" || v.action === "settings" || v.action === "taskbar") return <LaptopApps v={v} dur={dur} />;
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   const items = v.items ?? ["Meeting moved to 3pm", "https://techtipaday.com", "Flight AB123, seat 14C", "Invoice #4471"];
@@ -149,7 +153,7 @@ function LaptopApps({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur: n
     show = p(0, 6); fx = interpolate(move, [0, 1], [LW * 0.7, v.toggle ? LW - 110 : LW * 0.45]) - lift * 110; fy = interpolate(move, [0, 1], [LH - 90, rowY(ti) + 38]) + lift * 90;
     const path = v.path ?? ["Settings"];
     screen = <>
-      <div style={{ height: 44, background: "#1a2340", display: "flex", alignItems: "center", padding: "0 20px", fontFamily: fontMono, fontSize: 22, color: C.mut }}>{`Settings · ${path.join(" › ")}`}</div>
+      <div style={{ height: 44, background: "#1a2340", display: "flex", alignItems: "center", padding: "0 20px", fontFamily: fontMono, fontSize: 22, color: C.mut }}>{`${v.app ?? "Settings"} · ${path.join(" › ")}`}</div>
       <div style={{ position: "absolute", top: 66, left: 34, fontFamily: fontSans, fontWeight: 700, fontSize: 44, color: C.fg }}>{path[path.length - 1]}</div>
       {rows.map((r, i) => { const hit = i === ti;
         return <div key={r} style={{ position: "absolute", top: rowY(i), left: 26, right: 26, height: 76, borderRadius: 16, padding: "0 26px", display: "flex", alignItems: "center", justifyContent: "space-between",
@@ -182,8 +186,8 @@ function LaptopApps({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur: n
     <div style={{ position: "relative", width: LW, height: LH, borderRadius: 26, border: "12px solid #2c3658", background: "#0f1730", overflow: "hidden", boxShadow: "0 40px 100px rgba(0,0,0,.55)" }}>
       {screen}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 56, background: "#141c36", display: "flex", justifyContent: "center", alignItems: "center", gap }}>
-        {Array.from({ length: icons }, (_, i) => <div key={i} style={{ width: iconW, height: iconW, borderRadius: 8, background: i === 0 ? "#4da3ff" : i === appIdx ? "#21a366" : "#2f3a5e",
-          boxShadow: bar && i === appIdx ? `0 0 0 3px ${C.acc}` : "none", fontFamily: fontSans, fontWeight: 800, fontSize: 24, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{i === appIdx ? "X" : ""}</div>)}
+        {Array.from({ length: icons }, (_, i) => <div key={i} style={{ width: iconW, height: iconW, borderRadius: 8, background: i === 0 ? "#4da3ff" : i === appIdx ? (app === "Chrome" ? "#e8a33d" : "#21a366") : "#2f3a5e",
+          boxShadow: bar && i === appIdx ? `0 0 0 3px ${C.acc}` : "none", fontFamily: fontSans, fontWeight: 800, fontSize: 24, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{i === appIdx ? (app === "Chrome" ? "" : "X") : ""}</div>)}
       </div>
       {show > 0 && <div style={{ position: "absolute", left: 0, top: 0, width: LW, height: LH }}><Finger x={fx} y={fy} press={press} show={show} /></div>}
     </div>

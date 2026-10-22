@@ -1,0 +1,117 @@
+{
+  "key": "tip-50",
+  "n": 50,
+  "slug": "how-to-turn-off-wifi-assist-on-iphone",
+  "title": "How to turn off Wi-Fi Assist on iPhone",
+  "category": "wifi",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-off-wifi-assist-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "You're on Wi-Fi, so why is your mobile data running out?",
+      "text": "You're on Wi-Fi, so why is your mobile data running out?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "data",
+        "path": [
+          "Home · iPhone"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn off Wi-Fi Assist.",
+      "text": "Turn off Wi-Fi Assist.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "data",
+        "path": [
+          "Home · iPhone"
+        ],
+        "rows": [],
+        "reveal": "off"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Cellular.",
+      "text": "Open Settings, then Cellular.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Wi-Fi",
+          "Bluetooth",
+          "Cellular",
+          "Battery"
+        ],
+        "tap": "Cellular"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Scroll all the way down.",
+      "text": "Scroll all the way down.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Cellular"
+        ],
+        "rows": [
+          "Personal Hotspot",
+          "Apps by usage",
+          "Wi-Fi Calling",
+          "Wi-Fi Assist"
+        ],
+        "tap": "Wi-Fi Assist"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch off Wi-Fi Assist.",
+      "text": "Switch off Wi-Fi Assist.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Cellular"
+        ],
+        "rows": [
+          "Wi-Fi Calling",
+          "Wi-Fi Assist",
+          "iCloud Drive"
+        ],
+        "tap": "Wi-Fi Assist",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Your phone stays on Wi-Fi, and your data lasts the month.",
+      "text": "Data saved",
+      "result": {
+        "say": "Your phone stays on Wi-Fi, and your data lasts the month.",
+        "headline": "Data saved",
+        "before": "Sneaks onto 5G",
+        "after": "Stays on Wi-Fi"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 51,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] You're on Wi-Fi, so why is your mobile data running out?\n\n[confident] Here's the fix. Turn off Wi-Fi Assist.\n\n[friendly] Open Settings, then Cellular. Scroll all the way down. Switch off Wi-Fi Assist.\n\n[delighted] Your phone stays on Wi-Fi, and your data lasts the month.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

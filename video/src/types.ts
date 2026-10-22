@@ -5,8 +5,8 @@ export type Visual =
   | { type: "settings-path"; path: string[]; platform?: string }
   | { type: "icon"; icon: string; label?: string }
   | { type: "brand" }
-  | { type: "phone-settings"; mode?: "settings" | "call" | "circle" | "screenshot" | "scan" | "snatch" | "taps" | "scales" | "slowmo" | "charge" | "dim" | "lock"; path: string[]; rows: string[]; tap?: string; toggle?: boolean; toggleOff?: boolean; reveal?: string; caller?: string; note?: string }
-  | { type: "laptop"; action: "overwrite" | "keys" | "panel" | "paste" | "frozen" | "settings" | "taskbar" | "tabs" | "snip" | "boot" | "emoji"; items?: string[]; keys?: string[]; mode?: string;
+  | { type: "phone-settings"; mode?: "settings" | "call" | "circle" | "screenshot" | "scan" | "snatch" | "taps" | "scales" | "slowmo" | "charge" | "dim" | "lock" | "spam" | "data"; path: string[]; rows: string[]; tap?: string; toggle?: boolean; toggleOff?: boolean; reveal?: string; caller?: string; note?: string }
+  | { type: "laptop"; action: "overwrite" | "keys" | "panel" | "paste" | "frozen" | "settings" | "taskbar" | "tabs" | "snip" | "boot" | "emoji" | "passwords"; items?: string[]; keys?: string[]; mode?: string;
       app?: string; path?: string[]; rows?: string[]; tap?: string; toggle?: boolean; toggleOff?: boolean }; // frozen/taskbar use app; settings uses path/rows/tap/toggle(/toggleOff); boot uses items
 export type Segment = { kind: "hook" | "step" | "cta"; text: string; visual?: Visual; start: number };
 export type TipVideoProps = {

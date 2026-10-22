@@ -144,6 +144,20 @@ export const catalogB: TipDraft[] = [
     ],
     body: ["With Assist off, a weak network stays weak. Pages load slowly instead of jumping to cellular. That is the trade."],
     pick: true,
+    video: {
+      hook: "You're on Wi-Fi, so why is your mobile data running out?",
+      lines: ["Turn off Wi-Fi Assist.", "Open Settings, then Cellular.", "Scroll all the way down.", "Switch off Wi-Fi Assist."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "data", path: ["Home · iPhone"], rows: [] },
+      doThis: "Turn off Wi-Fi Assist.",
+      doVisual: { type: "phone-settings", mode: "data", path: ["Home · iPhone"], rows: [], reveal: "off" },
+      steps: [
+        { say: "Open Settings, then Cellular.", visual: { type: "phone-settings", path: ["Settings"], rows: ["Wi-Fi", "Bluetooth", "Cellular", "Battery"], tap: "Cellular" } },
+        { say: "Scroll all the way down.", visual: { type: "phone-settings", path: ["Settings", "Cellular"], rows: ["Personal Hotspot", "Apps by usage", "Wi-Fi Calling", "Wi-Fi Assist"], tap: "Wi-Fi Assist" } },
+        { say: "Switch off Wi-Fi Assist.", visual: { type: "phone-settings", path: ["Settings", "Cellular"], rows: ["Wi-Fi Calling", "Wi-Fi Assist", "iCloud Drive"], tap: "Wi-Fi Assist", toggle: true, toggleOff: true } },
+      ],
+      result: { say: "Your phone stays on Wi-Fi, and your data lasts the month.", headline: "Data saved", before: "Sneaks onto 5G", after: "Stays on Wi-Fi" },
+    },
   },
   {
     slug: "how-to-make-an-iphone-hotspot-show-up-on-a-laptop",

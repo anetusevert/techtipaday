@@ -1,0 +1,102 @@
+{
+  "key": "tip-28",
+  "n": 28,
+  "slug": "how-to-check-if-your-saved-passwords-were-leaked-in-chrome",
+  "title": "How to check if your saved passwords were leaked in Chrome",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-check-if-your-saved-passwords-were-leaked-in-chrome",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop wondering if your passwords leaked. Chrome can tell you.",
+      "text": "Stop wondering if your passwords leaked. Chrome can tell you.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "laptop",
+        "action": "passwords",
+        "mode": "reuse"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Run Password Checkup.",
+      "text": "Run Password Checkup.",
+      "visual": {
+        "type": "laptop",
+        "action": "passwords",
+        "mode": "scan"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Chrome Settings, then Autofill and passwords.",
+      "text": "Open Chrome Settings, then Autofill and passwords.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "You and Google",
+          "Autofill and passwords",
+          "Privacy and security",
+          "Appearance"
+        ],
+        "tap": "Autofill and passwords"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Password Manager, then Checkup.",
+      "text": "Open Password Manager, then Checkup.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Google Password Manager"
+        ],
+        "rows": [
+          "Passwords",
+          "Checkup",
+          "Settings"
+        ],
+        "tap": "Checkup"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Change the compromised ones first.",
+      "text": "Change the compromised ones first.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "passwords",
+        "mode": "fix"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now you know exactly which passwords to change.",
+      "text": "Leaks found",
+      "result": {
+        "say": "Now you know exactly which passwords to change.",
+        "headline": "Leaks found",
+        "before": "No idea",
+        "after": "3 to change"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 50,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop wondering if your passwords leaked. Chrome can tell you.\n\n[confident] Here's the fix. Run Password Checkup.\n\n[friendly] Open Chrome Settings, then Autofill and passwords. Open Password Manager, then Checkup. Change the compromised ones first.\n\n[delighted] Now you know exactly which passwords to change.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

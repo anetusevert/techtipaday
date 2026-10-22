@@ -680,6 +680,21 @@ export const catalogA: TipDraft[] = [
     ],
     body: ["If Password Manager is empty, Chrome was never saving passwords for you. The checkup cannot see passwords that live only in your head or in another app."],
     pick: true,
+    video: {
+      hook: "Stop wondering if your passwords leaked. Chrome can tell you.",
+      hookLabel: "STOP DOING THIS",
+      lines: ["Run Password Checkup.", "Open Chrome Settings, then Autofill and passwords.", "Open Password Manager, then Checkup.", "Change the compromised ones first."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "passwords", mode: "reuse" },
+      doThis: "Run Password Checkup.",
+      doVisual: { type: "laptop", action: "passwords", mode: "scan" },
+      steps: [
+        { say: "Open Chrome Settings, then Autofill and passwords.", visual: { type: "laptop", action: "settings", app: "Chrome", path: ["Settings"], rows: ["You and Google", "Autofill and passwords", "Privacy and security", "Appearance"], tap: "Autofill and passwords" } },
+        { say: "Open Password Manager, then Checkup.", visual: { type: "laptop", action: "settings", app: "Chrome", path: ["Google Password Manager"], rows: ["Passwords", "Checkup", "Settings"], tap: "Checkup" } },
+        { say: "Change the compromised ones first.", visual: { type: "laptop", action: "passwords", mode: "fix" } },
+      ],
+      result: { say: "Now you know exactly which passwords to change.", headline: "Leaks found", before: "No idea", after: "3 to change" },
+    },
   },
   {
     slug: "how-to-use-back-tap-on-iphone",
@@ -1015,7 +1030,7 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Sales calls stop ringing. So do the doctor and the delivery driver, until you save their numbers.",
-    intents: ["iphone-privacy-settings"],
+    intents: ["iphone-privacy-settings", "stop-spam-calls"],
     redirectFrom: ["/tips/iphone-unknown-callers", "/fix/silence-unknown-callers"],
     seo: {
       searchPhrase: "how to silence unknown callers on iphone",

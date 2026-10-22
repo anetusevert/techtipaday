@@ -1,0 +1,118 @@
+{
+  "key": "tip-85",
+  "n": 85,
+  "slug": "how-to-stop-spam-calls-on-android",
+  "title": "How to stop spam calls on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-stop-spam-calls-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android has a spam call filter. It's probably switched off.",
+      "text": "Your Android has a spam call filter. It's probably switched off.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "call",
+        "path": [],
+        "rows": [],
+        "caller": "+1 (602) 555-0148",
+        "note": "Suspected spam"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Filter spam calls.",
+      "text": "Turn on Filter spam calls.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "spam",
+        "path": [
+          "Phone",
+          "Recents"
+        ],
+        "rows": [],
+        "reveal": "filtered"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "In the Phone app, tap the dots, then Settings.",
+      "text": "In the Phone app, tap the dots, then Settings.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Phone",
+          "⋮ More"
+        ],
+        "rows": [
+          "Call history",
+          "Clear frequents",
+          "Settings",
+          "Help & feedback"
+        ],
+        "tap": "Settings"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Caller ID and spam.",
+      "text": "Open Caller ID and spam.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Phone",
+          "Settings"
+        ],
+        "rows": [
+          "Accessibility",
+          "Blocked numbers",
+          "Caller ID & spam",
+          "Display options"
+        ],
+        "tap": "Caller ID & spam"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Filter spam calls.",
+      "text": "Switch on Filter spam calls.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Caller ID & spam"
+        ],
+        "rows": [
+          "See caller & spam ID",
+          "Filter spam calls",
+          "Verified calls"
+        ],
+        "tap": "Filter spam calls",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Spam stops ringing, and it still waits in your call history.",
+      "text": "Spam stops ringing",
+      "result": {
+        "say": "Spam stops ringing, and it still waits in your call history.",
+        "headline": "Spam stops ringing",
+        "before": "Ring ring, spam",
+        "after": "Filtered, silent"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 58,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android has a spam call filter. It's probably switched off.\n\n[confident] Here's the fix. Turn on Filter spam calls.\n\n[friendly] In the Phone app, tap the dots, then Settings. Open Caller ID and spam. Switch on Filter spam calls.\n\n[delighted] Spam stops ringing, and it still waits in your call history.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}
