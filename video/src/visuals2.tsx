@@ -8,6 +8,7 @@ import { LaptopBoot, LaptopSnip, LaptopTabs, PhoneScan, PhoneCircle, PhoneSnatch
 import { PhoneTaps, PhoneScales, PhoneSlowmo, PhoneCharge } from "./visuals4";
 import { PhoneDim, PhoneLock, LaptopEmoji } from "./visuals5";
 import { PhoneSpam, PhoneData, LaptopPasswords } from "./visuals6";
+import { PhoneFlash, PhotoText, LaptopSnap } from "./visuals7";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -39,6 +40,8 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   if (v.mode === "lock") return <PhoneLock v={v} dur={dur} />;
   if (v.mode === "spam") return <PhoneSpam v={v} dur={dur} />;
   if (v.mode === "data") return <PhoneData v={v} dur={dur} />;
+  if (v.mode === "flash") return <PhoneFlash v={v} dur={dur} />;
+  if (v.mode === "photo") return <PhotoText v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>
@@ -79,6 +82,7 @@ export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur
   if (v.action === "boot") return <LaptopBoot v={v} dur={dur} />;
   if (v.action === "emoji") return <LaptopEmoji v={v} dur={dur} />;
   if (v.action === "passwords") return <LaptopPasswords v={v} dur={dur} />;
+  if (v.action === "snap") return <LaptopSnap v={v} dur={dur} />;
   if (v.action === "frozen" || v.action === "settings" || v.action === "taskbar") return <LaptopApps v={v} dur={dur} />;
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   const items = v.items ?? ["Meeting moved to 3pm", "https://techtipaday.com", "Flight AB123, seat 14C", "Invoice #4471"];

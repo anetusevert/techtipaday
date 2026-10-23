@@ -1,0 +1,98 @@
+{
+  "key": "tip-13",
+  "n": 13,
+  "slug": "how-to-snap-windows-side-by-side-in-windows-11",
+  "title": "How to snap windows side by side in Windows 11",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-snap-windows-side-by-side-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still dragging windows around to get them side by side?",
+      "text": "Still dragging windows around to get them side by side?",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "drag"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Let Snap layouts do it.",
+      "text": "Let Snap layouts do it.",
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "done"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Hover over the maximize button.",
+      "text": "Hover over the maximize button.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "grid"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click a zone in the grid.",
+      "text": "Click a zone in the grid.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "zone"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick the other window for the empty side.",
+      "text": "Pick the other window for the empty side.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "fill"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Or press Windows and the left arrow.",
+      "text": "Or press Windows and the left arrow.",
+      "step": 4,
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "keys",
+        "keys": [
+          "⊞ Win",
+          "←"
+        ]
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Two windows, side by side, in two clicks.",
+      "text": "Side by side",
+      "result": {
+        "say": "Two windows, side by side, in two clicks.",
+        "headline": "Side by side",
+        "before": "Drag, resize, overlap",
+        "after": "Two clicks, done"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 61,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Still dragging windows around to get them side by side?\n\n[confident] Here's the fix. Let Snap layouts do it.\n\n[friendly] Hover over the maximize button. Click a zone in the grid. Pick the other window for the empty side. Or press Windows and the left arrow.\n\n[delighted] Two windows, side by side, in two clicks.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

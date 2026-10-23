@@ -1,0 +1,102 @@
+{
+  "key": "tip-03",
+  "n": 3,
+  "slug": "how-to-copy-text-from-a-photo-on-iphone-or-android",
+  "title": "How to copy text from a photo on iPhone or Android",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-copy-text-from-a-photo-on-iphone-or-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still retyping a long code from a photo, letter by letter?",
+      "text": "Still retyping a long code from a photo, letter by letter?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "photo",
+        "path": [
+          "Photos"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Copy the text straight from the photo.",
+      "text": "Copy the text straight from the photo.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "photo",
+        "path": [
+          "Photos"
+        ],
+        "rows": [],
+        "reveal": "copied"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On iPhone, press and hold on the text, then tap Copy.",
+      "text": "On iPhone, press and hold on the text, then tap Copy.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "photo",
+        "path": [
+          "Photos"
+        ],
+        "rows": [],
+        "reveal": "hold"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On Android, open it in Google Photos and tap Lens.",
+      "text": "On Android, open it in Google Photos and tap Lens.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "photo",
+        "path": [
+          "Google Photos"
+        ],
+        "rows": [],
+        "reveal": "lens"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Text, select it, and hit Copy.",
+      "text": "Tap Text, select it, and hit Copy.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "photo",
+        "path": [
+          "Google Lens"
+        ],
+        "rows": [],
+        "reveal": "select"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Paste it anywhere. No squinting, no typos.",
+      "text": "Copied, not retyped",
+      "result": {
+        "say": "Paste it anywhere. No squinting, no typos.",
+        "headline": "Copied, not retyped",
+        "before": "Retype, typo, retype",
+        "after": "Hold, copy, paste"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 65,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Still retyping a long code from a photo, letter by letter?\n\n[confident] Here's the fix. Copy the text straight from the photo.\n\n[friendly] On iPhone, press and hold on the text, then tap Copy. On Android, open it in Google Photos and tap Lens. Tap Text, select it, and hit Copy.\n\n[delighted] Paste it anywhere. No squinting, no typos.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

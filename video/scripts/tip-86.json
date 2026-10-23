@@ -1,0 +1,136 @@
+{
+  "key": "tip-86",
+  "n": 86,
+  "slug": "how-to-turn-on-flash-notifications-on-iphone",
+  "title": "How to turn on flash notifications on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-flash-notifications-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Missed another call on silent? Your iPhone can flash instead.",
+      "text": "Missed another call on silent? Your iPhone can flash instead.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "flash",
+        "path": [
+          "on silent · face down"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on LED Flash for Alerts.",
+      "text": "Turn on LED Flash for Alerts.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "flash",
+        "path": [
+          "LED Flash for Alerts · on"
+        ],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Accessibility.",
+      "text": "Open Settings, then Accessibility.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "General",
+          "Accessibility",
+          "Display & Brightness",
+          "Sounds & Haptics"
+        ],
+        "tap": "Accessibility"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Audio and Visual.",
+      "text": "Tap Audio and Visual.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Accessibility"
+        ],
+        "rows": [
+          "Hearing Devices",
+          "Sound Recognition",
+          "Audio & Visual",
+          "Subtitles & Captioning"
+        ],
+        "tap": "Audio & Visual"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on LED Flash for Alerts.",
+      "text": "Switch on LED Flash for Alerts.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Audio & Visual",
+          "LED Flash"
+        ],
+        "rows": [
+          "LED Flash for Alerts",
+          "Flash While Unlocked",
+          "Flash in Silent Mode"
+        ],
+        "tap": "LED Flash for Alerts",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn on Flash in Silent Mode too.",
+      "text": "Turn on Flash in Silent Mode too.",
+      "step": 4,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Audio & Visual",
+          "LED Flash"
+        ],
+        "rows": [
+          "LED Flash for Alerts",
+          "Flash While Unlocked",
+          "Flash in Silent Mode"
+        ],
+        "tap": "Flash in Silent Mode",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now the light blinks for every call, even on silent.",
+      "text": "You'll see it ring",
+      "result": {
+        "say": "Now the light blinks for every call, even on silent.",
+        "headline": "You'll see it ring",
+        "before": "3 missed calls",
+        "after": "Blinks, you pick up"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 59,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Missed another call on silent? Your iPhone can flash instead.\n\n[confident] Here's the fix. Turn on LED Flash for Alerts.\n\n[friendly] Open Settings, then Accessibility. Tap Audio and Visual. Switch on LED Flash for Alerts. Turn on Flash in Silent Mode too.\n\n[delighted] Now the light blinks for every call, even on silent.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

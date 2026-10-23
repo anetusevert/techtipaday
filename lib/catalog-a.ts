@@ -226,6 +226,22 @@ export const catalogA: TipDraft[] = [
     ],
     body: ["If the grid never appears, check Settings > System > Multitasking and turn Snap windows on."],
     pick: true,
+    video: {
+      hook: "Still dragging windows around to get them side by side?",
+      hookLabel: "YOU'RE DOING IT WRONG",
+      lines: ["Let Snap layouts do it.", "Hover over the maximize button.", "Click a zone in the grid.", "Pick the other window for the empty side.", "Or press Windows and the left arrow."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "snap", mode: "drag" },
+      doThis: "Let Snap layouts do it.",
+      doVisual: { type: "laptop", action: "snap", mode: "done" },
+      steps: [
+        { say: "Hover over the maximize button.", visual: { type: "laptop", action: "snap", mode: "grid" } },
+        { say: "Click a zone in the grid.", visual: { type: "laptop", action: "snap", mode: "zone" } },
+        { say: "Pick the other window for the empty side.", visual: { type: "laptop", action: "snap", mode: "fill" } },
+        { say: "Or press Windows and the left arrow.", visual: { type: "laptop", action: "snap", mode: "keys", keys: ["⊞ Win", "←"] } },
+      ],
+      result: { say: "Two windows, side by side, in two clicks.", headline: "Side by side", before: "Drag, resize, overlap", after: "Two clicks, done" },
+    },
   },
   {
     slug: "how-to-tile-windows-side-by-side-on-a-mac",
