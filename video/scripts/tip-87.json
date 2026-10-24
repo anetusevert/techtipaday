@@ -1,0 +1,128 @@
+{
+  "key": "tip-87",
+  "n": 87,
+  "slug": "how-to-see-which-apps-use-your-camera-and-microphone-on-android",
+  "title": "How to see which apps use your camera and microphone on Android",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-see-which-apps-use-your-camera-and-microphone-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Want to know which app used your mic last night?",
+      "text": "Want to know which app used your mic last night?",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "privacy",
+        "path": [
+          "green dot · just scrolling"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Open the privacy dashboard.",
+      "text": "Open the privacy dashboard.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "privacy",
+        "path": [
+          "Security & privacy"
+        ],
+        "rows": [],
+        "reveal": "dashboard"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Security and privacy.",
+      "text": "Open Settings, then Security and privacy.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Network & internet",
+          "Apps",
+          "Security & privacy",
+          "Battery"
+        ],
+        "tap": "Security & privacy"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Privacy dashboard.",
+      "text": "Tap Privacy dashboard.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Security & privacy"
+        ],
+        "rows": [
+          "Device unlock",
+          "Privacy controls",
+          "Privacy dashboard",
+          "Private space"
+        ],
+        "tap": "Privacy dashboard"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Microphone to see every app and when.",
+      "text": "Tap Microphone to see every app and when.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "privacy",
+        "path": [
+          "Privacy dashboard",
+          "Microphone"
+        ],
+        "rows": [],
+        "reveal": "list"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Set the odd one to Don't allow.",
+      "text": "Set the odd one to Don't allow.",
+      "step": 4,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "privacy",
+        "path": [
+          "ShopNow",
+          "Permissions"
+        ],
+        "rows": [],
+        "reveal": "deny"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now you know exactly which apps were listening.",
+      "text": "Now you know",
+      "result": {
+        "say": "Now you know exactly which apps were listening.",
+        "headline": "Now you know",
+        "before": "Is it listening?",
+        "after": "Log shows who"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 58,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Want to know which app used your mic last night?\n\n[confident] Here's the fix. Open the privacy dashboard.\n\n[friendly] Open Settings, then Security and privacy. Tap Privacy dashboard. Tap Microphone to see every app and when. Set the odd one to Don't allow.\n\n[delighted] Now you know exactly which apps were listening.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

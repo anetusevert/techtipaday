@@ -1,0 +1,112 @@
+{
+  "key": "tip-32",
+  "n": 32,
+  "slug": "how-to-turn-on-the-camera-level-on-iphone",
+  "title": "How to turn on the camera level on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-the-camera-level-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Crooked photos again? Your iPhone camera has a hidden level.",
+      "text": "Crooked photos again? Your iPhone camera has a hidden level.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "level",
+        "path": [
+          "Camera"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on the camera level.",
+      "text": "Turn on the camera level.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "level",
+        "path": [
+          "Camera"
+        ],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Camera.",
+      "text": "Open Settings, then Camera.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Accessibility",
+          "Action Button",
+          "Camera",
+          "Control Center"
+        ],
+        "tap": "Camera"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Under Composition, switch on Level.",
+      "text": "Under Composition, switch on Level.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Camera",
+          "Composition"
+        ],
+        "rows": [
+          "Grid",
+          "Level",
+          "Mirror Front Camera",
+          "View Outside the Frame"
+        ],
+        "tap": "Level",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tilt until the line turns yellow.",
+      "text": "Tilt until the line turns yellow.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "level",
+        "path": [
+          "Camera"
+        ],
+        "rows": [],
+        "reveal": "tilt"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Straight horizons, and no cropping later.",
+      "text": "Straight every time",
+      "result": {
+        "say": "Straight horizons, and no cropping later.",
+        "headline": "Straight every time",
+        "before": "Tilted, crop later",
+        "after": "Yellow line, level"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 48,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Crooked photos again? Your iPhone camera has a hidden level.\n\n[confident] Here's the fix. Turn on the camera level.\n\n[friendly] Open Settings, then Camera. Under Composition, switch on Level. Tilt until the line turns yellow.\n\n[delighted] Straight horizons, and no cropping later.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}

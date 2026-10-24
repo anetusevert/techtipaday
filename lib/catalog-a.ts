@@ -479,6 +479,21 @@ export const catalogA: TipDraft[] = [
       "You can also type @tabs in the address bar, press Tab, and search from there.",
     ],
     pick: true,
+    video: {
+      hook: "Thirty tabs open and you can't find the one you need?",
+      lines: ["Search your tabs instead.", "Press Control, Shift and A.", "Type a word from the page title.", "Hit Enter and you're on that tab.", "On a Mac, it's Command, Shift, A."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "tabsearch", mode: "crowded" },
+      doThis: "Search your tabs instead.",
+      doVisual: { type: "laptop", action: "tabsearch", mode: "open" },
+      steps: [
+        { say: "Press Control, Shift and A.", visual: { type: "laptop", action: "tabsearch", mode: "keys", keys: ["Ctrl", "Shift", "A"] } },
+        { say: "Type a word from the page title.", visual: { type: "laptop", action: "tabsearch", mode: "type" } },
+        { say: "Hit Enter and you're on that tab.", visual: { type: "laptop", action: "tabsearch", mode: "jump" } },
+        { say: "On a Mac, it's Command, Shift, A.", visual: { type: "laptop", action: "tabsearch", mode: "keys", keys: ["⌘ Cmd", "Shift", "A"] } },
+      ],
+      result: { say: "Any tab, found in about two seconds.", headline: "Found it", before: "Squint at 30 tabs", after: "Type, Enter, there" },
+    },
   },
   {
     slug: "how-to-use-project-instructions-in-claude",
@@ -842,6 +857,21 @@ export const catalogA: TipDraft[] = [
       "Open Camera and tilt the phone. A broken line across the middle becomes a solid yellow line when the phone is level.",
     ],
     body: ["The level shows for photo, not for every video mode. If you never see it, you are probably in a mode that hides it, or the phone is already level and the line has faded."],
+    video: {
+      hook: "Crooked photos again? Your iPhone camera has a hidden level.",
+      hookLabel: "HIDDEN SETTING",
+      lines: ["Turn on the camera level.", "Open Settings, then Camera.", "Under Composition, switch on Level.", "Tilt until the line turns yellow."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "level", path: ["Camera"], rows: [] },
+      doThis: "Turn on the camera level.",
+      doVisual: { type: "phone-settings", mode: "level", path: ["Camera"], rows: [], reveal: "on" },
+      steps: [
+        { say: "Open Settings, then Camera.", visual: { type: "phone-settings", path: ["Settings"], rows: ["Accessibility", "Action Button", "Camera", "Control Center"], tap: "Camera" } },
+        { say: "Under Composition, switch on Level.", visual: { type: "phone-settings", path: ["Camera", "Composition"], rows: ["Grid", "Level", "Mirror Front Camera", "View Outside the Frame"], tap: "Level", toggle: true } },
+        { say: "Tilt until the line turns yellow.", visual: { type: "phone-settings", mode: "level", path: ["Camera"], rows: [], reveal: "tilt" } },
+      ],
+      result: { say: "Straight horizons, and no cropping later.", headline: "Straight every time", before: "Tilted, crop later", after: "Yellow line, level" },
+    },
   },
   {
     slug: "how-to-show-battery-percentage-on-iphone",

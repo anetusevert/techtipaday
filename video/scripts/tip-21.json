@@ -1,0 +1,104 @@
+{
+  "key": "tip-21",
+  "n": 21,
+  "slug": "how-to-search-open-tabs-in-chrome",
+  "title": "How to search open tabs in Chrome",
+  "category": "browser",
+  "url": "https://www.techtipaday.com/tips/how-to-search-open-tabs-in-chrome",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Thirty tabs open and you can't find the one you need?",
+      "text": "Thirty tabs open and you can't find the one you need?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "tabsearch",
+        "mode": "crowded"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Search your tabs instead.",
+      "text": "Search your tabs instead.",
+      "visual": {
+        "type": "laptop",
+        "action": "tabsearch",
+        "mode": "open"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Control, Shift and A.",
+      "text": "Press Control, Shift and A.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "tabsearch",
+        "mode": "keys",
+        "keys": [
+          "Ctrl",
+          "Shift",
+          "A"
+        ]
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Type a word from the page title.",
+      "text": "Type a word from the page title.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "tabsearch",
+        "mode": "type"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Hit Enter and you're on that tab.",
+      "text": "Hit Enter and you're on that tab.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "tabsearch",
+        "mode": "jump"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On a Mac, it's Command, Shift, A.",
+      "text": "On a Mac, it's Command, Shift, A.",
+      "step": 4,
+      "visual": {
+        "type": "laptop",
+        "action": "tabsearch",
+        "mode": "keys",
+        "keys": [
+          "⌘ Cmd",
+          "Shift",
+          "A"
+        ]
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Any tab, found in about two seconds.",
+      "text": "Found it",
+      "result": {
+        "say": "Any tab, found in about two seconds.",
+        "headline": "Found it",
+        "before": "Squint at 30 tabs",
+        "after": "Type, Enter, there"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 60,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Thirty tabs open and you can't find the one you need?\n\n[confident] Here's the fix. Search your tabs instead.\n\n[friendly] Press Control, Shift and A. Type a word from the page title. Hit Enter and you're on that tab. On a Mac, it's Command, Shift, A.\n\n[delighted] Any tab, found in about two seconds.\n\n[warm] One tech tip a day, at techtipaday dot com."
+}
