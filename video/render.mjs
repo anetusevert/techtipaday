@@ -1,12 +1,13 @@
-// v3 one-command render: node render.mjs <n|slug> [--out=/path.mp4] [--frames]
+// v3 one-command render: node render.mjs <n|slug> [--out=/path.mp4] [--dry]
 // Builds the script from lib/tips.ts, snaps timing to VO pauses (ffmpeg silencedetect), renders TipV3.
+// Also writes covers/tip-NN-cover.png next to the mp4 (the CoverPoster still, same pixels as frame 0).
 import { spawnSync } from "node:child_process";
 import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath } from "node:url";
 import { buildScript } from "./script.mjs";
 const dir = path.dirname(fileURLToPath(import.meta.url));
-const FPS = 30, INTRO = 0.9, OUTRO = 4.2; // intro = cursor-blink sting; outro = CTA card + sonic logo after the voice
+const FPS = 30, INTRO = 0.9, OUTRO = 4.2, COVER_FRAMES = 18; // 18 frames = 0.6s static poster, then the 0.9s cursor sting; outro = CTA + sonic logo after the voice
 const arg = process.argv[2]; if (!arg) { console.error("Usage: node render.mjs <n|slug> [--out=file.mp4]"); process.exit(1); }
 const outArg = process.argv.find((a) => a.startsWith("--out="));
 const s = await buildScript(arg);
@@ -46,15 +47,25 @@ const PY = process.env.WHISPER_PY ?? "/home/box/whisper-venv/bin/python";
 if (hasVo && fs.existsSync(PY)) { const r = spawnSync(PY, [path.join(dir, "align.py"), vo, JSON.stringify(s.pieces.map((p) => p.say))], { encoding: "utf8" });
   try { const w = JSON.parse(r.stdout.trim().split("\n").at(-1)); if (w.length === s.pieces.length) { starts = w; console.log("Timing: word timestamps"); } } catch { console.warn("⚠ align.py failed, using pause timing", r.stderr?.slice(-300)); } }
 const f = (x) => Math.round(x * FPS);
-const voStart = f(INTRO), voEnd = f(INTRO + dur);
+// Poster first, then the sting, then the VO. Alignment stays relative to the voice; only voStart moves.
+const voStart = COVER_FRAMES + f(INTRO), voEnd = voStart + f(dur);
 const pieces = s.pieces.map((p, i) => ({ ...p, start: voStart + f(starts[i]) }));
-const props = { n: s.n, title: s.title, category: s.category, url: s.url, pieces, voStart, voEnd, total: voEnd + f(OUTRO), voFile: hasVo ? `vo/.norm/${s.key}.mp3` : null };
+const props = { n: s.n, title: s.title, category: s.category, url: s.url, pieces, voStart, voEnd, total: voEnd + f(OUTRO), voFile: hasVo ? `vo/.norm/${s.key}.mp3` : null, coverLine: s.coverLine, coverFrames: COVER_FRAMES };
 fs.mkdirSync(path.join(dir, ".cache"), { recursive: true }); const pp = path.join(dir, ".cache", `${s.key}.props.json`); fs.writeFileSync(pp, JSON.stringify(props, null, 2));
+const coverProps = { n: s.n, coverLine: s.coverLine, hookLabel: s.hookLabel };
+const coverPp = path.join(dir, ".cache", `${s.key}.cover.json`); fs.writeFileSync(coverPp, JSON.stringify(coverProps));
 const out = outArg ? path.resolve(outArg.slice(6)) : path.join(dir, "out", `${s.key}.mp4`); fs.mkdirSync(path.dirname(out), { recursive: true });
-console.log(`VO ${dur.toFixed(2)}s, total ${(props.total / FPS).toFixed(1)}s. Piece starts (s):`, pieces.map((p) => `${p.beat}@${(p.start / FPS).toFixed(2)}`).join(" "));
+const coverPng = path.join(path.dirname(out), "covers", `${s.key}-cover.png`);
+console.log(`Poster ${COVER_FRAMES}f (${(COVER_FRAMES / FPS).toFixed(2)}s) "${s.coverLine}". VO ${dur.toFixed(2)}s, total ${(props.total / FPS).toFixed(1)}s. Piece starts (s):`, pieces.map((p) => `${p.beat}@${(p.start / FPS).toFixed(2)}`).join(" "));
 if (process.argv.includes("--dry")) process.exit(0);
-const args = ["render", "src/index.ts", "TipV3", out, `--props=${pp}`, "--overwrite", "--concurrency=4"];
-const chrome = ["/usr/bin/google-chrome-stable", "/usr/bin/google-chrome"].find((c) => fs.existsSync(c)); if (chrome) args.push(`--browser-executable=${chrome}`, "--gl=angle");
-const r = spawnSync(path.join(dir, "node_modules", ".bin", "remotion"), args, { cwd: dir, stdio: "inherit" });
+const chrome = ["/usr/bin/google-chrome-stable", "/usr/bin/google-chrome"].find((c) => fs.existsSync(c));
+const bin = path.join(dir, "node_modules", ".bin", "remotion");
+const browser = chrome ? [`--browser-executable=${chrome}`, "--gl=angle"] : [];
+fs.mkdirSync(path.dirname(coverPng), { recursive: true });
+const still = spawnSync(bin, ["still", "src/index.ts", "CoverPoster", coverPng, `--props=${coverPp}`, "--frame=0", "--image-format=png", "--overwrite", ...browser], { cwd: dir, stdio: "inherit" });
+if (still.status !== 0) process.exit(still.status ?? 1);
+console.log(`Cover ${coverPng}`);
+const args = ["render", "src/index.ts", "TipV3", out, `--props=${pp}`, "--overwrite", "--concurrency=4", ...browser];
+const r = spawnSync(bin, args, { cwd: dir, stdio: "inherit" });
 if (r.status === 0) console.log(`\nRendered ${out}`);
 process.exit(r.status ?? 1);

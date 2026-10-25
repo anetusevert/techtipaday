@@ -59,6 +59,8 @@ export type TipVideo = {
   hook: string;
   /** Hook pill text, by hook style (default SOUND FAMILIAR?), e.g. HIDDEN SETTING, STOP DOING THIS. */
   hookLabel?: string;
+  /** 3–7 short words for the grid cover (frame 0). Derived from `hook` when omitted. See video/VIDEO.md. */
+  coverLine?: string;
   /** Legacy v2 lines; used as steps when `steps` is missing. */
   lines: string[];
   cta: string;

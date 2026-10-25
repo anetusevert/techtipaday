@@ -3,6 +3,7 @@ import type { ReactNode } from "react";
 import { fDisplay, fMono, fSans } from "./fonts";
 import { VisualView } from "../visuals";
 import { CaretT } from "../CaretT";
+import { CoverPoster } from "./CoverPoster";
 import type { Beat, Piece, V3Props } from "./types";
 
 // Palette: brand navy + caret mint, plus one colour per beat (the pills).
@@ -130,10 +131,16 @@ export function TipV3(p: V3Props) {
   const curBeat = ps.filter((x) => x.start <= f).at(-1)?.beat ?? "hook";
   const phoneIn = pop(f, fps, ps[0].start + 4);
   const phoneOut = interpolate(f, [resultAt - 6, resultAt], [1, 0], clamp);
-  const bed = interpolate(f, [0, p.voStart, p.voStart + 6, p.voEnd, p.voEnd + 10, p.total - 24, p.total], [0.5, 0.5, 0.1, 0.1, 0.3, 0.3, 0], clamp);
+  // Poster frames are silent. The bed then follows the old curve: 0.5 through the sting, ducked under the VO.
+  const coverFrames = p.coverFrames ?? 0;
+  const bed = coverFrames >= 2 && p.voStart > coverFrames
+    ? interpolate(f, [0, coverFrames - 1, coverFrames, p.voStart, p.voStart + 6, p.voEnd, p.voEnd + 10, p.total - 24, p.total], [0, 0, 0.5, 0.5, 0.1, 0.1, 0.3, 0.3, 0], clamp)
+    : interpolate(f, [0, p.voStart, p.voStart + 6, p.voEnd, p.voEnd + 10, p.total - 24, p.total], [0.5, 0.5, 0.1, 0.1, 0.3, 0.3, 0], clamp);
   const hook = ps[0];
   const hookWords = hook.text.split(" ").length; const hookPer = ((end(0) - hook.start) * 0.75) / hookWords;
   const introEnd = ps[0].start;
+  const introLen = Math.max(1, introEnd - coverFrames);
+  const stingLen = Math.max(1, p.voStart - coverFrames);
   return (
     <AbsoluteFill style={{ background: K.bg }}>
       {/* signature backdrop: faint text-line grid + mint glow */}
@@ -158,12 +165,13 @@ export function TipV3(p: V3Props) {
         {beatOrder.slice(0, 4).map((b) => { const idx = beatOrder.indexOf(curBeat), me = beatOrder.indexOf(b);
           return <div key={b} style={{ flex: 1, height: 10, borderRadius: 5, background: me < idx ? K.beat[b] : me === idx ? `${K.beat[b]}` : "#ffffff1c", opacity: me === idx ? 0.55 + 0.45 * blinkOn(f) : 1 }} />; })}
       </div>}
-      {f < introEnd && <Intro until={introEnd} />}
+      <Sequence from={coverFrames} durationInFrames={introLen}><Intro until={introLen} /></Sequence>
+      {coverFrames > 0 && p.coverLine ? <Sequence from={0} durationInFrames={coverFrames}><CoverPoster n={p.n} coverLine={p.coverLine} hookLabel={hook.label} /></Sequence> : null}
       {/* audio */}
       <Audio src={staticFile("audio/bed.mp3")} loop volume={bed} />
-      <Sequence from={0} durationInFrames={130} layout="none"><Audio src={staticFile("audio/sonic-logo.mp3")} volume={(fr) => interpolate(fr, [p.voStart - 4, p.voStart + 8], [0.85, 0.2], clamp)} /></Sequence>
+      <Sequence from={coverFrames} durationInFrames={130} layout="none"><Audio src={staticFile("audio/sonic-logo.mp3")} volume={(fr) => interpolate(fr, [stingLen - 4, stingLen + 8], [0.85, 0.2], clamp)} /></Sequence>
       <Sfx name="sonic-logo" at={p.voEnd + 4} volume={0.85} />
-      {[0, 12].map((k) => <Sfx key={`b${k}`} name="blink" at={k} volume={0.5} />)}
+      {[0, 12].map((k) => <Sfx key={`b${k}`} name="blink" at={coverFrames + k} volume={0.5} />)}
       {p.voFile && <Sequence from={p.voStart} layout="none"><Audio src={staticFile(p.voFile)} volume={1} /></Sequence>}
       {Array.from({ length: hookWords }, (_, i) => <Sfx key={`k${i}`} name="keytap" at={hook.start + i * hookPer} volume={0.35} />)}
       {ps.slice(1).map((x, i) => x.beat !== ps[i].beat ? <Sfx key={`w${i}`} name="whoosh" at={x.start - 4} volume={0.4} /> : <Sfx key={`w${i}`} name="keytap" at={x.start + 2} volume={0.4} />)}

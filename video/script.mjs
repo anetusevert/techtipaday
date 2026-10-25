@@ -4,6 +4,7 @@ import fs from "node:fs";
 import path from "node:path";
 import { fileURLToPath, pathToFileURL } from "node:url";
 import { build } from "esbuild";
+import { coverLineFromHook } from "./cover.mjs";
 
 const dir = path.dirname(fileURLToPath(import.meta.url));
 const MAX_WORDS = 70;
@@ -43,11 +44,18 @@ export async function buildScript(arg) {
   const prompt = beats.map((b) => `${tags[b.beat]} ${b.text}`).join("\n\n");
   const words = pieces.map((p) => p.say).join(" ").split(/\s+/).length;
   const hookWords = v.hook.split(/\s+/).length;
+  const explicitCover = typeof v.coverLine === "string" ? v.coverLine.trim() : "";
+  const derivedCover = explicitCover ? null : coverLineFromHook(v.hook);
+  const coverLine = explicitCover || derivedCover.line;
+  const coverWords = coverLine.replace(/[.!?]+$/g, "").split(/\s+/).filter(Boolean);
   const warn = [];
   if (words > MAX_WORDS) warn.push(`VO is ${words} words (> ${MAX_WORDS})`);
   if (hookWords < 6 || hookWords > 12) warn.push(`hook is ${hookWords} words (want 6-12)`);
   const hw = result.headline.split(/\s+/).length; if (hw < 2 || hw > 5) warn.push(`result headline is ${hw} words (want 2-5)`);
-  return { key: keyFor(tip), n: tip.n, slug: tip.slug, title: tip.title, category: tip.category, url: `https://www.techtipaday.com/tips/${tip.slug}`, pieces, words, warn, elevenlabsPrompt: prompt };
+  if (explicitCover && (coverWords.length < 3 || coverWords.length > 7)) warn.push(`coverLine is ${coverWords.length} words (want 3-7)`);
+  if (!explicitCover && derivedCover.chopped) warn.push(`coverLine derived by shortening the hook: "${coverLine}". Set video.coverLine (3-7 short words).`);
+  if (coverLine.length > 42) warn.push(`coverLine is ${coverLine.length} characters; it may be tight at grid size`);
+  return { key: keyFor(tip), n: tip.n, slug: tip.slug, title: tip.title, category: tip.category, url: `https://www.techtipaday.com/tips/${tip.slug}`, pieces, words, warn, elevenlabsPrompt: prompt, coverLine, hookLabel: v.hookLabel ?? null };
 }
 
 if (process.argv[1] && path.resolve(process.argv[1]) === fileURLToPath(import.meta.url)) {
