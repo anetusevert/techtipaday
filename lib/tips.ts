@@ -64,6 +64,7 @@ const originals: Tip[] = [
     pick: true,
     video: {
       hook: "Still tapping on typos and missing every single time?",
+      coverLine: "Stop missing every typo",
       lines: [
         "Hold the spacebar.",
         "Your keyboard turns into a trackpad.",
@@ -119,6 +120,7 @@ const originals: Tip[] = [
     video: {
       hook: "Your phone hides every Wi-Fi password you've ever typed.",
       hookLabel: "HIDDEN SETTING",
+      coverLine: "Find that Wi-Fi password",
       lines: ["Open Settings, then Wi-Fi.", "Tap the little i next to your network.", "Tap Password. Face ID unlocks it.", "On Android, tap Share for a QR code."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", path: ["Settings", "Wi-Fi"], rows: ["Home-5G", "Cafe Guest", "Office"], tap: "Home-5G" },
@@ -170,6 +172,7 @@ const originals: Tip[] = [
     pick: true,
     video: {
       hook: "Still retyping a long code from a photo, letter by letter?",
+      coverLine: "Copy text from any photo",
       lines: ["Copy the text straight from the photo.", "On iPhone, press and hold on the text, then tap Copy.", "On Android, open it in Google Photos and tap Lens.", "Tap Text, select it, and hit Copy."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "photo", path: ["Photos"], rows: [] },
@@ -671,6 +674,7 @@ const originals: Tip[] = [
     video: {
       hook: "Your Android has a spam call filter. It's probably switched off.",
       hookLabel: "HIDDEN SETTING",
+      coverLine: "Spam calls stop ringing",
       lines: ["Turn on Filter spam calls.", "In the Phone app, tap the dots, then Settings.", "Open Caller ID and spam.", "Switch on Filter spam calls."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "call", path: [], rows: [], caller: "+1 (602) 555-0148", note: "Suspected spam" },
@@ -731,6 +735,7 @@ const originals: Tip[] = [
     video: {
       hook: "Missed another call on silent? Your iPhone can flash instead.",
       hookLabel: "HIDDEN SETTING",
+      coverLine: "Missed calls on silent",
       lines: ["Turn on LED Flash for Alerts.", "Open Settings, then Accessibility.", "Tap Audio and Visual.", "Switch on LED Flash for Alerts.", "Turn on Flash in Silent Mode too."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "flash", path: ["on silent · face down"], rows: [] },
@@ -793,6 +798,7 @@ const originals: Tip[] = [
     video: {
       hook: "Want to know which app used your mic last night?",
       hookLabel: "HIDDEN SETTING",
+      coverLine: "Who used your mic?",
       lines: ["Open the privacy dashboard.", "Open Settings, then Security and privacy.", "Tap Privacy dashboard.", "Tap Microphone to see every app and when.", "Set the odd one to Don't allow."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "privacy", path: ["green dot · just scrolling"], rows: [] },

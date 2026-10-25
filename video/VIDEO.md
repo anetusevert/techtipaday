@@ -3,12 +3,13 @@
 Patterns adapted from One Agent a Day's playbook; the look, type, palette, sound and voice are ours.
 
 ## The arc (fixed, every day: the repetition is the signature)
-0. **Intro sting (0.9s):** a mint text cursor blinks twice on navy over the sonic logo's key click.
-1. **Pain hook** (coral pill `SOUND FAMILIAR?`): words pop in one by one with a key-tap each; the last word gets a mint text-selection highlight; a caret trails the line. The phone mock acts out the pain.
-2. **Do this** (mint pill `DO THIS`): VO says "Here's the fix." + the action; big display line.
-3. **Steps** (blue pill `HOW`, `> step n/N`): each step types out in sans with a blue caret while the phone mock performs it. The pointer is always the Caret T.
-4. **Result** (amber pill `RESULT`): BEFORE (coral, struck through) / AFTER (mint, with caret) rows, then a burst headline in a selection highlight + success chime.
-5. **CTA:** Caret T blinks in, wordmark, "One tech tip a day", `techtipaday.com` button, gentle pulse, sonic logo after the voice ends.
+0. **Cover poster (0.6s, 18 frames):** a static hook poster, finished from frame 0. Navy, faint grid, Caret T + wordmark, `TIP #NN`, the hook pill, and a huge `coverLine` on 2–3 lines with a mint highlight on the last word. No phone mock. Silence: no voice, no bed, no sting yet.
+1. **Intro sting (0.9s):** a mint text cursor blinks twice on navy over the sonic logo's key click. Unchanged; it starts after the poster.
+2. **Pain hook** (coral pill `SOUND FAMILIAR?`): words pop in one by one with a key-tap each; the last word gets a mint text-selection highlight; a caret trails the line. The phone mock acts out the pain.
+3. **Do this** (mint pill `DO THIS`): VO says "Here's the fix." + the action; big display line.
+4. **Steps** (blue pill `HOW`, `> step n/N`): each step types out in sans with a blue caret while the phone mock performs it. The pointer is always the Caret T.
+5. **Result** (amber pill `RESULT`): BEFORE (coral, struck through) / AFTER (mint, with caret) rows, then a burst headline in a selection highlight + success chime.
+6. **CTA:** Caret T blinks in, wordmark, "One tech tip a day", `techtipaday.com` button, gentle pulse, sonic logo after the voice ends.
 
 Other constants: header (Caret T + wordmark, `TIP #NN`), faint text-line grid backdrop with a glow tinted by the current beat, a 4-segment beat bar at the bottom in the beat colours. Every entrance uses one spring, `pop()` in `src/v3/TipV3.tsx` (stiffness 180, mass 0.7, damping 9-12): scale-in + fade. Exits are a 6-frame scale/fade, with a whoosh on beat changes.
 
@@ -23,6 +24,9 @@ The VO is normalised to -16 LUFS at render; the bed sits around -33 LUFS under t
 ```ts
 video: {
   hook: "6-12 words, relatable pain, ends on ? or a punch",
+  coverLine: "Stop missing every typo", // optional, 3-7 short words, readable at ~300px grid width.
+                                      // Poster headline and frame 0. Last word gets the mint highlight.
+                                      // If omitted, derived from the hook (a warning when words were dropped).
   hookLabel: "HIDDEN SETTING",        // optional pill + VO tone by hook style: (default) SOUND FAMILIAR? [exasperated],
                                       // HIDDEN SETTING [intrigued], STOP DOING THIS [firm], YOU'RE DOING IT WRONG [playful]
   lines: [...],                       // legacy v2; used as steps if `steps` is missing
@@ -40,7 +44,14 @@ Copy rules: whole VO 70 words max (the script warns), hook 6-12 words, short ste
 ## Daily commands (from `video/`)
 1. Add the `video` fields to the tip, then `node script.mjs <n|slug>`. This writes `scripts/tip-NN.json` and prints the ElevenLabs prompt (5 emotion-tagged segments: [exasperated] hook, [confident] do, [friendly] steps, [delighted] result, [warm] CTA).
 2. ElevenLabs `creative_generate_speech` with `voice_id`/`model_id` from `voice.json`, `generations_count: 1`, prompt = the printed text exactly. Poll `creative_get_flow_run_status`, then `curl -L -o public/vo/tip-NN.mp3 "<content_url>"`. Never re-call to retry.
-3. `node render.mjs <n|slug> --out=/workspace/techtipaday/tip-NN-v3.mp4` (`--dry` prints timings only). Timing: word timestamps from `align.py` (faster-whisper tiny.en in `/home/box/whisper-venv`; set it up with `python3 -m venv /home/box/whisper-venv && /home/box/whisper-venv/bin/pip install faster-whisper`). Without it, the fallback splits the pieces into sentences and aligns their length-based estimates to the VO pauses (ffmpeg silencedetect) with a DP. The CTA sonic logo plays after the voice. Takes about 1.5 min.
-4. QA: grab 4-5 frames (`ffmpeg -ss <t> -i out.mp4 -frames:v 1 f.png`) for hook, steps, result and CTA, and check loudness (`ffmpeg -i out.mp4 -af ebur128 -f null -`, about -17 LUFS integrated).
+3. `node render.mjs <n|slug> --out=/workspace/techtipaday/tip-NN-v3.mp4` (`--dry` prints timings only). Timing: word timestamps from `align.py` (faster-whisper tiny.en in `/home/box/whisper-venv`; set it up with `python3 -m venv /home/box/whisper-venv && /home/box/whisper-venv/bin/pip install faster-whisper`). Without it, the fallback splits the pieces into sentences and aligns their length-based estimates to the VO pauses (ffmpeg silencedetect) with a DP. The CTA sonic logo plays after the voice. Takes about 1.5 min. The same command writes `covers/tip-NN-cover.png` next to the mp4 (a still of the `CoverPoster` composition).
+4. QA: grab 4-5 frames (`ffmpeg -ss <t> -i out.mp4 -frames:v 1 f.png`) for hook, steps, result and CTA, and check loudness (`ffmpeg -i out.mp4 -af ebur128 -f null -`, about -17 LUFS integrated). Also check frame 0 is the poster (`ffmpeg -ss 0 -i out.mp4 -frames:v 1 cover.png`).
+
+## Covers (TikTok / Instagram grids)
+Profile grids were grabbing a mid-animation frame, so the hook looked cut off. Buffer does not accept a separate cover upload for TikTok or Instagram. Edit Thumbnail only picks a frame from the uploaded video, and the default thumbnail is the frame at 0 seconds. `render.mjs` therefore prepends 18 frames (0.6s at 30fps) of the static poster before the intro sting. The sting, the bed, the sonic logo and the VO all shift by those 18 frames, so alignment relative to the voice does not change. Frame 0 is the finished poster, which means a new Buffer post does not need Edit Thumbnail.
+
+`coverLine` is the poster text: 3–7 short words, written to stay readable when the 1080-wide frame is shown at about 300px. The last word is the mint highlight, so end on the word that should carry the thumbnail. If `coverLine` is missing, `cover.mjs` keeps a short clause of the hook or cuts one, and a shortened line produces a warning. Set the field when that line is weak.
+
+The PNG next to the mp4 is for native TikTok or Instagram cover edits on a video that is already published. A sample of tip 01 is committed at `video/covers/tip-01-cover.png`.
 
 Setup: `npm ci` in `video/` (needs ffmpeg; uses google-chrome if present). The v2 composition is still available via `node render-v2.mjs`.
