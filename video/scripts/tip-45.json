@@ -1,0 +1,94 @@
+{
+  "key": "tip-45",
+  "n": 45,
+  "slug": "how-to-use-the-gboard-clipboard-on-android",
+  "title": "How to use the Gboard clipboard on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-use-the-gboard-clipboard-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Copied something new and lost the thing you copied before?",
+      "text": "Copied something new and lost the thing you copied before?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "clip",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Open Gboard's clipboard.",
+      "text": "Open Gboard's clipboard.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "clip",
+        "path": [],
+        "rows": [],
+        "reveal": "icon"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap the clipboard icon above the keys.",
+      "text": "Tap the clipboard icon above the keys.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "clip",
+        "path": [],
+        "rows": [],
+        "reveal": "panel"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap any copy to paste it.",
+      "text": "Tap any copy to paste it.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "clip",
+        "path": [],
+        "rows": [],
+        "reveal": "paste"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Hold one and tap Pin to keep it.",
+      "text": "Hold one and tap Pin to keep it.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "clip",
+        "path": [],
+        "rows": [],
+        "reveal": "pin"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Everything you copied in the last hour, one tap away.",
+      "text": "Nothing lost",
+      "result": {
+        "say": "Everything you copied in the last hour, one tap away.",
+        "headline": "Nothing lost",
+        "before": "Copy, copy, gone",
+        "after": "Both still there"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Copied something new and lost the thing you copied before?\n\n[confident] Here's the fix. Open Gboard's clipboard.\n\n[friendly] Tap the clipboard icon above the keys. Tap any copy to paste it. Hold one and tap Pin to keep it.\n\n[delighted] Everything you copied in the last hour, one tap away.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Where did my copy go?",
+  "hookLabel": null
+}

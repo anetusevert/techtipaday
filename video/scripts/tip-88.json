@@ -1,0 +1,128 @@
+{
+  "key": "tip-88",
+  "n": 88,
+  "slug": "how-to-turn-on-grayscale-on-iphone",
+  "title": "How to turn on grayscale on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-grayscale-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Can't stop scrolling? One hidden setting makes your phone boring.",
+      "text": "Can't stop scrolling? One hidden setting makes your phone boring.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "gray",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn your screen gray.",
+      "text": "Turn your screen gray.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "gray",
+        "path": [],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Accessibility.",
+      "text": "Open Settings, then Accessibility.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "General",
+          "Accessibility",
+          "Action Button",
+          "Camera"
+        ],
+        "tap": "Accessibility"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Display and Text Size.",
+      "text": "Tap Display and Text Size.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Accessibility"
+        ],
+        "rows": [
+          "VoiceOver",
+          "Zoom",
+          "Display & Text Size",
+          "Motion"
+        ],
+        "tap": "Display & Text Size"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn on Color Filters and pick Grayscale.",
+      "text": "Turn on Color Filters and pick Grayscale.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Display & Text Size",
+          "Color Filters"
+        ],
+        "rows": [
+          "Color Filters",
+          "Grayscale",
+          "Red/Green Filter",
+          "Color Tint"
+        ],
+        "tap": "Color Filters",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Set it as your triple-click shortcut.",
+      "text": "Set it as your triple-click shortcut.",
+      "step": 4,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "gray",
+        "path": [],
+        "rows": [],
+        "reveal": "triple"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Same phone, just a lot less tempting.",
+      "text": "Way less tempting",
+      "result": {
+        "say": "Same phone, just a lot less tempting.",
+        "headline": "Way less tempting",
+        "before": "Bright, can't stop",
+        "after": "Gray, put it down"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 55,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Can't stop scrolling? One hidden setting makes your phone boring.\n\n[confident] Here's the fix. Turn your screen gray.\n\n[friendly] Open Settings, then Accessibility. Tap Display and Text Size. Turn on Color Filters and pick Grayscale. Set it as your triple-click shortcut.\n\n[delighted] Same phone, just a lot less tempting.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Can't stop scrolling?",
+  "hookLabel": "HIDDEN SETTING"
+}

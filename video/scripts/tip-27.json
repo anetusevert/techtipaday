@@ -1,0 +1,127 @@
+{
+  "key": "tip-27",
+  "n": 27,
+  "slug": "how-to-stop-website-notifications-in-chrome",
+  "title": "How to stop website notifications in Chrome",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-stop-website-notifications-in-chrome",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop clicking Allow when a website wants to send notifications.",
+      "text": "Stop clicking Allow when a website wants to send notifications.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "laptop",
+        "action": "notifs",
+        "mode": "spam"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Block site notifications for good.",
+      "text": "Block site notifications for good.",
+      "visual": {
+        "type": "laptop",
+        "action": "notifs",
+        "mode": "prompt"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "In Chrome Settings, open Privacy and security.",
+      "text": "In Chrome Settings, open Privacy and security.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Autofill and passwords",
+          "Privacy and security",
+          "Performance",
+          "Appearance"
+        ],
+        "tap": "Privacy and security"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Site settings, then Notifications.",
+      "text": "Tap Site settings, then Notifications.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Privacy and security",
+          "Site settings"
+        ],
+        "rows": [
+          "Location",
+          "Camera",
+          "Notifications",
+          "Pop-ups and redirects"
+        ],
+        "tap": "Notifications"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick Don't allow sites to send notifications.",
+      "text": "Pick Don't allow sites to send notifications.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Site settings",
+          "Notifications"
+        ],
+        "rows": [
+          "Sites can ask to send notifications",
+          "Don't allow sites to send notifications",
+          "Allowed: daily-news-now"
+        ],
+        "tap": "Don't allow sites to send notifications"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Then block any site in the Allowed list.",
+      "text": "Then block any site in the Allowed list.",
+      "step": 4,
+      "visual": {
+        "type": "laptop",
+        "action": "notifs",
+        "mode": "quiet"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "No more junk popping up in the corner.",
+      "text": "Corner stays quiet",
+      "result": {
+        "say": "No more junk popping up in the corner.",
+        "headline": "Corner stays quiet",
+        "before": "You won an iPhone!",
+        "after": "Silence"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 62,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop clicking Allow when a website wants to send notifications.\n\n[confident] Here's the fix. Block site notifications for good.\n\n[friendly] In Chrome Settings, open Privacy and security. Tap Site settings, then Notifications. Pick Don't allow sites to send notifications. Then block any site in the Allowed list.\n\n[delighted] No more junk popping up in the corner.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Chrome popups won't stop?",
+  "hookLabel": "STOP DOING THIS"
+}
