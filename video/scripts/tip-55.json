@@ -1,0 +1,116 @@
+{
+  "key": "tip-55",
+  "n": 55,
+  "slug": "how-to-turn-off-precise-location-on-iphone",
+  "title": "How to turn off Precise Location on iPhone",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-off-precise-location-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your shopping apps know exactly which building you're standing in.",
+      "text": "Your shopping apps know exactly which building you're standing in.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "loc",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn off Precise Location.",
+      "text": "Turn off Precise Location.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "loc",
+        "path": [],
+        "rows": [],
+        "reveal": "off"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Privacy and Security, then Location Services.",
+      "text": "Open Privacy and Security, then Location Services.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Privacy & Security"
+        ],
+        "rows": [
+          "Location Services",
+          "Tracking",
+          "Contacts",
+          "Photos"
+        ],
+        "tap": "Location Services"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap the app.",
+      "text": "Tap the app.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Privacy & Security",
+          "Location Services"
+        ],
+        "rows": [
+          "Camera",
+          "CouponCity",
+          "Maps",
+          "Weather"
+        ],
+        "tap": "CouponCity"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch Precise Location off.",
+      "text": "Switch Precise Location off.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Location Services",
+          "CouponCity"
+        ],
+        "rows": [
+          "Never",
+          "While Using the App",
+          "Precise Location"
+        ],
+        "tap": "Precise Location",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The app still works. It just gets your neighborhood, not your front door.",
+      "text": "Rough area only",
+      "result": {
+        "say": "The app still works. It just gets your neighborhood, not your front door.",
+        "headline": "Rough area only",
+        "before": "12 Elm St, Flat 3",
+        "after": "Somewhere nearby"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your shopping apps know exactly which building you're standing in.\n\n[confident] Here's the fix. Turn off Precise Location.\n\n[friendly] Open Privacy and Security, then Location Services. Tap the app. Switch Precise Location off.\n\n[delighted] The app still works. It just gets your neighborhood, not your front door.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Apps know your exact address",
+  "hookLabel": "HIDDEN SETTING"
+}

@@ -1,0 +1,113 @@
+{
+  "key": "tip-47",
+  "n": 47,
+  "slug": "how-to-stop-strangers-sending-you-files-with-quick-share",
+  "title": "How to stop strangers sending you files with Quick Share",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-stop-strangers-sending-you-files-with-quick-share",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "A stranger on the train just tried to send you a photo?",
+      "text": "A stranger on the train just tried to send you a photo?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "share",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Set Quick Share to Contacts.",
+      "text": "Set Quick Share to Contacts.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "share",
+        "path": [],
+        "rows": [],
+        "reveal": "contacts"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Connected devices.",
+      "text": "Open Settings, then Connected devices.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Network & internet",
+          "Connected devices",
+          "Apps",
+          "Notifications"
+        ],
+        "tap": "Connected devices"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Connection preferences, then Quick Share.",
+      "text": "Tap Connection preferences, then Quick Share.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Connected devices",
+          "Connection preferences"
+        ],
+        "rows": [
+          "Bluetooth",
+          "Quick Share",
+          "Android Auto",
+          "Printing"
+        ],
+        "tap": "Quick Share"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Set who can share with you to Contacts.",
+      "text": "Set who can share with you to Contacts.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Quick Share",
+          "Who can share with you"
+        ],
+        "rows": [
+          "Your devices",
+          "Contacts",
+          "Everyone"
+        ],
+        "tap": "Contacts"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now only people you know can even ask.",
+      "text": "Strangers locked out",
+      "result": {
+        "say": "Now only people you know can even ask.",
+        "headline": "Strangers locked out",
+        "before": "Everyone nearby",
+        "after": "Contacts only"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] A stranger on the train just tried to send you a photo?\n\n[confident] Here's the fix. Set Quick Share to Contacts.\n\n[friendly] Open Settings, then Connected devices. Tap Connection preferences, then Quick Share. Set who can share with you to Contacts.\n\n[delighted] Now only people you know can even ask.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Strangers can send you files",
+  "hookLabel": null
+}

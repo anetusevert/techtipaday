@@ -11,6 +11,7 @@ import { PhoneSpam, PhoneData, LaptopPasswords } from "./visuals6";
 import { PhoneFlash, PhotoText, LaptopSnap } from "./visuals7";
 import { PhonePrivacy, PhoneLevel, LaptopTabSearch } from "./visuals8";
 import { PhoneGray, PhoneClip, LaptopNotifs } from "./visuals9";
+import { LaptopWifiKey, PhoneShare, PhoneLoc, LaptopCorners } from "./visuals10";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -48,6 +49,8 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   if (v.mode === "level") return <PhoneLevel v={v} dur={dur} />;
   if (v.mode === "gray") return <PhoneGray v={v} dur={dur} />;
   if (v.mode === "clip") return <PhoneClip v={v} dur={dur} />;
+  if (v.mode === "share") return <PhoneShare v={v} dur={dur} />;
+  if (v.mode === "loc") return <PhoneLoc v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>
@@ -91,6 +94,8 @@ export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur
   if (v.action === "snap") return <LaptopSnap v={v} dur={dur} />;
   if (v.action === "tabsearch") return <LaptopTabSearch v={v} dur={dur} />;
   if (v.action === "notifs") return <LaptopNotifs v={v} dur={dur} />;
+  if (v.action === "wifikey") return <LaptopWifiKey v={v} dur={dur} />;
+  if (v.action === "corners") return <LaptopCorners v={v} dur={dur} />;
   if (v.action === "frozen" || v.action === "settings" || v.action === "taskbar") return <LaptopApps v={v} dur={dur} />;
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   const items = v.items ?? ["Meeting moved to 3pm", "https://techtipaday.com", "Flight AB123, seat 14C", "Invoice #4471"];
@@ -198,8 +203,8 @@ function LaptopApps({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur: n
     <div style={{ position: "relative", width: LW, height: LH, borderRadius: 26, border: "12px solid #2c3658", background: "#0f1730", overflow: "hidden", boxShadow: "0 40px 100px rgba(0,0,0,.55)" }}>
       {screen}
       <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: 56, background: "#141c36", display: "flex", justifyContent: "center", alignItems: "center", gap }}>
-        {Array.from({ length: icons }, (_, i) => <div key={i} style={{ width: iconW, height: iconW, borderRadius: 8, background: i === 0 ? "#4da3ff" : i === appIdx ? (app === "Chrome" ? "#e8a33d" : "#21a366") : "#2f3a5e",
-          boxShadow: bar && i === appIdx ? `0 0 0 3px ${C.acc}` : "none", fontFamily: fontSans, fontWeight: 800, fontSize: 24, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{i === appIdx ? (app === "Chrome" ? "" : "X") : ""}</div>)}
+        {Array.from({ length: icons }, (_, i) => <div key={i} style={{ width: iconW, height: iconW, borderRadius: 8, background: i === 0 ? "#4da3ff" : i === appIdx ? (app === "Chrome" ? "#e8a33d" : app === "Excel" ? "#21a366" : "#2f3a5e") : "#2f3a5e",
+          boxShadow: bar && i === appIdx ? `0 0 0 3px ${C.acc}` : "none", fontFamily: fontSans, fontWeight: 800, fontSize: 24, color: "#fff", display: "flex", alignItems: "center", justifyContent: "center" }}>{i === appIdx && app === "Excel" ? "X" : ""}</div>)}
       </div>
       {show > 0 && <div style={{ position: "absolute", left: 0, top: 0, width: LW, height: LH }}><Finger x={fx} y={fy} press={press} show={show} /></div>}
     </div>

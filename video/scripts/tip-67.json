@@ -1,0 +1,104 @@
+{
+  "key": "tip-67",
+  "n": 67,
+  "slug": "how-to-set-up-hot-corners-on-a-mac",
+  "title": "How to set up hot corners on a Mac",
+  "category": "mac",
+  "url": "https://www.techtipaday.com/tips/how-to-set-up-hot-corners-on-a-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still clicking through menus every time you lock your Mac?",
+      "text": "Still clicking through menus every time you lock your Mac?",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "corners",
+        "mode": "menu"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Set up a hot corner.",
+      "text": "Set up a hot corner.",
+      "visual": {
+        "type": "laptop",
+        "action": "corners",
+        "mode": "flick"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open System Settings, then Desktop and Dock.",
+      "text": "Open System Settings, then Desktop and Dock.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "System Settings",
+        "path": [
+          "System Settings"
+        ],
+        "rows": [
+          "Appearance",
+          "Control Center",
+          "Desktop & Dock",
+          "Displays"
+        ],
+        "tap": "Desktop & Dock"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Scroll down and click Hot Corners.",
+      "text": "Scroll down and click Hot Corners.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "System Settings",
+        "path": [
+          "Desktop & Dock"
+        ],
+        "rows": [
+          "Mission Control",
+          "Shortcuts…",
+          "Hot Corners…"
+        ],
+        "tap": "Hot Corners…"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick Lock Screen for one corner.",
+      "text": "Pick Lock Screen for one corner.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "corners",
+        "mode": "pick"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Flick the pointer into the corner when you stand up. Locked.",
+      "text": "Locked in a flick",
+      "result": {
+        "say": "Flick the pointer into the corner when you stand up. Locked.",
+        "headline": "Locked in a flick",
+        "before": "Apple menu, Lock…",
+        "after": "Flick. Locked."
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 57,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Still clicking through menus every time you lock your Mac?\n\n[confident] Here's the fix. Set up a hot corner.\n\n[friendly] Open System Settings, then Desktop and Dock. Scroll down and click Hot Corners. Pick Lock Screen for one corner.\n\n[delighted] Flick the pointer into the corner when you stand up. Locked.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Lock your Mac in one flick",
+  "hookLabel": "YOU'RE DOING IT WRONG"
+}

@@ -1,0 +1,106 @@
+{
+  "key": "tip-89",
+  "n": 89,
+  "slug": "how-to-find-your-wifi-password-on-windows-11",
+  "title": "How to find your Wi-Fi password on Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-find-your-wifi-password-on-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still flipping the router over to find the Wi-Fi password?",
+      "text": "Still flipping the router over to find the Wi-Fi password?",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "laptop",
+        "action": "wifikey",
+        "mode": "ask"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Your laptop already knows it.",
+      "text": "Your laptop already knows it.",
+      "visual": {
+        "type": "laptop",
+        "action": "wifikey",
+        "mode": "saved"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Network and internet.",
+      "text": "Open Settings, then Network and internet.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "System",
+          "Bluetooth & devices",
+          "Network & internet",
+          "Personalization"
+        ],
+        "tap": "Network & internet"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click Wi-Fi, then Manage known networks.",
+      "text": "Click Wi-Fi, then Manage known networks.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "Network & internet",
+          "Wi-Fi"
+        ],
+        "rows": [
+          "Show available networks",
+          "Manage known networks",
+          "Hardware properties",
+          "Random hardware addresses"
+        ],
+        "tap": "Manage known networks"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick your network and click Show.",
+      "text": "Pick your network and click Show.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "wifikey",
+        "mode": "show"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "There's the password, plus a QR code your friend can scan.",
+      "text": "Password found",
+      "result": {
+        "say": "There's the password, plus a QR code your friend can scan.",
+        "headline": "Password found",
+        "before": "••••••••••",
+        "after": "sunflower42"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Still flipping the router over to find the Wi-Fi password?\n\n[confident] Here's the fix. Your laptop already knows it.\n\n[friendly] Open Settings, then Network and internet. Click Wi-Fi, then Manage known networks. Pick your network and click Show.\n\n[delighted] There's the password, plus a QR code your friend can scan.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your laptop knows the password",
+  "hookLabel": "STOP DOING THIS"
+}

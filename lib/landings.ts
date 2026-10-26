@@ -222,6 +222,20 @@ export const HUBS: Hub[] = [
     searchAlternates: ["iphone screen keeps dimming", "iphone screen goes dark while reading", "iphone brightness keeps going down"],
   },
   {
+    id: "find-wifi-password",
+    slug: "find-your-wifi-password",
+    searchPhrase: "how to find your wifi password",
+    title: "How to find your Wi-Fi password",
+    intro:
+      "If any phone or laptop in the house has joined the network, the password is saved on it and you can read it off the screen. iPhone, Android and Windows 11 all show it in Settings, and most will hand you a QR code a guest can scan.",
+    searchAlternates: ["forgot wifi password", "see saved wifi password", "wifi password qr code"],
+    faq: [
+      { q: "Where's the quickest place to find it?", a: "On whatever device is already connected. An iPhone shows it under Settings > Wi-Fi > (i) > Password, Android under the network's Share button, and Windows 11 under Manage known networks." },
+      { q: "What if nothing in the house has joined the network?", a: "Then it's on the router: the sticker on the bottom, or the admin page in a browser. If someone changed it and nobody remembers, a router reset puts the sticker password back." },
+      { q: "Can a guest join without me reading the password out?", a: "Yes. Android and Windows 11 show a QR code next to the password, and iPhones can share it to a nearby iPhone that's in your contacts." },
+    ],
+  },
+  {
     id: "stop-spam-calls",
     slug: "stop-spam-calls",
     searchPhrase: "how to stop spam calls",
