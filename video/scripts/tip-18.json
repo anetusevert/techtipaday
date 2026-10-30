@@ -1,0 +1,89 @@
+{
+  "key": "tip-18",
+  "n": 18,
+  "slug": "how-to-use-tabs-in-file-explorer-on-windows-11",
+  "title": "How to use tabs in File Explorer on Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-use-tabs-in-file-explorer-on-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Five File Explorer windows open and you can't find the right one?",
+      "text": "Five File Explorer windows open and you can't find the right one?",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "explorer",
+        "mode": "windows"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Use tabs in File Explorer.",
+      "text": "Use tabs in File Explorer.",
+      "visual": {
+        "type": "laptop",
+        "action": "explorer",
+        "mode": "tabs"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Control and T for a new tab.",
+      "text": "Press Control and T for a new tab.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "explorer",
+        "mode": "tabs"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Control Tab switches between them.",
+      "text": "Control Tab switches between them.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "explorer",
+        "mode": "tabs"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Drag a file onto a tab to move it.",
+      "text": "Drag a file onto a tab to move it.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "explorer",
+        "mode": "tabs",
+        "items": [
+          "",
+          "Dropped into Invoices."
+        ]
+      }
+    },
+    {
+      "beat": "result",
+      "say": "One window, every folder, one click apart.",
+      "text": "One tidy window",
+      "result": {
+        "say": "One window, every folder, one click apart.",
+        "headline": "One tidy window",
+        "before": "Five windows",
+        "after": "Five tabs"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 58,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Five File Explorer windows open and you can't find the right one?\n\n[confident] Here's the fix. Use tabs in File Explorer.\n\n[friendly] Press Control and T for a new tab. Control Tab switches between them. Drag a file onto a tab to move it.\n\n[delighted] One window, every folder, one click apart.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "File Explorer has tabs now",
+  "hookLabel": "YOU'RE DOING IT WRONG"
+}

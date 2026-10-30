@@ -1,0 +1,110 @@
+{
+  "key": "tip-70",
+  "n": 70,
+  "slug": "how-to-use-the-screenshot-toolbar-on-a-mac",
+  "title": "How to use the screenshot toolbar on a Mac",
+  "category": "mac",
+  "url": "https://www.techtipaday.com/tips/how-to-use-the-screenshot-toolbar-on-a-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still taking a full screenshot and cropping it on your Mac?",
+      "text": "Still taking a full screenshot and cropping it on your Mac?",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "full",
+        "app": "Safari · macOS"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Press Command, Shift, 5.",
+      "text": "Press Command, Shift, 5.",
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "keys",
+        "app": "Safari · macOS",
+        "keys": [
+          "⌘ Cmd",
+          "Shift",
+          "5"
+        ]
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick selection, window, or full screen.",
+      "text": "Pick selection, window, or full screen.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "drag",
+        "app": "Safari · macOS",
+        "keys": [
+          "⌘ Cmd",
+          "Shift",
+          "5"
+        ]
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click Options, then Clipboard.",
+      "text": "Click Options, then Clipboard.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Screenshot",
+        "path": [
+          "Screenshot",
+          "Options"
+        ],
+        "rows": [
+          "Desktop",
+          "Documents",
+          "Clipboard",
+          "Mail"
+        ],
+        "tap": "Clipboard"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Paste it straight into a chat.",
+      "text": "Paste it straight into a chat.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "done",
+        "app": "Safari · macOS"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "No more cropping, and no more clutter on your desktop.",
+      "text": "Clean screenshots",
+      "result": {
+        "say": "No more cropping, and no more clutter on your desktop.",
+        "headline": "Clean screenshots",
+        "before": "Shot, crop, delete",
+        "after": "Drag, paste"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Still taking a full screenshot and cropping it on your Mac?\n\n[confident] Here's the fix. Press Command, Shift, 5.\n\n[friendly] Pick selection, window, or full screen. Click Options, then Clipboard. Paste it straight into a chat.\n\n[delighted] No more cropping, and no more clutter on your desktop.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Mac has a screenshot menu",
+  "hookLabel": "STOP DOING THIS"
+}

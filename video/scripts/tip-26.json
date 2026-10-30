@@ -1,0 +1,106 @@
+{
+  "key": "tip-26",
+  "n": 26,
+  "slug": "how-to-translate-a-web-page-in-chrome",
+  "title": "How to translate a web page in Chrome",
+  "category": "browser",
+  "url": "https://www.techtipaday.com/tips/how-to-translate-a-web-page-in-chrome",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stuck on a page in a language you can't read?",
+      "text": "Stuck on a page in a language you can't read?",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "translate",
+        "mode": "foreign"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Click the translate icon.",
+      "text": "Click the translate icon.",
+      "visual": {
+        "type": "laptop",
+        "action": "translate",
+        "mode": "english"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click the translate icon in the address bar.",
+      "text": "Click the translate icon in the address bar.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "translate",
+        "mode": "english"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "No icon? Right-click and choose Translate.",
+      "text": "No icon? Right-click and choose Translate.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Right-click menu"
+        ],
+        "rows": [
+          "Back",
+          "Reload",
+          "Translate to English",
+          "Print…"
+        ],
+        "tap": "Translate to English"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick your language in Chrome settings.",
+      "text": "Pick your language in Chrome settings.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Settings",
+          "Languages"
+        ],
+        "rows": [
+          "Preferred languages",
+          "Use Google Translate",
+          "Translate into this language"
+        ],
+        "tap": "Use Google Translate",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The whole page, in English, in one click.",
+      "text": "Read anything",
+      "result": {
+        "say": "The whole page, in English, in one click.",
+        "headline": "Read anything",
+        "before": "Rücksendungen?",
+        "after": "Returns, in English"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 54,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Stuck on a page in a language you can't read?\n\n[confident] Here's the fix. Click the translate icon.\n\n[friendly] Click the translate icon in the address bar. No icon? Right-click and choose Translate. Pick your language in Chrome settings.\n\n[delighted] The whole page, in English, in one click.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Chrome translates any page",
+  "hookLabel": "HIDDEN SETTING"
+}

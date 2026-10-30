@@ -1,0 +1,107 @@
+{
+  "key": "tip-56",
+  "n": 56,
+  "slug": "how-to-stop-apps-asking-to-track-you-on-iphone",
+  "title": "How to stop apps asking to track you on iPhone",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-stop-apps-asking-to-track-you-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Every new app asks to track you? Stop the pop-ups.",
+      "text": "Every new app asks to track you? Stop the pop-ups.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "track",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn off tracking requests.",
+      "text": "Turn off tracking requests.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "track",
+        "path": [],
+        "rows": [],
+        "reveal": "off"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Privacy and Security.",
+      "text": "Open Settings, then Privacy and Security.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Battery",
+          "Privacy & Security",
+          "App Store",
+          "Wallet"
+        ],
+        "tap": "Privacy & Security"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Tracking.",
+      "text": "Tap Tracking.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Privacy & Security"
+        ],
+        "rows": [
+          "Location Services",
+          "Tracking",
+          "Contacts",
+          "Photos"
+        ],
+        "tap": "Tracking"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn off Allow Apps to Request to Track.",
+      "text": "Turn off Allow Apps to Request to Track.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "track",
+        "path": [],
+        "rows": [],
+        "reveal": "off"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "No more pop-ups. Every app gets told no automatically.",
+      "text": "Pop-ups gone",
+      "result": {
+        "say": "No more pop-ups. Every app gets told no automatically.",
+        "headline": "Pop-ups gone",
+        "before": "Allow tracking?",
+        "after": "Always no"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 51,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Every new app asks to track you? Stop the pop-ups.\n\n[confident] Here's the fix. Turn off tracking requests.\n\n[friendly] Open Settings, then Privacy and Security. Tap Tracking. Turn off Allow Apps to Request to Track.\n\n[delighted] No more pop-ups. Every app gets told no automatically.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Stop the tracking pop-ups",
+  "hookLabel": "STOP DOING THIS"
+}

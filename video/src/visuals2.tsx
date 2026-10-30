@@ -13,6 +13,7 @@ import { PhonePrivacy, PhoneLevel, LaptopTabSearch } from "./visuals8";
 import { PhoneGray, PhoneClip, LaptopNotifs } from "./visuals9";
 import { LaptopWifiKey, PhoneShare, PhoneLoc, LaptopCorners } from "./visuals10";
 import { PhoneBattery, PhoneReach, PhoneNight, PhoneTimer, LaptopNightLight, LaptopMacWifi, LaptopMemory, LaptopHotspot } from "./visuals11";
+import { PhoneKeyFeel, PhoneStorage, PhonePct, PhoneLowPower, PhoneTrack, PhoneSummary, LaptopTranslate, LaptopWinDnd, LaptopMacFrozen, LaptopExplorer, LaptopTextAct } from "./visuals12";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -56,6 +57,12 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   if (v.mode === "reach") return <PhoneReach v={v} dur={dur} />;
   if (v.mode === "night") return <PhoneNight v={v} dur={dur} />;
   if (v.mode === "timer") return <PhoneTimer v={v} dur={dur} />;
+  if (v.mode === "keyfeel") return <PhoneKeyFeel v={v} dur={dur} />;
+  if (v.mode === "storage") return <PhoneStorage v={v} dur={dur} />;
+  if (v.mode === "pct") return <PhonePct v={v} dur={dur} />;
+  if (v.mode === "lowpower") return <PhoneLowPower v={v} dur={dur} />;
+  if (v.mode === "track") return <PhoneTrack v={v} dur={dur} />;
+  if (v.mode === "summary") return <PhoneSummary v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>
@@ -105,6 +112,11 @@ export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur
   if (v.action === "macwifi") return <LaptopMacWifi v={v} dur={dur} />;
   if (v.action === "memory") return <LaptopMemory v={v} dur={dur} />;
   if (v.action === "hotspot") return <LaptopHotspot v={v} dur={dur} />;
+  if (v.action === "translate") return <LaptopTranslate v={v} dur={dur} />;
+  if (v.action === "windnd") return <LaptopWinDnd v={v} dur={dur} />;
+  if (v.action === "macfrozen") return <LaptopMacFrozen v={v} dur={dur} />;
+  if (v.action === "explorer") return <LaptopExplorer v={v} dur={dur} />;
+  if (v.action === "textact") return <LaptopTextAct v={v} dur={dur} />;
   if (v.action === "frozen" || v.action === "settings" || v.action === "taskbar") return <LaptopApps v={v} dur={dur} />;
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   const items = v.items ?? ["Meeting moved to 3pm", "https://techtipaday.com", "Flight AB123, seat 14C", "Invoice #4471"];

@@ -1,0 +1,119 @@
+{
+  "key": "tip-92",
+  "n": 92,
+  "slug": "how-to-turn-off-keyboard-vibration-on-android",
+  "title": "How to turn off keyboard vibration on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-off-keyboard-vibration-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your phone buzzes on every single letter you type?",
+      "text": "Your phone buzzes on every single letter you type?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "keyfeel",
+        "path": [],
+        "rows": [],
+        "caller": "bzz"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Switch off the keyboard buzz.",
+      "text": "Switch off the keyboard buzz.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "keyfeel",
+        "path": [],
+        "rows": [],
+        "caller": "bzz",
+        "reveal": "quiet"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Gboard settings, then Preferences.",
+      "text": "Open Gboard settings, then Preferences.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Gboard",
+          "Settings"
+        ],
+        "rows": [
+          "Languages",
+          "Preferences",
+          "Theme",
+          "Text correction"
+        ],
+        "tap": "Preferences"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn off Haptic feedback on keypress.",
+      "text": "Turn off Haptic feedback on keypress.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Gboard",
+          "Preferences"
+        ],
+        "rows": [
+          "Sound on keypress",
+          "Haptic feedback on keypress",
+          "Popup on keypress"
+        ],
+        "tap": "Haptic feedback on keypress",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn off the keypress sound too.",
+      "text": "Turn off the keypress sound too.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Gboard",
+          "Preferences"
+        ],
+        "rows": [
+          "Sound on keypress",
+          "Haptic feedback on keypress",
+          "Popup on keypress"
+        ],
+        "tap": "Sound on keypress",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now you can text in bed without buzzing like a wasp.",
+      "text": "Silent typing",
+      "result": {
+        "say": "Now you can text in bed without buzzing like a wasp.",
+        "headline": "Silent typing",
+        "before": "Bzz bzz bzz",
+        "after": "Not a sound"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 54,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Your phone buzzes on every single letter you type?\n\n[confident] Here's the fix. Switch off the keyboard buzz.\n\n[friendly] Open Gboard settings, then Preferences. Turn off Haptic feedback on keypress. Turn off the keypress sound too.\n\n[delighted] Now you can text in bed without buzzing like a wasp.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Stop the buzz on every letter",
+  "hookLabel": null
+}

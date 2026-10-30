@@ -1,0 +1,119 @@
+{
+  "key": "tip-75",
+  "n": 75,
+  "slug": "how-to-turn-on-do-not-disturb-in-windows-11",
+  "title": "How to turn on Do not disturb in Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-do-not-disturb-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Notifications popping up mid-presentation for the whole room to read?",
+      "text": "Notifications popping up mid-presentation for the whole room to read?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "windnd",
+        "mode": "toasts"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Do not disturb.",
+      "text": "Turn on Do not disturb.",
+      "visual": {
+        "type": "laptop",
+        "action": "windnd",
+        "mode": "quiet"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click the battery or volume icon.",
+      "text": "Click the battery or volume icon.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "Taskbar"
+        ],
+        "rows": [
+          "Wi-Fi",
+          "Volume",
+          "Battery",
+          "14:02"
+        ],
+        "tap": "Battery"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click Do not disturb.",
+      "text": "Click Do not disturb.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "Quick settings"
+        ],
+        "rows": [
+          "Wi-Fi",
+          "Bluetooth",
+          "Do not disturb",
+          "Night light"
+        ],
+        "tap": "Do not disturb",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Set a schedule in Notifications settings.",
+      "text": "Set a schedule in Notifications settings.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "System",
+          "Notifications",
+          "Do not disturb"
+        ],
+        "rows": [
+          "Turn on do not disturb automatically",
+          "During these times",
+          "When duplicating your display",
+          "Set priority notifications"
+        ],
+        "tap": "When duplicating your display",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Pop-ups wait quietly till you're done. Nobody sees a thing.",
+      "text": "Present in peace",
+      "result": {
+        "say": "Pop-ups wait quietly till you're done. Nobody sees a thing.",
+        "headline": "Present in peace",
+        "before": "Toasts on screen",
+        "after": "Silent till later"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Notifications popping up mid-presentation for the whole room to read?\n\n[confident] Here's the fix. Turn on Do not disturb.\n\n[friendly] Click the battery or volume icon. Click Do not disturb. Set a schedule in Notifications settings.\n\n[delighted] Pop-ups wait quietly till you're done. Nobody sees a thing.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Hide pop-ups while you present",
+  "hookLabel": null
+}

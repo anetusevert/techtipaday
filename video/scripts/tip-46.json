@@ -1,0 +1,113 @@
+{
+  "key": "tip-46",
+  "n": 46,
+  "slug": "how-to-crop-a-screenshot-on-android",
+  "title": "How to crop a screenshot on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-crop-a-screenshot-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Sending a screenshot of your whole screen just to show one line?",
+      "text": "Sending a screenshot of your whole screen just to show one line?",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "screenshot",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Tap the preview to crop.",
+      "text": "Tap the preview to crop.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Screenshot",
+          "Edit"
+        ],
+        "rows": [
+          "Crop",
+          "Markup",
+          "Text",
+          "Share"
+        ],
+        "tap": "Crop"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Power and Volume down.",
+      "text": "Press Power and Volume down.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "screenshot",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap the preview before it slides away.",
+      "text": "Tap the preview before it slides away.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Screenshot saved"
+        ],
+        "rows": [
+          "Preview",
+          "Share",
+          "Edit",
+          "Capture more"
+        ],
+        "tap": "Preview"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Crop, drag the handles, save.",
+      "text": "Tap Crop, drag the handles, save.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Screenshot",
+          "Edit"
+        ],
+        "rows": [
+          "Crop",
+          "Markup",
+          "Text",
+          "Save"
+        ],
+        "tap": "Save"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Just the bit that matters, nothing else on show.",
+      "text": "Only what matters",
+      "result": {
+        "say": "Just the bit that matters, nothing else on show.",
+        "headline": "Only what matters",
+        "before": "Whole screen sent",
+        "after": "Just the line"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Sending a screenshot of your whole screen just to show one line?\n\n[confident] Here's the fix. Tap the preview to crop.\n\n[friendly] Press Power and Volume down. Tap the preview before it slides away. Tap Crop, drag the handles, save.\n\n[delighted] Just the bit that matters, nothing else on show.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Crop it before you send it",
+  "hookLabel": "YOU'RE DOING IT WRONG"
+}

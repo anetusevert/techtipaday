@@ -1,0 +1,116 @@
+{
+  "key": "tip-94",
+  "n": 94,
+  "slug": "how-to-turn-off-keyboard-clicks-on-iphone",
+  "title": "How to turn off keyboard clicks on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-off-keyboard-clicks-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone ticks on every letter and the whole train hears?",
+      "text": "Your iPhone ticks on every letter and the whole train hears?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "keyfeel",
+        "path": [],
+        "rows": [],
+        "caller": "tick"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn off the keyboard sound.",
+      "text": "Turn off the keyboard sound.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "keyfeel",
+        "path": [],
+        "rows": [],
+        "caller": "tick",
+        "reveal": "quiet"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Sounds and Haptics.",
+      "text": "Open Settings, then Sounds and Haptics.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Notifications",
+          "Sounds & Haptics",
+          "Focus",
+          "Screen Time"
+        ],
+        "tap": "Sounds & Haptics"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Keyboard Feedback.",
+      "text": "Tap Keyboard Feedback.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Sounds & Haptics"
+        ],
+        "rows": [
+          "Ringtone",
+          "Text Tone",
+          "Keyboard Feedback",
+          "Lock Sound"
+        ],
+        "tap": "Keyboard Feedback"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn off Sound.",
+      "text": "Turn off Sound.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Sounds & Haptics",
+          "Keyboard Feedback"
+        ],
+        "rows": [
+          "Sound",
+          "Haptic"
+        ],
+        "tap": "Sound",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Ringer still on, typing completely silent.",
+      "text": "No more ticking",
+      "result": {
+        "say": "Ringer still on, typing completely silent.",
+        "headline": "No more ticking",
+        "before": "Tick tick tick",
+        "after": "Silent typing"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 46,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Your iPhone ticks on every letter and the whole train hears?\n\n[confident] Here's the fix. Turn off the keyboard sound.\n\n[friendly] Open Settings, then Sounds and Haptics. Tap Keyboard Feedback. Turn off Sound.\n\n[delighted] Ringer still on, typing completely silent.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Kill the keyboard clicks",
+  "hookLabel": null
+}

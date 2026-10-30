@@ -1,0 +1,95 @@
+{
+  "key": "tip-17",
+  "n": 17,
+  "slug": "how-to-force-quit-a-frozen-app-on-a-mac",
+  "title": "How to force quit a frozen app on a Mac",
+  "category": "mac",
+  "url": "https://www.techtipaday.com/tips/how-to-force-quit-a-frozen-app-on-a-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Mac app frozen with that spinning wheel and nothing works?",
+      "text": "Mac app frozen with that spinning wheel and nothing works?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "macfrozen",
+        "mode": "beachball"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Force quit it from the keyboard.",
+      "text": "Force quit it from the keyboard.",
+      "visual": {
+        "type": "laptop",
+        "action": "macfrozen",
+        "mode": "forcequit"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Command, Option, Escape.",
+      "text": "Press Command, Option, Escape.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "macfrozen",
+        "mode": "forcequit"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Select the stuck app.",
+      "text": "Select the stuck app.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Force Quit Applications",
+        "path": [
+          "Force Quit"
+        ],
+        "rows": [
+          "Pages (Not Responding)",
+          "Safari",
+          "Mail",
+          "Finder"
+        ],
+        "tap": "Pages (Not Responding)"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click Force Quit.",
+      "text": "Click Force Quit.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "macfrozen",
+        "mode": "forcequit"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The frozen app closes, everything else keeps running.",
+      "text": "Unstuck in seconds",
+      "result": {
+        "say": "The frozen app closes, everything else keeps running.",
+        "headline": "Unstuck in seconds",
+        "before": "Spinning wheel",
+        "after": "Back to work"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 47,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Mac app frozen with that spinning wheel and nothing works?\n\n[confident] Here's the fix. Force quit it from the keyboard.\n\n[friendly] Press Command, Option, Escape. Select the stuck app. Click Force Quit.\n\n[delighted] The frozen app closes, everything else keeps running.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Unfreeze your Mac in seconds",
+  "hookLabel": null
+}

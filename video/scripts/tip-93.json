@@ -1,0 +1,106 @@
+{
+  "key": "tip-93",
+  "n": 93,
+  "slug": "how-to-free-up-storage-on-android",
+  "title": "How to free up storage on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-free-up-storage-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Storage full again and you've barely got any apps?",
+      "text": "Storage full again and you've barely got any apps?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "storage",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Let Files by Google clean it.",
+      "text": "Let Files by Google clean it.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "storage",
+        "path": [],
+        "rows": [],
+        "reveal": "freed"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Files by Google, then tap Clean.",
+      "text": "Open Files by Google, then tap Clean.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Files by Google"
+        ],
+        "rows": [
+          "Browse",
+          "Clean",
+          "Share"
+        ],
+        "tap": "Clean"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Clean the junk files card.",
+      "text": "Clean the junk files card.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Files",
+          "Clean"
+        ],
+        "rows": [
+          "Junk files  3.1 GB",
+          "Duplicate files  2.6 GB",
+          "Old screenshots  2.7 GB",
+          "Large files"
+        ],
+        "tap": "Junk files  3.1 GB"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Bin the duplicates and old screenshots.",
+      "text": "Bin the duplicates and old screenshots.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "storage",
+        "path": [],
+        "rows": [],
+        "reveal": "freed"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Gigabytes back, and not one photo you care about gone.",
+      "text": "8 GB back",
+      "result": {
+        "say": "Gigabytes back, and not one photo you care about gone.",
+        "headline": "8 GB back",
+        "before": "Storage 97% full",
+        "after": "61%, camera works"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 55,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Storage full again and you've barely got any apps?\n\n[confident] Here's the fix. Let Files by Google clean it.\n\n[friendly] Open Files by Google, then tap Clean. Clean the junk files card. Bin the duplicates and old screenshots.\n\n[delighted] Gigabytes back, and not one photo you care about gone.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your phone is full of junk",
+  "hookLabel": null
+}

@@ -1,0 +1,107 @@
+{
+  "key": "tip-33",
+  "n": 33,
+  "slug": "how-to-show-battery-percentage-on-iphone",
+  "title": "How to show battery percentage on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-show-battery-percentage-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Squinting at that tiny battery icon trying to guess what's left?",
+      "text": "Squinting at that tiny battery icon trying to guess what's left?",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "pct",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Battery Percentage.",
+      "text": "Turn on Battery Percentage.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "pct",
+        "path": [],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Battery.",
+      "text": "Open Settings, then Battery.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Notifications",
+          "Sounds & Haptics",
+          "Battery",
+          "Privacy & Security"
+        ],
+        "tap": "Battery"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Battery Percentage.",
+      "text": "Switch on Battery Percentage.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Battery"
+        ],
+        "rows": [
+          "Battery Percentage",
+          "Low Power Mode",
+          "Battery Health & Charging"
+        ],
+        "tap": "Battery Percentage",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "The number sits right inside the icon.",
+      "text": "The number sits right inside the icon.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "pct",
+        "path": [],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "No more guessing. You always know exactly what's left.",
+      "text": "No more guessing",
+      "result": {
+        "say": "No more guessing. You always know exactly what's left.",
+        "headline": "No more guessing",
+        "before": "About a third?",
+        "after": "27%"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 51,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Squinting at that tiny battery icon trying to guess what's left?\n\n[confident] Here's the fix. Turn on Battery Percentage.\n\n[friendly] Open Settings, then Battery. Switch on Battery Percentage. The number sits right inside the icon.\n\n[delighted] No more guessing. You always know exactly what's left.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "See your exact battery left",
+  "hookLabel": "HIDDEN SETTING"
+}

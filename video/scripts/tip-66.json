@@ -1,0 +1,115 @@
+{
+  "key": "tip-66",
+  "n": 66,
+  "slug": "how-to-use-scheduled-summary-on-iphone",
+  "title": "How to use Scheduled Summary on iPhone",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-use-scheduled-summary-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your phone buzzes with junk notifications all morning?",
+      "text": "Your phone buzzes with junk notifications all morning?",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "summary",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Scheduled Summary.",
+      "text": "Turn on Scheduled Summary.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "summary",
+        "path": [],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Notifications.",
+      "text": "Open Settings, then Notifications.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Notifications",
+          "Sounds & Haptics",
+          "Focus",
+          "Screen Time"
+        ],
+        "tap": "Notifications"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Scheduled Summary and switch it on.",
+      "text": "Tap Scheduled Summary and switch it on.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Notifications",
+          "Scheduled Summary"
+        ],
+        "rows": [
+          "Scheduled Summary",
+          "1st Summary  8:00",
+          "2nd Summary  18:00"
+        ],
+        "tap": "Scheduled Summary",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick the apps. Leave messages out.",
+      "text": "Pick the apps. Leave messages out.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Scheduled Summary",
+          "Apps in Summary"
+        ],
+        "rows": [
+          "ShopNow",
+          "NewsDaily",
+          "Puzzle Pop",
+          "Messages"
+        ],
+        "tap": "Puzzle Pop",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The junk arrives in one tidy card, and messages still come straight through.",
+      "text": "One calm card",
+      "result": {
+        "say": "The junk arrives in one tidy card, and messages still come straight through.",
+        "headline": "One calm card",
+        "before": "23 buzzes",
+        "after": "One summary"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 54,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your phone buzzes with junk notifications all morning?\n\n[confident] Here's the fix. Turn on Scheduled Summary.\n\n[friendly] Open Settings, then Notifications. Tap Scheduled Summary and switch it on. Pick the apps. Leave messages out.\n\n[delighted] The junk arrives in one tidy card, and messages still come straight through.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Get your notifications once",
+  "hookLabel": "HIDDEN SETTING"
+}

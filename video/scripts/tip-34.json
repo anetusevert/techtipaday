@@ -1,0 +1,107 @@
+{
+  "key": "tip-34",
+  "n": 34,
+  "slug": "how-to-turn-on-low-power-mode-on-iphone",
+  "title": "How to turn on Low Power Mode on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-low-power-mode-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Twenty percent left and three hours till you're home?",
+      "text": "Twenty percent left and three hours till you're home?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "lowpower",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Low Power Mode.",
+      "text": "Turn on Low Power Mode.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "lowpower",
+        "path": [],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Battery.",
+      "text": "Open Settings, then Battery.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Notifications",
+          "Sounds & Haptics",
+          "Battery",
+          "Privacy & Security"
+        ],
+        "tap": "Battery"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Low Power Mode.",
+      "text": "Switch on Low Power Mode.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Battery"
+        ],
+        "rows": [
+          "Battery Percentage",
+          "Low Power Mode",
+          "Battery Health & Charging"
+        ],
+        "tap": "Low Power Mode",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Or tap the battery in Control Center.",
+      "text": "Or tap the battery in Control Center.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "lowpower",
+        "path": [],
+        "rows": [],
+        "reveal": "on"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The icon turns yellow, and those last few percent stretch a lot further.",
+      "text": "Makes it home",
+      "result": {
+        "say": "The icon turns yellow, and those last few percent stretch a lot further.",
+        "headline": "Makes it home",
+        "before": "1h 30m left",
+        "after": "3h 30m left"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 55,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Twenty percent left and three hours till you're home?\n\n[confident] Here's the fix. Turn on Low Power Mode.\n\n[friendly] Open Settings, then Battery. Switch on Low Power Mode. Or tap the battery in Control Center.\n\n[delighted] The icon turns yellow, and those last few percent stretch a lot further.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Make 20% last till home",
+  "hookLabel": null
+}

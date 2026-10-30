@@ -1,0 +1,124 @@
+{
+  "key": "tip-36",
+  "n": 36,
+  "slug": "how-to-change-the-auto-lock-time-on-iphone",
+  "title": "How to change the Auto-Lock time on iPhone",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-change-the-auto-lock-time-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "iPhone screen keeps locking while you're still reading?",
+      "text": "iPhone screen keeps locking while you're still reading?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dim",
+        "path": [
+          "reading a recipe"
+        ],
+        "rows": [],
+        "note": "Locked again. Mid-recipe."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Make Auto-Lock longer.",
+      "text": "Make Auto-Lock longer.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Display & Brightness",
+          "Auto-Lock"
+        ],
+        "rows": [
+          "30 seconds",
+          "1 minute",
+          "2 minutes",
+          "5 minutes"
+        ],
+        "tap": "5 minutes"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Display and Brightness.",
+      "text": "Open Settings, then Display and Brightness.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "General",
+          "Accessibility",
+          "Display & Brightness",
+          "Wallpaper"
+        ],
+        "tap": "Display & Brightness"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Auto-Lock.",
+      "text": "Tap Auto-Lock.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Display & Brightness"
+        ],
+        "rows": [
+          "Brightness",
+          "True Tone",
+          "Auto-Lock",
+          "Raise to Wake"
+        ],
+        "tap": "Auto-Lock"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick a longer time.",
+      "text": "Pick a longer time.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Display & Brightness",
+          "Auto-Lock"
+        ],
+        "rows": [
+          "30 seconds",
+          "1 minute",
+          "2 minutes",
+          "5 minutes"
+        ],
+        "tap": "5 minutes"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now it stays on while you read, then locks when you're done.",
+      "text": "Stays on",
+      "result": {
+        "say": "Now it stays on while you read, then locks when you're done.",
+        "headline": "Stays on",
+        "before": "Locks in 30 seconds",
+        "after": "5 minutes"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 47,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] iPhone screen keeps locking while you're still reading?\n\n[confident] Here's the fix. Make Auto-Lock longer.\n\n[friendly] Open Settings, then Display and Brightness. Tap Auto-Lock. Pick a longer time.\n\n[delighted] Now it stays on while you read, then locks when you're done.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Stop the screen locking on you",
+  "hookLabel": null
+}

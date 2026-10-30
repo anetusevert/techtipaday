@@ -1,0 +1,117 @@
+{
+  "key": "tip-95",
+  "n": 95,
+  "slug": "how-to-limit-charging-to-80-percent-on-android",
+  "title": "How to limit charging to 80 percent on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-limit-charging-to-80-percent-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android has the same battery-saving trick as the iPhone.",
+      "text": "Your Android has the same battery-saving trick as the iPhone.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "charge",
+        "path": [
+          "Pixel · plugged in all night"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Limit charging to 80 percent.",
+      "text": "Limit charging to 80 percent.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "charge",
+        "path": [
+          "Pixel · plugged in all night"
+        ],
+        "rows": [],
+        "reveal": "limit",
+        "note": "Charging limited to 80%"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Battery.",
+      "text": "Open Settings, then Battery.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Network & internet",
+          "Battery",
+          "Storage",
+          "Display"
+        ],
+        "tap": "Battery"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Charging optimization.",
+      "text": "Tap Charging optimization.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Battery"
+        ],
+        "rows": [
+          "Battery usage",
+          "Battery Saver",
+          "Charging optimization",
+          "Battery health"
+        ],
+        "tap": "Charging optimization"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Choose Limit to 80 percent.",
+      "text": "Choose Limit to 80 percent.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Battery",
+          "Charging optimization"
+        ],
+        "rows": [
+          "Adaptive Charging",
+          "Limit to 80%"
+        ],
+        "tap": "Limit to 80%"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "It still lasts the day, and the battery wears out a lot slower.",
+      "text": "Battery saved",
+      "result": {
+        "say": "It still lasts the day, and the battery wears out a lot slower.",
+        "headline": "Battery saved",
+        "before": "100% all night",
+        "after": "Stops at 80%"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android has the same battery-saving trick as the iPhone.\n\n[confident] Here's the fix. Limit charging to 80 percent.\n\n[friendly] Open Settings, then Battery. Tap Charging optimization. Choose Limit to 80 percent.\n\n[delighted] It still lasts the day, and the battery wears out a lot slower.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Android can stop at 80",
+  "hookLabel": "HIDDEN SETTING"
+}

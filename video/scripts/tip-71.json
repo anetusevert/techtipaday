@@ -1,0 +1,85 @@
+{
+  "key": "tip-71",
+  "n": 71,
+  "slug": "how-to-copy-text-from-a-screenshot-on-windows-11",
+  "title": "How to copy text from a screenshot on Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-copy-text-from-a-screenshot-on-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still retyping text from a screenshot, letter by letter?",
+      "text": "Still retyping text from a screenshot, letter by letter?",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "laptop",
+        "action": "textact",
+        "mode": "retype"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Use Text actions.",
+      "text": "Use Text actions.",
+      "visual": {
+        "type": "laptop",
+        "action": "textact",
+        "mode": "copied"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Windows, Shift, S and drag.",
+      "text": "Press Windows, Shift, S and drag.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "drag"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click the preview to open Snipping Tool.",
+      "text": "Click the preview to open Snipping Tool.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "snip",
+        "mode": "done"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click Text actions, then Copy all text.",
+      "text": "Click Text actions, then Copy all text.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "textact",
+        "mode": "copied"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Every word copied, no typos. Just paste it.",
+      "text": "Copied, no typos",
+      "result": {
+        "say": "Every word copied, no typos. Just paste it.",
+        "headline": "Copied, no typos",
+        "before": "Retyping by hand",
+        "after": "One click"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Still retyping text from a screenshot, letter by letter?\n\n[confident] Here's the fix. Use Text actions.\n\n[friendly] Press Windows, Shift, S and drag. Click the preview to open Snipping Tool. Click Text actions, then Copy all text.\n\n[delighted] Every word copied, no typos. Just paste it.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Copy text out of any screenshot",
+  "hookLabel": "STOP DOING THIS"
+}
