@@ -1,0 +1,119 @@
+{
+  "key": "tip-72",
+  "n": 72,
+  "slug": "how-to-schedule-night-light-in-windows-11",
+  "title": "How to schedule Night light in Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-schedule-night-light-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your laptop has a bedtime mode you never turned on.",
+      "text": "Your laptop has a bedtime mode you never turned on.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "nightlight",
+        "mode": "cold"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Schedule Night light.",
+      "text": "Schedule Night light.",
+      "visual": {
+        "type": "laptop",
+        "action": "nightlight",
+        "mode": "warm"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, System, then Display.",
+      "text": "Open Settings, System, then Display.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "Settings",
+          "System"
+        ],
+        "rows": [
+          "Display",
+          "Sound",
+          "Notifications",
+          "Power & battery"
+        ],
+        "tap": "Display"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click Night light.",
+      "text": "Click Night light.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "System",
+          "Display"
+        ],
+        "rows": [
+          "Brightness",
+          "Night light",
+          "HDR",
+          "Scale"
+        ],
+        "tap": "Night light"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn on the schedule, sunset to sunrise.",
+      "text": "Turn on the schedule, sunset to sunrise.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Settings",
+        "path": [
+          "Display",
+          "Night light"
+        ],
+        "rows": [
+          "Strength",
+          "Schedule night light",
+          "Sunset to sunrise",
+          "Set hours"
+        ],
+        "tap": "Schedule night light",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Once it gets dark, the screen goes warm on its own.",
+      "text": "Warm after dark",
+      "result": {
+        "say": "Once it gets dark, the screen goes warm on its own.",
+        "headline": "Warm after dark",
+        "before": "Cold blue at 11 pm",
+        "after": "Warm, automatically"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 51,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your laptop has a bedtime mode you never turned on.\n\n[confident] Here's the fix. Schedule Night light.\n\n[friendly] Open Settings, System, then Display. Click Night light. Turn on the schedule, sunset to sunrise.\n\n[delighted] Once it gets dark, the screen goes warm on its own.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your laptop has a bedtime mode",
+  "hookLabel": "HIDDEN SETTING"
+}

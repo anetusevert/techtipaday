@@ -1,0 +1,108 @@
+{
+  "key": "tip-40",
+  "n": 40,
+  "slug": "how-to-turn-on-one-handed-mode-on-android",
+  "title": "How to turn on one-handed mode on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-one-handed-mode-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Can't reach the top of your phone without dropping it?",
+      "text": "Can't reach the top of your phone without dropping it?",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "reach",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on one-handed mode.",
+      "text": "Turn on one-handed mode.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "reach",
+        "path": [],
+        "rows": [],
+        "reveal": "drop"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, System, then Gestures.",
+      "text": "Open Settings, System, then Gestures.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "System"
+        ],
+        "rows": [
+          "Languages",
+          "Gestures",
+          "Date & time",
+          "Backup"
+        ],
+        "tap": "Gestures"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap One-handed mode and switch it on.",
+      "text": "Tap One-handed mode and switch it on.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Gestures",
+          "One-handed mode"
+        ],
+        "rows": [
+          "Use one-handed mode",
+          "Pull screen down",
+          "Show notifications"
+        ],
+        "tap": "Use one-handed mode",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Swipe down at the bottom edge.",
+      "text": "Swipe down at the bottom edge.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "reach",
+        "path": [],
+        "rows": [],
+        "reveal": "drop"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The whole top half drops right under your thumb.",
+      "text": "Top in reach",
+      "result": {
+        "say": "The whole top half drops right under your thumb.",
+        "headline": "Top in reach",
+        "before": "Two-hand stretch",
+        "after": "One thumb"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Can't reach the top of your phone without dropping it?\n\n[confident] Here's the fix. Turn on one-handed mode.\n\n[friendly] Open Settings, System, then Gestures. Tap One-handed mode and switch it on. Swipe down at the bottom edge.\n\n[delighted] The whole top half drops right under your thumb.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your phone has a one-hand mode",
+  "hookLabel": "HIDDEN SETTING"
+}

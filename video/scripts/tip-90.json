@@ -1,0 +1,109 @@
+{
+  "key": "tip-90",
+  "n": 90,
+  "slug": "how-to-see-which-apps-drain-your-battery-on-iphone",
+  "title": "How to see which apps drain your battery on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-see-which-apps-drain-your-battery-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone's at 20 percent by lunch and you barely touched it?",
+      "text": "Your iPhone's at 20 percent by lunch and you barely touched it?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "battery",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Check the battery list in Settings.",
+      "text": "Check the battery list in Settings.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "battery",
+        "path": [],
+        "rows": [],
+        "reveal": "list"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Battery.",
+      "text": "Open Settings, then Battery.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Notifications",
+          "Sounds & Haptics",
+          "Battery",
+          "Privacy & Security"
+        ],
+        "tap": "Battery"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Scroll to the apps. The top one is your drain.",
+      "text": "Scroll to the apps. The top one is your drain.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "battery",
+        "path": [],
+        "rows": [],
+        "reveal": "list"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn off its Background App Refresh.",
+      "text": "Turn off its Background App Refresh.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "General",
+          "Background App Refresh"
+        ],
+        "rows": [
+          "Maps",
+          "Messages",
+          "Scrollr",
+          "Weather"
+        ],
+        "tap": "Scrollr",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now it stops eating battery while it sits in your pocket.",
+      "text": "Drain found",
+      "result": {
+        "say": "Now it stops eating battery while it sits in your pocket.",
+        "headline": "Drain found",
+        "before": "20% by lunch",
+        "after": "Lasts till bedtime"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 61,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Your iPhone's at 20 percent by lunch and you barely touched it?\n\n[confident] Here's the fix. Check the battery list in Settings.\n\n[friendly] Open Settings, then Battery. Scroll to the apps. The top one is your drain. Turn off its Background App Refresh.\n\n[delighted] Now it stops eating battery while it sits in your pocket.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "What's killing your battery",
+  "hookLabel": null
+}

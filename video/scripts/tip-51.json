@@ -1,0 +1,111 @@
+{
+  "key": "tip-51",
+  "n": 51,
+  "slug": "how-to-make-an-iphone-hotspot-show-up-on-a-laptop",
+  "title": "How to make an iPhone hotspot show up on a laptop",
+  "category": "wifi",
+  "url": "https://www.techtipaday.com/tips/how-to-make-an-iphone-hotspot-show-up-on-a-laptop",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your laptop just can't see your iPhone hotspot?",
+      "text": "Your laptop just can't see your iPhone hotspot?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "hotspot",
+        "mode": "missing"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Maximize Compatibility.",
+      "text": "Turn on Maximize Compatibility.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Personal Hotspot"
+        ],
+        "rows": [
+          "Allow Others to Join",
+          "Wi-Fi Password",
+          "Maximize Compatibility"
+        ],
+        "tap": "Maximize Compatibility",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Personal Hotspot.",
+      "text": "Open Settings, then Personal Hotspot.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Wi-Fi",
+          "Bluetooth",
+          "Mobile Service",
+          "Personal Hotspot"
+        ],
+        "tap": "Personal Hotspot"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Maximize Compatibility.",
+      "text": "Switch on Maximize Compatibility.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Personal Hotspot"
+        ],
+        "rows": [
+          "Allow Others to Join",
+          "Wi-Fi Password",
+          "Maximize Compatibility"
+        ],
+        "tap": "Maximize Compatibility",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Refresh the Wi-Fi list on the laptop.",
+      "text": "Refresh the Wi-Fi list on the laptop.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "hotspot",
+        "mode": "found"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "There it is. Even older laptops can see it now.",
+      "text": "Hotspot found",
+      "result": {
+        "say": "There it is. Even older laptops can see it now.",
+        "headline": "Hotspot found",
+        "before": "No iPhone in sight",
+        "after": "Sam's iPhone, connected"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 50,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Your laptop just can't see your iPhone hotspot?\n\n[confident] Here's the fix. Turn on Maximize Compatibility.\n\n[friendly] Open Settings, then Personal Hotspot. Switch on Maximize Compatibility. Refresh the Wi-Fi list on the laptop.\n\n[delighted] There it is. Even older laptops can see it now.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Fix the invisible hotspot",
+  "hookLabel": null
+}

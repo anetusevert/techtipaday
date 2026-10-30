@@ -1,0 +1,114 @@
+{
+  "key": "tip-43",
+  "n": 43,
+  "slug": "how-to-set-a-time-limit-on-an-app-on-android",
+  "title": "How to set a time limit on an app on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-set-a-time-limit-on-an-app-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Stop losing your whole evening to one app.",
+      "text": "Stop losing your whole evening to one app.",
+      "label": "STOP DOING THIS",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "timer",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Give the app a daily timer.",
+      "text": "Give the app a daily timer.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "timer",
+        "path": [],
+        "rows": [],
+        "reveal": "paused"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Digital Wellbeing.",
+      "text": "Open Settings, then Digital Wellbeing.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Battery",
+          "Storage",
+          "Digital Wellbeing",
+          "Security"
+        ],
+        "tap": "Digital Wellbeing"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Dashboard and pick the app.",
+      "text": "Tap Dashboard and pick the app.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Digital Wellbeing",
+          "Dashboard"
+        ],
+        "rows": [
+          "Scrollr  2h 47m",
+          "Chrome  48m",
+          "Messages  21m",
+          "Maps  9m"
+        ],
+        "tap": "Scrollr  2h 47m"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap the hourglass and set a limit.",
+      "text": "Tap the hourglass and set a limit.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Scrollr",
+          "App timer"
+        ],
+        "rows": [
+          "15 min",
+          "30 min",
+          "1 hour",
+          "No timer"
+        ],
+        "tap": "30 min"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "When time's up, the app grays out until midnight.",
+      "text": "App paused",
+      "result": {
+        "say": "When time's up, the app grays out until midnight.",
+        "headline": "App paused",
+        "before": "2h 47m today",
+        "after": "30 min, then paused"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[firm] Stop losing your whole evening to one app.\n\n[confident] Here's the fix. Give the app a daily timer.\n\n[friendly] Open Settings, then Digital Wellbeing. Tap Dashboard and pick the app. Tap the hourglass and set a limit.\n\n[delighted] When time's up, the app grays out until midnight.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Give your worst app a timer",
+  "hookLabel": "STOP DOING THIS"
+}

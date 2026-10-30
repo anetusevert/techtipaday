@@ -1,0 +1,85 @@
+{
+  "key": "tip-91",
+  "n": 91,
+  "slug": "how-to-see-your-wifi-password-on-a-mac",
+  "title": "How to see your Wi-Fi password on a Mac",
+  "category": "mac",
+  "url": "https://www.techtipaday.com/tips/how-to-see-your-wifi-password-on-a-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Mac remembers every Wi-Fi password you've ever typed.",
+      "text": "Your Mac remembers every Wi-Fi password you've ever typed.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "macwifi",
+        "mode": "ask"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Open the Passwords app.",
+      "text": "Open the Passwords app.",
+      "visual": {
+        "type": "laptop",
+        "action": "macwifi",
+        "mode": "app"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click Wi-Fi in the sidebar.",
+      "text": "Click Wi-Fi in the sidebar.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "macwifi",
+        "mode": "app"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick your network. The password's right there.",
+      "text": "Pick your network. The password's right there.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "macwifi",
+        "mode": "show"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Or show the QR code and let them scan it.",
+      "text": "Or show the QR code and let them scan it.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "macwifi",
+        "mode": "show"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Your guest scans it and they're on. No router sticker.",
+      "text": "Guest is online",
+      "result": {
+        "say": "Your guest scans it and they're on. No router sticker.",
+        "headline": "Guest is online",
+        "before": "Wrong password",
+        "after": "Scanned, connected"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 57,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Mac remembers every Wi-Fi password you've ever typed.\n\n[confident] Here's the fix. Open the Passwords app.\n\n[friendly] Click Wi-Fi in the sidebar. Pick your network. The password's right there. Or show the QR code and let them scan it.\n\n[delighted] Your guest scans it and they're on. No router sticker.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Mac knows the password",
+  "hookLabel": "HIDDEN SETTING"
+}

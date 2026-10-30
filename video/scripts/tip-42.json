@@ -1,0 +1,117 @@
+{
+  "key": "tip-42",
+  "n": 42,
+  "slug": "how-to-schedule-do-not-disturb-on-android",
+  "title": "How to schedule Do Not Disturb on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-schedule-do-not-disturb-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Group chat buzzing your phone at two in the morning?",
+      "text": "Group chat buzzing your phone at two in the morning?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "night",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Put Do Not Disturb on a schedule.",
+      "text": "Put Do Not Disturb on a schedule.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "night",
+        "path": [],
+        "rows": [],
+        "reveal": "quiet"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Notifications, Do Not Disturb.",
+      "text": "Open Settings, Notifications, Do Not Disturb.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Notifications"
+        ],
+        "rows": [
+          "App notifications",
+          "Notification history",
+          "Do Not Disturb",
+          "Lock screen"
+        ],
+        "tap": "Do Not Disturb"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Add a schedule for the hours you sleep.",
+      "text": "Add a schedule for the hours you sleep.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Do Not Disturb",
+          "Schedules"
+        ],
+        "rows": [
+          "Sleeping  23:00 – 7:00",
+          "Event",
+          "Driving",
+          "Add more"
+        ],
+        "tap": "Sleeping  23:00 – 7:00",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Let calls from favorites through.",
+      "text": "Let calls from favorites through.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Do Not Disturb",
+          "People",
+          "Calls"
+        ],
+        "rows": [
+          "Starred contacts",
+          "Contacts",
+          "Anyone",
+          "None"
+        ],
+        "tap": "Starred contacts"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Your phone goes quiet when you sleep. Alarms still ring, and family still gets through.",
+      "text": "Quiet nights",
+      "result": {
+        "say": "Your phone goes quiet when you sleep. Alarms still ring, and family still gets through.",
+        "headline": "Quiet nights",
+        "before": "Buzz at 2:13 am",
+        "after": "Silent till 7"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 63,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Group chat buzzing your phone at two in the morning?\n\n[confident] Here's the fix. Put Do Not Disturb on a schedule.\n\n[friendly] Open Settings, Notifications, Do Not Disturb. Add a schedule for the hours you sleep. Let calls from favorites through.\n\n[delighted] Your phone goes quiet when you sleep. Alarms still ring, and family still gets through.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Stop the 2am buzzing",
+  "hookLabel": null
+}

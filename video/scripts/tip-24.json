@@ -1,0 +1,117 @@
+{
+  "key": "tip-24",
+  "n": 24,
+  "slug": "how-to-stop-chrome-using-so-much-memory",
+  "title": "How to stop Chrome using so much memory",
+  "category": "browser",
+  "url": "https://www.techtipaday.com/tips/how-to-stop-chrome-using-so-much-memory",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Forty tabs open and your laptop sounds like a jet engine?",
+      "text": "Forty tabs open and your laptop sounds like a jet engine?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "memory",
+        "mode": "slow"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Memory Saver.",
+      "text": "Turn on Memory Saver.",
+      "visual": {
+        "type": "laptop",
+        "action": "memory",
+        "mode": "saver"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Chrome settings, then Performance.",
+      "text": "Open Chrome settings, then Performance.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "You and Google",
+          "Autofill and passwords",
+          "Privacy and security",
+          "Performance"
+        ],
+        "tap": "Performance"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch Memory Saver on.",
+      "text": "Switch Memory Saver on.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Settings",
+          "Performance"
+        ],
+        "rows": [
+          "Energy Saver",
+          "Memory Saver",
+          "Tab hover preview",
+          "Preload pages"
+        ],
+        "tap": "Memory Saver",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Keep mail and music always active.",
+      "text": "Keep mail and music always active.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Performance",
+          "Always keep these sites active"
+        ],
+        "rows": [
+          "mail.google.com",
+          "open.spotify.com",
+          "Add site"
+        ],
+        "tap": "Add site"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Tabs you're not using go to sleep, and wake up the moment you click them.",
+      "text": "Laptop breathes again",
+      "result": {
+        "say": "Tabs you're not using go to sleep, and wake up the moment you click them.",
+        "headline": "Laptop breathes again",
+        "before": "Memory 94%",
+        "after": "Memory 52%"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 57,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Forty tabs open and your laptop sounds like a jet engine?\n\n[confident] Here's the fix. Turn on Memory Saver.\n\n[friendly] Open Chrome settings, then Performance. Switch Memory Saver on. Keep mail and music always active.\n\n[delighted] Tabs you're not using go to sleep, and wake up the moment you click them.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Chrome is eating your memory",
+  "hookLabel": null
+}
