@@ -236,6 +236,19 @@ export const HUBS: Hub[] = [
     ],
   },
   {
+    id: "hidden-phone-settings",
+    slug: "hidden-iphone-and-android-settings-worth-turning-on",
+    searchPhrase: "hidden iphone and android settings worth turning on",
+    title: "Hidden iPhone and Android settings worth turning on",
+    intro:
+      "Phones ship with useful switches turned off or tucked three menus deep. These are the ones worth finding: a charge limit that saves the battery, a spam filter Android leaves off, a private space for apps, a flash for calls, and a lock that kicks in if the phone is snatched.",
+    searchAlternates: ["hidden iphone settings", "hidden android settings", "iphone settings you should change", "android settings to turn on"],
+    faq: [
+      { q: "Will any of these slow the phone down?", a: "No. They're all built into the phone. The Android animation tweak actually makes it feel faster." },
+      { q: "Do I need to root or jailbreak anything?", a: "No. Every setting here is in the normal Settings app. The animation speed one lives in Developer options, which you switch on by tapping Build number seven times." },
+    ],
+  },
+  {
     id: "stop-spam-calls",
     slug: "stop-spam-calls",
     searchPhrase: "how to stop spam calls",

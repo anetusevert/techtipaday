@@ -10,6 +10,7 @@ import { pageAlternates } from "@/lib/seo";
 import { CATEGORIES } from "@/lib/taxonomy";
 import { BEEHIIV_ATTRIBUTION, BEEHIIV_SUBSCRIBE } from "@/lib/newsletter";
 import { SITE_DESC, SITE_NAME, SITE_URL } from "@/lib/tips";
+import { SOCIAL, SOCIAL_URLS } from "@/lib/social";
 
 const serif = Newsreader({
   subsets: ["latin"],
@@ -70,6 +71,7 @@ const graph = {
       url: SITE_URL,
       description: SITE_DESC,
       logo: `${SITE_URL}/icons/icon-512.png`,
+      sameAs: SOCIAL_URLS,
     },
   ],
 };
@@ -90,6 +92,13 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
               <div>
                 <h2>TechTipADay</h2>
                 <p>One checked tip a day. Tips go live on their Europe/Berlin date and not before.</p>
+                <p className="footer-social">
+                  {SOCIAL.map((s) => (
+                    <a key={s.id} href={s.url} rel="me">
+                      {s.name}
+                    </a>
+                  ))}
+                </p>
               </div>
               <div>
                 <h2>Browse</h2>

@@ -808,6 +808,7 @@ export const catalogA: TipDraft[] = [
   },
   {
     slug: "how-to-use-back-tap-on-iphone",
+    intents: ["hidden-phone-settings"],
     title: "How to use Back Tap on iPhone",
     summary: "The back of the phone is a button. It does nothing until you assign it.",
     category: "iphone",
@@ -912,6 +913,7 @@ export const catalogA: TipDraft[] = [
   },
   {
     slug: "how-to-turn-on-the-camera-level-on-iphone",
+    intents: ["hidden-phone-settings"],
     title: "How to turn on the camera level on iPhone",
     summary: "Settings > Camera > Composition > Level. A line appears, then turns yellow when you are level.",
     category: "iphone",
@@ -962,7 +964,7 @@ export const catalogA: TipDraft[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A icon that looks half full is not a number you can plan an afternoon around.",
-    intents: ["save-battery"],
+    intents: ["save-battery", "hidden-phone-settings"],
     redirectFrom: ["/tips/iphone-battery-percentage", "/fix/iphone-battery-percentage"],
     seo: {
       searchPhrase: "how to show battery percentage on iphone",

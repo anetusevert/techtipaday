@@ -349,7 +349,7 @@ const originals: Tip[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "A battery that sits at 100% every night ages faster than one that stops earlier.",
-    intents: ["save-battery"],
+    intents: ["save-battery", "hidden-phone-settings"],
     redirectFrom: ["/tips/iphone-80-percent-charging-limit", "/fix/battery-charge-limit"],
     seo: {
       searchPhrase: "how to set an 80 percent charging limit on iphone",
@@ -520,7 +520,7 @@ const originals: Tip[] = [
     difficulty: "Easy",
     minutes: 2,
     why: "Opening apps, going back and pulling down the notification shade all feel quicker, because the animation in between takes half as long.",
-    intents: ["speed-up-slow-phone"],
+    intents: ["speed-up-slow-phone", "hidden-phone-settings"],
     seo: {
       searchPhrase: "how to speed up animations on android",
       searchAlternates: ["android animation scale 0.5x", "make android feel faster", "developer options animation speed", "window animation scale", "how to make my android phone faster"],
@@ -580,7 +580,7 @@ const originals: Tip[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "The screen stays at the level you picked, so it stops going dark halfway through a page in a dim room.",
-    intents: ["iphone-screen-dimming"],
+    intents: ["iphone-screen-dimming", "hidden-phone-settings"],
     seo: {
       searchPhrase: "how to turn off auto brightness on iphone",
       searchAlternates: ["iphone screen keeps dimming", "iphone brightness keeps changing", "where is auto brightness on iphone", "stop iphone from dimming", "iphone auto brightness not in display settings"],
@@ -640,7 +640,7 @@ const originals: Tip[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "Calls Google or Samsung already flag as spam stop ringing. You can still see them in your call history if you want to check.",
-    intents: ["stop-spam-calls", "android-privacy-settings"],
+    intents: ["stop-spam-calls", "android-privacy-settings", "hidden-phone-settings"],
     seo: {
       searchPhrase: "how to stop spam calls on android",
       searchAlternates: ["block spam calls android", "filter spam calls android", "android caller id and spam", "samsung block spam and scam calls", "stop robocalls on android", "suspected spam calls android"],
@@ -701,7 +701,7 @@ const originals: Tip[] = [
     difficulty: "Easy",
     minutes: 1,
     why: "You see a call from across the room, even with the phone on silent or face down on the desk.",
-    intents: ["notifications"],
+    intents: ["notifications", "hidden-phone-settings"],
     seo: {
       searchPhrase: "how to turn on flash notifications on iphone",
       searchAlternates: ["led flash for alerts iphone", "iphone flash when ringing", "make iphone flash when someone calls", "flash for alerts iphone", "iphone flash notification on silent", "flashlight notification iphone"],
@@ -1242,6 +1242,7 @@ const originals: Tip[] = [
   {
     n: 95,
     slug: "how-to-limit-charging-to-80-percent-on-android",
+    intents: ["hidden-phone-settings"],
     date: "2026-11-06",
     title: "How to limit charging to 80 percent on Android",
     displayName: "Your Android can stop at 80% to save the battery",

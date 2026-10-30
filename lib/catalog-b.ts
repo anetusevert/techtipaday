@@ -536,7 +536,7 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 5,
     why: "A second set of apps can stay hidden and signed into a different account.",
-    intents: ["android-privacy-settings"],
+    intents: ["android-privacy-settings", "hidden-phone-settings"],
     redirectFrom: ["/tips/android-private-space", "/fix/android-private-space"],
     seo: {
       searchPhrase: "how to hide apps on android with private space",
@@ -582,7 +582,7 @@ export const catalogB: TipDraft[] = [
     difficulty: "Moderate",
     minutes: 2,
     why: "A stolen phone that locks immediately is harder to rummage through than one that stays open.",
-    intents: ["android-privacy-settings"],
+    intents: ["android-privacy-settings", "hidden-phone-settings"],
     redirectFrom: ["/tips/android-theft-detection", "/fix/theft-detection-lock"],
     seo: {
       searchPhrase: "how to turn on theft detection lock on android",

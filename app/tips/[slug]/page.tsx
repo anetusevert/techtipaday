@@ -5,6 +5,9 @@ import { Faq } from "@/components/Faq";
 import { JsonLd } from "@/components/JsonLd";
 import { Newsletter } from "@/components/Newsletter";
 import { TipActions } from "@/components/TipActions";
+import { TipVideo } from "@/components/TipVideo";
+import { shortFor } from "@/lib/videos";
+import { mostWatched } from "@/lib/popular";
 import { breadcrumbLd, faqLd, metaDescription, pageAlternates } from "@/lib/seo";
 import { appBySlug } from "@/lib/landings";
 import { comparePath } from "@/lib/compare";
@@ -42,6 +45,7 @@ export async function generateMetadata({ params }: { params: Promise<{ slug: str
       url: `/tips/${tip.slug}`,
       publishedTime: tip.date,
     },
+    twitter: { card: "summary_large_image", title: tip.title, description },
   };
 }
 
@@ -55,6 +59,8 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
   const hubs = hubsForTip(tip);
   const compares = comparesForTip(tip);
   const seo = seoOf(tip);
+  const short = shortFor(tip.slug);
+  const popular = mostWatched(6, tip.slug).filter((p) => !related.some((r) => r.slug === p.slug)).slice(0, 4);
   const devices = tip.platforms.map((id) => platformById(id)).filter((p) => !!p);
   const crumbs = [
     { name: "Home", href: "/" },
@@ -87,6 +93,21 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       keywords: [seo.searchPhrase, ...seo.searchAlternates].join(", "),
       publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
     },
+    ...(short
+      ? [
+          {
+            "@context": "https://schema.org",
+            "@type": "VideoObject",
+            name: tip.title,
+            description: tip.seo.answer,
+            thumbnailUrl: [`https://i.ytimg.com/vi/${short.id}/hqdefault.jpg`],
+            uploadDate: short.uploaded,
+            contentUrl: `https://www.youtube.com/shorts/${short.id}`,
+            embedUrl: `https://www.youtube.com/embed/${short.id}`,
+            publisher: { "@type": "Organization", name: SITE_NAME, url: SITE_URL },
+          },
+        ]
+      : []),
     breadcrumbLd(crumbs.map((crumb) => ({ name: crumb.name, url: crumb.href === "/" ? SITE_URL : `${SITE_URL}${crumb.href}` }))),
   ];
 
@@ -149,6 +170,7 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
           </li>
         ))}
       </ol>
+      {short ? <TipVideo short={short} title={tip.title} /> : null}
       <aside className="why use-when">
         <p className="kicker">When it helps</p>
         <p>{seo.useWhen}</p>
@@ -222,6 +244,21 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
           <h2>Related tips</h2>
           <ul className="link-grid">
             {related.map((item) => (
+              <li key={item.slug}>
+                <Link href={`/tips/${item.slug}`}>
+                  <small>{categoryName(item.category)}</small>
+                  {item.title}
+                </Link>
+              </li>
+            ))}
+          </ul>
+        </section>
+      ) : null}
+      {popular.length ? (
+        <section className="block">
+          <h2>Most-watched tips</h2>
+          <ul className="link-grid">
+            {popular.map((item) => (
               <li key={item.slug}>
                 <Link href={`/tips/${item.slug}`}>
                   <small>{categoryName(item.category)}</small>

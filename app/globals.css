@@ -579,3 +579,9 @@ a.cal-day.live { background: var(--ink); color: var(--paper); font-weight: 700; 
 .guide-note { color: var(--muted); font-size: 15px; }
 
 .display-name { font-weight: 700; font-size: 1.15rem; color: var(--green-ink); margin: 0.25rem 0 0.1rem; }
+
+/* Tip page: embedded YouTube Short */
+.tip-video-frame { width: min(100%, 320px); aspect-ratio: 9 / 16; border-radius: 16px; overflow: hidden; background: var(--ink); border: 1px solid var(--line); }
+.tip-video-frame iframe { width: 100%; height: 100%; border: 0; display: block; }
+.tip-video-links { color: var(--muted); font-size: 0.95rem; }
+.footer-social a { margin-right: 0.9rem; }

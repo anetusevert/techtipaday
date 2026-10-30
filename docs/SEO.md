@@ -8,7 +8,7 @@ The canonical host is **https://www.techtipaday.com**. `techtipaday.com` 301s to
 
 | Layer | URL | Built from | JSON-LD |
 | --- | --- | --- | --- |
-| Tip pages | `/tips/<slug>` | each tip in `lib/tips.ts`, `lib/catalog-a.ts`, `lib/catalog-b.ts` | HowTo, FAQPage, Article, BreadcrumbList |
+| Tip pages | `/tips/<slug>` | each tip in `lib/tips.ts`, `lib/catalog-a.ts`, `lib/catalog-b.ts` | HowTo, FAQPage, Article, BreadcrumbList, VideoObject (when the tip has a YouTube Short) |
 | Task hubs | `/how-to/<task>`, index `/how-to` | `HUBS` in `lib/landings.ts` + each tip's `intents` | CollectionPage + ItemList, FAQPage, BreadcrumbList |
 | Comparisons | `/compare/<a>-vs-<b>`, index `/compare` | `COMPARES` in `lib/compare.ts` (kind `vs` or `built-in-vs-app`) | WebPage, ItemList, FAQPage, BreadcrumbList |
 | Alternatives | `/alternatives/<slug>` | `COMPARES` with kind `alternatives` | WebPage, ItemList, FAQPage, BreadcrumbList |
@@ -109,3 +109,12 @@ It fetches every sitemap URL and checks: 200 with no redirect, www canonical, on
 Each new tip may set `displayName`: a catchy but clear human headline, e.g. "Closed the wrong tab? One shortcut brings it back".
 It shows above the H1 on the tip page and as the card hook. The `title` (title tag + H1), `seo.searchPhrase` and `slug`
 keep the plain search wording; never put the display name in those.
+
+## Videos, share images and referrals (30 Oct 2026)
+
+- `lib/videos.ts` maps tip slugs to their public YouTube Short (id, title, views, upload time). It is generated: run `python3 /workspace/techtipaday/launch/sync-shorts.py` after new Shorts publish, then commit. Tip pages with a Short embed it (lazy, youtube-nocookie), add VideoObject JSON-LD, and link Subscribe / TikTok / Instagram.
+- Every tip page lists "Most-watched tips" (top live tips by Short views, from `lib/popular.ts`) so the winners get internal links from all pages.
+- `app/tips/[slug]/opengraph-image.tsx` renders a per-tip share card (1200x630). Future tips 404 there too.
+- `lib/social.ts` holds the public profiles; they appear in the footer (`rel="me"`) and in Organization `sameAs`.
+- `proxy.ts` logs one JSON line `{"evt":"referral",...}` per human page view that has an external referer or `?ref=` / `utm_source`. Read them in Railway deploy logs with the filter `referral`. Video descriptions use `?ref=yt` on the "Full steps" link.
+- Hub `hidden-phone-settings` (/how-to/hidden-iphone-and-android-settings-worth-turning-on) collects the "hidden setting" winners.
