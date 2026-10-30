@@ -397,7 +397,7 @@ export const catalogB: TipDraft[] = [
     video: {
       hook: "Every new app asks to track you? Stop the pop-ups.",
       hookLabel: "STOP DOING THIS",
-      coverLine: "Stop the tracking pop-ups",
+      coverLine: "Let your iPhone say no",
       lines: ["Turn off tracking requests.", "Open Settings, then Privacy and Security.", "Tap Tracking.", "Turn off Allow Apps to Request to Track."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "track", path: [], rows: [] },

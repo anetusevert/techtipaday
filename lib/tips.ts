@@ -1105,7 +1105,7 @@ const originals: Tip[] = [
     pick: true,
     video: {
       hook: "Your phone buzzes on every single letter you type?",
-      coverLine: "Stop the buzz on every letter",
+      coverLine: "Your keyboard buzz has an off switch",
       lines: ["Turn off keypress haptics.", "Open Gboard settings, then Preferences.", "Turn off Haptic feedback on keypress.", "Turn off the keypress sound too."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "keyfeel", path: [], rows: [], caller: "bzz" },
@@ -1225,7 +1225,7 @@ const originals: Tip[] = [
     pick: true,
     video: {
       hook: "Your iPhone ticks on every letter and the whole train hears?",
-      coverLine: "Kill the keyboard clicks",
+      coverLine: "Everyone can hear your typing",
       lines: ["Turn off keyboard sound.", "Open Settings, then Sounds and Haptics.", "Tap Keyboard Feedback.", "Turn off Sound."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "keyfeel", path: [], rows: [], caller: "tick" },

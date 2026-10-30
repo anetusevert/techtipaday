@@ -114,6 +114,6 @@
   "words": 54,
   "warn": [],
   "elevenlabsPrompt": "[exasperated] Your phone buzzes on every single letter you type?\n\n[confident] Here's the fix. Switch off the keyboard buzz.\n\n[friendly] Open Gboard settings, then Preferences. Turn off Haptic feedback on keypress. Turn off the keypress sound too.\n\n[delighted] Now you can text in bed without buzzing like a wasp.\n\n[warm] One tech tip a day, at techtipaday dot com.",
-  "coverLine": "Stop the buzz on every letter",
+  "coverLine": "Your keyboard buzz has an off switch",
   "hookLabel": null
 }

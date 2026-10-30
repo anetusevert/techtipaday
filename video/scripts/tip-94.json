@@ -111,6 +111,6 @@
   "words": 46,
   "warn": [],
   "elevenlabsPrompt": "[exasperated] Your iPhone ticks on every letter and the whole train hears?\n\n[confident] Here's the fix. Turn off the keyboard sound.\n\n[friendly] Open Settings, then Sounds and Haptics. Tap Keyboard Feedback. Turn off Sound.\n\n[delighted] Ringer still on, typing completely silent.\n\n[warm] One tech tip a day, at techtipaday dot com.",
-  "coverLine": "Kill the keyboard clicks",
+  "coverLine": "Everyone can hear your typing",
   "hookLabel": null
 }

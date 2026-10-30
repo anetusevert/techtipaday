@@ -102,6 +102,6 @@
   "words": 51,
   "warn": [],
   "elevenlabsPrompt": "[intrigued] Squinting at that tiny battery icon trying to guess what's left?\n\n[confident] Here's the fix. Turn on Battery Percentage.\n\n[friendly] Open Settings, then Battery. Switch on Battery Percentage. The number sits right inside the icon.\n\n[delighted] No more guessing. You always know exactly what's left.\n\n[warm] One tech tip a day, at techtipaday dot com.",
-  "coverLine": "See your exact battery left",
+  "coverLine": "Your iPhone hides the battery number",
   "hookLabel": "HIDDEN SETTING"
 }

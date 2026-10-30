@@ -984,7 +984,7 @@ export const catalogA: TipDraft[] = [
     video: {
       hook: "Squinting at that tiny battery icon trying to guess what's left?",
       hookLabel: "HIDDEN SETTING",
-      coverLine: "See your exact battery left",
+      coverLine: "Your iPhone hides the battery number",
       lines: ["Turn on Battery Percentage.", "Open Settings, then Battery.", "Switch on Battery Percentage.", "The number sits right inside the icon."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "pct", path: [], rows: [] },
