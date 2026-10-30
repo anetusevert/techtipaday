@@ -35,7 +35,7 @@ export async function buildScript(arg) {
     { beat: "do", say: `${DO_LEAD} ${doThis}`, text: doThis, visual: v.doVisual ?? steps[0]?.visual ?? null },
     ...steps.map((s, i) => ({ beat: "steps", say: s.say, text: s.say, step: i + 1, visual: s.visual ?? null })),
     { beat: "result", say: result.say, text: result.headline, result },
-    { beat: "cta", say: CTA_SAY, text: "One tech tip a day" },
+    { beat: "cta", say: v.ctaSay ?? CTA_SAY, text: "One tech tip a day", ...(v.ctaNote ? { note: v.ctaNote } : {}) },
   ];
   const hookTag = { "HIDDEN SETTING": "[intrigued]", "STOP DOING THIS": "[firm]", "YOU'RE DOING IT WRONG": "[playful]" }[v.hookLabel] ?? "[exasperated]";
   const tags = { hook: hookTag, do: "[confident]", steps: "[friendly]", result: "[delighted]", cta: "[warm]" };

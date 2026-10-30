@@ -78,7 +78,7 @@ function ResultCard({ r, dur }: { r: NonNullable<Piece["result"]>; dur: number }
   </div>;
 }
 
-function CtaCard({ url }: { url: string }) {
+function CtaCard({ url, note }: { url: string; note?: string }) {
   const f = useCurrentFrame(); const { fps } = useVideoConfig(); const s = pop(f, fps, 0, 10);
   const cur = f < 6 ? 0 : f < 30 ? (Math.floor((f - 6) / 6) % 2 === 0 ? 1 : 0) : blinkOn(f);
   const pulse = 1 + 0.025 * Math.sin(f / 7);
@@ -87,6 +87,7 @@ function CtaCard({ url }: { url: string }) {
     <div style={{ fontFamily: fDisplay, fontWeight: 800, fontSize: 110, color: K.ink, letterSpacing: -3, marginTop: 40 }}>TechTip<span style={{ color: K.mint }}>ADay</span></div>
     <div style={{ fontFamily: fSans, fontWeight: 500, fontSize: 52, color: K.ink, marginTop: 18 }}>One tech tip a day</div>
     <div style={{ fontFamily: fMono, fontWeight: 700, fontSize: 50, color: K.bg, background: K.mint, padding: "16px 36px", borderRadius: 16, marginTop: 40 }}>techtipaday.com</div>
+    {note ? <div style={{ fontFamily: fMono, fontWeight: 700, fontSize: 40, color: K.ink, marginTop: 34 }}>{note}</div> : null}
   </AbsoluteFill>;
 }
 
@@ -94,7 +95,7 @@ function CtaCard({ url }: { url: string }) {
 function PieceScene({ p, dur, totalSteps, showLabel }: { p: Piece; dur: number; totalSteps: number; showLabel: boolean }) {
   const f = useCurrentFrame();
   const out = interpolate(f, [dur - 6, dur], [1, 0], clamp); const sc = interpolate(f, [dur - 6, dur], [1, 0.94], clamp);
-  if (p.beat === "cta") return <CtaCard url="" />;
+  if (p.beat === "cta") return <CtaCard url="" note={p.note} />;
   return <AbsoluteFill style={{ opacity: out, transform: `scale(${sc})` }}>
     <div style={{ position: "absolute", top: 250, left: 80, right: 80 }}>
       {showLabel && <div style={{ marginBottom: 34 }}><Pill beat={p.beat}>{p.label ?? LABEL[p.beat]}</Pill></div>}

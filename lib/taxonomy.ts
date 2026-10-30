@@ -73,6 +73,10 @@ export type TipVideo = {
   /** Visual under the hook and the "do this" beat. */
   hookVisual?: TipVideoVisual;
   doVisual?: TipVideoVisual;
+  /** Cross-promo only: replaces the spoken CTA line. Keep the techtipaday.com mention. */
+  ctaSay?: string;
+  /** Cross-promo only: one extra line under techtipaday.com on the end card. */
+  ctaNote?: string;
 };
 
 export type Tip = {
@@ -103,6 +107,8 @@ export type Tip = {
   seo: TipSeo;
   steps: string[];
   body: string[];
+  /** Optional outside resource the tip uses (e.g. a prompt page). Rendered as a linked block after the steps. */
+  source?: { kicker: string; label: string; url: string; note: string };
   /** Editor's shortlist. Not a view count. */
   pick?: boolean;
   /** Daily short. v3 fields drive video/script.mjs (see video/VIDEO.md). Not rendered on the site. */

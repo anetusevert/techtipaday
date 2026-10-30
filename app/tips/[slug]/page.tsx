@@ -171,6 +171,15 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
         ))}
       </ol>
       {short ? <TipVideo short={short} title={tip.title} /> : null}
+      {tip.source ? (
+        <aside className="why tip-source">
+          <p className="kicker">{tip.source.kicker}</p>
+          <p>
+            <a href={tip.source.url}>{tip.source.label}</a>
+          </p>
+          <p>{tip.source.note}</p>
+        </aside>
+      ) : null}
       <aside className="why use-when">
         <p className="kicker">When it helps</p>
         <p>{seo.useWhen}</p>

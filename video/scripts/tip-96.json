@@ -1,0 +1,116 @@
+{
+  "key": "tip-96",
+  "n": 96,
+  "slug": "how-to-make-a-text-shortcut-on-iphone-that-pastes-a-whole-prompt",
+  "title": "How to make a text shortcut on iPhone that pastes a whole prompt",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-make-a-text-shortcut-on-iphone-that-pastes-a-whole-prompt",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone can type a whole AI prompt from four keys.",
+      "text": "Your iPhone can type a whole AI prompt from four keys.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "expand",
+        "path": [
+          "Chat"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Make a text replacement.",
+      "text": "Make a text replacement.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "expand",
+        "path": [
+          "Chat"
+        ],
+        "rows": [],
+        "note": "4 keys → 2,394 characters"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then General, then Keyboard.",
+      "text": "Open Settings, then General, then Keyboard.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "General"
+        ],
+        "rows": [
+          "About",
+          "Software Update",
+          "Keyboard",
+          "Language & Region"
+        ],
+        "tap": "Keyboard"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Text Replacement, then the plus.",
+      "text": "Tap Text Replacement, then the plus.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "General",
+          "Keyboard"
+        ],
+        "rows": [
+          "Keyboards",
+          "Text Replacement",
+          "Auto-Capitalization",
+          "Auto-Correction"
+        ],
+        "tap": "Text Replacement"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Paste the prompt as the phrase. Shortcut: semicolon fix.",
+      "text": "Paste the prompt as the phrase. Shortcut: semicolon fix.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "expand",
+        "path": [
+          "Text Replacement",
+          "New"
+        ],
+        "rows": [],
+        "reveal": "form"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Type semicolon fix in any chat, and the whole prompt drops in.",
+      "text": "Whole prompt, four keys",
+      "result": {
+        "say": "Type semicolon fix in any chat, and the whole prompt drops in.",
+        "headline": "Whole prompt, four keys",
+        "before": "Digging through Notes",
+        "after": ";fix + space"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com. The other half is on One Agent a Day.",
+      "text": "One tech tip a day",
+      "note": "the other half is on @oneagentaday"
+    }
+  ],
+  "words": 69,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone can type a whole AI prompt from four keys.\n\n[confident] Here's the fix. Make a text replacement.\n\n[friendly] Open Settings, then General, then Keyboard. Tap Text Replacement, then the plus. Paste the prompt as the phrase. Shortcut: semicolon fix.\n\n[delighted] Type semicolon fix in any chat, and the whole prompt drops in.\n\n[warm] One tech tip a day, at techtipaday dot com. The other half is on One Agent a Day.",
+  "coverLine": "A whole prompt from four keys",
+  "hookLabel": "HIDDEN SETTING"
+}
