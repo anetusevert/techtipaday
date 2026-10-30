@@ -1040,7 +1040,7 @@ export const catalogA: TipDraft[] = [
         { say: "Switch on Low Power Mode.", visual: { type: "phone-settings", path: ["Settings", "Battery"], rows: ["Battery Percentage", "Low Power Mode", "Battery Health & Charging"], tap: "Low Power Mode", toggle: true } },
         { say: "Or tap the battery in Control Center.", visual: { type: "phone-settings", mode: "lowpower", path: [], rows: [], reveal: "on" } },
       ],
-      result: { say: "The icon turns yellow, and those last few percent stretch a lot further.", headline: "Makes it home", before: "1h 30m left", after: "3h 30m left" },
+      result: { say: "The icon turns yellow, and those last few percent stretch a lot further.", headline: "Makes it home", before: "1h 30m left", after: "2h 30m left" },
     },
   },
   {

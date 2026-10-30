@@ -116,7 +116,7 @@ export function PhoneLowPower({ v, dur }: { v: PhoneV; dur: number }) {
   const f = useCurrentFrame();
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
   const on = v.reveal === "on" ? p(dur * 0.2, dur * 0.4) : 0;
-  const hrs = on > 0.5 ? interpolate(on, [0.5, 1], [1.5, 3.5]) : interpolate(p(0, dur), [0, 1], [2, 1]);
+  const hrs = on > 0.5 ? interpolate(on, [0.5, 1], [1.5, 2.5]) : interpolate(p(0, dur), [0, 1], [2, 1]);
   const h = Math.floor(hrs), m = Math.round((hrs - h) * 60 / 5) * 5;
   const col = on > 0.5 ? AMBER : C.warn;
   return <Frame label="Battery">
