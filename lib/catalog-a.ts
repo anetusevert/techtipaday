@@ -1175,7 +1175,7 @@ export const catalogA: TipDraft[] = [
     video: {
       hook: "Can't reach the top of your phone without dropping it?",
       hookLabel: "HIDDEN SETTING",
-      coverLine: "Your phone has a one-hand mode",
+      coverLine: "Pull your screen down",
       lines: ["Turn on one-handed mode.", "Open Settings, System, then Gestures.", "Tap One-handed mode and switch it on.", "Swipe down at the bottom edge."],
       cta: "One tech tip a day at techtipaday.com",
       hookVisual: { type: "phone-settings", mode: "reach", path: [], rows: [] },
