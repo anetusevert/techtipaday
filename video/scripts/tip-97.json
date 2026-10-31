@@ -1,0 +1,126 @@
+{
+  "key": "tip-97",
+  "n": 97,
+  "slug": "how-to-stop-iphone-calls-ringing-on-mac-and-ipad",
+  "title": "How to stop iPhone calls ringing on Mac and iPad",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-stop-iphone-calls-ringing-on-mac-and-ipad",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Someone calls and your Mac and iPad ring along with your phone?",
+      "text": "Someone calls and your Mac and iPad ring along with your phone?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "call",
+        "path": [],
+        "rows": [],
+        "caller": "Mum",
+        "note": "Ringing on your Mac and iPad too"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn off calls on your other devices.",
+      "text": "Turn off calls on your other devices.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Phone",
+          "Calls on Other Devices"
+        ],
+        "rows": [
+          "Allow Calls on Other Devices",
+          "MacBook Air",
+          "iPad"
+        ],
+        "tap": "MacBook Air",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Apps, then Phone.",
+      "text": "Open Settings, Apps, then Phone.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Apps"
+        ],
+        "rows": [
+          "Maps",
+          "Messages",
+          "Phone",
+          "Photos"
+        ],
+        "tap": "Phone"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Calls on Other Devices.",
+      "text": "Tap Calls on Other Devices.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Apps",
+          "Phone"
+        ],
+        "rows": [
+          "Respond with Text",
+          "Calls on Other Devices",
+          "Blocked Contacts",
+          "Dial Assist"
+        ],
+        "tap": "Calls on Other Devices"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch off your Mac, or turn the whole thing off.",
+      "text": "Switch off your Mac, or turn the whole thing off.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Phone",
+          "Calls on Other Devices"
+        ],
+        "rows": [
+          "Allow Calls on Other Devices",
+          "MacBook Air",
+          "iPad"
+        ],
+        "tap": "Allow Calls on Other Devices",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now only your phone rings, and the Mac stays quiet.",
+      "text": "Only the phone rings",
+      "result": {
+        "say": "Now only your phone rings, and the Mac stays quiet.",
+        "headline": "Only the phone rings",
+        "before": "Three things ringing",
+        "after": "Just the iPhone"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 61,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Someone calls and your Mac and iPad ring along with your phone?\n\n[confident] Here's the fix. Turn off calls on your other devices.\n\n[friendly] Open Settings, Apps, then Phone. Tap Calls on Other Devices. Switch off your Mac, or turn the whole thing off.\n\n[delighted] Now only your phone rings, and the Mac stays quiet.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Why is your Mac ringing?",
+  "hookLabel": null
+}

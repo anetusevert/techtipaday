@@ -1,0 +1,109 @@
+{
+  "key": "tip-31",
+  "n": 31,
+  "slug": "how-to-reach-the-top-of-the-iphone-screen-with-one-hand",
+  "title": "How to reach the top of the iPhone screen with one hand",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-reach-the-top-of-the-iphone-screen-with-one-hand",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Can't reach the top of your iPhone with one thumb?",
+      "text": "Can't reach the top of your iPhone with one thumb?",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "reach",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Reachability.",
+      "text": "Turn on Reachability.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "reach",
+        "path": [],
+        "rows": [],
+        "reveal": "drop"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Accessibility, then Touch.",
+      "text": "Open Settings, Accessibility, then Touch.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Accessibility"
+        ],
+        "rows": [
+          "VoiceOver",
+          "Display & Text Size",
+          "Touch",
+          "Face ID & Attention"
+        ],
+        "tap": "Touch"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Reachability.",
+      "text": "Switch on Reachability.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Accessibility",
+          "Touch"
+        ],
+        "rows": [
+          "AssistiveTouch",
+          "Reachability",
+          "Haptic Touch",
+          "Tap to Wake"
+        ],
+        "tap": "Reachability",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Swipe down on the bar at the bottom.",
+      "text": "Swipe down on the bar at the bottom.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "reach",
+        "path": [],
+        "rows": [],
+        "reveal": "drop"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The top half of the screen drops right under your thumb.",
+      "text": "One thumb does it",
+      "result": {
+        "say": "The top half of the screen drops right under your thumb.",
+        "headline": "One thumb does it",
+        "before": "Two-hand stretch",
+        "after": "Thumb reaches"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Can't reach the top of your iPhone with one thumb?\n\n[confident] Here's the fix. Turn on Reachability.\n\n[friendly] Open Settings, Accessibility, then Touch. Switch on Reachability. Swipe down on the bar at the bottom.\n\n[delighted] The top half of the screen drops right under your thumb.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your iPhone screen slides down",
+  "hookLabel": "HIDDEN SETTING"
+}

@@ -1,0 +1,113 @@
+{
+  "key": "tip-23",
+  "n": 23,
+  "slug": "how-to-see-which-chrome-tab-is-using-the-most-memory",
+  "title": "How to see which Chrome tab is using the most memory",
+  "category": "browser",
+  "url": "https://www.techtipaday.com/tips/how-to-see-which-chrome-tab-is-using-the-most-memory",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Chrome is crawling and you have no idea which tab did it?",
+      "text": "Chrome is crawling and you have no idea which tab did it?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "memory",
+        "mode": "slow",
+        "items": [
+          "Fan: full blast. Which tab is it?"
+        ]
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Open Chrome's own task manager.",
+      "text": "Open Chrome's own task manager.",
+      "visual": {
+        "type": "shortcut",
+        "keys": [
+          "Shift",
+          "Esc"
+        ],
+        "label": "Chrome task manager"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On Windows, press Shift and Escape.",
+      "text": "On Windows, press Shift and Escape.",
+      "step": 1,
+      "visual": {
+        "type": "shortcut",
+        "keys": [
+          "Shift",
+          "Esc"
+        ],
+        "label": "On a Mac: Window › Task Manager"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Sort by memory, biggest first.",
+      "text": "Sort by memory, biggest first.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Task manager"
+        ],
+        "rows": [
+          "Memory footprint ↓",
+          "Tab: YouTube · 1.4 GB",
+          "Tab: Google Docs · 380 MB",
+          "Extension: Coupons · 290 MB"
+        ],
+        "tap": "Memory footprint ↓"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick the hog and click End task.",
+      "text": "Pick the hog and click End task.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "Chrome",
+        "path": [
+          "Task manager"
+        ],
+        "rows": [
+          "Tab: YouTube · 1.4 GB",
+          "Tab: Google Docs · 380 MB",
+          "End task"
+        ],
+        "tap": "End task"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The one tab eating your memory is gone, and the rest stay open.",
+      "text": "Found the hog",
+      "result": {
+        "say": "The one tab eating your memory is gone, and the rest stay open.",
+        "headline": "Found the hog",
+        "before": "Whole browser stuck",
+        "after": "One tab closed"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 60,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Chrome is crawling and you have no idea which tab did it?\n\n[confident] Here's the fix. Open Chrome's own task manager.\n\n[friendly] On Windows, press Shift and Escape. Sort by memory, biggest first. Pick the hog and click End task.\n\n[delighted] The one tab eating your memory is gone, and the rest stay open.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Chrome has its own task manager",
+  "hookLabel": null
+}

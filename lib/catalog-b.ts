@@ -146,6 +146,21 @@ export const catalogB: TipDraft[] = [
       "Join the network again.",
     ],
     body: ["If the network is not in the list, the phone has already forgotten it. The spinning connection is then a signal or a password problem, not a stale profile."],
+    video: {
+      hook: "Your phone won't join the Wi-Fi it joined yesterday?",
+      coverLine: "Stuck on Connecting forever",
+      lines: ["Forget the network and join again.", "Open Settings, then Network and internet.", "Tap your Wi-Fi, then Forget.", "Join it again with the password."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", path: ["Network & internet", "Internet"], rows: ["Home-WiFi · Connecting…", "Neighbour-5G", "Cafe Guest", "Saved networks"], tap: "Home-WiFi · Connecting…" },
+      doThis: "Forget the network and join it again.",
+      doVisual: { type: "phone-settings", path: ["Internet", "Home-WiFi"], rows: ["Forget", "Connect", "Share", "Network details"], tap: "Forget" },
+      steps: [
+        { say: "Open Settings, then Network and internet.", visual: { type: "phone-settings", path: ["Settings"], rows: ["Network & internet", "Connected devices", "Apps", "Notifications"], tap: "Network & internet" } },
+        { say: "Tap Internet, then your Wi-Fi, then Forget.", visual: { type: "phone-settings", path: ["Internet", "Home-WiFi"], rows: ["Forget", "Connect", "Share", "Network details"], tap: "Forget" } },
+        { say: "Join it again and type the password.", visual: { type: "phone-settings", path: ["Network & internet", "Internet"], rows: ["Home-WiFi", "Neighbour-5G", "Cafe Guest"], tap: "Home-WiFi" } },
+      ],
+      result: { say: "A fresh connection, and no more endless spinning.", headline: "Back online", before: "Connecting…", after: "Connected" },
+    },
   },
   {
     slug: "how-to-turn-off-wifi-assist-on-iphone",

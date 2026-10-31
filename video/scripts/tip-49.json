@@ -1,0 +1,128 @@
+{
+  "key": "tip-49",
+  "n": 49,
+  "slug": "how-to-forget-a-wifi-network-on-android",
+  "title": "How to forget a Wi-Fi network on Android",
+  "category": "wifi",
+  "url": "https://www.techtipaday.com/tips/how-to-forget-a-wifi-network-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your phone won't join the Wi-Fi it joined yesterday?",
+      "text": "Your phone won't join the Wi-Fi it joined yesterday?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Network & internet",
+          "Internet"
+        ],
+        "rows": [
+          "Home-WiFi · Connecting…",
+          "Neighbour-5G",
+          "Cafe Guest",
+          "Saved networks"
+        ],
+        "tap": "Home-WiFi · Connecting…"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Forget the network and join it again.",
+      "text": "Forget the network and join it again.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Internet",
+          "Home-WiFi"
+        ],
+        "rows": [
+          "Forget",
+          "Connect",
+          "Share",
+          "Network details"
+        ],
+        "tap": "Forget"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Network and internet.",
+      "text": "Open Settings, then Network and internet.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Network & internet",
+          "Connected devices",
+          "Apps",
+          "Notifications"
+        ],
+        "tap": "Network & internet"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Internet, then your Wi-Fi, then Forget.",
+      "text": "Tap Internet, then your Wi-Fi, then Forget.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Internet",
+          "Home-WiFi"
+        ],
+        "rows": [
+          "Forget",
+          "Connect",
+          "Share",
+          "Network details"
+        ],
+        "tap": "Forget"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Join it again and type the password.",
+      "text": "Join it again and type the password.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Network & internet",
+          "Internet"
+        ],
+        "rows": [
+          "Home-WiFi",
+          "Neighbour-5G",
+          "Cafe Guest"
+        ],
+        "tap": "Home-WiFi"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "A fresh connection, and no more endless spinning.",
+      "text": "Back online",
+      "result": {
+        "say": "A fresh connection, and no more endless spinning.",
+        "headline": "Back online",
+        "before": "Connecting…",
+        "after": "Connected"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Your phone won't join the Wi-Fi it joined yesterday?\n\n[confident] Here's the fix. Forget the network and join it again.\n\n[friendly] Open Settings, then Network and internet. Tap Internet, then your Wi-Fi, then Forget. Join it again and type the password.\n\n[delighted] A fresh connection, and no more endless spinning.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Stuck on Connecting forever",
+  "hookLabel": null
+}
