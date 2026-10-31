@@ -9,7 +9,7 @@ import type { Visual } from "./types";
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
 type PhoneV = Extract<Visual, { type: "phone-settings" }>;
-const PROMPT = "You debug prompts. You are practical and specific. You treat a bad model answer like a bug report: find the line in the prompt that caused it, fix that line, and leave working parts alone.";
+const PROMPT = "You're a prompt debugger. I'll paste a prompt and the bad answer it gave. Tell me in 3 bullets why it failed, then rewrite the prompt so it can't fail that way. Ask me one question first if anything is unclear.";
 
 function Frame({ children, label }: { children: React.ReactNode; label?: string }) {
   return <div style={{ position: "relative", width: PW, height: PH, borderRadius: 72, background: "#0e1428", border: "10px solid #2c3658", boxShadow: "0 40px 100px rgba(0,0,0,.55)", overflow: "hidden" }}>
@@ -49,7 +49,7 @@ export function PhoneExpand({ v, dur }: { v: PhoneV; dur: number }) {
         <span style={{ color: C.mut }}>Cancel</span><b style={{ color: C.fg, fontSize: 40 }}>New</b><span style={{ color: saved > 0.5 ? C.acc : "#4da3ff", fontWeight: 700 }}>Save</span></div>
       <div style={{ position: "absolute", top: 230, left: 26, right: 26, borderRadius: 22, background: C.panel, padding: "20px 26px", border: pasted > 0.5 && sc === 0 ? `3px solid ${C.acc}` : "3px solid transparent" }}>
         <div style={{ fontFamily: fontMono, fontSize: 24, color: C.mut }}>Phrase</div>
-        <div style={{ fontFamily: fontSans, fontSize: 28, lineHeight: 1.3, color: C.fg, marginTop: 8, height: 220, overflow: "hidden", opacity: pasted }}>{PROMPT.slice(0, 150)}…</div>
+        <div style={{ fontFamily: fontSans, fontSize: 25, lineHeight: 1.3, color: C.fg, marginTop: 8, height: 230, overflow: "hidden", opacity: pasted }}>{PROMPT}</div>
       </div>
       <div style={{ position: "absolute", top: 560, left: 26, right: 26, height: 92, borderRadius: 22, background: C.panel, padding: "0 26px", display: "flex", alignItems: "center", gap: 20, border: sc > 0 ? `3px solid ${C.acc}` : "3px solid transparent" }}>
         <span style={{ fontFamily: fontMono, fontSize: 24, color: C.mut }}>Shortcut</span>
@@ -64,13 +64,13 @@ export function PhoneExpand({ v, dur }: { v: PhoneV; dur: number }) {
   const n = Math.min(4, Math.floor(interpolate(f, [dur * 0.08, dur * 0.38], [0, 4.99], clamp)));
   const space = f > dur * 0.42;
   const grow = p(dur * 0.44, dur * 0.72);
-  const shown = Math.round(grow * 175);
+  const shown = Math.round(grow * PROMPT.length);
   const hot = !space ? typed[Math.max(0, n - 1)] ?? "" : grow < 0.1 ? " " : "";
   return <Frame label="Chat">
     <div style={{ position: "absolute", top: 140, left: 34, fontFamily: fontSans, fontWeight: 700, fontSize: 44, color: C.fg }}>New chat</div>
-    <div style={{ position: "absolute", top: 230, left: 24, right: 24, padding: "20px 24px", borderRadius: 24, background: C.panel, border: grow > 0.05 ? `3px solid ${C.acc}` : "3px solid transparent", fontFamily: grow > 0.05 ? fontSans : fontMono, fontSize: grow > 0.05 ? 27 : 44, lineHeight: 1.3, color: C.fg, height: grow > 0.05 ? 240 : 70, overflow: "hidden" }}>
-      {grow > 0.05 ? <>{PROMPT.slice(0, shown)}{shown >= 175 ? "…" : ""}</> : <span style={{ color: C.acc, fontWeight: 700 }}>{typed.slice(0, n)}</span>}<span style={{ color: C.acc, opacity: f % 14 < 8 ? 1 : 0 }}>|</span></div>
+    <div style={{ position: "absolute", top: 230, left: 24, right: 24, padding: "20px 24px", borderRadius: 24, background: C.panel, border: grow > 0.05 ? `3px solid ${C.acc}` : "3px solid transparent", fontFamily: grow > 0.05 ? fontSans : fontMono, fontSize: grow > 0.05 ? 26 : 44, lineHeight: 1.3, color: C.fg, height: grow > 0.05 ? 270 : 70, overflow: "hidden" }}>
+      {grow > 0.05 ? <>{PROMPT.slice(0, shown)}</> : <span style={{ color: C.acc, fontWeight: 700 }}>{typed.slice(0, n)}</span>}<span style={{ color: C.acc, opacity: f % 14 < 8 ? 1 : 0 }}>|</span></div>
     <Keys hot={hot} />
-    <Note text={v.note ?? (grow > 0.5 ? "4 keys → 2,394 characters" : "Type ;fix and a space…")} good={grow > 0.5} bottom={380} />
+    <Note text={v.note ?? (grow > 0.5 ? `4 keys → ${PROMPT.length} characters` : "Type ;fix and a space…")} good={grow > 0.5} bottom={380} />
   </Frame>;
 }

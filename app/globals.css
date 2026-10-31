@@ -209,6 +209,19 @@ main {
   border-left: 3px solid var(--ink);
 }
 .why p:last-child { margin: 0; }
+.tip-prompt {
+  margin: 8px 0 10px;
+  padding: 12px 14px;
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 8px;
+  font-size: 15px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+  word-break: break-word;
+  user-select: all;
+}
+.tip-prompt-note { font-size: 14px; }
 
 .btn {
   appearance: none;

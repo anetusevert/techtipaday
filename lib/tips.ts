@@ -1316,10 +1316,12 @@ const originals: Tip[] = [
     minutes: 3,
     why: "If you reuse the same long prompt, you stop digging through Notes for it. Four keys and a space, in ChatGPT, Claude, Gemini or anywhere else you type.",
     source: {
-      kicker: "The prompt in this tip",
-      label: "Prompt Debugger on One Agent a Day",
+      kicker: "The prompt in this tip (short version, 210 characters)",
+      prompt: "You're a prompt debugger. I'll paste a prompt and the bad answer it gave. Tell me in 3 bullets why it failed, then rewrite the prompt so it can't fail that way. Ask me one question first if anything is unclear.",
+      promptNote: "Copy this into Phrase. It's short enough for Text Replacement to paste in one go.",
+      label: "The full Prompt Debugger on One Agent a Day",
       url: "https://www.oneagentaday.com/agents/prompt-debugger",
-      note: "Copy the full prompt there (it's free, CC-BY-4.0). That's the other half of this tip: what the prompt does and how to use it once ;fix has pasted it in.",
+      note: "The full prompt is there (free, CC-BY-4.0), along with what it does and how to use it once ;fix has pasted it in. That's the other half of this tip.",
     },
     seo: {
       searchPhrase: "how to make a text shortcut on iphone that pastes a whole prompt",
@@ -1327,7 +1329,7 @@ const originals: Tip[] = [
       answer: "Copy the prompt, then open Settings > General > Keyboard > Text Replacement and tap +. Paste the prompt into Phrase and type a short code such as ;fix into Shortcut, then tap Save. In any chat app, type ;fix and a space and the iPhone swaps in the whole prompt.",
       faq: [
         { q: "Why start the shortcut with a semicolon?", a: "So it never fires by accident. Nobody types ;fix in a normal sentence, but a plain word like fix would expand every time you used it." },
-        { q: "Is there a length limit for the phrase?", a: "Apple doesn't publish one. If a very long prompt gets cut off when it expands, split it into two shortcuts, like ;fix1 and ;fix2." },
+        { q: "Is there a length limit for the phrase?", a: "Apple doesn't publish one, but very long phrases can get cut off. That's why the prompt here is a short 210-character version. If a longer prompt gets cut off when it expands, split it into two shortcuts, like ;fix1 and ;fix2." },
         { q: "Does it keep the line breaks?", a: "Sometimes not. Pasting straight from Notes usually keeps them, but they can get flattened into one block. The model reads it fine either way." },
         { q: "It doesn't expand in my chat app.", a: "Text Replacement only works with Apple's own keyboard, so switch back from Gboard or SwiftKey with the globe key. Also press space after the shortcut rather than tapping the suggestion bar." },
         { q: "Will it show up on my Mac?", a: "Yes, if both use the same Apple Account with iCloud. Look under System Settings > Keyboard > Text Replacements." },
@@ -1340,7 +1342,7 @@ const originals: Tip[] = [
       ],
     },
     steps: [
-      "Copy the prompt you keep reusing. To try it, the Prompt Debugger prompt from One Agent a Day is linked below.",
+      "Copy the prompt you keep reusing. To try it, copy the short Prompt Debugger prompt below.",
       "Open Settings > General > Keyboard > Text Replacement and tap +.",
       "Paste the prompt into Phrase. Type ;fix into Shortcut, then tap Save.",
       "Open ChatGPT, Claude or any chat app, type ;fix and press space. The whole prompt drops in.",
@@ -1357,11 +1359,11 @@ const originals: Tip[] = [
       coverLine: "A whole prompt from four keys",
       lines: ["Make a text replacement.", "Open Settings, then General, then Keyboard.", "Tap Text Replacement, then the plus.", "Paste the prompt as the phrase. Shortcut: semicolon fix."],
       cta: "One tech tip a day at techtipaday.com",
-      ctaSay: "One tech tip a day, at techtipaday dot com. The other half is on One Agent a Day.",
+      ctaSay: "One tech tip a day, at techtipaday dot com. The other half is on One Agent... a Day.",
       ctaNote: "the other half is on @oneagentaday",
       hookVisual: { type: "phone-settings", mode: "expand", path: ["Chat"], rows: [] },
       doThis: "Make a text replacement.",
-      doVisual: { type: "phone-settings", mode: "expand", path: ["Chat"], rows: [], note: "4 keys → 2,394 characters" },
+      doVisual: { type: "phone-settings", mode: "expand", path: ["Chat"], rows: [], note: "4 keys → 210 characters" },
       steps: [
         { say: "Open Settings, then General, then Keyboard.", visual: { type: "phone-settings", path: ["Settings", "General"], rows: ["About", "Software Update", "Keyboard", "Language & Region"], tap: "Keyboard" } },
         { say: "Tap Text Replacement, then the plus.", visual: { type: "phone-settings", path: ["General", "Keyboard"], rows: ["Keyboards", "Text Replacement", "Auto-Capitalization", "Auto-Correction"], tap: "Text Replacement" } },

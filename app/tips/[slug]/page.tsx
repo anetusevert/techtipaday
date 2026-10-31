@@ -174,6 +174,12 @@ export default async function TipPage({ params }: { params: Promise<{ slug: stri
       {tip.source ? (
         <aside className="why tip-source">
           <p className="kicker">{tip.source.kicker}</p>
+          {tip.source.prompt ? (
+            <>
+              <pre className="tip-prompt">{tip.source.prompt}</pre>
+              {tip.source.promptNote ? <p className="tip-prompt-note">{tip.source.promptNote}</p> : null}
+            </>
+          ) : null}
           <p>
             <a href={tip.source.url}>{tip.source.label}</a>
           </p>

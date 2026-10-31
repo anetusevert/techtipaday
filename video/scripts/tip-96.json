@@ -31,7 +31,7 @@
           "Chat"
         ],
         "rows": [],
-        "note": "4 keys → 2,394 characters"
+        "note": "4 keys → 210 characters"
       }
     },
     {
@@ -103,14 +103,14 @@
     },
     {
       "beat": "cta",
-      "say": "One tech tip a day, at techtipaday dot com. The other half is on One Agent a Day.",
+      "say": "One tech tip a day, at techtipaday dot com. The other half is on One Agent... a Day.",
       "text": "One tech tip a day",
       "note": "the other half is on @oneagentaday"
     }
   ],
   "words": 69,
   "warn": [],
-  "elevenlabsPrompt": "[intrigued] Your iPhone can type a whole AI prompt from four keys.\n\n[confident] Here's the fix. Make a text replacement.\n\n[friendly] Open Settings, then General, then Keyboard. Tap Text Replacement, then the plus. Paste the prompt as the phrase. Shortcut: semicolon fix.\n\n[delighted] Type semicolon fix in any chat, and the whole prompt drops in.\n\n[warm] One tech tip a day, at techtipaday dot com. The other half is on One Agent a Day.",
+  "elevenlabsPrompt": "[intrigued] Your iPhone can type a whole AI prompt from four keys.\n\n[confident] Here's the fix. Make a text replacement.\n\n[friendly] Open Settings, then General, then Keyboard. Tap Text Replacement, then the plus. Paste the prompt as the phrase. Shortcut: semicolon fix.\n\n[delighted] Type semicolon fix in any chat, and the whole prompt drops in.\n\n[warm] One tech tip a day, at techtipaday dot com. The other half is on One Agent... a Day.",
   "coverLine": "A whole prompt from four keys",
   "hookLabel": "HIDDEN SETTING"
 }

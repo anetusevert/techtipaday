@@ -108,7 +108,7 @@ export type Tip = {
   steps: string[];
   body: string[];
   /** Optional outside resource the tip uses (e.g. a prompt page). Rendered as a linked block after the steps. */
-  source?: { kicker: string; label: string; url: string; note: string };
+  source?: { kicker: string; label: string; url: string; note: string; prompt?: string; promptNote?: string };
   /** Editor's shortlist. Not a view count. */
   pick?: boolean;
   /** Daily short. v3 fields drive video/script.mjs (see video/VIDEO.md). Not rendered on the site. */
