@@ -27,6 +27,7 @@ function Note({ text, good }: { text: string; good: boolean }) {
 export function PhoneDim({ v, dur }: { v: PhoneV; dur: number }) {
   const f = useCurrentFrame();
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+  if (v.reveal === "glare" || v.reveal === "extra") return <PhoneGlare v={v} dur={dur} />;
   const steady = v.reveal === "steady";
   const level = steady ? interpolate(p(dur * 0.1, dur * 0.4), [0, 1], [0.3, 0.75]) : interpolate(p(4, dur * 0.85), [0, 1], [0.75, 0.2]);
   const shade = (1 - level) * 0.8;
@@ -43,6 +44,32 @@ export function PhoneDim({ v, dur }: { v: PhoneV; dur: number }) {
     <div style={{ position: "absolute", left: sx - 30, top: barTop + barH + 14, width: 60, textAlign: "center", fontFamily: fontMono, fontSize: 24, color: C.fg, zIndex: 3 }}>{`${pct}%`}</div>
     <Note text={v.note ?? (steady ? "Auto-Brightness off · stays put" : `dimming by itself · ${pct}%`)} good={steady} />
     {steady && <div style={{ position: "absolute", inset: 0, zIndex: 4 }}><Finger x={sx} y={barTop + barH * (1 - level)} press={drag > 0 && drag < 1 ? 1 : 0} show={p(0, 6)} /></div>}
+  </Frame>;
+}
+
+/** mode "dim", reveal "glare" (Android, dark bedroom): a white page, the slider is dragged to the bottom and the screen still glows
+ *  | reveal "extra": slider already at the bottom, Extra dim kicks in and the page drops well below the old minimum. */
+function PhoneGlare({ v, dur }: { v: PhoneV; dur: number }) {
+  const f = useCurrentFrame();
+  const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+  const extra = v.reveal === "extra";
+  const drag = extra ? 1 : p(4, dur * 0.45);
+  const level = interpolate(drag, [0, 1], [0.7, 0.02]);
+  const deep = extra ? p(dur * 0.2, dur * 0.55) : 0;
+  const shade = interpolate(drag, [0, 1], [0, 0.18]) + deep * 0.5;
+  const glow = extra ? 0 : 0.5 + 0.5 * Math.abs(Math.sin(f / 9));
+  const barTop = 200, barH = 420, sx = PW - 70;
+  return <Frame label={v.path[0] ?? "00:47 · lights off"} bg="#f4f1ea">
+    <div style={{ position: "absolute", top: 140, left: 40, right: 110, fontFamily: fontSans, fontWeight: 700, fontSize: 44, color: "#1a1f33" }}>Group chat</div>
+    {Array.from({ length: 11 }, (_, i) => <div key={i} style={{ position: "absolute", top: 230 + i * 56, left: 40, width: [420, 380, 440, 400, 300, 430, 410, 360, 440, 390, 260][i], height: 22, borderRadius: 8, background: "#b9bdcc" }} />)}
+    <div style={{ position: "absolute", inset: 0, background: `rgba(0,0,0,${shade})` }} />
+    {!extra && <div style={{ position: "absolute", inset: 0, boxShadow: `inset 0 0 ${60 + 60 * glow}px rgba(255,255,255,${0.35 * glow})` }} />}
+    <div style={{ position: "absolute", left: sx - 30, top: barTop, width: 60, height: barH, borderRadius: 30, background: "rgba(20,28,54,.55)", overflow: "hidden", zIndex: 3 }}>
+      <div style={{ position: "absolute", bottom: 0, left: 0, right: 0, height: Math.max(14, barH * level), background: extra ? C.acc : "#ffc857" }} />
+    </div>
+    <div style={{ position: "absolute", left: sx - 50, top: barTop + barH + 14, width: 100, textAlign: "center", fontFamily: fontMono, fontSize: 24, color: extra ? C.fg : "#1a1f33", zIndex: 3 }}>{extra ? "extra dim" : `${Math.round(level * 100)}%`}</div>
+    {(extra ? deep > 0.4 : drag > 0.9) && <Note text={v.note ?? (extra ? "Extra dim on · eyes thank you" : "Lowest it goes. Still blinding.")} good={extra} />}
+    {!extra && <div style={{ position: "absolute", inset: 0, zIndex: 4 }}><Finger x={sx} y={barTop + barH * (1 - level)} press={drag > 0 && drag < 1 ? 1 : 0} show={1 - p(dur * 0.5, dur * 0.6)} /></div>}
   </Frame>;
 }
 

@@ -1,0 +1,119 @@
+{
+  "key": "tip-53",
+  "n": 53,
+  "slug": "how-to-set-airdrop-to-contacts-only",
+  "title": "How to set AirDrop to Contacts Only",
+  "category": "privacy",
+  "url": "https://www.techtipaday.com/tips/how-to-set-airdrop-to-contacts-only",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Random strangers keep AirDropping you photos on the train?",
+      "text": "Random strangers keep AirDropping you photos on the train?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "share",
+        "path": [
+          "AirDrop"
+        ],
+        "rows": [],
+        "note": "Who even is this?"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Set AirDrop to Contacts Only.",
+      "text": "Set AirDrop to Contacts Only.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "share",
+        "path": [
+          "AirDrop"
+        ],
+        "rows": [],
+        "reveal": "contacts",
+        "note": "Strangers can't even ask now."
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then General.",
+      "text": "Open Settings, then General.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Screen Time",
+          "General",
+          "Accessibility",
+          "Privacy & Security"
+        ],
+        "tap": "General"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap AirDrop.",
+      "text": "Tap AirDrop.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "General"
+        ],
+        "rows": [
+          "About",
+          "Software Update",
+          "AirDrop",
+          "AirPlay & Continuity"
+        ],
+        "tap": "AirDrop"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Choose Contacts Only.",
+      "text": "Choose Contacts Only.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "General",
+          "AirDrop"
+        ],
+        "rows": [
+          "Receiving Off",
+          "Contacts Only",
+          "Everyone for 10 Minutes"
+        ],
+        "tap": "Contacts Only"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now only people in your contacts can send you anything.",
+      "text": "No more surprise photos",
+      "result": {
+        "say": "Now only people in your contacts can send you anything.",
+        "headline": "No more surprise photos",
+        "before": "Everyone nearby",
+        "after": "Contacts Only"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 45,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Random strangers keep AirDropping you photos on the train?\n\n[confident] Here's the fix. Set AirDrop to Contacts Only.\n\n[friendly] Open Settings, then General. Tap AirDrop. Choose Contacts Only.\n\n[delighted] Now only people in your contacts can send you anything.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Strangers can AirDrop you photos",
+  "hookLabel": null
+}

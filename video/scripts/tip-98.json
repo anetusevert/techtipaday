@@ -1,0 +1,120 @@
+{
+  "key": "tip-98",
+  "n": 98,
+  "slug": "how-to-make-your-android-screen-darker-than-the-lowest-brightness",
+  "title": "How to make your Android screen darker than the lowest brightness",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-make-your-android-screen-darker-than-the-lowest-brightness",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android can go darker than the lowest brightness.",
+      "text": "Your Android can go darker than the lowest brightness.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dim",
+        "path": [
+          "00:47 · lights off"
+        ],
+        "rows": [],
+        "reveal": "glare"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Extra dim.",
+      "text": "Turn on Extra dim.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dim",
+        "path": [
+          "00:47 · lights off"
+        ],
+        "rows": [],
+        "reveal": "extra"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Accessibility.",
+      "text": "Open Settings, then Accessibility.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Display",
+          "Battery",
+          "Accessibility",
+          "Security & privacy"
+        ],
+        "tap": "Accessibility"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Extra dim and switch it on.",
+      "text": "Tap Extra dim and switch it on.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Accessibility",
+          "Extra dim"
+        ],
+        "rows": [
+          "Use Extra dim",
+          "Extra dim shortcut",
+          "Intensity"
+        ],
+        "tap": "Use Extra dim",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On a Samsung, it's under Vision enhancements.",
+      "text": "On a Samsung, it's under Vision enhancements.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Accessibility",
+          "Vision enhancements"
+        ],
+        "rows": [
+          "High contrast fonts",
+          "Color inversion",
+          "Reduce animations",
+          "Extra dim"
+        ],
+        "tap": "Extra dim",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now you can read in bed without squinting at the screen.",
+      "text": "Easy on the eyes",
+      "result": {
+        "say": "Now you can read in bed without squinting at the screen.",
+        "headline": "Easy on the eyes",
+        "before": "Lowest: still glaring",
+        "after": "Extra dim: comfy"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 54,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android can go darker than the lowest brightness.\n\n[confident] Here's the fix. Turn on Extra dim.\n\n[friendly] Open Settings, then Accessibility. Tap Extra dim and switch it on. On a Samsung, it's under Vision enhancements.\n\n[delighted] Now you can read in bed without squinting at the screen.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Android goes even darker",
+  "hookLabel": "HIDDEN SETTING"
+}

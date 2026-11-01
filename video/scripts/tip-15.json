@@ -1,0 +1,97 @@
+{
+  "key": "tip-15",
+  "n": 15,
+  "slug": "how-to-use-virtual-desktops-in-windows-11",
+  "title": "How to use virtual desktops in Windows 11",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-use-virtual-desktops-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Work, chat and twenty tabs all piled on one screen?",
+      "text": "Work, chat and twenty tabs all piled on one screen?",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "drag"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Make a second desktop.",
+      "text": "Make a second desktop.",
+      "visual": {
+        "type": "shortcut",
+        "keys": [
+          "⊞ Win",
+          "Ctrl",
+          "D"
+        ],
+        "label": "New desktop"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Windows, Control and D.",
+      "text": "Press Windows, Control and D.",
+      "step": 1,
+      "visual": {
+        "type": "shortcut",
+        "keys": [
+          "⊞ Win",
+          "Ctrl",
+          "D"
+        ],
+        "label": "Desktop 2 is ready"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open the apps for that job.",
+      "text": "Open the apps for that job.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "snap",
+        "mode": "done"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch with Windows, Control and an arrow.",
+      "text": "Switch with Windows, Control and an arrow.",
+      "step": 3,
+      "visual": {
+        "type": "shortcut",
+        "keys": [
+          "⊞ Win",
+          "Ctrl",
+          "← →"
+        ],
+        "label": "Desktop 1 ↔ Desktop 2"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Work on one desktop, everything else on the other.",
+      "text": "Two clean desktops",
+      "result": {
+        "say": "Work on one desktop, everything else on the other.",
+        "headline": "Two clean desktops",
+        "before": "One messy screen",
+        "after": "Desktop 1 · Desktop 2"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Work, chat and twenty tabs all piled on one screen?\n\n[confident] Here's the fix. Make a second desktop.\n\n[friendly] Press Windows, Control and D. Open the apps for that job. Switch with Windows, Control and an arrow.\n\n[delighted] Work on one desktop, everything else on the other.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your PC has spare desktops",
+  "hookLabel": "YOU'RE DOING IT WRONG"
+}

@@ -1,0 +1,124 @@
+{
+  "key": "tip-64",
+  "n": 64,
+  "slug": "how-to-set-downtime-in-screen-time-on-iphone",
+  "title": "How to set Downtime in Screen Time on iPhone",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-set-downtime-in-screen-time-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Said five more minutes in bed, and now it's 1 a.m.?",
+      "text": "Said five more minutes in bed, and now it's 1 a.m.?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "timer",
+        "path": [],
+        "rows": [],
+        "note": "Where did the night go?"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Schedule Downtime in Screen Time.",
+      "text": "Schedule Downtime in Screen Time.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Screen Time",
+          "Downtime"
+        ],
+        "rows": [
+          "Scheduled",
+          "Every Day",
+          "From 22:30",
+          "To 07:00"
+        ],
+        "tap": "Scheduled",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Screen Time.",
+      "text": "Open Settings, then Screen Time.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Notifications",
+          "Sounds & Haptics",
+          "Focus",
+          "Screen Time"
+        ],
+        "tap": "Screen Time"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Downtime and switch on Scheduled.",
+      "text": "Tap Downtime and switch on Scheduled.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Screen Time",
+          "Downtime"
+        ],
+        "rows": [
+          "Turn On Downtime Until Tomorrow",
+          "Scheduled",
+          "From 22:30",
+          "To 07:00"
+        ],
+        "tap": "Scheduled",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick the apps that stay on in Always Allowed.",
+      "text": "Pick the apps that stay on in Always Allowed.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Screen Time",
+          "Always Allowed"
+        ],
+        "rows": [
+          "Phone",
+          "Messages",
+          "Maps",
+          "Add apps"
+        ],
+        "tap": "Messages"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "At bedtime the other apps grey out, and calls still come through.",
+      "text": "Bedtime, sorted",
+      "result": {
+        "say": "At bedtime the other apps grey out, and calls still come through.",
+        "headline": "Bedtime, sorted",
+        "before": "Scrolling till 1 a.m.",
+        "after": "Apps off at 22:30"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 60,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Said five more minutes in bed, and now it's 1 a.m.?\n\n[confident] Here's the fix. Schedule Downtime in Screen Time.\n\n[friendly] Open Settings, then Screen Time. Tap Downtime and switch on Scheduled. Pick the apps that stay on in Always Allowed.\n\n[delighted] At bedtime the other apps grey out, and calls still come through.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your iPhone can lock apps at bedtime",
+  "hookLabel": null
+}

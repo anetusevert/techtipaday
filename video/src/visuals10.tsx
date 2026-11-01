@@ -100,14 +100,15 @@ export function LaptopWifiKey({ v, dur }: { v: LaptopV; dur: number }) {
 export function PhoneShare({ v, dur }: { v: PhoneV; dur: number }) {
   const f = useCurrentFrame();
   const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+  const air = v.path[0] === "AirDrop"; // iPhone AirDrop wording, same story
   if (!v.reveal) {
-    const reqs = [["Galaxy S23", "hey 😉.jpg"], ["Pixel 8", "IMG_4471.jpg"], ["Unknown phone", "free_gift.apk"]];
+    const reqs = air ? [["iPhone", "1 Photo"], ["Dave's iPhone", "IMG_4471.HEIC"], ["iPhone (2)", "3 Photos"]] : [["Galaxy S23", "hey 😉.jpg"], ["Pixel 8", "IMG_4471.jpg"], ["Unknown phone", "free_gift.apk"]];
     const step = Math.max(8, dur / 3.4); const shown = Math.min(reqs.length, 1 + Math.floor(f / step));
     return <Frame label="12:41 · train">
-      <div style={{ position: "absolute", top: 140, left: 34, fontFamily: fontSans, fontWeight: 700, fontSize: 46, color: C.fg }}>Quick Share</div>
+      <div style={{ position: "absolute", top: 140, left: 34, fontFamily: fontSans, fontWeight: 700, fontSize: 46, color: C.fg }}>{air ? "AirDrop" : "Quick Share"}</div>
       {reqs.slice(0, shown).map(([who, file], i) => { const o = interpolate(f, [i * step, i * step + 6], [0, 1], clamp);
         return <div key={who} style={{ position: "absolute", top: 230 + i * 190, left: 26, right: 26, padding: "22px 24px", borderRadius: 22, background: "#1c2440", border: `2px solid ${i === 2 ? C.warn : "#3a4670"}`, opacity: o, transform: `translateY(${(1 - o) * -40}px)` }}>
-          <div style={{ fontFamily: fontSans, fontSize: 28, color: C.mut }}>{who} wants to share</div>
+          <div style={{ fontFamily: fontSans, fontSize: 28, color: C.mut }}>{air ? `"${who}" would like to share` : `${who} wants to share`}</div>
           <div style={{ fontFamily: fontSans, fontWeight: 700, fontSize: 34, color: C.fg, marginTop: 6 }}>{file}</div>
           <div style={{ display: "flex", gap: 16, marginTop: 14, justifyContent: "flex-end" }}>
             <div style={{ padding: "10px 22px", borderRadius: 20, background: "#2a3354", fontFamily: fontSans, fontSize: 26, color: C.fg }}>Decline</div>
@@ -118,9 +119,9 @@ export function PhoneShare({ v, dur }: { v: PhoneV; dur: number }) {
   }
   // contacts: the visibility picker flips, then a quiet screen
   const flip = p(dur * 0.25, dur * 0.4);
-  const opts = ["Your devices", "Contacts", "Everyone"]; const sel = flip > 0.5 ? 1 : 2;
-  return <Frame label="Quick Share">
-    <div style={{ position: "absolute", top: 140, left: 34, fontFamily: fontSans, fontWeight: 700, fontSize: 46, color: C.fg }}>Who can share</div>
+  const opts = air ? ["Receiving Off", "Contacts Only", "Everyone for 10 Minutes"] : ["Your devices", "Contacts", "Everyone"]; const sel = flip > 0.5 ? 1 : 2;
+  return <Frame label={air ? "General › AirDrop" : "Quick Share"}>
+    <div style={{ position: "absolute", top: 140, left: 34, fontFamily: fontSans, fontWeight: 700, fontSize: 46, color: C.fg }}>{air ? "AirDrop" : "Who can share"}</div>
     {opts.map((o, i) => <div key={o} style={{ position: "absolute", top: 240 + i * 110, left: 26, right: 26, height: 92, borderRadius: 22, padding: "0 28px", display: "flex", alignItems: "center", gap: 22,
       background: i === sel ? (i === 1 ? "rgba(62,224,160,.16)" : "rgba(255,107,107,.14)") : C.panel, border: `3px solid ${i === sel ? (i === 1 ? C.acc : C.warn) : "transparent"}`, fontFamily: fontSans, fontSize: 36, color: C.fg }}>
       <div style={{ width: 40, height: 40, borderRadius: 20, border: `4px solid ${i === sel ? (i === 1 ? C.acc : C.warn) : C.mut}`, display: "flex", alignItems: "center", justifyContent: "center" }}>

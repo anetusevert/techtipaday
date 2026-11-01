@@ -305,6 +305,21 @@ export const catalogB: TipDraft[] = [
       "When you need a file from someone else, switch to Everyone for 10 Minutes. It returns to Contacts Only by itself.",
     ],
     body: ["Receiving Off is the stricter choice. You can still send. You will not see incoming requests."],
+    video: {
+      hook: "Random strangers keep AirDropping you photos on the train?",
+      coverLine: "Strangers can AirDrop you photos",
+      lines: ["Set AirDrop to Contacts Only.", "Open Settings, then General.", "Tap AirDrop.", "Choose Contacts Only."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "share", path: ["AirDrop"], rows: [], note: "Who even is this?" },
+      doThis: "Set AirDrop to Contacts Only.",
+      doVisual: { type: "phone-settings", mode: "share", path: ["AirDrop"], rows: [], reveal: "contacts", note: "Strangers can't even ask now." },
+      steps: [
+        { say: "Open Settings, then General.", visual: { type: "phone-settings", path: ["Settings"], rows: ["Screen Time", "General", "Accessibility", "Privacy & Security"], tap: "General" } },
+        { say: "Tap AirDrop.", visual: { type: "phone-settings", path: ["Settings", "General"], rows: ["About", "Software Update", "AirDrop", "AirPlay & Continuity"], tap: "AirDrop" } },
+        { say: "Choose Contacts Only.", visual: { type: "phone-settings", path: ["General", "AirDrop"], rows: ["Receiving Off", "Contacts Only", "Everyone for 10 Minutes"], tap: "Contacts Only" } },
+      ],
+      result: { say: "Now only people in your contacts can send you anything.", headline: "No more surprise photos", before: "Everyone nearby", after: "Contacts Only" },
+    },
   },
   {
     slug: "how-to-use-hide-my-email-on-iphone",
@@ -721,6 +736,21 @@ export const catalogB: TipDraft[] = [
       "During Downtime you can ignore the block for a minute, or for the day, if you have not set a Screen Time passcode.",
     ],
     body: ["A Screen Time passcode stops the easy override. Set one only if you want the friction. If you forget it, changing it is a recovery, not a toggle."],
+    video: {
+      hook: "Said five more minutes in bed, and now it's 1 a.m.?",
+      coverLine: "Your iPhone can lock apps at bedtime",
+      lines: ["Schedule Downtime in Screen Time.", "Open Settings, then Screen Time.", "Tap Downtime and switch on Scheduled.", "Pick the apps that stay on."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "timer", path: [], rows: [], note: "Where did the night go?" },
+      doThis: "Schedule Downtime in Screen Time.",
+      doVisual: { type: "phone-settings", path: ["Screen Time", "Downtime"], rows: ["Scheduled", "Every Day", "From 22:30", "To 07:00"], tap: "Scheduled", toggle: true },
+      steps: [
+        { say: "Open Settings, then Screen Time.", visual: { type: "phone-settings", path: ["Settings"], rows: ["Notifications", "Sounds & Haptics", "Focus", "Screen Time"], tap: "Screen Time" } },
+        { say: "Tap Downtime and switch on Scheduled.", visual: { type: "phone-settings", path: ["Screen Time", "Downtime"], rows: ["Turn On Downtime Until Tomorrow", "Scheduled", "From 22:30", "To 07:00"], tap: "Scheduled", toggle: true } },
+        { say: "Pick the apps that stay on in Always Allowed.", visual: { type: "phone-settings", path: ["Screen Time", "Always Allowed"], rows: ["Phone", "Messages", "Maps", "Add apps"], tap: "Messages" } },
+      ],
+      result: { say: "At bedtime the other apps grey out, and calls still come through.", headline: "Bedtime, sorted", before: "Scrolling till 1 a.m.", after: "Apps off at 22:30" },
+    },
   },
   {
     slug: "how-to-set-up-a-focus-on-iphone",
