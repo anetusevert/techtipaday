@@ -1,0 +1,85 @@
+{
+  "key": "tip-14",
+  "n": 14,
+  "slug": "how-to-tile-windows-side-by-side-on-a-mac",
+  "title": "How to tile windows side by side on a Mac",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-tile-windows-side-by-side-on-a-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Mac can snap windows side by side, just like Windows.",
+      "text": "Your Mac can snap windows side by side, just like Windows.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "mactile",
+        "mode": "mess"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Let your Mac tile them.",
+      "text": "Let your Mac tile them.",
+      "visual": {
+        "type": "laptop",
+        "action": "mactile",
+        "mode": "drag"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Drag a window to the left edge and let go.",
+      "text": "Drag a window to the left edge and let go.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "mactile",
+        "mode": "drag"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Or hover the green button and pick a half.",
+      "text": "Or hover the green button and pick a half.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "mactile",
+        "mode": "menu"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Then drag the other window to the right edge.",
+      "text": "Then drag the other window to the right edge.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "mactile",
+        "mode": "both"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Two windows side by side, and no extra app.",
+      "text": "Side by side",
+      "result": {
+        "say": "Two windows side by side, and no extra app.",
+        "headline": "Side by side",
+        "before": "Resizing corners by hand",
+        "after": "Drag to the edge, done"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 65,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Mac can snap windows side by side, just like Windows.\n\n[confident] Here's the fix. Let your Mac tile them.\n\n[friendly] Drag a window to the left edge and let go. Or hover the green button and pick a half. Then drag the other window to the right edge.\n\n[delighted] Two windows side by side, and no extra app.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Mac snaps windows too",
+  "hookLabel": "HIDDEN SETTING"
+}

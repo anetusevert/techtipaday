@@ -1,0 +1,89 @@
+{
+  "key": "tip-19",
+  "n": 19,
+  "slug": "how-to-use-voice-typing-in-windows-11",
+  "title": "How to use voice typing in Windows 11",
+  "category": "windows",
+  "url": "https://www.techtipaday.com/tips/how-to-use-voice-typing-in-windows-11",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your PC can type what you say, no app needed.",
+      "text": "Your PC can type what you say, no app needed.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "voice",
+        "mode": "slow"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Press Windows and H.",
+      "text": "Press Windows and H.",
+      "visual": {
+        "type": "laptop",
+        "action": "voice",
+        "mode": "keys",
+        "keys": [
+          "⊞ Win",
+          "H"
+        ]
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click where the words should go.",
+      "text": "Click where the words should go.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "voice",
+        "mode": "click"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Windows and H, then just talk.",
+      "text": "Press Windows and H, then just talk.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "voice",
+        "mode": "talk"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Say comma or period, and it types them.",
+      "text": "Say comma or period, and it types them.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "voice",
+        "mode": "punct"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "A whole email, and you didn't type a word.",
+      "text": "Talk, don't type",
+      "result": {
+        "say": "A whole email, and you didn't type a word.",
+        "headline": "Talk, don't type",
+        "before": "Typing with two fingers",
+        "after": "Win + H, and talk"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your PC can type what you say, no app needed.\n\n[confident] Here's the fix. Press Windows and H.\n\n[friendly] Click where the words should go. Press Windows and H, then just talk. Say comma or period, and it types them.\n\n[delighted] A whole email, and you didn't type a word.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your PC types what you say",
+  "hookLabel": "HIDDEN SETTING"
+}

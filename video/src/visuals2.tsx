@@ -15,6 +15,7 @@ import { LaptopWifiKey, PhoneShare, PhoneLoc, LaptopCorners } from "./visuals10"
 import { PhoneBattery, PhoneReach, PhoneNight, PhoneTimer, LaptopNightLight, LaptopMacWifi, LaptopMemory, LaptopHotspot } from "./visuals11";
 import { PhoneKeyFeel, PhoneStorage, PhonePct, PhoneLowPower, PhoneTrack, PhoneSummary, LaptopTranslate, LaptopWinDnd, LaptopMacFrozen, LaptopExplorer, LaptopTextAct } from "./visuals12";
 import { PhoneExpand } from "./visuals13";
+import { PhoneDupes, LaptopVoice, LaptopMacTile } from "./visuals14";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -65,6 +66,7 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   if (v.mode === "track") return <PhoneTrack v={v} dur={dur} />;
   if (v.mode === "summary") return <PhoneSummary v={v} dur={dur} />;
   if (v.mode === "expand") return <PhoneExpand v={v} dur={dur} />;
+  if (v.mode === "dupes") return <PhoneDupes v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>
@@ -103,6 +105,8 @@ export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur
   if (v.action === "tabs") return <LaptopTabs v={v} dur={dur} />;
   if (v.action === "snip") return <LaptopSnip v={v} dur={dur} />;
   if (v.action === "boot") return <LaptopBoot v={v} dur={dur} />;
+  if (v.action === "voice") return <LaptopVoice v={v} dur={dur} />;
+  if (v.action === "mactile") return <LaptopMacTile v={v} dur={dur} />;
   if (v.action === "emoji") return <LaptopEmoji v={v} dur={dur} />;
   if (v.action === "passwords") return <LaptopPasswords v={v} dur={dur} />;
   if (v.action === "snap") return <LaptopSnap v={v} dur={dur} />;

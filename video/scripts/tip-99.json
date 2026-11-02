@@ -1,0 +1,109 @@
+{
+  "key": "tip-99",
+  "n": 99,
+  "slug": "how-to-delete-duplicate-photos-on-iphone",
+  "title": "How to delete duplicate photos on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-delete-duplicate-photos-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone already found every duplicate photo you have.",
+      "text": "Your iPhone already found every duplicate photo you have.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dupes",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Merge your duplicates.",
+      "text": "Merge your duplicates.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dupes",
+        "path": [],
+        "rows": [],
+        "reveal": "merge",
+        "note": "Hiding in Photos › Utilities"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "In Photos, scroll down to Utilities.",
+      "text": "In Photos, scroll down to Utilities.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Photos",
+          "Collections"
+        ],
+        "rows": [
+          "Memories",
+          "Albums",
+          "People & Pets",
+          "Utilities"
+        ],
+        "tap": "Utilities"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Duplicates.",
+      "text": "Tap Duplicates.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Collections",
+          "Utilities"
+        ],
+        "rows": [
+          "Hidden",
+          "Recently Deleted",
+          "Duplicates",
+          "Receipts"
+        ],
+        "tap": "Duplicates"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Select, Select All, then Merge.",
+      "text": "Tap Select, Select All, then Merge.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dupes",
+        "path": [],
+        "rows": [],
+        "reveal": "merge"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "One copy of each photo, and the space comes back.",
+      "text": "One of each",
+      "result": {
+        "say": "One copy of each photo, and the space comes back.",
+        "headline": "One of each",
+        "before": "Same photo ×4",
+        "after": "Best copy, kept"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 48,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone already found every duplicate photo you have.\n\n[confident] Here's the fix. Merge your duplicates.\n\n[friendly] In Photos, scroll down to Utilities. Tap Duplicates. Tap Select, Select All, then Merge.\n\n[delighted] One copy of each photo, and the space comes back.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your iPhone found the duplicates",
+  "hookLabel": "HIDDEN SETTING"
+}
