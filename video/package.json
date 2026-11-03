@@ -8,7 +8,7 @@
     "render:v2": "node render-v2.mjs"
   },
   "dependencies": {
-    "@remotion/cli": "4.0.535",
+    "@remotion/cli": "4.0.540",
     "@remotion/google-fonts": "4.0.535",
     "gray-matter": "^4.0.3",
     "react": "19.3.0",
