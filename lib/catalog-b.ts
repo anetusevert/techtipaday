@@ -781,6 +781,23 @@ export const catalogB: TipDraft[] = [
       "Turn the Focus on in Control Center to test it, or add a schedule on the Focus screen.",
     ],
     body: ["Time Sensitive notifications can still break through. That is how reminders and some alarms behave. If too much is getting through, look at that permission on the noisy app, under Settings > Notifications."],
+
+    video: {
+      hook: "Your iPhone can go silent for everyone except family.",
+      hookLabel: "HIDDEN SETTING",
+      coverLine: "Silent for everyone but family",
+      lines: ["Set up a Focus.", "Open Settings, then Focus.", "Pick the people who can still reach you.", "Turn it on in Control Center."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "night", path: [], rows: [], note: "You: just trying to switch off." },
+      doThis: "Set up a Focus.",
+      doVisual: { type: "phone-settings", mode: "night", path: [], rows: [], reveal: "quiet", note: "Family still gets through." },
+      steps: [
+        { say: "Open Settings, then Focus.", visual: { type: "phone-settings", path: ["Settings"], rows: ["Notifications", "Sounds & Haptics", "Focus", "Screen Time"], tap: "Focus" } },
+        { say: "Pick the people who can still reach you.", visual: { type: "phone-settings", path: ["Focus", "Personal", "People"], rows: ["Mum", "Sam", "Add People", "Allow Calls From"], tap: "Add People" } },
+        { say: "Turn it on in Control Center.", visual: { type: "phone-settings", path: ["Control Center", "Focus"], rows: ["Do Not Disturb", "Personal", "Work", "Sleep"], tap: "Personal", toggle: true } },
+      ],
+      result: { say: "Everything else waits quietly, and family still gets straight through.", headline: "Only family rings", before: "Pinged all evening", after: "Family only" },
+    },
   },
   {
     slug: "how-to-use-scheduled-summary-on-iphone",

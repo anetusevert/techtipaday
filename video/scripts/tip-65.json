@@ -1,0 +1,118 @@
+{
+  "key": "tip-65",
+  "n": 65,
+  "slug": "how-to-set-up-a-focus-on-iphone",
+  "title": "How to set up a Focus on iPhone",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-set-up-a-focus-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone can go silent for everyone except family.",
+      "text": "Your iPhone can go silent for everyone except family.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "night",
+        "path": [],
+        "rows": [],
+        "note": "You: just trying to switch off."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Set up a Focus.",
+      "text": "Set up a Focus.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "night",
+        "path": [],
+        "rows": [],
+        "reveal": "quiet",
+        "note": "Family still gets through."
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Focus.",
+      "text": "Open Settings, then Focus.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Notifications",
+          "Sounds & Haptics",
+          "Focus",
+          "Screen Time"
+        ],
+        "tap": "Focus"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick the people who can still reach you.",
+      "text": "Pick the people who can still reach you.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Focus",
+          "Personal",
+          "People"
+        ],
+        "rows": [
+          "Mum",
+          "Sam",
+          "Add People",
+          "Allow Calls From"
+        ],
+        "tap": "Add People"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Turn it on in Control Center.",
+      "text": "Turn it on in Control Center.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Control Center",
+          "Focus"
+        ],
+        "rows": [
+          "Do Not Disturb",
+          "Personal",
+          "Work",
+          "Sleep"
+        ],
+        "tap": "Personal",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Everything else waits quietly, and family still gets straight through.",
+      "text": "Only family rings",
+      "result": {
+        "say": "Everything else waits quietly, and family still gets straight through.",
+        "headline": "Only family rings",
+        "before": "Pinged all evening",
+        "after": "Family only"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone can go silent for everyone except family.\n\n[confident] Here's the fix. Set up a Focus.\n\n[friendly] Open Settings, then Focus. Pick the people who can still reach you. Turn it on in Control Center.\n\n[delighted] Everything else waits quietly, and family still gets straight through.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Silent for everyone but family",
+  "hookLabel": "HIDDEN SETTING"
+}

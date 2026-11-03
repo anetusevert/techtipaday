@@ -727,6 +727,22 @@ export const catalogA: TipDraft[] = [
       "Let the other person scan it, or download the image.",
     ],
     body: ["The code points at the address in the bar, including a long query string. Check the address before you share a page that has a private token in the URL."],
+
+    video: {
+      hook: "Still reading a long link out loud, letter by letter?",
+      coverLine: "Chrome makes QR codes for free",
+      lines: ["Let Chrome make a QR code.", "Click the three dots in Chrome.", "Cast, save and share, then Create QR code.", "Scan it with the phone camera."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "qr", mode: "spell" },
+      doThis: "Let Chrome make a QR code.",
+      doVisual: { type: "laptop", action: "qr", mode: "scan" },
+      steps: [
+        { say: "Click the three dots in Chrome.", visual: { type: "laptop", action: "qr", mode: "menu" } },
+        { say: "Cast, save and share, then Create QR code.", visual: { type: "laptop", action: "qr", mode: "create" } },
+        { say: "Scan it with the phone camera.", visual: { type: "laptop", action: "qr", mode: "scan" } },
+      ],
+      result: { say: "The page opens on their phone, and nobody types a thing.", headline: "Scan, done", before: "h-t-t-p-s, colon…", after: "Point, scan, open" },
+    },
   },
   {
     slug: "how-to-translate-a-web-page-in-chrome",
@@ -1150,6 +1166,23 @@ export const catalogA: TipDraft[] = [
       "Drag the color temperature slider. Warmer is more amber. Less warm still looks like the normal screen.",
     ],
     body: ["Night Shift is not a sleep treatment. It only changes the screen. True Tone, on the Display screen above it, is a different feature and can stay on at the same time."],
+
+    video: {
+      hook: "Your iPhone can turn its screen warm by itself every night.",
+      hookLabel: "HIDDEN SETTING",
+      coverLine: "Your screen can go warm at sunset",
+      lines: ["Put Night Shift on a schedule.", "Open Settings, then Display and Brightness.", "Tap Night Shift and switch on Scheduled.", "Drag the slider toward More Warm."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "phone-settings", mode: "warm", path: ["23:40 · lights off"], rows: [] },
+      doThis: "Put Night Shift on a schedule.",
+      doVisual: { type: "phone-settings", mode: "warm", path: ["20:14 · sunset"], rows: [], reveal: "warm" },
+      steps: [
+        { say: "Open Settings, then Display and Brightness.", visual: { type: "phone-settings", path: ["Settings"], rows: ["General", "Accessibility", "Display & Brightness", "Wallpaper"], tap: "Display & Brightness" } },
+        { say: "Tap Night Shift and switch on Scheduled.", visual: { type: "phone-settings", path: ["Display & Brightness", "Night Shift"], rows: ["Scheduled", "From  Sunset", "To  Sunrise", "Manually Enable Until Tomorrow"], tap: "Scheduled", toggle: true } },
+        { say: "Drag the slider toward More Warm.", visual: { type: "phone-settings", mode: "warm", path: [], rows: [], reveal: "slider" } },
+      ],
+      result: { say: "Every evening the screen goes warm on its own, and back in the morning.", headline: "Warm by itself", before: "Blue glare at midnight", after: "Warm from sunset" },
+    },
   },
   {
     slug: "how-to-change-the-auto-lock-time-on-iphone",

@@ -1,0 +1,85 @@
+{
+  "key": "tip-25",
+  "n": 25,
+  "slug": "how-to-make-a-qr-code-for-a-website-in-chrome",
+  "title": "How to make a QR code for a website in Chrome",
+  "category": "browser",
+  "url": "https://www.techtipaday.com/tips/how-to-make-a-qr-code-for-a-website-in-chrome",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still reading a long link out loud, letter by letter?",
+      "text": "Still reading a long link out loud, letter by letter?",
+      "label": null,
+      "visual": {
+        "type": "laptop",
+        "action": "qr",
+        "mode": "spell"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Let Chrome make a QR code.",
+      "text": "Let Chrome make a QR code.",
+      "visual": {
+        "type": "laptop",
+        "action": "qr",
+        "mode": "scan"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click the three dots in Chrome.",
+      "text": "Click the three dots in Chrome.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "qr",
+        "mode": "menu"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Cast, save and share, then Create QR code.",
+      "text": "Cast, save and share, then Create QR code.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "qr",
+        "mode": "create"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Scan it with the phone camera.",
+      "text": "Scan it with the phone camera.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "qr",
+        "mode": "scan"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "The page opens on their phone, and nobody types a thing.",
+      "text": "Scan, done",
+      "result": {
+        "say": "The page opens on their phone, and nobody types a thing.",
+        "headline": "Scan, done",
+        "before": "h-t-t-p-s, colon…",
+        "after": "Point, scan, open"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 59,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Still reading a long link out loud, letter by letter?\n\n[confident] Here's the fix. Let Chrome make a QR code.\n\n[friendly] Click the three dots in Chrome. Cast, save and share, then Create QR code. Scan it with the phone camera.\n\n[delighted] The page opens on their phone, and nobody types a thing.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Chrome makes QR codes for free",
+  "hookLabel": null
+}

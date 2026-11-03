@@ -1,0 +1,110 @@
+{
+  "key": "tip-100",
+  "n": 100,
+  "slug": "how-to-see-which-apps-drain-your-battery-on-android",
+  "title": "How to see which apps drain your battery on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-see-which-apps-drain-your-battery-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android already knows which app is killing your battery.",
+      "text": "Your Android already knows which app is killing your battery.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "battery",
+        "path": [],
+        "rows": [],
+        "note": "Barely touched it. Flat by four."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Check Battery usage in Settings.",
+      "text": "Check Battery usage in Settings.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "battery",
+        "path": [],
+        "rows": [],
+        "reveal": "list"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Battery, then Battery usage.",
+      "text": "Open Settings, Battery, then Battery usage.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Battery"
+        ],
+        "rows": [
+          "Battery Saver",
+          "Adaptive Battery",
+          "Battery usage",
+          "Battery percentage"
+        ],
+        "tap": "Battery usage"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "The app at the top is your drain.",
+      "text": "The app at the top is your drain.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "battery",
+        "path": [],
+        "rows": [],
+        "reveal": "list"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap it and switch off background usage.",
+      "text": "Tap it and switch off background usage.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Scrollr",
+          "App battery usage"
+        ],
+        "rows": [
+          "Allow background usage",
+          "Optimized",
+          "Unrestricted"
+        ],
+        "tap": "Allow background usage",
+        "toggle": true,
+        "toggleOff": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now it can't drain your battery from your pocket.",
+      "text": "Drain found",
+      "result": {
+        "say": "Now it can't drain your battery from your pocket.",
+        "headline": "Drain found",
+        "before": "Flat by four",
+        "after": "Makes it to bedtime"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 57,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android already knows which app is killing your battery.\n\n[confident] Here's the fix. Check Battery usage in Settings.\n\n[friendly] Open Settings, Battery, then Battery usage. The app at the top is your drain. Tap it and switch off background usage.\n\n[delighted] Now it can't drain your battery from your pocket.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your phone knows the battery thief",
+  "hookLabel": "HIDDEN SETTING"
+}

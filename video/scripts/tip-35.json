@@ -1,0 +1,112 @@
+{
+  "key": "tip-35",
+  "n": 35,
+  "slug": "how-to-schedule-night-shift-on-iphone",
+  "title": "How to schedule Night Shift on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-schedule-night-shift-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone can turn its screen warm by itself every night.",
+      "text": "Your iPhone can turn its screen warm by itself every night.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "warm",
+        "path": [
+          "23:40 · lights off"
+        ],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Put Night Shift on a schedule.",
+      "text": "Put Night Shift on a schedule.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "warm",
+        "path": [
+          "20:14 · sunset"
+        ],
+        "rows": [],
+        "reveal": "warm"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Display and Brightness.",
+      "text": "Open Settings, then Display and Brightness.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "General",
+          "Accessibility",
+          "Display & Brightness",
+          "Wallpaper"
+        ],
+        "tap": "Display & Brightness"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Night Shift and switch on Scheduled.",
+      "text": "Tap Night Shift and switch on Scheduled.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Display & Brightness",
+          "Night Shift"
+        ],
+        "rows": [
+          "Scheduled",
+          "From  Sunset",
+          "To  Sunrise",
+          "Manually Enable Until Tomorrow"
+        ],
+        "tap": "Scheduled",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Drag the slider toward More Warm.",
+      "text": "Drag the slider toward More Warm.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "warm",
+        "path": [],
+        "rows": [],
+        "reveal": "slider"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Every evening the screen goes warm on its own, and back in the morning.",
+      "text": "Warm by itself",
+      "result": {
+        "say": "Every evening the screen goes warm on its own, and back in the morning.",
+        "headline": "Warm by itself",
+        "before": "Blue glare at midnight",
+        "after": "Warm from sunset"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 62,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone can turn its screen warm by itself every night.\n\n[confident] Here's the fix. Put Night Shift on a schedule.\n\n[friendly] Open Settings, then Display and Brightness. Tap Night Shift and switch on Scheduled. Drag the slider toward More Warm.\n\n[delighted] Every evening the screen goes warm on its own, and back in the morning.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your screen can go warm at sunset",
+  "hookLabel": "HIDDEN SETTING"
+}
