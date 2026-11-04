@@ -1,0 +1,110 @@
+{
+  "key": "tip-52",
+  "n": 52,
+  "slug": "how-to-set-private-dns-on-android",
+  "title": "How to set Private DNS on Android",
+  "category": "wifi",
+  "url": "https://www.techtipaday.com/tips/how-to-set-private-dns-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android can block a lot of ads with one hidden setting.",
+      "text": "Your Android can block a lot of ads with one hidden setting.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dns",
+        "path": [
+          "Weather"
+        ],
+        "rows": [],
+        "note": "I just wanted the weather."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Private DNS.",
+      "text": "Turn on Private DNS.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dns",
+        "path": [],
+        "rows": [],
+        "reveal": "clean"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, Network and internet, Private DNS.",
+      "text": "Open Settings, Network and internet, Private DNS.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Network & internet"
+        ],
+        "rows": [
+          "Internet",
+          "SIMs",
+          "Airplane mode",
+          "Private DNS"
+        ],
+        "tap": "Private DNS"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Choose Private DNS provider hostname.",
+      "text": "Choose Private DNS provider hostname.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Network & internet",
+          "Private DNS"
+        ],
+        "rows": [
+          "Off",
+          "Automatic",
+          "Private DNS provider hostname"
+        ],
+        "tap": "Private DNS provider hostname"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Type dns dot adguard dash dns dot com, then Save.",
+      "text": "Type dns dot adguard dash dns dot com, then Save.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "dns",
+        "path": [],
+        "rows": [],
+        "reveal": "host"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Fewer ads in your apps and browser, and nothing to install.",
+      "text": "Fewer ads",
+      "result": {
+        "say": "Fewer ads in your apps and browser, and nothing to install.",
+        "headline": "Fewer ads",
+        "before": "Ads in every app",
+        "after": "Most of them gone"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 61,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android can block a lot of ads with one hidden setting.\n\n[confident] Here's the fix. Turn on Private DNS.\n\n[friendly] Open Settings, Network and internet, Private DNS. Choose Private DNS provider hostname. Type dns dot adguard dash dns dot com, then Save.\n\n[delighted] Fewer ads in your apps and browser, and nothing to install.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Android has a hidden ad filter",
+  "hookLabel": "HIDDEN SETTING"
+}

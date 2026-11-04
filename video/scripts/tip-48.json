@@ -1,0 +1,100 @@
+{
+  "key": "tip-48",
+  "n": 48,
+  "slug": "how-to-forget-a-wifi-network-on-iphone",
+  "title": "How to forget a Wi-Fi network on iPhone",
+  "category": "wifi",
+  "url": "https://www.techtipaday.com/tips/how-to-forget-a-wifi-network-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone sees the Wi-Fi but just won't join it?",
+      "text": "Your iPhone sees the Wi-Fi but just won't join it?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "wifijoin",
+        "path": [],
+        "rows": []
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Make your iPhone forget the network.",
+      "text": "Make your iPhone forget the network.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "wifijoin",
+        "path": [],
+        "rows": [],
+        "reveal": "forget"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Wi-Fi.",
+      "text": "Open Settings, then Wi-Fi.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Airplane Mode",
+          "Wi-Fi",
+          "Bluetooth",
+          "Mobile Service"
+        ],
+        "tap": "Wi-Fi"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap the i next to the network.",
+      "text": "Tap the i next to the network.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "wifijoin",
+        "path": [],
+        "rows": [],
+        "reveal": "info"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Forget This Network, then join again.",
+      "text": "Tap Forget This Network, then join again.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "wifijoin",
+        "path": [],
+        "rows": [],
+        "reveal": "joined"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Type the password fresh, and it connects like new.",
+      "text": "Back online",
+      "result": {
+        "say": "Type the password fresh, and it connects like new.",
+        "headline": "Back online",
+        "before": "Unable to join",
+        "after": "Connected"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 55,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Your iPhone sees the Wi-Fi but just won't join it?\n\n[confident] Here's the fix. Make your iPhone forget the network.\n\n[friendly] Open Settings, then Wi-Fi. Tap the i next to the network. Tap Forget This Network, then join again.\n\n[delighted] Type the password fresh, and it connects like new.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Wi-Fi won't join? Make it forget",
+  "hookLabel": null
+}

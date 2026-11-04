@@ -98,6 +98,22 @@ export const catalogA: TipDraft[] = [
       "If Command + Space does nothing, another app has taken the shortcut. Check System Settings > Keyboard > Keyboard Shortcuts > Spotlight.",
     ],
     pick: true,
+    video: {
+      hook: "Still hunting through the Dock for one app?",
+      hookLabel: "YOU'RE DOING IT WRONG",
+      coverLine: "Your Mac opens apps in a second",
+      lines: ["Press Command and Space.", "Type the first few letters.", "Press Return, and it opens.", "It does quick sums too."],
+      cta: "One tech tip a day at techtipaday.com",
+      hookVisual: { type: "laptop", action: "spotlight", mode: "dock" },
+      doThis: "Press Command and Space.",
+      doVisual: { type: "laptop", action: "spotlight", mode: "keys" },
+      steps: [
+        { say: "Type the first few letters of the app.", visual: { type: "laptop", action: "spotlight", mode: "type" } },
+        { say: "Press Return, and it opens.", visual: { type: "laptop", action: "spotlight", mode: "open" } },
+        { say: "It does quick sums too.", visual: { type: "laptop", action: "spotlight", mode: "math" } },
+      ],
+      result: { say: "Any app in a second, no Dock and no Launchpad.", headline: "One second", before: "Scroll the Dock", after: "Command Space, type" },
+    },
   },
   {
     slug: "how-to-turn-on-clipboard-history-in-windows-11",

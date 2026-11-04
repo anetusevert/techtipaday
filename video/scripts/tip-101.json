@@ -1,0 +1,104 @@
+{
+  "key": "tip-101",
+  "n": 101,
+  "slug": "how-to-make-text-bigger-on-iphone",
+  "title": "How to make text bigger on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-make-text-bigger-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone can make text bigger in just one app.",
+      "text": "Your iPhone can make text bigger in just one app.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textsize",
+        "path": [
+          "Mail"
+        ],
+        "rows": [],
+        "note": "Glasses on. Still squinting."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Use Text Size in Control Center.",
+      "text": "Use Text Size in Control Center.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textsize",
+        "path": [],
+        "rows": [],
+        "reveal": "control"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Add Text Size to Control Center.",
+      "text": "Add Text Size to Control Center.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Control Center",
+          "Add a Control"
+        ],
+        "rows": [
+          "Flashlight",
+          "Timer",
+          "Text Size",
+          "Dark Mode"
+        ],
+        "tap": "Text Size"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open the app, swipe down and tap Text Size.",
+      "text": "Open the app, swipe down and tap Text Size.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textsize",
+        "path": [],
+        "rows": [],
+        "reveal": "cc"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch to this app only, then drag up.",
+      "text": "Switch to this app only, then drag up.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textsize",
+        "path": [],
+        "rows": [],
+        "reveal": "control"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Big text where you need it, and everything else stays the same.",
+      "text": "Just this app",
+      "result": {
+        "say": "Big text where you need it, and everything else stays the same.",
+        "headline": "Just this app",
+        "before": "Tiny text everywhere",
+        "after": "Big in Mail only"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 63,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone can make text bigger in just one app.\n\n[confident] Here's the fix. Use Text Size in Control Center.\n\n[friendly] Add Text Size to Control Center. Open the app, swipe down and tap Text Size. Switch to this app only, then drag up.\n\n[delighted] Big text where you need it, and everything else stays the same.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Bigger text in just one app",
+  "hookLabel": "HIDDEN SETTING"
+}

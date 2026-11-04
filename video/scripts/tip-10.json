@@ -1,0 +1,85 @@
+{
+  "key": "tip-10",
+  "n": 10,
+  "slug": "how-to-open-an-app-on-a-mac-with-the-keyboard",
+  "title": "How to open an app on a Mac with the keyboard",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-open-an-app-on-a-mac-with-the-keyboard",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still hunting through the Dock for one app?",
+      "text": "Still hunting through the Dock for one app?",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "laptop",
+        "action": "spotlight",
+        "mode": "dock"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Press Command and Space.",
+      "text": "Press Command and Space.",
+      "visual": {
+        "type": "laptop",
+        "action": "spotlight",
+        "mode": "keys"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Type the first few letters of the app.",
+      "text": "Type the first few letters of the app.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "spotlight",
+        "mode": "type"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press Return, and it opens.",
+      "text": "Press Return, and it opens.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "spotlight",
+        "mode": "open"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "It does quick sums too.",
+      "text": "It does quick sums too.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "spotlight",
+        "mode": "math"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Any app in a second, no Dock and no Launchpad.",
+      "text": "One second",
+      "result": {
+        "say": "Any app in a second, no Dock and no Launchpad.",
+        "headline": "One second",
+        "before": "Scroll the Dock",
+        "after": "Command Space, type"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] Still hunting through the Dock for one app?\n\n[confident] Here's the fix. Press Command and Space.\n\n[friendly] Type the first few letters of the app. Press Return, and it opens. It does quick sums too.\n\n[delighted] Any app in a second, no Dock and no Launchpad.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Mac opens apps in a second",
+  "hookLabel": "YOU'RE DOING IT WRONG"
+}
