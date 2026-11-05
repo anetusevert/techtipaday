@@ -1,0 +1,113 @@
+{
+  "key": "tip-102",
+  "n": 102,
+  "slug": "how-to-change-the-screen-timeout-on-android",
+  "title": "How to change the screen timeout on Android",
+  "category": "android",
+  "url": "https://www.techtipaday.com/tips/how-to-change-the-screen-timeout-on-android",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Android can stay awake while you're looking at it.",
+      "text": "Your Android can stay awake while you're looking at it.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "awake",
+        "path": [
+          "Recipe · step 4"
+        ],
+        "rows": [],
+        "note": "Flour on my hands. Screen's gone."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Screen attention.",
+      "text": "Turn on Screen attention.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "awake",
+        "path": [
+          "Recipe · step 4"
+        ],
+        "rows": [],
+        "reveal": "reading"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Display and touch.",
+      "text": "Open Settings, then Display and touch.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Network & internet",
+          "Battery",
+          "Display & touch",
+          "Sound & vibration"
+        ],
+        "tap": "Display & touch"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Screen timeout, then switch on Screen attention.",
+      "text": "Tap Screen timeout, then switch on Screen attention.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "awake",
+        "path": [],
+        "rows": [],
+        "reveal": "attention"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "On a Samsung, it's Keep screen on while viewing.",
+      "text": "On a Samsung, it's Keep screen on while viewing.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Advanced features",
+          "Motions and gestures"
+        ],
+        "rows": [
+          "Lift to wake",
+          "Double tap to turn on screen",
+          "Keep screen on while viewing",
+          "Palm swipe to capture"
+        ],
+        "tap": "Keep screen on while viewing",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now it stays on while you read, and sleeps when you walk away.",
+      "text": "Stays on for you",
+      "result": {
+        "say": "Now it stays on while you read, and sleeps when you walk away.",
+        "headline": "Stays on for you",
+        "before": "Dark mid-recipe",
+        "after": "On while you look"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 62,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Android can stay awake while you're looking at it.\n\n[confident] Here's the fix. Turn on Screen attention.\n\n[friendly] Open Settings, then Display and touch. Tap Screen timeout, then switch on Screen attention. On a Samsung, it's Keep screen on while viewing.\n\n[delighted] Now it stays on while you read, and sleeps when you walk away.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your screen waits while you read",
+  "hookLabel": "HIDDEN SETTING"
+}

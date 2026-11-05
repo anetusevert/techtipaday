@@ -1,0 +1,102 @@
+{
+  "key": "tip-08",
+  "n": 8,
+  "slug": "how-to-set-up-text-replacement-on-iphone",
+  "title": "How to set up text replacement on iPhone",
+  "category": "productivity",
+  "url": "https://www.techtipaday.com/tips/how-to-set-up-text-replacement-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Still typing your whole email address, letter by letter?",
+      "text": "Still typing your whole email address, letter by letter?",
+      "label": null,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textrep",
+        "path": [],
+        "rows": [],
+        "note": "Third typo. Same address."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Set up a text replacement.",
+      "text": "Set up a text replacement.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textrep",
+        "path": [],
+        "rows": [],
+        "reveal": "expand"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, General, Keyboard, Text Replacement.",
+      "text": "Open Settings, General, Keyboard, Text Replacement.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "General",
+          "Keyboard"
+        ],
+        "rows": [
+          "Keyboards",
+          "Text Replacement",
+          "Auto-Correction",
+          "Smart Punctuation"
+        ],
+        "tap": "Text Replacement"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap plus, add your email and a short code.",
+      "text": "Tap plus, add your email and a short code.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textrep",
+        "path": [],
+        "rows": [],
+        "reveal": "add"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Now type the code and a space.",
+      "text": "Now type the code and a space.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "textrep",
+        "path": [],
+        "rows": [],
+        "reveal": "expand"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Two keys, and the whole address is there, spelled right every time.",
+      "text": "Typed for you",
+      "result": {
+        "say": "Two keys, and the whole address is there, spelled right every time.",
+        "headline": "Typed for you",
+        "before": "Every letter, every typo",
+        "after": "@@ and a space"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 60,
+  "warn": [],
+  "elevenlabsPrompt": "[exasperated] Still typing your whole email address, letter by letter?\n\n[confident] Here's the fix. Set up a text replacement.\n\n[friendly] Open Settings, General, Keyboard, Text Replacement. Tap plus, add your email and a short code. Now type the code and a space.\n\n[delighted] Two keys, and the whole address is there, spelled right every time.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your iPhone types your email",
+  "hookLabel": null
+}

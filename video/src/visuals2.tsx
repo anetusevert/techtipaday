@@ -18,6 +18,7 @@ import { PhoneExpand } from "./visuals13";
 import { PhoneDupes, LaptopVoice, LaptopMacTile } from "./visuals14";
 import { PhoneWarm, LaptopQR } from "./visuals15";
 import { PhoneTextSize, PhoneDns, PhoneWifiJoin, LaptopSpotlight } from "./visuals16";
+import { PhoneAwake, PhoneTextRep, PhoneOneHand, PhoneChat } from "./visuals17";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -73,6 +74,10 @@ export function PhoneSettings({ v, dur }: { v: Extract<Visual, { type: "phone-se
   if (v.mode === "textsize") return <PhoneTextSize v={v} dur={dur} />;
   if (v.mode === "dns") return <PhoneDns v={v} dur={dur} />;
   if (v.mode === "wifijoin") return <PhoneWifiJoin v={v} dur={dur} />;
+  if (v.mode === "awake") return <PhoneAwake v={v} dur={dur} />;
+  if (v.mode === "textrep") return <PhoneTextRep v={v} dur={dur} />;
+  if (v.mode === "onehand") return <PhoneOneHand v={v} dur={dur} />;
+  if (v.mode === "chat") return <PhoneChat v={v} dur={dur} />;
   if (v.mode === "call") { // incoming call that keeps ringing
     const ring = 1 + 0.06 * Math.sin(f / 3);
     return <PhoneFrame>

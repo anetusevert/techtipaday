@@ -1,0 +1,105 @@
+{
+  "key": "tip-06",
+  "n": 6,
+  "slug": "how-to-make-chatgpt-ask-you-questions-before-it-answers",
+  "title": "How to make ChatGPT ask you questions before it answers",
+  "category": "ai",
+  "url": "https://www.techtipaday.com/tips/how-to-make-chatgpt-ask-you-questions-before-it-answers",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "ChatGPT's answers feel generic because it's guessing about you.",
+      "text": "ChatGPT's answers feel generic because it's guessing about you.",
+      "label": "YOU'RE DOING IT WRONG",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "chat",
+        "path": [
+          "ChatGPT"
+        ],
+        "rows": [],
+        "note": "Could be for anyone."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Make it ask you questions first.",
+      "text": "Make it ask you questions first.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "chat",
+        "path": [
+          "ChatGPT"
+        ],
+        "rows": [],
+        "reveal": "rule"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "End your prompt with this one line.",
+      "text": "End your prompt with this one line.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "chat",
+        "path": [
+          "ChatGPT"
+        ],
+        "rows": [],
+        "reveal": "line"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "It asks you three quick questions.",
+      "text": "It asks you three quick questions.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "chat",
+        "path": [
+          "ChatGPT"
+        ],
+        "rows": [],
+        "reveal": "asks"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Answer them, then it writes the real thing.",
+      "text": "Answer them, then it writes the real thing.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "chat",
+        "path": [
+          "ChatGPT"
+        ],
+        "rows": [],
+        "reveal": "fit"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Now the answer fits your life, not everybody's.",
+      "text": "Made for you",
+      "result": {
+        "say": "Now the answer fits your life, not everybody's.",
+        "headline": "Made for you",
+        "before": "Generic two-day plan",
+        "after": "Fits my weekend"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 56,
+  "warn": [],
+  "elevenlabsPrompt": "[playful] ChatGPT's answers feel generic because it's guessing about you.\n\n[confident] Here's the fix. Make it ask you questions first.\n\n[friendly] End your prompt with this one line. It asks you three quick questions. Answer them, then it writes the real thing.\n\n[delighted] Now the answer fits your life, not everybody's.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "ChatGPT is guessing about you",
+  "hookLabel": "YOU'RE DOING IT WRONG"
+}

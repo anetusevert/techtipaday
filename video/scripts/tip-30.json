@@ -1,0 +1,95 @@
+{
+  "key": "tip-30",
+  "n": 30,
+  "slug": "how-to-turn-on-the-one-handed-keyboard-on-iphone",
+  "title": "How to turn on the one-handed keyboard on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-the-one-handed-keyboard-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone keyboard can slide over to your thumb.",
+      "text": "Your iPhone keyboard can slide over to your thumb.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "onehand",
+        "path": [],
+        "rows": [],
+        "note": "Thumb can't reach the Q."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Hold the globe or emoji key.",
+      "text": "Hold the globe or emoji key.",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "onehand",
+        "path": [],
+        "rows": [],
+        "reveal": "hold"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Pick the keyboard on the right or left.",
+      "text": "Pick the keyboard on the right or left.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "onehand",
+        "path": [],
+        "rows": [],
+        "reveal": "pick"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Now every key is in reach.",
+      "text": "Now every key is in reach.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "onehand",
+        "path": [],
+        "rows": [],
+        "reveal": "small"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap the arrow to go back to full size.",
+      "text": "Tap the arrow to go back to full size.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "mode": "onehand",
+        "path": [],
+        "rows": [],
+        "reveal": "back"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Type with one thumb, and the phone stays safe in your hand.",
+      "text": "One-thumb typing",
+      "result": {
+        "say": "Type with one thumb, and the phone stays safe in your hand.",
+        "headline": "One-thumb typing",
+        "before": "Stretching for the Q",
+        "after": "Every key in reach"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 62,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone keyboard can slide over to your thumb.\n\n[confident] Here's the fix. Hold the globe or emoji key.\n\n[friendly] Pick the keyboard on the right or left. Now every key is in reach. Tap the arrow to go back to full size.\n\n[delighted] Type with one thumb, and the phone stays safe in your hand.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your keyboard shrinks for one thumb",
+  "hookLabel": "HIDDEN SETTING"
+}
