@@ -1320,7 +1320,7 @@ const originals: Tip[] = [
     n: 96,
     slug: "how-to-make-a-text-shortcut-on-iphone-that-pastes-a-whole-prompt",
     intents: ["keyboard", "ai-prompts", "hidden-phone-settings"],
-    date: "2026-11-09",
+    date: "2099-01-01",
     title: "How to make a text shortcut on iPhone that pastes a whole prompt",
     displayName: "Your iPhone can type a whole AI prompt from four keys",
     summary: "Save a long prompt as an iPhone Text Replacement with a shortcut like ;fix. Type it and a space in any chat app and the full prompt drops in.",
