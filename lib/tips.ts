@@ -1783,7 +1783,7 @@ const originals: Tip[] = [
       notFor: "It won't help if the carrier doesn't support Wi-Fi Calling, or if you're on Wi-Fi that blocks voice traffic (some guest networks do). And it needs a working internet connection.",
       alternatives: [
         { name: "Move closer to a window", kind: "manual", pickIt: "You're somewhere for five minutes and don't want to dig in Settings.", pickThis: "This keeps happening in the same place every day." },
-        { name: "A VoIP app (WhatsApp, FaceTime Audio)", kind: "app", pickIt: "The other person is also on that app and you both have Wi-Fi.", pickThis: "You need a normal phone call to any number, including landlines." },
+        { name: "A VoIP app (WhatsApp, FaceTime Audio)", kind: "tool", pickIt: "The other person is also on that app and you both have Wi-Fi.", pickThis: "You need a normal phone call to any number, including landlines." },
       ],
     },
     steps: [
