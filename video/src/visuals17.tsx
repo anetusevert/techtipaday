@@ -1,6 +1,7 @@
 // More v3 mocks: an Android screen that goes dark mid-recipe and the Screen attention switch that keeps it on while you look;
 // iPhone text replacement typing a whole email address from "@@"; the iPhone one-handed keyboard (hold the globe key, pick
-// the right-hand layout, tap the arrow to go back); and a chatbot that asks three questions before it answers.
+// the right-hand layout, tap the arrow to go back); a chatbot that asks three questions before it answers; and a Mac Finder
+// window that reveals the Path Bar so you can see (and jump) the full folder path.
 // The Caret T is always the pointer.
 import { interpolate, useCurrentFrame, Easing } from "remotion";
 import { C, clamp } from "./theme";
@@ -288,4 +289,100 @@ export function PhoneChat({ v, dur }: { v: PhoneV; dur: number }) {
     <Msg top={260} o={a}><div><b>Sat:</b> train to Cascais, beach day, kids' menu lunch by the sand.</div><div style={{ marginTop: 10 }}><b>Sun:</b> Oceanário in the morning, tram 28 after.</div><div style={{ marginTop: 10 }}><b>Budget:</b> about €380 with the flat.</div></Msg>
     {f > dur * 0.6 && <Note text={v.note ?? "Now it's my weekend."} good />}
   </Frame>;
+}
+
+
+/* ---------- Mac Finder Path Bar ---------- */
+const LW = 940, LH = 600;
+type LaptopV = Extract<Visual, { type: "laptop" }>;
+function Pointer({ x, y, press, show = 1 }: { x: number; y: number; press: number; show?: number }) {
+  return <div style={{ position: "absolute", left: 0, top: 0, width: LW, height: LH, zIndex: 8 }}><Finger x={x} y={y} press={press} show={show} /></div>;
+}
+/** action "finderpath" (Mac). mode "lost": Finder open in a nested Downloads folder with no path bar and a confused note
+ *  | "menu": View menu open, Show Path Bar highlighted and clicked | "bar": path bar visible at the bottom, pointer double-clicks Users. */
+export function LaptopFinderPath({ v, dur }: { v: LaptopV; dur: number }) {
+  const f = useCurrentFrame();
+  const p = (a: number, b: number) => interpolate(f, [a, b], [0, 1], { ...clamp, easing: ease });
+  const mode = v.mode ?? "lost";
+  const crumbs = ["Macintosh HD", "Users", "alex", "Downloads", "Invoices"];
+  const files = ["Q3-report.pdf", "receipt-4412.png", "photo-dump.zip", "notes.txt"];
+  const menuBar = (
+    <div style={{ position: "absolute", top: 0, left: 0, right: 0, height: 30, background: "rgba(20,28,54,.95)", display: "flex", alignItems: "center", gap: 22, padding: "0 18px", fontFamily: fontSans, fontSize: 18, color: C.fg, zIndex: 5 }}>
+      <b>Finder</b><span>File</span><span>Edit</span><span style={{ color: mode === "menu" ? C.acc : C.fg }}>View</span><span>Go</span><span>Window</span>
+    </div>
+  );
+  const sidebar = (
+    <div style={{ position: "absolute", top: 30, left: 0, bottom: 0, width: 180, background: "#141c36", borderRight: "2px solid #2a3355", padding: "18px 14px", fontFamily: fontSans, fontSize: 22, color: C.mut }}>
+      {["Favorites", "AirDrop", "Recents", "Downloads", "Documents"].map((n, i) => (
+        <div key={n} style={{ padding: "10px 12px", borderRadius: 10, marginBottom: 4, background: n === "Downloads" ? "rgba(62,224,160,.16)" : "transparent", color: n === "Downloads" ? C.fg : C.mut }}>{i === 0 ? n : `📁 ${n}`}</div>
+      ))}
+    </div>
+  );
+  const titlebar = (
+    <div style={{ position: "absolute", top: 30, left: 180, right: 0, height: 44, background: "#1a2340", display: "flex", alignItems: "center", gap: 10, padding: "0 18px", borderBottom: "2px solid #2a3355" }}>
+      {["#ff5f57", "#febc2e", "#28c840"].map((c) => <div key={c} style={{ width: 14, height: 14, borderRadius: 7, background: c }} />)}
+      <span style={{ marginLeft: 14, fontFamily: fontSans, fontSize: 24, color: C.fg }}>Invoices</span>
+    </div>
+  );
+  const fileGrid = (
+    <div style={{ position: "absolute", top: 90, left: 200, right: 24, display: "grid", gridTemplateColumns: "1fr 1fr", gap: 16 }}>
+      {files.map((name) => (
+        <div key={name} style={{ padding: "18px 16px", borderRadius: 14, background: C.panel, fontFamily: fontSans, fontSize: 24, color: C.fg }}>📄 {name}</div>
+      ))}
+    </div>
+  );
+  let pathBar = null as React.ReactNode;
+  let menu = null as React.ReactNode;
+  let note = "";
+  let good = false;
+  let fx = LW * 0.55, fy = LH * 0.45, press = 0, show = 0;
+
+  if (mode === "lost") {
+    note = v.items?.[0] ?? "Which Downloads is this?";
+    show = 0;
+  } else if (mode === "menu") {
+    const open = p(dur * 0.1, dur * 0.25);
+    const pick = p(dur * 0.45, dur * 0.55);
+    press = interpolate(f, [dur * 0.5, dur * 0.55, dur * 0.62], [0, 1, 0], clamp);
+    show = p(0, 6) * (1 - p(dur * 0.75, dur * 0.9));
+    fx = interpolate(p(0, dur * 0.35), [0, 1], [500, 210]);
+    fy = interpolate(p(0, dur * 0.35), [0, 1], [400, 168]);
+    menu = (
+      <div style={{ position: "absolute", top: 34, left: 150, width: 280, borderRadius: 12, background: "#232c4a", border: "2px solid #3a4670", padding: 10, opacity: open, zIndex: 6, fontFamily: fontSans, fontSize: 22, color: C.fg }}>
+        {["as Icons", "as List", "as Columns", "Show Path Bar", "Show Status Bar"].map((row, i) => (
+          <div key={row} style={{ padding: "10px 14px", borderRadius: 8, background: i === 3 && pick > 0.3 ? "rgba(62,224,160,.22)" : "transparent", color: i === 3 ? C.acc : C.fg }}>{row}</div>
+        ))}
+      </div>
+    );
+    note = "View › Show Path Bar";
+    good = pick > 0.5;
+  } else {
+    // bar
+    const jump = p(dur * 0.35, dur * 0.5);
+    press = interpolate(f, [dur * 0.4, dur * 0.45, dur * 0.55], [0, 1, 0], clamp);
+    show = p(0, 6) * (1 - p(dur * 0.7, dur * 0.85));
+    fx = interpolate(p(0, dur * 0.3), [0, 1], [700, 310]);
+    fy = interpolate(p(0, dur * 0.3), [0, 1], [300, LH - 36]);
+    pathBar = (
+      <div style={{ position: "absolute", left: 180, right: 0, bottom: 0, height: 48, background: "#141c36", borderTop: "2px solid #2a3355", display: "flex", alignItems: "center", gap: 8, padding: "0 16px", fontFamily: fontSans, fontSize: 20, color: C.fg, zIndex: 4 }}>
+        {crumbs.map((c, i) => (
+          <div key={c} style={{ display: "flex", alignItems: "center", gap: 8 }}>
+            {i > 0 && <span style={{ color: C.mut }}>›</span>}
+            <span style={{ padding: "4px 10px", borderRadius: 8, background: i === 1 && jump > 0.4 ? "rgba(62,224,160,.25)" : "transparent", border: i === 1 && jump > 0.4 ? `2px solid ${C.acc}` : "2px solid transparent" }}>{c}</span>
+          </div>
+        ))}
+      </div>
+    );
+    note = jump > 0.5 ? "Jumped up to Users" : "Path bar is on";
+    good = true;
+  }
+
+  return <div style={{ width: LW + 80, display: "flex", flexDirection: "column", alignItems: "center", marginTop: 40 }}>
+    <div style={{ position: "relative", width: LW, height: LH, borderRadius: 26, border: "12px solid #2c3658", background: "linear-gradient(160deg,#2b3f7a,#14204a)", overflow: "hidden", boxShadow: "0 40px 100px rgba(0,0,0,.55)" }}>
+      {menuBar}{sidebar}{titlebar}{fileGrid}{pathBar}{menu}
+      {show > 0 && <Pointer x={fx} y={fy} press={press} show={show} />}
+      {note && <div style={{ position: "absolute", bottom: mode === "bar" ? 60 : 20, left: 200, right: 24, padding: "12px", borderRadius: 14, textAlign: "center", background: good ? "rgba(62,224,160,.18)" : "rgba(255,107,107,.18)", border: `2px solid ${good ? C.acc : C.warn}`, fontFamily: fontMono, fontSize: 26, color: C.fg, zIndex: 7 }}>{note}</div>}
+    </div>
+    <div style={{ width: LW + 100, height: 26, borderRadius: "0 0 30px 30px", background: "#2c3658" }} />
+  </div>;
 }

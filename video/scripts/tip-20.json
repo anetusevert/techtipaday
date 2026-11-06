@@ -1,0 +1,120 @@
+{
+  "key": "tip-20",
+  "n": 20,
+  "slug": "how-to-turn-on-dictation-on-a-mac",
+  "title": "How to turn on dictation on a Mac",
+  "category": "mac",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-dictation-on-a-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Mac can type what you say in any text field.",
+      "text": "Your Mac can type what you say in any text field.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "voice",
+        "mode": "slow"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn Dictation on.",
+      "text": "Turn Dictation on.",
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "System Settings",
+        "path": [
+          "Keyboard"
+        ],
+        "rows": [
+          "Key repeat",
+          "Dictation",
+          "Keyboard shortcuts",
+          "Input Sources"
+        ],
+        "tap": "Dictation",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open System Settings, then Keyboard.",
+      "text": "Open System Settings, then Keyboard.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "System Settings",
+        "path": [
+          "System Settings"
+        ],
+        "rows": [
+          "Displays",
+          "Sound",
+          "Keyboard",
+          "Trackpad"
+        ],
+        "tap": "Keyboard"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch Dictation on.",
+      "text": "Switch Dictation on.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "settings",
+        "app": "System Settings",
+        "path": [
+          "Keyboard"
+        ],
+        "rows": [
+          "Key repeat",
+          "Dictation",
+          "Keyboard shortcuts",
+          "Text Input"
+        ],
+        "tap": "Dictation",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press the shortcut and just talk.",
+      "text": "Press the shortcut and just talk.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "voice",
+        "mode": "talk",
+        "keys": [
+          "fn"
+        ]
+      }
+    },
+    {
+      "beat": "result",
+      "say": "A whole email, and you barely touched the keys.",
+      "text": "Talk, don't type",
+      "result": {
+        "say": "A whole email, and you barely touched the keys.",
+        "headline": "Talk, don't type",
+        "before": "Hunting and pecking",
+        "after": "Press fn, and talk"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 49,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Mac can type what you say in any text field.\n\n[confident] Here's the fix. Turn Dictation on.\n\n[friendly] Open System Settings, then Keyboard. Switch Dictation on. Press the shortcut and just talk.\n\n[delighted] A whole email, and you barely touched the keys.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your Mac types what you say",
+  "hookLabel": "HIDDEN SETTING"
+}

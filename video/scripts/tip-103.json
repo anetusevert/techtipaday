@@ -1,0 +1,122 @@
+{
+  "key": "tip-103",
+  "n": 103,
+  "slug": "how-to-turn-on-wifi-calling-on-iphone",
+  "title": "How to turn on wifi calling on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-turn-on-wifi-calling-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone can call over Wi-Fi when the bars die.",
+      "text": "Your iPhone can call over Wi-Fi when the bars die.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "mode": "call",
+        "path": [],
+        "rows": [],
+        "caller": "Mum",
+        "note": "Call failed · No service"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Wi-Fi Calling.",
+      "text": "Turn on Wi-Fi Calling.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Cellular"
+        ],
+        "rows": [
+          "Cellular Data",
+          "Wi-Fi Calling",
+          "Wi-Fi Assist",
+          "Carrier Services"
+        ],
+        "tap": "Wi-Fi Calling"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Cellular.",
+      "text": "Open Settings, then Cellular.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "Wi-Fi",
+          "Bluetooth",
+          "Cellular",
+          "Battery"
+        ],
+        "tap": "Cellular"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Tap Wi-Fi Calling.",
+      "text": "Tap Wi-Fi Calling.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Cellular"
+        ],
+        "rows": [
+          "Cellular Data Options",
+          "Personal Hotspot",
+          "Wi-Fi Calling",
+          "Wi-Fi Assist"
+        ],
+        "tap": "Wi-Fi Calling"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch on Wi-Fi Calling on This iPhone.",
+      "text": "Switch on Wi-Fi Calling on This iPhone.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Cellular",
+          "Wi-Fi Calling"
+        ],
+        "rows": [
+          "Wi-Fi Calling on This iPhone",
+          "Add Wi-Fi Calling For Other Devices"
+        ],
+        "tap": "Wi-Fi Calling on This iPhone",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Same number, but the call rides your Wi-Fi when the bars give up.",
+      "text": "Calls on Wi-Fi",
+      "result": {
+        "say": "Same number, but the call rides your Wi-Fi when the bars give up.",
+        "headline": "Calls on Wi-Fi",
+        "before": "No service",
+        "after": "Wi-Fi Calling"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone can call over Wi-Fi when the bars die.\n\n[confident] Here's the fix. Turn on Wi-Fi Calling.\n\n[friendly] Open Settings, then Cellular. Tap Wi-Fi Calling. Switch on Wi-Fi Calling on This iPhone.\n\n[delighted] Same number, but the call rides your Wi-Fi when the bars give up.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Your iPhone calls over Wi-Fi",
+  "hookLabel": "HIDDEN SETTING"
+}

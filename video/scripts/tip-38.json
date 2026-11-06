@@ -1,0 +1,129 @@
+{
+  "key": "tip-38",
+  "n": 38,
+  "slug": "how-to-type-to-siri-on-iphone",
+  "title": "How to type to Siri on iPhone",
+  "category": "iphone",
+  "url": "https://www.techtipaday.com/tips/how-to-type-to-siri-on-iphone",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your iPhone lets you type to Siri instead of talking.",
+      "text": "Your iPhone lets you type to Siri instead of talking.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Siri"
+        ],
+        "rows": [
+          "Listen for",
+          "Press Side Button for Siri",
+          "Type to Siri",
+          "Siri Responses"
+        ],
+        "tap": "Type to Siri",
+        "note": "Quiet carriage. Can't talk."
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on Type to Siri.",
+      "text": "Turn on Type to Siri.",
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Siri"
+        ],
+        "rows": [
+          "Listen for",
+          "Press Side Button for Siri",
+          "Type to Siri",
+          "Siri Responses"
+        ],
+        "tap": "Type to Siri",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Open Settings, then Siri.",
+      "text": "Open Settings, then Siri.",
+      "step": 1,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings"
+        ],
+        "rows": [
+          "General",
+          "Accessibility",
+          "Siri",
+          "Battery"
+        ],
+        "tap": "Siri"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Switch Type to Siri on.",
+      "text": "Switch Type to Siri on.",
+      "step": 2,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Settings",
+          "Siri"
+        ],
+        "rows": [
+          "Listen for",
+          "Press Side Button for Siri",
+          "Type to Siri",
+          "Siri Responses"
+        ],
+        "tap": "Type to Siri",
+        "toggle": true
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Press the side button and type.",
+      "text": "Press the side button and type.",
+      "step": 3,
+      "visual": {
+        "type": "phone-settings",
+        "path": [
+          "Siri"
+        ],
+        "rows": [
+          "Set a timer for 10 minutes",
+          "Text Mum I'm on the train",
+          "Open Notes"
+        ],
+        "tap": "Set a timer for 10 minutes"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "Siri works in a quiet room, and nobody hears you.",
+      "text": "Siri, silently",
+      "result": {
+        "say": "Siri works in a quiet room, and nobody hears you.",
+        "headline": "Siri, silently",
+        "before": "Have to whisper",
+        "after": "Just type it"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 52,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your iPhone lets you type to Siri instead of talking.\n\n[confident] Here's the fix. Turn on Type to Siri.\n\n[friendly] Open Settings, then Siri. Switch Type to Siri on. Press the side button and type.\n\n[delighted] Siri works in a quiet room, and nobody hears you.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Type to Siri, skip the talking",
+  "hookLabel": "HIDDEN SETTING"
+}

@@ -1,0 +1,85 @@
+{
+  "key": "tip-16",
+  "n": 16,
+  "slug": "how-to-show-the-file-path-in-finder-on-a-mac",
+  "title": "How to show the file path in Finder on a Mac",
+  "category": "mac",
+  "url": "https://www.techtipaday.com/tips/how-to-show-the-file-path-in-finder-on-a-mac",
+  "pieces": [
+    {
+      "beat": "hook",
+      "say": "Your Mac can show the whole folder path in Finder.",
+      "text": "Your Mac can show the whole folder path in Finder.",
+      "label": "HIDDEN SETTING",
+      "visual": {
+        "type": "laptop",
+        "action": "finderpath",
+        "mode": "lost"
+      }
+    },
+    {
+      "beat": "do",
+      "say": "Here's the fix. Turn on the Path Bar.",
+      "text": "Turn on the Path Bar.",
+      "visual": {
+        "type": "laptop",
+        "action": "finderpath",
+        "mode": "menu"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Click a Finder window.",
+      "text": "Click a Finder window.",
+      "step": 1,
+      "visual": {
+        "type": "laptop",
+        "action": "finderpath",
+        "mode": "lost"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Choose View, then Show Path Bar.",
+      "text": "Choose View, then Show Path Bar.",
+      "step": 2,
+      "visual": {
+        "type": "laptop",
+        "action": "finderpath",
+        "mode": "menu"
+      }
+    },
+    {
+      "beat": "steps",
+      "say": "Double-click a folder in the bar to jump.",
+      "text": "Double-click a folder in the bar to jump.",
+      "step": 3,
+      "visual": {
+        "type": "laptop",
+        "action": "finderpath",
+        "mode": "bar"
+      }
+    },
+    {
+      "beat": "result",
+      "say": "You always know which Downloads folder you're in.",
+      "text": "Path always visible",
+      "result": {
+        "say": "You always know which Downloads folder you're in.",
+        "headline": "Path always visible",
+        "before": "Where am I?",
+        "after": "Macintosh HD › Users › …"
+      }
+    },
+    {
+      "beat": "cta",
+      "say": "One tech tip a day, at techtipaday dot com.",
+      "text": "One tech tip a day"
+    }
+  ],
+  "words": 53,
+  "warn": [],
+  "elevenlabsPrompt": "[intrigued] Your Mac can show the whole folder path in Finder.\n\n[confident] Here's the fix. Turn on the Path Bar.\n\n[friendly] Click a Finder window. Choose View, then Show Path Bar. Double-click a folder in the bar to jump.\n\n[delighted] You always know which Downloads folder you're in.\n\n[warm] One tech tip a day, at techtipaday dot com.",
+  "coverLine": "Finder shows the full path",
+  "hookLabel": "HIDDEN SETTING"
+}

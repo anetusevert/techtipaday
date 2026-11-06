@@ -18,7 +18,7 @@ import { PhoneExpand } from "./visuals13";
 import { PhoneDupes, LaptopVoice, LaptopMacTile } from "./visuals14";
 import { PhoneWarm, LaptopQR } from "./visuals15";
 import { PhoneTextSize, PhoneDns, PhoneWifiJoin, LaptopSpotlight } from "./visuals16";
-import { PhoneAwake, PhoneTextRep, PhoneOneHand, PhoneChat } from "./visuals17";
+import { PhoneAwake, PhoneTextRep, PhoneOneHand, PhoneChat, LaptopFinderPath } from "./visuals17";
 
 const ease = Easing.inOut(Easing.cubic);
 const PW = 620, PH = 1000;
@@ -120,6 +120,7 @@ export function Laptop({ v, dur }: { v: Extract<Visual, { type: "laptop" }>; dur
   if (v.action === "mactile") return <LaptopMacTile v={v} dur={dur} />;
   if (v.action === "qr") return <LaptopQR v={v} dur={dur} />;
   if (v.action === "spotlight") return <LaptopSpotlight v={v} dur={dur} />;
+  if (v.action === "finderpath") return <LaptopFinderPath v={v} dur={dur} />;
   if (v.action === "emoji") return <LaptopEmoji v={v} dur={dur} />;
   if (v.action === "passwords") return <LaptopPasswords v={v} dur={dur} />;
   if (v.action === "snap") return <LaptopSnap v={v} dur={dur} />;
